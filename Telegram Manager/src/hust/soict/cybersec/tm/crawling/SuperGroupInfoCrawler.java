@@ -1,8 +1,10 @@
 package hust.soict.cybersec.tm.crawling;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
+import java.util.Set;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
@@ -26,8 +28,8 @@ public class SuperGroupInfoCrawler extends Crawler
     private int memberCount = -1;
     private int canGetMembers = -1;
     private int isAllHistoryAvailable = -1;
-    private List<Long> adminId = new ArrayList<>();
-    private List<Long> memberIds = new ArrayList<>();
+    private Set<Long> adminId = new HashSet<>();
+    private Set<Long> memberIds = new HashSet<>();
     private String description = "Không rõ";
     private TdApi.ChatInviteLink inviteLink = null;
     private List<TdApi.BotCommands> botCommands = new ArrayList<>();
@@ -54,12 +56,12 @@ public class SuperGroupInfoCrawler extends Crawler
         canGetMembers = -1;
         isAllHistoryAvailable = -1;
         messageAutoDeleteTime = -1;
-        adminId = new ArrayList<>();
+        adminId.clear();
         memberCount = -1;
-        memberIds = new ArrayList<>();
+        memberIds.clear();
         description = "Không rõ";
         inviteLink = null;
-        botCommands = new ArrayList<>();
+        botCommands.clear();
         isChannel = -1;
         isBroadCastGroup = -1;
         isFake = -1;
@@ -88,9 +90,17 @@ public class SuperGroupInfoCrawler extends Crawler
             isFake = superGroups.get(id).isFake ? 1 : 0;
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateSuperGroupHandler);
             blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
-            if (canGetMembers == 1)
-            {
-                blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
+            if (canGetMembers == 1 && (isChannel == 0 || adminId.contains(2134816269l)))
+            {   
+                //blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
+                //System.out.println(memberCount);
+                for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
+                {   
+                    //System.out.print(i + ". ");
+                    blockingSend(new TdApi.GetSupergroupMembers(id, null, 200 * i, 200), updateSuperGroupHandler);
+                    Thread.sleep(100);
+                    //System.out.println("memSize: " + memberIds.size());
+                }
             }
             if (!adminId.isEmpty())
             {
@@ -98,6 +108,7 @@ public class SuperGroupInfoCrawler extends Crawler
                 System.out.println(memberIds);
             }
             redefinedAttributes();
+            
         }
     }
 
@@ -129,6 +140,7 @@ public class SuperGroupInfoCrawler extends Crawler
                     }
                     break;
                 case TdApi.ChatMembers.CONSTRUCTOR:
+                    //System.out.println("i'm here");
                     TdApi.ChatMembers chatMembers = (TdApi.ChatMembers) object;
                     for (TdApi.ChatMember mem: chatMembers.members)
                     {

@@ -28,7 +28,7 @@ public class MainChatListHandler implements Client.ResultHandler
                 TelegramManager.getMainChatList();
                 break;
             default:
-                System.err.println("Receive wrong response from TDLib:\n" + object);
+                //System.err.println("Receive wrong response from TDLib:\n" + object);
         }
     }
 }
