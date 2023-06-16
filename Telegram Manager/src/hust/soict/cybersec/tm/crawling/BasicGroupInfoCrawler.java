@@ -27,6 +27,7 @@ public class BasicGroupInfoCrawler extends Crawler
     private String description = "Không rõ";
     private TdApi.ChatInviteLink inviteLink = null;
     private List<TdApi.BotCommands> botCommands = new ArrayList<>();
+    private List<TdApi.Message> messages = new ArrayList<>();
 
     public BasicGroupInfoCrawler(Map<Long, TdApi.BasicGroup> basicGroups, Map<Long, TdApi.Chat> chats, Client client)
     {
@@ -49,6 +50,7 @@ public class BasicGroupInfoCrawler extends Crawler
         description = "Không rõ";
         inviteLink = null;
         botCommands.clear();
+        messages.clear();
     }
 
     
@@ -74,23 +76,35 @@ public class BasicGroupInfoCrawler extends Crawler
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
             //System.out.println("-----------------------------");
             blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
-            //client.send(new TdApi.GetChatAdministrators(chat.getKey()), new UpdateBasicGroupHandler());
-            //client.send(new TdApi.GetBasicGroupFullInfo(basicGroup.getId()), new DefaultHandler());
-    
-            //Thread.sleep(3000);
-            System.out.println("id: " + id);
-            System.out.println("groupName: " + groupName);
-            System.out.println("permissions: " + permissions);
-            System.out.println("canBeDeletedOnlyForSelf: " + canBeDeletedOnlyForSelf);
-            System.out.println("canBeDeletedOnlyForAllUsers: " + canBeDeletedForAllUsers);
-            System.out.println("defaultDisableNotification: " + defaultDisableNotification);
-            System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
-            System.out.println("memberCount: " + memberCount);
-            System.out.println("adminId: " + adminId);
-            System.out.println("memberIds: " + memberIds);
-            System.out.println("description: " + description);
-            System.out.println("InviteLink: " + inviteLink);
-            System.out.println("botCommands: " + botCommands);
+            
+            blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
+            int oldSize = messages.size();
+            while (true)
+            {
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
+                if (oldSize != messages.size())
+                {
+                    oldSize = messages.size();
+                    continue;
+                }
+                break;
+            }
+            System.out.println(messages.size());
+            System.out.println(messages.get(0));
+
+            // System.out.println("id: " + id);
+            // System.out.println("groupName: " + groupName);
+            // System.out.println("permissions: " + permissions);
+            // System.out.println("canBeDeletedOnlyForSelf: " + canBeDeletedOnlyForSelf);
+            // System.out.println("canBeDeletedOnlyForAllUsers: " + canBeDeletedForAllUsers);
+            // System.out.println("defaultDisableNotification: " + defaultDisableNotification);
+            // System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
+            // System.out.println("memberCount: " + memberCount);
+            // System.out.println("adminId: " + adminId);
+            // System.out.println("memberIds: " + memberIds);
+            // System.out.println("description: " + description);
+            // System.out.println("InviteLink: " + inviteLink);
+            // System.out.println("botCommands: " + botCommands);
             redefinedAttributes();
         }
     }
@@ -135,6 +149,14 @@ public class BasicGroupInfoCrawler extends Crawler
                         }
                     }
                     break;
+                case TdApi.Messages.CONSTRUCTOR:
+                    for (TdApi.Message m: ((TdApi.Messages) object).messages)
+                    {
+                        messages.add(m);
+                    }
+                    break;
+                default:
+                    //System.out.println(object.toString());
             }
             haveReceivedRespond = true;
             authorizationLock.lock();

@@ -22,6 +22,11 @@ public class Crawler
 
     }
 
+    public Crawler(Client client)
+    {
+        this.client = client;
+    }
+
     public Crawler(Client client, Map<Long, TdApi.Chat> chats)
     {
         this.client = client;

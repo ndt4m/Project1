@@ -1,4 +1,5 @@
-package hust.soict.cybersec.tm;
+package hust.soict.cybersec.tm.entity;
+
 import java.util.ArrayList;
 import java.util.List;
 

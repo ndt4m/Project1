@@ -72,16 +72,16 @@ public class UpdateHandler implements Client.ResultHandler
             //     }
             //     break;
             // }
-            // case TdApi.UpdateChatLastMessage.CONSTRUCTOR: {
-            //     //System.out.println("====================================update Chat last message======================================");
-            //     TdApi.UpdateChatLastMessage updateChat = (TdApi.UpdateChatLastMessage) object;
-            //     TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
-            //     synchronized (chat) {
-            //         chat.lastMessage = updateChat.lastMessage;
-            //         OrderedChat.setChatPositions(chat, updateChat.positions);
-            //     }
-            //     break;
-            // }
+            case TdApi.UpdateChatLastMessage.CONSTRUCTOR: {
+                //System.out.println("====================================update Chat last message======================================");
+                TdApi.UpdateChatLastMessage updateChat = (TdApi.UpdateChatLastMessage) object;
+                TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
+                synchronized (chat) {
+                    chat.lastMessage = updateChat.lastMessage;
+                    OrderedChat.setChatPositions(chat, updateChat.positions);
+                }
+                break;
+            }
             // case TdApi.UpdateChatPosition.CONSTRUCTOR: {
             //     //System.out.println("====================================update Chat position======================================");
             //     TdApi.UpdateChatPosition updateChat = (TdApi.UpdateChatPosition) object;

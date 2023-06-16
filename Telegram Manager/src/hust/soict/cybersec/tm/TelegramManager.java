@@ -203,8 +203,8 @@ public final class TelegramManager {
             //     }
 
             // }
-            // CrawlBasicGroupInfo crawler = new CrawlBasicGroupInfo(basicGroups, chats, client);
-            // crawler.crawlBasicGroupInfo();
+            // BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
+            // bgCrawler.crawlBasicGroupInfo();
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
             sgCrawler.crawlSuperGroupInfo();
             while (haveAuthorization && haveFullMainChatList) {

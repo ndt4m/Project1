@@ -33,6 +33,7 @@ public class SuperGroupInfoCrawler extends Crawler
     private String description = "Không rõ";
     private TdApi.ChatInviteLink inviteLink = null;
     private List<TdApi.BotCommands> botCommands = new ArrayList<>();
+    private List<TdApi.Message> messages = new ArrayList<>();
 
     public SuperGroupInfoCrawler()
     {
@@ -66,6 +67,7 @@ public class SuperGroupInfoCrawler extends Crawler
         isBroadCastGroup = -1;
         isFake = -1;
         isScam = -1;
+        messages.clear();
     }
 
     public void crawlSuperGroupInfo() throws InterruptedException
@@ -94,19 +96,34 @@ public class SuperGroupInfoCrawler extends Crawler
             {   
                 //blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
                 //System.out.println(memberCount);
-                for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
-                {   
-                    //System.out.print(i + ". ");
-                    blockingSend(new TdApi.GetSupergroupMembers(id, null, 200 * i, 200), updateSuperGroupHandler);
-                    Thread.sleep(100);
-                    //System.out.println("memSize: " + memberIds.size());
+                // for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
+                // {   
+                //     //System.out.print(i + ". ");
+                //     blockingSend(new TdApi.GetSupergroupMembers(id, null, 200 * i, 200), updateSuperGroupHandler);
+                //     Thread.sleep(100);
+                //     //System.out.println("memSize: " + memberIds.size());
+                // }
+                
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateSuperGroupHandler);
+                int oldSize = messages.size();
+                while (true)
+                {
+                    System.out.println("size: " + messages.size());
+                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateSuperGroupHandler);
+                    if (oldSize != messages.size())
+                    {
+                        oldSize = messages.size();
+                        continue;
+                    }
+                    break;
                 }
+                System.out.println(messages.size());
             }
-            if (!adminId.isEmpty())
-            {
-                System.out.println("superGroup Id: " + groupName + "======" + adminId);
-                System.out.println(memberIds);
-            }
+            // if (!adminId.isEmpty())
+            // {
+            //     System.out.println("superGroup Id: " + groupName + "======" + adminId);
+            //     System.out.println(memberIds);
+            // }
             redefinedAttributes();
             
         }
@@ -152,6 +169,12 @@ public class SuperGroupInfoCrawler extends Crawler
                         {
                             memberIds.add(((TdApi.MessageSenderUser) mem.memberId).userId);
                         }
+                    }
+                    break;
+                case TdApi.Messages.CONSTRUCTOR:
+                    for (TdApi.Message m: ((TdApi.Messages) object).messages)
+                    {
+                        messages.add(m);
                     }
                     break;
                 default:
