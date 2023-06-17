@@ -87,7 +87,7 @@ public final class TelegramManager {
         try {
             switch (commands[0]) {
                 case "gu": {
-                    System.out.println(users.get(getChatId(commands[1])).phoneNumber);
+                    System.out.println(users.get(getChatId(commands[1])));
                     break;
                 }
                 case "gbg": {
@@ -203,10 +203,10 @@ public final class TelegramManager {
             //     }
 
             // }
-            // BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
-            // bgCrawler.crawlBasicGroupInfo();
-            SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
-            sgCrawler.crawlSuperGroupInfo();
+            BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
+            bgCrawler.crawlBasicGroupInfo();
+            // SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
+            // sgCrawler.crawlSuperGroupInfo();
             while (haveAuthorization && haveFullMainChatList) {
                 getCommand();
             }

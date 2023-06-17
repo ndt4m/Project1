@@ -21,7 +21,7 @@ public class BasicGroupInfoCrawler extends Crawler
     private int canBeDeletedForAllUsers = -1;
     private int defaultDisableNotification = -1;
     private int messageAutoDeleteTime = -1;
-    private List<Long> adminId = new ArrayList<>();
+    private List<Long> adminIds = new ArrayList<>();
     private int memberCount = -1;
     private List<Long> memberIds = new ArrayList<>();
     private String description = "Không rõ";
@@ -44,7 +44,7 @@ public class BasicGroupInfoCrawler extends Crawler
         canBeDeletedForAllUsers = -1;
         defaultDisableNotification = -1;
         messageAutoDeleteTime = -1;
-        adminId.clear();
+        adminIds.clear();
         memberCount = -1;
         memberIds.clear();
         description = "Không rõ";
@@ -79,7 +79,7 @@ public class BasicGroupInfoCrawler extends Crawler
             
             blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
             int oldSize = messages.size();
-            while (true)
+            while (messages.size() <= 10000)
             {
                 blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
                 if (oldSize != messages.size())
@@ -100,7 +100,7 @@ public class BasicGroupInfoCrawler extends Crawler
             // System.out.println("defaultDisableNotification: " + defaultDisableNotification);
             // System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
             // System.out.println("memberCount: " + memberCount);
-            // System.out.println("adminId: " + adminId);
+            // System.out.println("adminIds: " + adminIds);
             // System.out.println("memberIds: " + memberIds);
             // System.out.println("description: " + description);
             // System.out.println("InviteLink: " + inviteLink);
@@ -123,7 +123,7 @@ public class BasicGroupInfoCrawler extends Crawler
                     TdApi.ChatAdministrators chatAdministrators = (TdApi.ChatAdministrators) object;
                     for (TdApi.ChatAdministrator chatAdmin: chatAdministrators.administrators)
                     {
-                        adminId.add(chatAdmin.userId);
+                        adminIds.add(chatAdmin.userId);
                     }
                     break;
                 
@@ -136,6 +136,7 @@ public class BasicGroupInfoCrawler extends Crawler
                     for (TdApi.BotCommands bc : basicGroupFullInfo.botCommands)
                     {
                         botCommands.add(bc);
+                        System.out.println(bc);
                     }
                     for (TdApi.ChatMember mem: basicGroupFullInfo.members)
                     {

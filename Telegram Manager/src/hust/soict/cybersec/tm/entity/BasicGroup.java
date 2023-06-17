@@ -10,18 +10,60 @@ public class BasicGroup {
     private String groupName;
     private TdApi.ChatPermissions permissions;
     private boolean canBeDeletedOnlyForSelf;
-    private boolean canBeDeletedOnlyForAllUsers;
+    private boolean canBeDeletedForAllUsers;
     private boolean defaultDisableNotification;
     private int messageAutoDeleteTime;
-    private List<Long> adminId = new ArrayList<>();
+    private List<Long> adminIds = new ArrayList<>();
     private int memberCount;
-    private List<Long> memberId = new ArrayList<>();
+    private List<Long> memberIds = new ArrayList<>();
     private String description;
     private String inviteLink;
     private List<TdApi.BotCommands> botCommands = new ArrayList<>();
+    private List<TdApi.Message> messages = new ArrayList<>();
     
+
+    public BasicGroup()
+    {
+
+    }
+
+    public BasicGroup(long id, 
+                      String groupName, 
+                      TdApi.ChatPermissions permissions, 
+                      boolean canBeDeletedForAllUsers, 
+                      boolean canBeDeletedOnlyForSelf,
+                      boolean defaultDisableNotification,
+                      int messageAutoDeleteTime,
+                      List<Long> adminIds,
+                      int memberCount,
+                      List<Long> memberIds,
+                      String description,
+                      String inviteLink,
+                      List<TdApi.BotCommands> botCommands,
+                      List<TdApi.Message> messages)
+    {
+        this.id = id;
+        this.groupName = groupName;
+        this.permissions = permissions;
+        this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
+        this.canBeDeletedOnlyForSelf = canBeDeletedOnlyForSelf;
+        this.defaultDisableNotification = defaultDisableNotification;
+        this.messageAutoDeleteTime = messageAutoDeleteTime;
+        this.adminIds = adminIds;
+        this.memberCount = memberCount;
+        this.memberIds = memberIds;
+        this.description = description;
+        this.inviteLink = inviteLink;
+        this.botCommands = botCommands;
+        this.messages = messages;
+    }
+
     public long getId() {
         return id;
+    }
+
+    public List<Long> getMemberIds() {
+        return memberIds;
     }
 
     public void setId(long id) {
@@ -40,8 +82,8 @@ public class BasicGroup {
         this.canBeDeletedOnlyForSelf = canBeDeletedOnlyForSelf;
     }
 
-    public void setCanBeDeletedOnlyForAllUsers(boolean canBeDeletedOnlyForAllUsers) {
-        this.canBeDeletedOnlyForAllUsers = canBeDeletedOnlyForAllUsers;
+    public void setCanBeDeletedOnlyForAllUsers(boolean canBeDeletedForAllUsers) {
+        this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
     }
 
     public void setDefaultDisableNotification(boolean defaultDisableNotification) {
@@ -54,15 +96,15 @@ public class BasicGroup {
 
     public void addAdminId(Long id)
     {
-        this.adminId.add(id);
+        this.adminIds.add(id);
     }
 
     public void setMemberCount(int memberCount) {
         this.memberCount = memberCount;
     }
 
-    public void setMemberId(List<Long> memberId) {
-        this.memberId = memberId;
+    public void setMemberId(List<Long> memberIds) {
+        this.memberIds = memberIds;
     }
 
     public void setDescription(String description) {

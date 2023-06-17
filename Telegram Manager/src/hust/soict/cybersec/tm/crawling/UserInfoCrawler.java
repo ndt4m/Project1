@@ -1,18 +1,21 @@
 package hust.soict.cybersec.tm.crawling;
 
 import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.List;
-import java.util.Map;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
-import hust.soict.cybersec.tm.crawling.SuperGroupInfoCrawler.UpdateSuperGroupHandler;
-import hust.soict.cybersec.tm.crawling.UserInfoCrawler.UpdateUserHandler;
+import hust.soict.cybersec.tm.entity.BasicGroup;
+import hust.soict.cybersec.tm.entity.SuperGroup;
 
 public class UserInfoCrawler extends Crawler
 {
     private Client.ResultHandler updateUserHandler = new UpdateUserHandler();
+    private List<BasicGroup> basicGroups = new ArrayList<>();
+    private List<SuperGroup> superGroups = new ArrayList<>();
 
     private long id = 0l;
     private String firstName = "Không rõ";
@@ -23,28 +26,24 @@ public class UserInfoCrawler extends Crawler
     private int isFake = -1;
     private String languageCode = "Không rõ";
     private String type = "Không rõ";
-    private List<Long> user_basic_group_ids = new ArrayList<>();
-    private List<Long> user_super_group_ids = new ArrayList<>();
+    private Set<Long> user_basic_group_ids = new HashSet<>();
+    private Set<Long> user_super_group_ids = new HashSet<>();
 
     public UserInfoCrawler()
     {
 
     }
 
-    public UserInfoCrawler(Client client)
+    public UserInfoCrawler(Client client, List<BasicGroup> basicGroups, List<SuperGroup> superGroups)
     {
         super(client);
-
+        this.basicGroups = basicGroups;
+        this.superGroups = superGroups;
     }
 
     public void redefinedAttributes()
     {
         id = 0l;
-        permissions = null;
-        canBeDeletedOnlyForSelf = -1;
-        canBeDeletedForAllUsers = -1;
-        defaultDisableNotification = -1;
-        messageAutoDeleteTime = -1;
         firstName = "Không rõ";
         lastName = "Không rõ";
         userName = "Không rõ";
@@ -53,12 +52,21 @@ public class UserInfoCrawler extends Crawler
         isFake = -1;
         languageCode = "Không rõ";
         type = "Không rõ";
+        user_basic_group_ids.clear();
+        user_super_group_ids.clear();
     }
 
 
-    public void crawlUserInfo()
+    public void crawlUserInfo() throws InterruptedException
     {
-        
+        for (BasicGroup basicGroup: basicGroups)
+        {
+            for (long userId : basicGroup.getMemberIds())
+            {   
+                id = userId;
+                blockingSend(new TdApi.GetUser(id), updateUserHandler);
+            }
+        }
     }
 
 
@@ -69,8 +77,28 @@ public class UserInfoCrawler extends Crawler
         {
             switch (object.getConstructor())
             {
+                case TdApi.User.CONSTRUCTOR:
+                    TdApi.User user = (TdApi.User) object;
+                    firstName = user.firstName;
+                    lastName = user.lastName;
+                    userName = user.usernames.activeUsernames[0];
+                    phoneNumber = user.phoneNumber;
+                    isScam = user.isScam ? 1 : 0;
+                    isFake = user.isFake ? 1 : 0;
+                    languageCode = user.languageCode;
+                    
+                    break;
 
+                default:
+                    //System.out.println(object.toString());
             }
-        }
+            haveReceivedRespond = true;
+            authorizationLock.lock();
+            try {
+                gotAuthorization.signal();
+            } finally {
+                authorizationLock.unlock();
+            }
+        }   
     }
 }
