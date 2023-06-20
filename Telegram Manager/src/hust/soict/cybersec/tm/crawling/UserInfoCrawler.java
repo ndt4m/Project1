@@ -59,11 +59,16 @@ public class UserInfoCrawler extends Crawler
 
     public void crawlUserInfo() throws InterruptedException
     {
+        
+        for ()
+
         for (BasicGroup basicGroup: basicGroups)
         {
             for (long userId : basicGroup.getMemberIds())
             {   
                 id = userId;
+                
+                user_basic_group_ids.add(basicGroup.getId());
                 blockingSend(new TdApi.GetUser(id), updateUserHandler);
             }
         }
@@ -86,7 +91,15 @@ public class UserInfoCrawler extends Crawler
                     isScam = user.isScam ? 1 : 0;
                     isFake = user.isFake ? 1 : 0;
                     languageCode = user.languageCode;
-                    
+                    if (user.type.getConstructor() == TdApi.UserTypeBot.CONSTRUCTOR)
+                    {
+                        type = "bot user";
+                    }
+                    else if (user.type.getConstructor() == TdApi.UserTypeRegular.CONSTRUCTOR)
+                    {
+                        type = "regular user";
+                    }
+
                     break;
 
                 default:
