@@ -8,9 +8,10 @@ import java.util.Set;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
-import org.drinkless.tdlib.TdApi.Message;
 
-public class SuperGroupInfoCrawler extends Crawler
+import hust.soict.cybersec.tm.entity.SuperGroup;
+
+public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
 {
     private Client.ResultHandler updateSuperGroupHandler = new UpdateSuperGroupHandler();
     private Map<Long, TdApi.Supergroup> superGroups;
@@ -96,13 +97,13 @@ public class SuperGroupInfoCrawler extends Crawler
             if (canGetMembers == 1 && (isChannel == 0 || adminIds.contains(2134816269l)))
             {   
                 blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
-                System.out.println(memberCount);
+                //System.out.println(memberCount);
                 for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
                 {   
-                    //System.out.print(i + ". ");
+                    System.out.print(i + ". ");
                     blockingSend(new TdApi.GetSupergroupMembers(id, null, 200 * i, 200), updateSuperGroupHandler);
-                    Thread.sleep(100);
-                    //System.out.println("memSize: " + memberIds.size());
+                    //Thread.sleep(100);
+                    System.out.println("memSize: " + memberIds.size());
                 }
                 
                 blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateSuperGroupHandler);
@@ -118,13 +119,33 @@ public class SuperGroupInfoCrawler extends Crawler
                     }
                     break;
                 }
-                System.out.println(messages.size());
+                //System.out.println(messages.size());
             }
-            if (!adminIds.isEmpty())
-            {
-                System.out.println("superGroup Id: " + groupName + "======" + adminIds);
-                System.out.println(memberIds);
-            }
+            // if (!adminIds.isEmpty())
+            // {
+            //     System.out.println("superGroup Id: " + groupName + "======" + adminIds);
+            //     System.out.println(memberIds);
+            // }
+            this.addCollection(new SuperGroup(id, 
+                                              groupName, 
+                                              permissions, 
+                                              (canBeDeletedOnlyForSelf == 1) ? true : false, 
+                                              (canBeDeletedForAllUsers == 1) ? true : false, 
+                                              (defaultDisableNotification == 1) ? true : false, 
+                                              messageAutoDeleteTime, 
+                                              (isChannel == 1) ? true : false, 
+                                              (isBroadCastGroup == 1) ? true : false, 
+                                              (isFake == 1) ? true : false, 
+                                              (isScam == 1) ? true : false, 
+                                              memberCount, 
+                                              (canGetMembers == 1) ? true : false, 
+                                              (isAllHistoryAvailable == 1) ? true : false, 
+                                              adminIds, 
+                                              memberIds, 
+                                              description, 
+                                              inviteLink, 
+                                              botCommands, 
+                                              messages));
             redefinedAttributes();
             
         }

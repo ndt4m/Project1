@@ -17,7 +17,7 @@ public class BasicGroup {
     private int memberCount;
     private List<Long> memberIds = new ArrayList<>();
     private String description;
-    private String inviteLink;
+    private TdApi.ChatInviteLink inviteLink;
     private List<TdApi.BotCommands> botCommands = new ArrayList<>();
     private List<TdApi.Message> messages = new ArrayList<>();
     
@@ -38,7 +38,7 @@ public class BasicGroup {
                       int memberCount,
                       List<Long> memberIds,
                       String description,
-                      String inviteLink,
+                      TdApi.ChatInviteLink inviteLink,
                       List<TdApi.BotCommands> botCommands,
                       List<TdApi.Message> messages)
     {
@@ -111,7 +111,7 @@ public class BasicGroup {
         this.description = description;
     }
 
-    public void setInviteLink(String inviteLink) {
+    public void setInviteLink(TdApi.ChatInviteLink inviteLink) {
         this.inviteLink = inviteLink;
     }
 

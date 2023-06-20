@@ -7,11 +7,13 @@ import java.util.List;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
+import org.drinkless.tdlib.TdApi.Usernames;
 
 import hust.soict.cybersec.tm.entity.BasicGroup;
 import hust.soict.cybersec.tm.entity.SuperGroup;
+import hust.soict.cybersec.tm.entity.User;
 
-public class UserInfoCrawler extends Crawler
+public class UserInfoCrawler extends Crawler<User>
 {
     private Client.ResultHandler updateUserHandler = new UpdateUserHandler();
     private List<BasicGroup> basicGroups = new ArrayList<>();
@@ -56,21 +58,70 @@ public class UserInfoCrawler extends Crawler
         user_super_group_ids.clear();
     }
 
+    public void findUserBasicGroupIds(long userId)
+    {
+        for (BasicGroup basicGroup: basicGroups)
+        {
+            if (basicGroup.getMemberIds().contains(userId))
+            {
+                user_basic_group_ids.add(basicGroup.getId());
+            }
+        }
+    }
+
+    public void findUserSuperGroupIds(long userId)
+    {
+        for (SuperGroup superGroup: superGroups)
+        {
+            if (superGroup.getMemberIds().contains(userId))
+            {
+                user_super_group_ids.add(superGroup.getId());
+            }
+        }
+    }
+
 
     public void crawlUserInfo() throws InterruptedException
     {
-        
-        for ()
-
+        System.out.println(basicGroups.size());
+        System.out.println(superGroups.size());
+        Set<Long> userIds = new HashSet<>();
         for (BasicGroup basicGroup: basicGroups)
         {
             for (long userId : basicGroup.getMemberIds())
             {   
-                id = userId;
-                
-                user_basic_group_ids.add(basicGroup.getId());
-                blockingSend(new TdApi.GetUser(id), updateUserHandler);
+                userIds.add(userId);
             }
+        }
+
+
+        for (SuperGroup superGroup: superGroups)
+        {
+            for (Long userId: superGroup.getMemberIds())
+            {
+                userIds.add(userId);
+            }
+        }
+        System.out.println(userIds.size());
+        for (long userId: userIds)
+        {
+            id = userId;
+            findUserBasicGroupIds(id);
+            findUserSuperGroupIds(id);
+            blockingSend(new TdApi.GetUser(id), updateUserHandler);
+            System.out.println("id: " + id);
+            System.out.println("firstName: " + firstName);
+            System.out.println("lastName: " + lastName);
+            System.out.println("userName: " + userName);
+            System.out.println("phoneNumber: " + phoneNumber);
+            System.out.println("isScam: " + isScam);
+            System.out.println("isFake: " + isFake);
+            System.out.println("languageCode: " + languageCode);
+            System.out.println("type: " + type);
+            System.out.println("user_basic_group_ids: " + user_basic_group_ids);
+            System.out.println("user_super_group_ids: " + user_super_group_ids);
+            System.out.println("====================================================================");
+            redefinedAttributes();
         }
     }
 

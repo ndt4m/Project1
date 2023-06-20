@@ -1,6 +1,9 @@
 package hust.soict.cybersec.tm.crawling;
 
 import org.drinkless.tdlib.TdApi;
+
+import hust.soict.cybersec.tm.entity.BasicGroup;
+
 import org.drinkless.tdlib.Client;
 
 import java.util.Map;
@@ -9,7 +12,7 @@ import java.util.List;
 
 
 
-public class BasicGroupInfoCrawler extends Crawler
+public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
 {
     private Client.ResultHandler updateBasicGroupHandler = new UpdateBasicGroupHandler();
     private Map<Long, TdApi.BasicGroup> basicGroups;
@@ -56,7 +59,6 @@ public class BasicGroupInfoCrawler extends Crawler
     
     public void crawlBasicGroupInfo() throws InterruptedException
     {
-
         for (Map.Entry<Long, TdApi.Chat> chat : chats.entrySet())
         {
             if (chat.getValue().type.getConstructor() != TdApi.ChatTypeBasicGroup.CONSTRUCTOR)
@@ -90,21 +92,22 @@ public class BasicGroupInfoCrawler extends Crawler
                 break;
             }
             System.out.println(messages.size());
-            System.out.println(messages.get(0));
+            // System.out.println(messages.get(0));
 
-            // System.out.println("id: " + id);
-            // System.out.println("groupName: " + groupName);
-            // System.out.println("permissions: " + permissions);
-            // System.out.println("canBeDeletedOnlyForSelf: " + canBeDeletedOnlyForSelf);
-            // System.out.println("canBeDeletedOnlyForAllUsers: " + canBeDeletedForAllUsers);
-            // System.out.println("defaultDisableNotification: " + defaultDisableNotification);
-            // System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
-            // System.out.println("memberCount: " + memberCount);
-            // System.out.println("adminIds: " + adminIds);
-            // System.out.println("memberIds: " + memberIds);
-            // System.out.println("description: " + description);
-            // System.out.println("InviteLink: " + inviteLink);
-            // System.out.println("botCommands: " + botCommands);
+            this.addCollection(new BasicGroup(id, 
+                                              groupName, 
+                                              permissions, 
+                                              (canBeDeletedForAllUsers == 1) ? true : false, 
+                                              (canBeDeletedOnlyForSelf == 1) ? true : false, 
+                                              (defaultDisableNotification == 1) ? true : false, 
+                                              messageAutoDeleteTime, 
+                                              adminIds, 
+                                              memberCount, 
+                                              memberIds, 
+                                              description, 
+                                              inviteLink, 
+                                              botCommands, 
+                                              messages));
             redefinedAttributes();
         }
     }
@@ -136,7 +139,7 @@ public class BasicGroupInfoCrawler extends Crawler
                     for (TdApi.BotCommands bc : basicGroupFullInfo.botCommands)
                     {
                         botCommands.add(bc);
-                        System.out.println(bc);
+                        //System.out.println(bc);
                     }
                     for (TdApi.ChatMember mem: basicGroupFullInfo.members)
                     {

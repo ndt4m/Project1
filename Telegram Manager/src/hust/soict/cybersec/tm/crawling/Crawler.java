@@ -1,5 +1,7 @@
 package hust.soict.cybersec.tm.crawling;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
@@ -8,7 +10,7 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
-public class Crawler 
+public class Crawler <T>
 {
     protected final Lock authorizationLock = new ReentrantLock();
     protected final Condition gotAuthorization = authorizationLock.newCondition();
@@ -16,6 +18,8 @@ public class Crawler
 
     protected Map<Long, TdApi.Chat> chats;
     protected Client client;
+
+    private List<T> collection = new ArrayList<>();
      
     public Crawler()
     {
@@ -47,5 +51,18 @@ public class Crawler
             authorizationLock.unlock();
         }
         //System.out.println("admin hererere");
+    }
+
+    public List<T> getCollection() {
+        return collection;
+    }
+
+    public void setCollection(List<T> collection) {
+        this.collection = collection;
+    }
+
+    public void addCollection(T entity)
+    {
+        this.collection.add(entity);
     }
 }
