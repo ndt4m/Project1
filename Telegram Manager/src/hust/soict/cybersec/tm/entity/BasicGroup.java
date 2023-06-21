@@ -7,6 +7,7 @@ import org.drinkless.tdlib.TdApi;
 
 public class BasicGroup {
     private long id;
+    private long chatId;
     private String groupName;
     private TdApi.ChatPermissions permissions;
     private boolean canBeDeletedOnlyForSelf;
@@ -27,7 +28,8 @@ public class BasicGroup {
 
     }
 
-    public BasicGroup(long id, 
+    public BasicGroup(long id,
+                      long chatId,
                       String groupName, 
                       TdApi.ChatPermissions permissions, 
                       boolean canBeDeletedForAllUsers, 
@@ -43,6 +45,7 @@ public class BasicGroup {
                       List<TdApi.Message> messages)
     {
         this.id = id;
+        this.chatId = chatId;
         this.groupName = groupName;
         this.permissions = permissions;
         this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
@@ -61,6 +64,10 @@ public class BasicGroup {
     public long getId() {
         return id;
     }
+    
+    public long getChatId() {
+        return chatId;
+    }
 
     public List<Long> getMemberIds() {
         //System.out.println(this.memberIds + "o trong basic group class");
@@ -69,6 +76,10 @@ public class BasicGroup {
 
     public TdApi.ChatPermissions getPermissions() {
         return permissions;
+    }
+
+    public String getGroupName() {
+        return groupName;
     }
 
     public List<Long> getAdminIds() {

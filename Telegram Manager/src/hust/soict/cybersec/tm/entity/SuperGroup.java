@@ -10,6 +10,7 @@ import org.drinkless.tdlib.TdApi;
 public class SuperGroup 
 {
     private long id;
+    private long chatId;
     private String groupName;
     private TdApi.ChatPermissions permissions;
     private boolean canBeDeletedOnlyForSelf;
@@ -38,6 +39,7 @@ public class SuperGroup
 
 
     public SuperGroup(long id,
+                      long chatId,
                       String groupName,
                       TdApi.ChatPermissions permissions,
                       boolean canBeDeletedOnlyForSelf,
@@ -59,6 +61,7 @@ public class SuperGroup
                       List<TdApi.Message> messages)
     {
         this.id = id;
+        this.chatId = chatId;
         this.groupName = groupName;
         this.permissions = permissions;
         this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;

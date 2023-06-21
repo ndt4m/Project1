@@ -12,6 +12,10 @@ public class OrderedChat implements Comparable<OrderedChat>
         this.position = position;
     }
 
+    public long getChatId() {
+        return chatId;
+    }
+
     @Override
     public int compareTo(OrderedChat o) 
     {

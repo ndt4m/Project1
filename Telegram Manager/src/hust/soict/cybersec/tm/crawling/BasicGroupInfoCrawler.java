@@ -18,6 +18,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
     private Map<Long, TdApi.BasicGroup> basicGroups;
 
     private long id = 0l;
+    private long chatId = 0l;
     private String groupName = "Không rõ";
     private TdApi.ChatPermissions permissions = null;
     private int canBeDeletedOnlyForSelf = -1;
@@ -41,6 +42,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
     public void redefinedAttributes()
     {
         id = 0l;
+        chatId = 0l;
         groupName = "Không rõ";
         permissions = null;
         canBeDeletedOnlyForSelf = -1;
@@ -67,6 +69,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             }
             
             id = ((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId;
+            chatId = chat.getKey();
             groupName = chat.getValue().title;
             permissions = chat.getValue().permissions;
             canBeDeletedOnlyForSelf = chat.getValue().canBeDeletedOnlyForSelf ? 1 : 0;
@@ -94,7 +97,8 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             System.out.println(messages.size());
             // System.out.println(messages.get(0));
             //System.out.println("=====" + memberIds);
-            this.addCollection(new BasicGroup(id, 
+            this.addCollection(new BasicGroup(id,
+                                              chatId,
                                               groupName, 
                                               permissions, 
                                               (canBeDeletedForAllUsers == 1) ? true : false, 

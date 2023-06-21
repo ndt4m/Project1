@@ -17,6 +17,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
     private Map<Long, TdApi.Supergroup> superGroups;
     
     private long id = 0l;
+    private long chatId = 0l;
     private String groupName = "Không rõ";
     private TdApi.ChatPermissions permissions = null;
     private int canBeDeletedOnlyForSelf = -1;
@@ -51,6 +52,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
     public void redefinedAttributes()
     {
         id = 0l;
+        chatId = 0l;
         groupName = "Không rõ";
         permissions = null;
         canBeDeletedOnlyForSelf = -1;
@@ -82,6 +84,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
             }
 
             id = ((TdApi.ChatTypeSupergroup) chat.getValue().type).supergroupId;
+            chatId = chat.getKey();
             groupName = chat.getValue().title;
             permissions = chat.getValue().permissions;
             canBeDeletedOnlyForSelf = chat.getValue().canBeDeletedOnlyForSelf ? 1 : 0;
@@ -120,6 +123,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     break;
                 }
                 this.addCollection(new SuperGroup(id, 
+                                              chatId,
                                               groupName, 
                                               permissions, 
                                               (canBeDeletedOnlyForSelf == 1) ? true : false, 
