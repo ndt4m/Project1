@@ -63,9 +63,17 @@ public class BasicGroup {
     }
 
     public List<Long> getMemberIds() {
-        return memberIds;
+        //System.out.println(this.memberIds + "o trong basic group class");
+        return this.memberIds;
     }
 
+    public TdApi.ChatPermissions getPermissions() {
+        return permissions;
+    }
+
+    public List<Long> getAdminIds() {
+        return adminIds;
+    }
     public void setId(long id) {
         this.id = id;
     }

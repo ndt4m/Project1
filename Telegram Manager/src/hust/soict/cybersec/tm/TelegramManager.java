@@ -6,6 +6,7 @@ import org.drinkless.tdlib.TdApi;
 import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.SuperGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.UserInfoCrawler;
+import hust.soict.cybersec.tm.entity.BasicGroup;
 
 import java.io.BufferedReader;
 import java.io.IOError;
@@ -207,6 +208,10 @@ public final class TelegramManager {
             // }
             BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
             bgCrawler.crawlBasicGroupInfo();
+            // for (BasicGroup bs : bgCrawler.getCollection())
+            // {
+            //     System.out.println(bs.getMemberIds());
+            // }
             System.out.println("Start Crawling supergroup");
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
             sgCrawler.crawlSuperGroupInfo(); 

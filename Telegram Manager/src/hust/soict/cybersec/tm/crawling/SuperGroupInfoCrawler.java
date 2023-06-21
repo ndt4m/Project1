@@ -59,17 +59,17 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
         canGetMembers = -1;
         isAllHistoryAvailable = -1;
         messageAutoDeleteTime = -1;
-        adminIds.clear();
+        adminIds = new HashSet<>();
         memberCount = -1;
-        memberIds.clear();
+        memberIds = new HashSet<>();
         description = "Không rõ";
         inviteLink = null;
-        botCommands.clear();
+        botCommands = new ArrayList<>();
         isChannel = -1;
         isBroadCastGroup = -1;
         isFake = -1;
         isScam = -1;
-        messages.clear();
+        messages = new ArrayList<>();
     }
 
     public void crawlSuperGroupInfo() throws InterruptedException
@@ -119,14 +119,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     }
                     break;
                 }
-                //System.out.println(messages.size());
-            }
-            // if (!adminIds.isEmpty())
-            // {
-            //     System.out.println("superGroup Id: " + groupName + "======" + adminIds);
-            //     System.out.println(memberIds);
-            // }
-            this.addCollection(new SuperGroup(id, 
+                this.addCollection(new SuperGroup(id, 
                                               groupName, 
                                               permissions, 
                                               (canBeDeletedOnlyForSelf == 1) ? true : false, 
@@ -146,6 +139,13 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                                               inviteLink, 
                                               botCommands, 
                                               messages));
+                //System.out.println(messages.size());
+            }
+            // if (!adminIds.isEmpty())
+            // {
+            //     System.out.println("superGroup Id: " + groupName + "======" + adminIds);
+            //     System.out.println(memberIds);
+            // }
             redefinedAttributes();
             
         }

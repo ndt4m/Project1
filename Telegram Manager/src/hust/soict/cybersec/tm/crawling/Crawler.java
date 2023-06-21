@@ -10,6 +10,8 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
+import hust.soict.cybersec.tm.entity.BasicGroup;
+
 public class Crawler <T>
 {
     protected final Lock authorizationLock = new ReentrantLock();
@@ -54,6 +56,7 @@ public class Crawler <T>
     }
 
     public List<T> getCollection() {
+        //System.out.println(((BasicGroup) this.collection.get(0)).getMemberIds() + "==23=424234");
         return collection;
     }
 
@@ -63,6 +66,8 @@ public class Crawler <T>
 
     public void addCollection(T entity)
     {
+        //System.out.println(((BasicGroup) entity).getMemberIds() + " o trong crawler");
         this.collection.add(entity);
+        //System.out.println(((BasicGroup) collection.get(collection.size() - 1)).getMemberIds() + " van o day");
     }
 }

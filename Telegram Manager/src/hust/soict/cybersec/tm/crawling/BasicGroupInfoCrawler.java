@@ -47,13 +47,13 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
         canBeDeletedForAllUsers = -1;
         defaultDisableNotification = -1;
         messageAutoDeleteTime = -1;
-        adminIds.clear();
+        adminIds = new ArrayList<>();
         memberCount = -1;
-        memberIds.clear();
+        memberIds = new ArrayList<>();
         description = "Không rõ";
         inviteLink = null;
-        botCommands.clear();
-        messages.clear();
+        botCommands = new ArrayList<>();
+        messages = new ArrayList<>();
     }
 
     
@@ -93,7 +93,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             }
             System.out.println(messages.size());
             // System.out.println(messages.get(0));
-
+            //System.out.println("=====" + memberIds);
             this.addCollection(new BasicGroup(id, 
                                               groupName, 
                                               permissions, 
@@ -108,8 +108,14 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                                               inviteLink, 
                                               botCommands, 
                                               messages));
+                    //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
+
             redefinedAttributes();
+                    //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
+
         }
+
+        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
     }
 
     
@@ -151,6 +157,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                         {
                             memberIds.add(((TdApi.MessageSenderUser) mem.memberId).userId);
                         }
+                        //System.out.println(memberIds);
                     }
                     break;
                 case TdApi.Messages.CONSTRUCTOR:

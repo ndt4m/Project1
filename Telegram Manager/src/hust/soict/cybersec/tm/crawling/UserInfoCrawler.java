@@ -54,8 +54,8 @@ public class UserInfoCrawler extends Crawler<User>
         isFake = -1;
         languageCode = "Không rõ";
         type = "Không rõ";
-        user_basic_group_ids.clear();
-        user_super_group_ids.clear();
+        user_basic_group_ids = new HashSet<>();
+        user_super_group_ids = new HashSet<>();
     }
 
     public void findUserBasicGroupIds(long userId)
@@ -83,8 +83,6 @@ public class UserInfoCrawler extends Crawler<User>
 
     public void crawlUserInfo() throws InterruptedException
     {
-        System.out.println(basicGroups.size());
-        System.out.println(superGroups.size());
         Set<Long> userIds = new HashSet<>();
         for (BasicGroup basicGroup: basicGroups)
         {
@@ -102,7 +100,7 @@ public class UserInfoCrawler extends Crawler<User>
                 userIds.add(userId);
             }
         }
-        System.out.println(userIds.size());
+
         for (long userId: userIds)
         {
             id = userId;
@@ -137,7 +135,14 @@ public class UserInfoCrawler extends Crawler<User>
                     TdApi.User user = (TdApi.User) object;
                     firstName = user.firstName;
                     lastName = user.lastName;
-                    userName = user.usernames.activeUsernames[0];
+                    if (user.usernames != null)
+                    {
+                        userName = user.usernames.activeUsernames[0];
+                    }
+                    else
+                    {
+                        userName = "";
+                    }
                     phoneNumber = user.phoneNumber;
                     isScam = user.isScam ? 1 : 0;
                     isFake = user.isFake ? 1 : 0;
@@ -150,7 +155,6 @@ public class UserInfoCrawler extends Crawler<User>
                     {
                         type = "regular user";
                     }
-
                     break;
 
                 default:
