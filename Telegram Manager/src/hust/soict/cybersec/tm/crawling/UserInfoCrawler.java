@@ -7,7 +7,6 @@ import java.util.List;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
-import org.drinkless.tdlib.TdApi.Usernames;
 
 import hust.soict.cybersec.tm.entity.BasicGroup;
 import hust.soict.cybersec.tm.entity.SuperGroup;
@@ -30,7 +29,7 @@ public class UserInfoCrawler extends Crawler<User>
     private String type = "Không rõ";
     private Set<Long> user_basic_group_ids = new HashSet<>();
     private Set<Long> user_super_group_ids = new HashSet<>();
-
+    
     public UserInfoCrawler()
     {
 
@@ -119,6 +118,17 @@ public class UserInfoCrawler extends Crawler<User>
             System.out.println("user_basic_group_ids: " + user_basic_group_ids);
             System.out.println("user_super_group_ids: " + user_super_group_ids);
             System.out.println("====================================================================");
+            this.addCollection(new User(id, 
+                                        firstName, 
+                                        lastName, 
+                                        userName, 
+                                        phoneNumber, 
+                                        (isScam == 1) ? true : false, 
+                                        (isFake == 1) ? true : false, 
+                                        languageCode, 
+                                        type, 
+                                        user_basic_group_ids, 
+                                        user_super_group_ids));
             redefinedAttributes();
         }
     }

@@ -6,13 +6,11 @@ import org.drinkless.tdlib.TdApi;
 import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.SuperGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.UserInfoCrawler;
-import hust.soict.cybersec.tm.entity.BasicGroup;
 
 import java.io.BufferedReader;
 import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.Map;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
@@ -188,36 +186,17 @@ public final class TelegramManager {
             } finally {
                 authorizationLock.unlock();
             }
-            // System.out.println("chats: " + chats.size());
-            // System.out.println("basic group: " + basicGroups.size());
-            // System.out.println("super group: " + supergroups.size());
-            // System.out.println("basic group full info: " + basicGroupsFullInfo.size());
-            // System.out.println("super group full info: " + supergroupsFullInfo.size());
-            // System.out.println("user: " + users.size());
-            // for (Map.Entry<Long, TdApi.Chat> entry: chats.entrySet())
-            // {
-            //     if (entry.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR)
-            //     {
-            //         System.out.println("basic group: " + entry.getValue().title + " ----- " + entry.getValue().id);
-            //     }
-            //     else if (entry.getValue().type.getConstructor() == TdApi.ChatTypeSupergroup.CONSTRUCTOR)
-            //     {
-            //         System.out.println("super group: " + entry.getValue().title + " ----- " + entry.getValue().id);
-            //     }
-
-            // }
+            
             BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
             bgCrawler.crawlBasicGroupInfo();
-            // for (BasicGroup bs : bgCrawler.getCollection())
-            // {
-            //     System.out.println(bs.getMemberIds());
-            // }
+            
             System.out.println("Start Crawling supergroup");
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
             sgCrawler.crawlSuperGroupInfo(); 
             System.out.println("Start Crawling user");   
             UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
             uCrawler.crawlUserInfo();
+            System.out.println(uCrawler.getCollection().size());
             System.out.println("finish Crawling user");
             while (haveAuthorization && haveFullMainChatList) {
                 getCommand();
@@ -225,7 +204,6 @@ public final class TelegramManager {
         }
         while (!canQuit) {
             Thread.sleep(1);
-            //System.out.println("fasfsdfadsfdsfdffasdfdfafsfaffafdsaf");
         }
     }
 
