@@ -52,11 +52,9 @@ public class Crawler <T>
         } finally {
             authorizationLock.unlock();
         }
-        //System.out.println("admin hererere");
     }
 
     public List<T> getCollection() {
-        //System.out.println(((BasicGroup) this.collection.get(0)).getMemberIds() + "==23=424234");
         return collection;
     }
 
@@ -66,8 +64,6 @@ public class Crawler <T>
 
     public void addCollection(T entity)
     {
-        //System.out.println(((BasicGroup) entity).getMemberIds() + " o trong crawler");
         this.collection.add(entity);
-        //System.out.println(((BasicGroup) collection.get(collection.size() - 1)).getMemberIds() + " van o day");
     }
 }

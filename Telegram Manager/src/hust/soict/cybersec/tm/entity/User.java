@@ -48,5 +48,14 @@ public class User
         this.user_super_group_ids = user_super_group_ids;
     }
 
-    
+    public String getDisplayName()
+    {
+        StringBuilder s = new StringBuilder(firstName);
+        s.append(lastName);
+        return s.toString();
+    }
+
+    public long getId() {
+        return id;
+    }
 }

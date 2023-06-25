@@ -91,4 +91,12 @@ public class SuperGroup
     public Set<Long> getMemberIds() {
         return memberIds;
     }
+
+    public String getGroupName() {
+        return groupName;
+    }
+
+    public long getChatId() {
+        return chatId;
+    }
 }

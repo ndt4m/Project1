@@ -7,11 +7,14 @@ import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.SuperGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.UserInfoCrawler;
 import hust.soict.cybersec.tm.entity.BasicGroup;
+import hust.soict.cybersec.tm.entity.SuperGroup;
+import hust.soict.cybersec.tm.entity.User;
 
 import java.io.BufferedReader;
 import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.List;
 import java.util.NavigableSet;
 import java.util.TreeSet;
 import java.util.concurrent.ConcurrentHashMap;
@@ -33,18 +36,16 @@ public final class TelegramManager {
     protected static final Lock authorizationLock = new ReentrantLock();
     protected static final Condition gotAuthorization = authorizationLock.newCondition();
 
-    //protected static final ConcurrentMap<Long, TdApi.User> users = new ConcurrentHashMap<Long, TdApi.User>();
     protected static final ConcurrentMap<Long, TdApi.BasicGroup> basicGroups = new ConcurrentHashMap<Long, TdApi.BasicGroup>();
     protected static final ConcurrentMap<Long, TdApi.Supergroup> supergroups = new ConcurrentHashMap<Long, TdApi.Supergroup>();
-    //protected static final ConcurrentMap<Integer, TdApi.SecretChat> secretChats = new ConcurrentHashMap<Integer, TdApi.SecretChat>();
+
+    private static List<BasicGroup> targetBasicGroups;
+    private static List<SuperGroup> targetSupergroups;
+    private static List<User> targetUsers;
 
     protected static final ConcurrentMap<Long, TdApi.Chat> chats = new ConcurrentHashMap<Long, TdApi.Chat>();
     protected static final NavigableSet<OrderedChat> mainChatList = new TreeSet<OrderedChat>();
     protected static boolean haveFullMainChatList = false;
-
-    //protected static final ConcurrentMap<Long, TdApi.UserFullInfo> usersFullInfo = new ConcurrentHashMap<Long, TdApi.UserFullInfo>();
-    //protected static final ConcurrentMap<Long, TdApi.BasicGroupFullInfo> basicGroupsFullInfo = new ConcurrentHashMap<Long, TdApi.BasicGroupFullInfo>();
-    //protected static final ConcurrentMap<Long, TdApi.SupergroupFullInfo> supergroupsFullInfo = new ConcurrentHashMap<Long, TdApi.SupergroupFullInfo>();
 
     private static final String commandsLine = "Enter command (gcs - GetChats, gc <chatId> - GetChat, me - GetMe, gu <userId> - GetUser, sm <chatId> <message> - SendMessage, lo - LogOut, q - Quit): ";
     private static volatile String currentPrompt = null;
@@ -73,12 +74,81 @@ public final class TelegramManager {
         return str;
     }
 
+    private static long mapGroupNameToId(String groupName) 
+    {
+        for (SuperGroup superGroup: targetSupergroups)
+        {
+            if (superGroup.getGroupName().equals(groupName))
+            {
+                return superGroup.getChatId();
+            }
+        }
+
+        for (BasicGroup basicGroup : targetBasicGroups)
+        {
+            if (basicGroup.getGroupName().equals(groupName))
+            {
+                return basicGroup.getChatId();
+            }
+        }
+        return -1l;
+    }
+
+    private static long mapUserNameToId(String userName)
+    {
+        for (User user: targetUsers)
+        {
+            if (user.getDisplayName().equals(userName))
+            {
+                return user.getId();
+            }
+        }
+        return -1l;
+    }
+
+    private static boolean isBasicGroup(String groupName)
+    {
+        for (BasicGroup basicGroup: targetBasicGroups)
+        {
+            if (basicGroup.getGroupName().equals(groupName))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static void updateData() throws InterruptedException
+    {
+        System.out.println("Start Crawling basicgroup");
+        BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
+        bgCrawler.crawlBasicGroupInfo();
+        targetBasicGroups = bgCrawler.getCollection();
+        
+        //long[] userIds = {6173576926l, 6024238663l, 806954250l, 373610989l, 84210004l, 2134816269l};
+        //client.send(new TdApi.CreateNewBasicGroupChat(null, "aa", 0), new UpdateHandler());
+        //client.send(new TdApi.BanChatMember(-981850633l, new TdApi.MessageSenderChat(6173576926l), 0, true), new UpdateHandler());
+        System.out.println("Start Crawling supergroup");
+        SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
+        sgCrawler.crawlSuperGroupInfo(); 
+        targetSupergroups = sgCrawler.getCollection();
+        System.out.println("Start Crawling user");   
+        UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
+        uCrawler.crawlUserInfo();
+        targetUsers = uCrawler.getCollection();
+        System.out.println("finish Crawling user");
+    }
+
     private static void getCommand() {
         String command = promptString(commandsLine);
         // System.out.println(command+"================================");
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
+                case "update": {
+                    updateData();
+                    break;
+                }
                 case "createBasicGroup": {
                         if (commands.length == 3)
                         {
@@ -103,18 +173,33 @@ public final class TelegramManager {
                         break;
                 }
                 case "addMembers": {
-                    String[] idString = commands[2].split("-");
-                    long[] userIds = new long[idString.length];
-                    for (int i = 0; i < idString.length; i++) 
+                    long chatId = mapGroupNameToId(commands[1]);
+                    System.out.println(chatId);
+                    String[] userNames = commands[2].split("-");
+                    long[] userIds = new long[userNames.length];
+                    for (int i = 0; i < userNames.length; i++) 
                     {
-                        userIds[i] = Long.parseLong(idString[i]);
+                        userIds[i] = mapUserNameToId(userNames[i]);
+                        System.out.println(userIds[i]);
                     }
 
-                    client.send(new TdApi.AddChatMembers(Integer.parseInt(commands[1]), userIds), new UpdateHandler());
+                    if (isBasicGroup(commands[1]))
+                    {
+                        for (int i = 0; i < userIds.length; i++)
+                        {
+                            client.send(new TdApi.AddChatMember(chatId, userIds[i], 0), new UpdateHandler());
+                        }
+                    }
+                    else
+                    {
+                        client.send(new TdApi.AddChatMembers(chatId, userIds), new UpdateHandler());
+                    }
                     break;
                 }
                 case "kickUser": {
-                    client.send(new TdApi.BanChatMember(Integer.parseInt(commands[1]), new TdApi.MessageSenderChat(Integer.parseInt(commands[2])), 0, true), new UpdateHandler());
+                    long chatId = mapGroupNameToId(commands[1]);
+                    long userId = mapUserNameToId(commands[2]);
+                    client.send(new TdApi.BanChatMember(chatId, new TdApi.MessageSenderChat(userId), 0, true), new UpdateHandler());
                     break;
                 }
                 case "lo":
@@ -131,14 +216,15 @@ public final class TelegramManager {
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             print("Not enough arguments");
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
         }
     }
 
     protected static void getMainChatList() {
         synchronized (mainChatList) {
-            //System.out.println(mainChatList + "=====================");
             if (!haveFullMainChatList) {
-                //System.out.println("ầdafsfasfaf");
                 // send LoadChats request if there are some unknown chats and have not enough known chats
                 client.send(new TdApi.LoadChats(new TdApi.ChatListMain(), 50), new MainChatListHandler());
                 return;
@@ -158,8 +244,6 @@ public final class TelegramManager {
 
         // create client
         client = Client.create(new UpdateHandler(), null, null);
-        // test Client.execute
-        //defaultHandler.onResult(Client.execute(new TdApi.GetTextEntities("@telegram /test_command https://telegram.org telegram.me @gif @test")));
         // main loop
         while (!needQuit) {
             // await authorization
@@ -180,24 +264,8 @@ public final class TelegramManager {
             } finally {
                 authorizationLock.unlock();
             }
-            System.out.println("Start Crawling basicgroup");
-            BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
-            bgCrawler.crawlBasicGroupInfo();
-            for (BasicGroup bs: bgCrawler.getCollection())
-            {
-                System.out.println(bs.getGroupName() + " - " + bs.getId() + " - " + bs.getChatId());
-            }
-            
-            //long[] userIds = {6173576926l, 6024238663l, 806954250l, 373610989l, 84210004l, 2134816269l};
-            //client.send(new TdApi.CreateNewBasicGroupChat(null, "aa", 0), new UpdateHandler());
-            //client.send(new TdApi.BanChatMember(-981850633l, new TdApi.MessageSenderChat(6173576926l), 0, true), new UpdateHandler());
-            System.out.println("Start Crawling supergroup");
-            SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
-            sgCrawler.crawlSuperGroupInfo(); 
-            System.out.println("Start Crawling user");   
-            UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
-            uCrawler.crawlUserInfo();
-            System.out.println("finish Crawling user");
+
+            updateData();
             while (haveAuthorization && haveFullMainChatList) {
                 getCommand();
             }
