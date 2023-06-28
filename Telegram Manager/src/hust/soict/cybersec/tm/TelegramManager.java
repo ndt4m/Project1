@@ -120,6 +120,10 @@ public final class TelegramManager {
 
     public static void updateData() throws InterruptedException
     {
+        System.out.println("Start Crawling supergroup");
+        SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
+        sgCrawler.crawlSuperGroupInfo(); 
+        targetSupergroups = sgCrawler.getCollection();
         System.out.println("Start Crawling basicgroup");
         BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
         bgCrawler.crawlBasicGroupInfo();
@@ -128,10 +132,6 @@ public final class TelegramManager {
         //long[] userIds = {6173576926l, 6024238663l, 806954250l, 373610989l, 84210004l, 2134816269l};
         //client.send(new TdApi.CreateNewBasicGroupChat(null, "aa", 0), new UpdateHandler());
         //client.send(new TdApi.BanChatMember(-981850633l, new TdApi.MessageSenderChat(6173576926l), 0, true), new UpdateHandler());
-        System.out.println("Start Crawling supergroup");
-        SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
-        sgCrawler.crawlSuperGroupInfo(); 
-        targetSupergroups = sgCrawler.getCollection();
         System.out.println("Start Crawling user");   
         UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
         uCrawler.crawlUserInfo();
@@ -139,6 +139,53 @@ public final class TelegramManager {
         System.out.println("finish Crawling user");
     }
 
+    public static void synchronize()
+    {
+        Client.setLogMessageHandler(0, new LogMessageHandler());
+
+        // disable TDLib log and redirect fatal errors and plain log messages to a file
+        Client.execute(new TdApi.SetLogVerbosityLevel(0));
+        if (Client.execute(new TdApi.SetLogStream(new TdApi.LogStreamFile("tdlib.log", 1 << 27, false))) instanceof TdApi.Error) {
+            throw new IOError(new IOException("Write access to the current directory is required"));
+        }
+
+        client = Client.create(new UpdateHandler(), null, null);
+        authorizationLock.lock();
+            try {
+                while (!haveAuthorization) {
+                    try {
+                        gotAuthorization.await();
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            } finally {
+                authorizationLock.unlock();
+            }
+            getMainChatList();
+            authorizationLock.lock();
+            try {
+                while (!haveFullMainChatList) {
+                    try {
+                        gotAuthorization.await();
+                    } catch (InterruptedException e) {
+                        // TODO Auto-generated catch block
+                        e.printStackTrace();
+                    }
+                }
+            } finally {
+                authorizationLock.unlock();
+            }
+
+        try {
+            updateData();
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+    
     private static void getCommand() {
         String command = promptString(commandsLine);
         // System.out.println(command+"================================");
