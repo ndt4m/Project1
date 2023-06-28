@@ -192,6 +192,10 @@ public final class TelegramManager {
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
+                case "gu": {
+                    client.send(new TdApi.GetUser(5846793443l), defaultHandler);
+                    break;
+                }
                 case "update": {
                     updateData();
                     break;
@@ -313,6 +317,7 @@ public final class TelegramManager {
             }
 
             updateData();
+            System.out.println(targetUsers.size());
             while (haveAuthorization && haveFullMainChatList) {
                 getCommand();
             }

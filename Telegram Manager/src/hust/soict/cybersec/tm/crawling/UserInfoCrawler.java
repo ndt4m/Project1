@@ -106,18 +106,18 @@ public class UserInfoCrawler extends Crawler<User>
             findUserBasicGroupIds(id);
             findUserSuperGroupIds(id);
             blockingSend(new TdApi.GetUser(id), updateUserHandler);
-            System.out.println("id: " + id);
-            System.out.println("firstName: " + firstName);
-            System.out.println("lastName: " + lastName);
-            System.out.println("userName: " + userName);
-            System.out.println("phoneNumber: " + phoneNumber);
-            System.out.println("isScam: " + isScam);
-            System.out.println("isFake: " + isFake);
-            System.out.println("languageCode: " + languageCode);
-            System.out.println("type: " + type);
-            System.out.println("user_basic_group_ids: " + user_basic_group_ids);
-            System.out.println("user_super_group_ids: " + user_super_group_ids);
-            System.out.println("====================================================================");
+            // System.out.println("id: " + id);
+            // System.out.println("firstName: " + firstName);
+            // System.out.println("lastName: " + lastName);
+            // System.out.println("userName: " + userName);
+            // System.out.println("phoneNumber: " + phoneNumber);
+            // System.out.println("isScam: " + isScam);
+            // System.out.println("isFake: " + isFake);
+            // System.out.println("languageCode: " + languageCode);
+            // System.out.println("type: " + type);
+            // System.out.println("user_basic_group_ids: " + user_basic_group_ids);
+            // System.out.println("user_super_group_ids: " + user_super_group_ids);
+            // System.out.println("====================================================================");
             this.addCollection(new User(id, 
                                         firstName, 
                                         lastName, 

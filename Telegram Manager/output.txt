@@ -1,3 +1,5 @@
-Ok {
+Error {
+  code = 400
+  message = "User not found"
 }
 

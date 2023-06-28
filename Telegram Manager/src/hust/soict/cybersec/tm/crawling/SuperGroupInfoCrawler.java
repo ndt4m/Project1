@@ -144,6 +144,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                                               botCommands, 
                                               messages));
                 //System.out.println(messages.size());
+                System.out.println("GroupName: "+groupName);
             }
             // if (!adminIds.isEmpty())
             // {
