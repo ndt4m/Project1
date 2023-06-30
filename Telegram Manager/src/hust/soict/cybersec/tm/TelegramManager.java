@@ -9,123 +9,33 @@ import hust.soict.cybersec.tm.crawling.UserInfoCrawler;
 import hust.soict.cybersec.tm.entity.BasicGroup;
 import hust.soict.cybersec.tm.entity.SuperGroup;
 import hust.soict.cybersec.tm.entity.User;
+import hust.soict.cybersec.tm.utils.Base;
+import hust.soict.cybersec.tm.utils.LogMessageHandler;
+import hust.soict.cybersec.tm.utils.UpdateHandler;
 
-import java.io.BufferedReader;
 import java.io.IOError;
 import java.io.IOException;
-import java.io.InputStreamReader;
+
 import java.util.List;
-import java.util.NavigableSet;
-import java.util.TreeSet;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.concurrent.ConcurrentMap;
-import java.util.concurrent.locks.Condition;
-import java.util.concurrent.locks.Lock;
-import java.util.concurrent.locks.ReentrantLock;
+import java.util.Map;
 
-public final class TelegramManager {
-    protected static Client client = null;
 
-    protected static TdApi.AuthorizationState authorizationState = null;
-    protected static volatile boolean haveAuthorization = false;
-    protected static volatile boolean needQuit = false;
-    protected static volatile boolean canQuit = false;
+public final class TelegramManager extends Base{
     
-    private static final Client.ResultHandler defaultHandler = new DefaultHandler();
-
-    protected static final Lock authorizationLock = new ReentrantLock();
-    protected static final Condition gotAuthorization = authorizationLock.newCondition();
-
-    protected static final ConcurrentMap<Long, TdApi.BasicGroup> basicGroups = new ConcurrentHashMap<Long, TdApi.BasicGroup>();
-    protected static final ConcurrentMap<Long, TdApi.Supergroup> supergroups = new ConcurrentHashMap<Long, TdApi.Supergroup>();
 
     private static List<BasicGroup> targetBasicGroups;
     private static List<SuperGroup> targetSupergroups;
     private static List<User> targetUsers;
 
-    protected static final ConcurrentMap<Long, TdApi.Chat> chats = new ConcurrentHashMap<Long, TdApi.Chat>();
-    protected static final NavigableSet<OrderedChat> mainChatList = new TreeSet<OrderedChat>();
-    protected static boolean haveFullMainChatList = false;
-
-    private static final String commandsLine = "Enter command (gcs - GetChats, gc <chatId> - GetChat, me - GetMe, gu <userId> - GetUser, sm <chatId> <message> - SendMessage, lo - LogOut, q - Quit): ";
-    private static volatile String currentPrompt = null;
-
-    protected static void print(String str) {
-        if (currentPrompt != null) {
-            System.out.println("");
-        }
-        System.out.println(str);
-        if (currentPrompt != null) {
-            System.out.print(currentPrompt);
-        }
-    }
-
-    protected static String promptString(String prompt) {
-        System.out.print(prompt);
-        currentPrompt = prompt;
-        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-        String str = "";
-        try {
-            str = reader.readLine();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        currentPrompt = null;
-        return str;
-    }
-
-    private static long mapGroupNameToId(String groupName) 
-    {
-        for (SuperGroup superGroup: targetSupergroups)
-        {
-            if (superGroup.getGroupName().equals(groupName))
-            {
-                return superGroup.getChatId();
-            }
-        }
-
-        for (BasicGroup basicGroup : targetBasicGroups)
-        {
-            if (basicGroup.getGroupName().equals(groupName))
-            {
-                return basicGroup.getChatId();
-            }
-        }
-        return -1l;
-    }
-
-    private static long mapUserNameToId(String userName)
-    {
-        for (User user: targetUsers)
-        {
-            if (user.getDisplayName().equals(userName))
-            {
-                return user.getId();
-            }
-        }
-        return -1l;
-    }
-
-    private static boolean isBasicGroup(String groupName)
-    {
-        for (BasicGroup basicGroup: targetBasicGroups)
-        {
-            if (basicGroup.getGroupName().equals(groupName))
-            {
-                return true;
-            }
-        }
-        return false;
-    }
 
     public static void updateData() throws InterruptedException
     {
         System.out.println("Start Crawling supergroup");
-        SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(supergroups, chats, client);
+        SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
         sgCrawler.crawlSuperGroupInfo(); 
         targetSupergroups = sgCrawler.getCollection();
         System.out.println("Start Crawling basicgroup");
-        BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(basicGroups, chats, client);
+        BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(chats, client);
         bgCrawler.crawlBasicGroupInfo();
         targetBasicGroups = bgCrawler.getCollection();
         
@@ -180,6 +90,8 @@ public final class TelegramManager {
 
         try {
             updateData();
+            
+
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
@@ -192,10 +104,10 @@ public final class TelegramManager {
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
-                case "gu": {
-                    client.send(new TdApi.GetUser(5846793443l), defaultHandler);
-                    break;
-                }
+                // case "gu": {
+                //     client.send(new TdApi.GetUser(5846793443l), defaultHandler);
+                //     break;
+                // }
                 case "update": {
                     updateData();
                     break;
@@ -223,44 +135,80 @@ public final class TelegramManager {
                         }
                         break;
                 }
-                case "addMembers": {
-                    long chatId = mapGroupNameToId(commands[1]);
-                    System.out.println(chatId);
-                    String[] userNames = commands[2].split("-");
-                    long[] userIds = new long[userNames.length];
-                    for (int i = 0; i < userNames.length; i++) 
+                case "am": {
+                    System.out.println("###################################################################");
+                    System.out.println("Basic Group List:");
+                    for (BasicGroup bsg: targetBasicGroups)
                     {
-                        userIds[i] = mapUserNameToId(userNames[i]);
-                        System.out.println(userIds[i]);
+                        System.out.println(bsg.getGroupName() + ": " + bsg.getChatId());
                     }
-
-                    if (isBasicGroup(commands[1]))
+                    System.out.println("Super Groups List: ");
+                    for (SuperGroup sg: targetSupergroups)
+                    {   
+                        System.out.println(sg.getGroupName() + ": " + sg.getChatId());
+                    }
+                    System.out.println("User List: ");
+                    for (User u: targetUsers)
                     {
-                        for (int i = 0; i < userIds.length; i++)
+                        System.out.println(u.getDisplayName() + ": " + u.getId());
+                    }
+                    
+                    for (Map.Entry<Long, TdApi.Chat> chat : chats.entrySet())
+                    {
+                        if (chat.getValue().type.getConstructor() == TdApi.ChatTypePrivate.CONSTRUCTOR)
                         {
-                            client.send(new TdApi.AddChatMember(chatId, userIds[i], 0), new UpdateHandler());
+                            System.out.println(chat.getValue().title + ": " + ((TdApi.ChatTypePrivate) chat.getValue().type).userId);
+                        }
+                        else if (chat.getValue().type.getConstructor() == TdApi.ChatTypeSecret.CONSTRUCTOR)
+                        {
+                            System.out.println(chat.getValue().title + ": " + ((TdApi.ChatTypeSecret) chat.getValue().type).userId);
                         }
                     }
-                    else
-                    {
-                        client.send(new TdApi.AddChatMembers(chatId, userIds), new UpdateHandler());
-                    }
+                    String chatId = promptString("Enter group Id: ");
+                    String UserId = promptString("Enter user Id: ");
+                    client.send(new TdApi.AddChatMember(Long.parseLong(chatId), Long.parseLong(UserId), 0), new UpdateHandler());
                     break;
+                    
                 }
-                case "kickUser": {
-                    long chatId = mapGroupNameToId(commands[1]);
-                    long userId = mapUserNameToId(commands[2]);
-                    client.send(new TdApi.BanChatMember(chatId, new TdApi.MessageSenderChat(userId), 0, true), new UpdateHandler());
+                case "ku": {
+                    client.send(new TdApi.BanChatMember(Long.parseLong(commands[1]), new TdApi.MessageSenderChat(Long.parseLong(commands[2])), 0, true), new UpdateHandler());
                     break;
                 }
                 case "lo":
+                    needQuit = true;
                     haveAuthorization = false;
-                    client.send(new TdApi.LogOut(), defaultHandler);
+                    client.send(new TdApi.LogOut(), new Client.ResultHandler() {
+                        @Override
+                        public void onResult(TdApi.Object object) 
+                        {
+                            switch (object.getConstructor()) 
+                            {
+                                case TdApi.Ok.CONSTRUCTOR:
+                                    System.out.println("All local data will be destroyed");
+                                    break;
+                                default:
+                                    System.err.println("[-] Receive an error: " + newLine + object);
+                            }
+                        }
+                    });
                     break;
                 case "q":
                     needQuit = true;
                     haveAuthorization = false;
-                    client.send(new TdApi.Close(), defaultHandler);
+                    client.send(new TdApi.Close(), new Client.ResultHandler() {
+                        @Override
+                        public void onResult(TdApi.Object object) 
+                        {
+                            switch (object.getConstructor()) 
+                            {
+                                case TdApi.Ok.CONSTRUCTOR:
+                                    System.out.println("All databases will be flushed to disk and properly closed.");
+                                    break;
+                                default:
+                                    System.err.println("[-] Receive an error: " + newLine + object);
+                            }
+                        }
+                    });
                     break;
                 default:
                     System.err.println("Unsupported command: " + command);
@@ -270,16 +218,6 @@ public final class TelegramManager {
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
-    }
-
-    protected static void getMainChatList() {
-        synchronized (mainChatList) {
-            if (!haveFullMainChatList) {
-                // send LoadChats request if there are some unknown chats and have not enough known chats
-                client.send(new TdApi.LoadChats(new TdApi.ChatListMain(), 50), new MainChatListHandler());
-                return;
-            }
         }
     }
     
@@ -315,9 +253,7 @@ public final class TelegramManager {
             } finally {
                 authorizationLock.unlock();
             }
-
-            updateData();
-            System.out.println(targetUsers.size());
+            //updateData();
             while (haveAuthorization && haveFullMainChatList) {
                 getCommand();
             }
@@ -328,3 +264,163 @@ public final class TelegramManager {
     }
 
 }
+// ‘’’package com.project.main;
+
+// import com.project.createchannels.CreateChannels;
+// import com.project.slackdatafetching.*;
+// import com.project.inviteusers.*;
+
+// import java.io.IOException;
+// import java.io.BufferedReader;
+// import java.io.InputStreamReader;
+// import java.util.*;
+
+// public class Main {
+
+// 	private static Scanner sc = new Scanner(System.in);
+
+// 	public static void main(String[] args) throws Exception {
+// 		//autoFetching();
+// 		showlogo();
+// 		showMenu();
+// 		sc.close();
+// 	}
+
+// 	public static void showlogo() {
+// 		String logo = "\n  _  _  _  _  _.---------------.\n"
+// 				+ ".'\\__\\'\\__\\'\\__\\'\\__\\'\\__,`   .  __
+// _ \\\n"
+// 				+ "|\\/ _\\/ __\\/ __\\/ __\\/ _:\\   |`.  \\  \\__ \\\n"
+// 				+ " \\\\'\\__\\'\\__\\'\\__\\'\\__\\'\\_.__|\"\". \\  \\___ \\\n"
+// 				+ "  \\\\/ _\\/ __\\/ __\\/ __\\/ _:                \\\n"
+// 				+ "   \\\\'\\__\\'\\__\\'\\__\\ \\__\\'\\_;-----------------`\n"
+// 				+ "    \\\\/   \\/   \\/   \\/   \\/ :               tk|\n"
+// 				+ "     \\|______________________;________________|\n";
+
+// 		String title = "WELCOME TO SLACK MANAGEMENT PROGRAM!";
+// 		int width = 60;
+// 		String line = "-".repeat(width);
+		
+// 		System.out.println(logo);
+// 		System.out.println(line);
+// 		System.out.println(centerString(title, width));
+// 		System.out.println(line);
+// 	}
+
+// 	public static void showMenu() throws Exception {
+// 		String menu = "\nPlease select an option:\n\n" + "1. Show Slack's channels\n"
+// 				+ "2. Show Slack user's information\n" + "3. Create a channels\n" + "4. Invite user to channel\n" + "5. User management\n"
+// 				+ "0. Exit\n\n" + "Enter your choice (1-5): ";
+// 		System.out.print(menu);
+// 		int option = sc.nextInt();
+		
+// 		switch (option) {
+// 		case 0:
+// 			System.out.println("Program ended");
+// 			break;
+// 		case 1:
+// 			showChannels();
+// 			break;
+// 		case 2:
+// 			showUsers();
+// 			break;
+// 		case 3:
+// 			createChannel();
+// 			break;
+//     		case 4:
+// 			inviteUser();
+// 			break;
+// 		case 5:
+// 			manageUsers();
+// 			break;
+// 		default:
+// 			System.out.println("Invalid input!");
+// 			showMenu();
+// 			break;
+// 		}
+// 	}
+
+// 	public static void autoFetching() {
+// 		try {
+// 			SlackDataFetching.airtableFetching();
+// 		} catch (IOException e) {
+// 			// TODO Auto-generated catch block
+// 			e.printStackTrace();
+// 		}
+// 	}
+
+// 	public static void showUsers() throws Exception {
+// 		SlackDataFetching.printUsers();
+// 		System.out.println("Press Enter key to get back...");
+// 		System.in.read();
+// 		showMenu();
+// 	}
+
+// 	public static void showChannels() throws Exception {
+// 		SlackDataFetching.printChannels();
+// 		System.out.println("Press Enter key to get back...");
+// 		System.in.read();
+// 		showMenu();
+// 	}
+
+// 	public static void createChannel() throws Exception {
+// 		// create channel bang slack API
+// 		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+// 		System.out.print("Note: Channel names have a 21-character limit and can include lowercase letters, non-Latin characters, numbers, and hyphens.\nEnter channel's name:\n");
+// 		String channelName = reader.readLine();
+// 		if (channelName.trim().isEmpty()) {
+// 			System.out.println("Channel name cannot be empty.");
+// 			System.out.println("Press Enter to get back...");
+// 			System.in.read();
+// 			showMenu();
+// 		}		
+    
+// 		System.out.print("Enter '0' for private channel or '1' for public channel:\n");
+// 		String channelType = reader.readLine();
+// 		boolean isPrivate = false;
+
+// 		while (!channelType.equals("0") && !channelType.equals("1")) {
+// 		    System.out.println("Invalid input! Please enter '0' for private channel or '1' for public channel:");
+// 		    channelType = reader.readLine();
+// 		}
+
+// 		isPrivate = channelType.equals("0");
+		
+// 		System.out.print("Enter channel' description (optional):\n");
+// 		String description = reader.readLine();
+// 		CreateChannels.createChannel(channelName, description, isPrivate);
+//     System.out.println("Press Enter key to get back...");
+// 		System.in.read();
+// 		showMenu();
+// 	}
+
+// 	public static void inviteUser() throws Exception {
+// 		//for debug
+// 		System.out.println("inviteUser");
+// 		InviteUsers.inviteUser();
+//     System.out.println("Press Enter key to get back...");
+// 		System.in.read();
+// 		showMenu();
+// 	}
+
+// 	public static void manageUsers() {
+// 		//for debug
+// 		System.out.println("manageUsers");
+// 		System.out.println("Press Enter key to get back...");
+// 		System.in.read();
+// 		showMenu();
+// 	}
+
+// 	public static String centerString(String text, int width) {
+// 		if (text.length() > width) {
+// 			return text.substring(0, width);
+// 		} else {
+// 			int padding = width - text.length();
+// 			int leftPadding = padding / 2;
+// 			int rightPadding = padding - leftPadding;
+// 			return " ".repeat(leftPadding) + text + " ".repeat(rightPadding);
+// 		}
+// 	}
+
+// }
+// ‘’’

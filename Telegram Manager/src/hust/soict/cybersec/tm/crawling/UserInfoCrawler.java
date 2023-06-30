@@ -118,7 +118,9 @@ public class UserInfoCrawler extends Crawler<User>
             // System.out.println("user_basic_group_ids: " + user_basic_group_ids);
             // System.out.println("user_super_group_ids: " + user_super_group_ids);
             // System.out.println("====================================================================");
-            this.addCollection(new User(id, 
+            if (!type.equals("bot user"))
+            {
+                this.addCollection(new User(id, 
                                         firstName, 
                                         lastName, 
                                         userName, 
@@ -129,6 +131,7 @@ public class UserInfoCrawler extends Crawler<User>
                                         type, 
                                         user_basic_group_ids, 
                                         user_super_group_ids));
+            }
             redefinedAttributes();
         }
     }
