@@ -1,8 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="fb34cc7d-3703-4463-a427-527932847ce5" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/Project1/Telegram Manager/src/hust/soict/cybersec/tm/AirTable/Record.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Telegram Manager/src/hust/soict/cybersec/tm/AirTable/Record.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/github_docker_java_transport_httpclient5.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/google_api_client_gson.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/New Commit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/New Commit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/Telegram Manager/src/hust/soict/cybersec/tm/TelegramManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Telegram Manager/src/hust/soict/cybersec/tm/TelegramManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Project1/Telegram Manager/src/hust/soict/cybersec/tm/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/Project1/Telegram Manager/src/hust/soict/cybersec/tm/entity/User.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,9 +38,17 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Downloaded.Files.Path.Enabled": "false",
+    "Repository.Attach.Annotations": "false",
+    "Repository.Attach.JavaDocs": "false",
+    "Repository.Attach.Sources": "false",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/anhnh/OneDrive/Desktop/New Commit"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/anhnh/OneDrive/Desktop/New Commit/Project1",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
