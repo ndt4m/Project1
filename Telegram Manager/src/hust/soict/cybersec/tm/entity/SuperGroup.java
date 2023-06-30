@@ -31,6 +31,89 @@ public class SuperGroup
     // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
     private List<TdApi.Message> messages = new ArrayList<>();
 
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public void setChatId(long chatId) {
+        this.chatId = chatId;
+    }
+
+    public void setGroupName(String groupName) {
+        this.groupName = groupName;
+    }
+
+    public TdApi.ChatPermissions getPermissions() {
+        return permissions;
+    }
+
+    public void setPermissions(TdApi.ChatPermissions permissions) {
+        this.permissions = permissions;
+    }
+
+    public int getMessageAutoDeleteTime() {
+        return messageAutoDeleteTime;
+    }
+
+    public void setMessageAutoDeleteTime(int messageAutoDeleteTime) {
+        this.messageAutoDeleteTime = messageAutoDeleteTime;
+    }
+
+    public int getMemberCount() {
+        return memberCount;
+    }
+
+    public void setMemberCount(int memberCount) {
+        this.memberCount = memberCount;
+    }
+
+    public boolean isCanGetMembers() {
+        return canGetMembers;
+    }
+
+    public void setCanGetMembers(boolean canGetMembers) {
+        this.canGetMembers = canGetMembers;
+    }
+
+    public boolean isAllHistoryAvailable() {
+        return isAllHistoryAvailable;
+    }
+
+    public void setAllHistoryAvailable(boolean allHistoryAvailable) {
+        isAllHistoryAvailable = allHistoryAvailable;
+    }
+
+    public Set<Long> getAdminIds() {
+        return adminIds;
+    }
+
+    public void setAdminIds(Set<Long> adminIds) {
+        this.adminIds = adminIds;
+    }
+
+    public void setMemberIds(Set<Long> memberIds) {
+        this.memberIds = memberIds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setInviteLink(String inviteLink) {
+        this.inviteLink = inviteLink;
+    }
+
+    public List<TdApi.Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<TdApi.Message> messages) {
+        this.messages = messages;
+    }
 
     public SuperGroup()
     {

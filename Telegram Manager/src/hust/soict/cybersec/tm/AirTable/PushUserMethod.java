@@ -5,7 +5,7 @@ import hust.soict.cybersec.tm.entity.User;
 
 import java.util.List;
 
-public class PushMethod {
+public class PushUserMethod {
     public void pushMethod(List<User> List_of_user){
         if(List_of_user != null){
             System.out.println("UserList exists");
@@ -19,6 +19,9 @@ public class PushMethod {
                 fields.addProperty("LastName", user.getLastName());
                 fields.addProperty("UserName", user.getUserName());
                 fields.addProperty("PhoneNumber", user.getPhoneNumber());
+                fields.addProperty("IsScam", user.isScam());
+                fields.addProperty("IsFake", user.isFake());
+                System.out.println(fields);
 
                 //Set table AirTable parameters
                 String tableId = "tblJZJWSIFCNzjFyW";

@@ -1,5 +1,8 @@
 package hust.soict.cybersec.tm;
 
+import hust.soict.cybersec.tm.AirTable.PushBasicGroupMethod;
+import hust.soict.cybersec.tm.AirTable.PushSuperGroupMethod;
+import hust.soict.cybersec.tm.AirTable.PushUserMethod;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
@@ -101,7 +104,8 @@ public final class TelegramManager extends Base{
 
         try {
             updateData();
-            
+            PushUserMethod pushUser = new PushUserMethod();
+            pushUser.pushMethod(targetUsers);
 
         } catch (InterruptedException e) {
             // TODO Auto-generated catch block
@@ -118,9 +122,19 @@ public final class TelegramManager extends Base{
                 // case "gu": {
                 //     client.send(new TdApi.GetUser(5846793443l), defaultHandler);
                 //     break;
-                // }
+                // }\
+                case "sync":{
+                    synchronize();
+                    break;
+                }
                 case "update": {
                     updateData();
+                    PushUserMethod pushUser = new PushUserMethod();
+                    pushUser.pushMethod(targetUsers);
+                    PushBasicGroupMethod pushBasicGroup = new PushBasicGroupMethod();
+                    pushBasicGroup.pushMethod(targetBasicGroups);
+                    PushSuperGroupMethod pushSuperGroup = new PushSuperGroupMethod();
+                    pushSuperGroup.pushMethod(targetSupergroups);
                     break;
                 }
                 case "createBasicGroup": {

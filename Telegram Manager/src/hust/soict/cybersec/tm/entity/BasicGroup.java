@@ -21,7 +21,38 @@ public class BasicGroup {
     private String inviteLink;
     // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
     private List<TdApi.Message> messages = new ArrayList<>();
-    
+
+    public void setChatId(long chatId) {
+        this.chatId = chatId;
+    }
+
+    public int getMessageAutoDeleteTime() {
+        return messageAutoDeleteTime;
+    }
+
+    public void setAdminIds(List<Long> adminIds) {
+        this.adminIds = adminIds;
+    }
+
+    public int getMemberCount() {
+        return memberCount;
+    }
+
+    public void setMemberIds(List<Long> memberIds) {
+        this.memberIds = memberIds;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public List<TdApi.Message> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<TdApi.Message> messages) {
+        this.messages = messages;
+    }
 
     public BasicGroup()
     {

@@ -19,6 +19,7 @@ public class User
 
     // Getter
 
+
     public String getFirstName() {
         return firstName;
     }
