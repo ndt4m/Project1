@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="td">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Telegram Manager/lib/td.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
