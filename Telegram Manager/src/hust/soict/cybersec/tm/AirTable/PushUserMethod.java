@@ -1,5 +1,6 @@
 package hust.soict.cybersec.tm.AirTable;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import hust.soict.cybersec.tm.entity.User;
 
@@ -21,6 +22,25 @@ public class PushUserMethod {
                 fields.addProperty("PhoneNumber", user.getPhoneNumber());
                 fields.addProperty("IsScam", user.isScam());
                 fields.addProperty("IsFake", user.isFake());
+
+                // Create Link records for basicGroupIds
+                JsonArray basicGroupIds = new JsonArray();
+                for (Long groupId : user.getUser_basic_group_ids()) {
+                    JsonObject linkObject = new JsonObject();
+                    linkObject.addProperty("ID", groupId.toString());
+                    basicGroupIds.add(linkObject);
+                }
+                fields.add("InBasicGroup", basicGroupIds);
+
+                // Create Link records for superGroupIds
+                JsonArray superGroupIds = new JsonArray();
+                for (Long groupId : user.getUser_super_group_ids()) {
+                    JsonObject linkObject = new JsonObject();
+                    linkObject.addProperty("ID", groupId.toString());
+                    superGroupIds.add(linkObject);
+                }
+                fields.add("InSuperGroup", superGroupIds);
+
                 System.out.println(fields);
 
                 //Set table AirTable parameters
