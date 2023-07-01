@@ -235,23 +235,55 @@ public class UpdateHandler implements Client.ResultHandler
                 System.err.println("\n[-] Receive an error: " + ((TdApi.Error) object).message);
                 break;
             }
+            
             case TdApi.UpdateUserFullInfo.CONSTRUCTOR:
                 //System.out.println("====================================update user full info======================================");
                 TdApi.UpdateUserFullInfo updateUserFullInfo = (TdApi.UpdateUserFullInfo) object;
                 TelegramManager.usersFullInfo.put(updateUserFullInfo.userId, updateUserFullInfo.userFullInfo);
                 break;
             case TdApi.UpdateBasicGroupFullInfo.CONSTRUCTOR:
-                //System.out.println("====================================update basic group full info======================================");
+                System.out.println("====================================update basic group full info======================================");
                 TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
                 TelegramManager.basicGroupsFullInfo.put(updateBasicGroupFullInfo.basicGroupId, updateBasicGroupFullInfo.basicGroupFullInfo);
+                //System.out.println(object.toString());
                 break;
             case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
-                //System.out.println("====================================update super group full info======================================");
+                System.out.println("====================================update super group full info======================================");
                 TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
                 TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
                 break;
+            case TdApi.UpdateOption.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateChatOnlineMemberCount.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateHavePendingNotifications.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateConnectionState.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateUnreadChatCount.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateChatFolders.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateScopeNotificationSettings.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateUnreadMessageCount.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateDefaultReactionType.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateAnimationSearchParameters.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateAttachmentMenuBots.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateDiceEmojis.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateActiveEmojiReactions.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateChatThemes.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateSelectedBackground.CONSTRUCTOR:
+                break;
             default:
-                    //TelegramManager.print("Unsupported update:\n" + object);
+                TelegramManager.print("Unsupported update:\n" + object);
         }
     }
 }

@@ -67,6 +67,10 @@ public final class TelegramManager extends Base{
                     }
                 }
             });
+            if (chat.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR)
+            {
+                client.send(new TdApi.GetBasicGroupFullInfo(((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId), new UpdateHandler());
+            }
         }
     }
 
@@ -123,6 +127,7 @@ public final class TelegramManager extends Base{
         System.out.println("Please choose a number: 0-1-2-3");
         System.out.print("Your choise is: ");
     }
+
     public static void synchronize()
     {
         

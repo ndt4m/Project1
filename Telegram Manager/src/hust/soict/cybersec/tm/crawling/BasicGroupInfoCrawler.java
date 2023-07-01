@@ -79,44 +79,45 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             // memberCount = basicGroups.get(id).memberCount;
 
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
-            //System.out.println("-----------------------------");
-            blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
-            
-            blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
-            int oldSize = messages.size();
-            while (messages.size() <= 1000)
+            if (adminIds.contains(2134816269l))
             {
-                blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
-                if (oldSize != messages.size())
+                blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
+            
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
+                int oldSize = messages.size();
+                while (messages.size() <= 1000)
                 {
-                    oldSize = messages.size();
-                    continue;
+                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
+                    if (oldSize != messages.size())
+                    {
+                        oldSize = messages.size();
+                        continue;
+                    }
+                    break;
                 }
-                break;
+                //System.out.println(messages.size());
+                // System.out.println(messages.get(0));
+                //System.out.println("=====" + memberIds);
+                this.addCollection(new BasicGroup(id,
+                                                  chatId,
+                                                  groupName, 
+                                                  permissions, 
+                                                //   (canBeDeletedForAllUsers == 1) ? true : false, 
+                                                //   (canBeDeletedOnlyForSelf == 1) ? true : false, 
+                                                //   (defaultDisableNotification == 1) ? true : false, 
+                                                  messageAutoDeleteTime, 
+                                                  adminIds, 
+                                                  memberCount, 
+                                                  memberIds, 
+                                                  description, 
+                                                  inviteLink, 
+                                                //   botCommands, 
+                                                  messages));
+                        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
+                // System.out.println("Group name: " + groupName);
+                redefinedAttributes();
+                        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
             }
-            //System.out.println(messages.size());
-            // System.out.println(messages.get(0));
-            //System.out.println("=====" + memberIds);
-            this.addCollection(new BasicGroup(id,
-                                              chatId,
-                                              groupName, 
-                                              permissions, 
-                                            //   (canBeDeletedForAllUsers == 1) ? true : false, 
-                                            //   (canBeDeletedOnlyForSelf == 1) ? true : false, 
-                                            //   (defaultDisableNotification == 1) ? true : false, 
-                                              messageAutoDeleteTime, 
-                                              adminIds, 
-                                              memberCount, 
-                                              memberIds, 
-                                              description, 
-                                              inviteLink, 
-                                            //   botCommands, 
-                                              messages));
-                    //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
-            // System.out.println("Group name: " + groupName);
-            redefinedAttributes();
-                    //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
-
         }
 
         //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");

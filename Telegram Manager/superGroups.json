@@ -73,11 +73,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 80590.43287682533,
-=======
-        "autoDeleteIn": 71172.36475944519,
->>>>>>> Stashed changes
+        "autoDeleteIn": 65193.480843544006,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -147,11 +143,7 @@
                 "width": 128,
                 "height": 128,
                 "file": {
-<<<<<<< Updated upstream
-                  "id": 1444,
-=======
                   "id": 406,
->>>>>>> Stashed changes
                   "size": 2994,
                   "expectedSize": 2994,
                   "local": {
@@ -165,11 +157,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-<<<<<<< Updated upstream
                     "id": "AAMCAQADFQABZKASNFToFGvtj2NEK5kI96dlBAoAAhUCAAKH1zFHziumzPL3qxgBAAdtAAMvBA",
-=======
-                    "id": "AAMCAQADFQABZKAz7S67Stc5Sqo6enhMDjDO06cAAhUCAAKH1zFHziumzPL3qxgBAAdtAAMvBA",
->>>>>>> Stashed changes
                     "uniqueId": "AQADFQIAAofXMUdy",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -178,11 +166,7 @@
                 }
               },
               "sticker": {
-<<<<<<< Updated upstream
-                "id": 1443,
-=======
                 "id": 407,
->>>>>>> Stashed changes
                 "size": 7096,
                 "expectedSize": 7096,
                 "local": {
@@ -196,11 +180,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-<<<<<<< Updated upstream
                   "id": "CAACAgEAAxUAAWSgEjRU6BRr7Y9jRCuZCPenZQQKAAIVAgACh9cxR84rpszy96sYLwQ",
-=======
-                  "id": "CAACAgEAAxUAAWSgM-0uu0rXOUqqOnp4TA4wztOnAAIVAgACh9cxR84rpszy96sYLwQ",
->>>>>>> Stashed changes
                   "uniqueId": "AgADFQIAAofXMUc",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -257,11 +237,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 80584.43282175064,
-=======
-        "autoDeleteIn": 71166.36469388008,
->>>>>>> Stashed changes
+        "autoDeleteIn": 65187.48078417778,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -834,11 +810,7 @@
               "width": 128,
               "height": 128,
               "file": {
-<<<<<<< Updated upstream
-                "id": 2316,
-=======
-                "id": 1464,
->>>>>>> Stashed changes
+                "id": 1471,
                 "size": 6710,
                 "expectedSize": 6710,
                 "local": {
@@ -852,11 +824,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-<<<<<<< Updated upstream
                   "id": "AAMCAgADHQR1uwy1AAMQZKASPANaj2u7toIm2RETX1nPyVEAApYKAAJl10hKnguVY2_8T-ABAAdtAAMvBA",
-=======
-                  "id": "AAMCAgADHQR1uwy1AAMQZKAz8ZeSm1ngNbBfLWK7-PpYpKoAApYKAAJl10hKnguVY2_8T-ABAAdtAAMvBA",
->>>>>>> Stashed changes
                   "uniqueId": "AQADlgoAAmXXSEpy",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -865,11 +833,7 @@
               }
             },
             "sticker": {
-<<<<<<< Updated upstream
-              "id": 2317,
-=======
-              "id": 1465,
->>>>>>> Stashed changes
+              "id": 1472,
               "size": 21341,
               "expectedSize": 21341,
               "local": {
@@ -883,11 +847,7 @@
                 "downloadedSize": 0
               },
               "remote": {
-<<<<<<< Updated upstream
                 "id": "CAACAgIAAx0EdbsMtQADEGSgEjwDWo9ru7aCJtkRE19Zz8lRAAKWCgACZddISp4LlWNv_E_gLwQ",
-=======
-                "id": "CAACAgIAAx0EdbsMtQADEGSgM_GXkptZ4DWwXy1iu_j6WKSqAAKWCgACZddISp4LlWNv_E_gLwQ",
->>>>>>> Stashed changes
                 "uniqueId": "AgADlgoAAmXXSEo",
                 "isUploadingActive": false,
                 "isUploadingCompleted": true,
@@ -939,11 +899,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64947.43274688721,
-=======
-        "autoDeleteIn": 55529.36463737488,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49550.48071026802,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1013,11 +969,7 @@
                 "width": 128,
                 "height": 128,
                 "file": {
-<<<<<<< Updated upstream
-                  "id": 1436,
-=======
                   "id": 396,
->>>>>>> Stashed changes
                   "size": 3816,
                   "expectedSize": 3816,
                   "local": {
@@ -1031,11 +983,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-<<<<<<< Updated upstream
                     "id": "AAMCAQADFQABZKASNNggtwQMfZoSgQk-brIF4VYAAgkCAAKIHilH6wp76aVRR4QBAAdtAAMvBA",
-=======
-                    "id": "AAMCAQADFQABZKAz7YxfW61LpgnJsqrVu-asFwADCQIAAogeKUfrCnvppVFHhAEAB20AAy8E",
->>>>>>> Stashed changes
                     "uniqueId": "AQADCQIAAogeKUdy",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1044,11 +992,7 @@
                 }
               },
               "sticker": {
-<<<<<<< Updated upstream
-                "id": 1435,
-=======
                 "id": 397,
->>>>>>> Stashed changes
                 "size": 16679,
                 "expectedSize": 16679,
                 "local": {
@@ -1062,11 +1006,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-<<<<<<< Updated upstream
                   "id": "CAACAgEAAxUAAWSgEjTYILcEDH2aEoEJPm6yBeFWAAIJAgACiB4pR-sKe-mlUUeELwQ",
-=======
-                  "id": "CAACAgEAAxUAAWSgM-2MX1utS6YJybKq1bvmrBcAAwkCAAKIHilH6wp76aVRR4QvBA",
->>>>>>> Stashed changes
                   "uniqueId": "AgADCQIAAogeKUc",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -1123,11 +1063,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64923.432725191116,
-=======
-        "autoDeleteIn": 55505.36461186409,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49526.480664014816,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1197,11 +1133,7 @@
                 "width": 128,
                 "height": 128,
                 "file": {
-<<<<<<< Updated upstream
-                  "id": 1290,
-=======
                   "id": 216,
->>>>>>> Stashed changes
                   "size": 4352,
                   "expectedSize": 4352,
                   "local": {
@@ -1215,11 +1147,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-<<<<<<< Updated upstream
                     "id": "AAMCAQADFQABZKASNNnxn1E20alTRqKC_iW9kcIAAh8DAAIIvDFHauoAAfCMpRs3AQAHbQADLwQ",
-=======
-                    "id": "AAMCAQADFQABZKAz7b3ZfmalCU9rkKFEVbUglAsAAh8DAAIIvDFHauoAAfCMpRs3AQAHbQADLwQ",
->>>>>>> Stashed changes
                     "uniqueId": "AQADHwMAAgi8MUdy",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1228,11 +1156,7 @@
                 }
               },
               "sticker": {
-<<<<<<< Updated upstream
-                "id": 1289,
-=======
                 "id": 217,
->>>>>>> Stashed changes
                 "size": 11081,
                 "expectedSize": 11081,
                 "local": {
@@ -1246,11 +1170,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-<<<<<<< Updated upstream
                   "id": "CAACAgEAAxUAAWSgEjTZ8Z9RNtGpU0aigv4lvZHCAAIfAwACCLwxR2rqAAHwjKUbNy8E",
-=======
-                  "id": "CAACAgEAAxUAAWSgM-292X5mpQlPa5ChRFW1IJQLAAIfAwACCLwxR2rqAAHwjKUbNy8E",
->>>>>>> Stashed changes
                   "uniqueId": "AgADHwMAAgi8MUc",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -1307,11 +1227,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64828.432705402374,
-=======
-        "autoDeleteIn": 55410.36459326744,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49431.48063874245,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1365,11 +1281,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64698.432700634,
-=======
-        "autoDeleteIn": 55280.36458826065,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49301.48063278198,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1423,11 +1335,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64640.43269395828,
-=======
-        "autoDeleteIn": 55222.364584207535,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49243.48062682152,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1481,11 +1389,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64549.432690382004,
-=======
-        "autoDeleteIn": 55131.364577293396,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49152.480622291565,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1534,11 +1438,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64536.432686805725,
-=======
-        "autoDeleteIn": 55118.36457109451,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49139.48061466217,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1583,11 +1483,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64516.43268370628,
-=======
-        "autoDeleteIn": 55098.364567518234,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49119.48061108589,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1637,11 +1533,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 64500.43268108368,
-=======
-        "autoDeleteIn": 55082.36456537247,
->>>>>>> Stashed changes
+        "autoDeleteIn": 49103.48060822487,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2007,11 +1899,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.1535703248392344E7,
-=======
-        "autoDeleteIn": 3.1526285150733232E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.1520306175406456E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2056,11 +1944,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.1535395248370886E7,
-=======
-        "autoDeleteIn": 3.1525977150718927E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.1519998175392866E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2105,11 +1989,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.153516824836445E7,
-=======
-        "autoDeleteIn": 3.1525750150714636E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.1519771175388813E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2156,11 +2036,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.1531603248358488E7,
-=======
-        "autoDeleteIn": 3.1522185150709867E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.151620617538476E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2216,11 +2092,7 @@
         "messageThreadId": 5242880,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.1476491248354673E7,
-=======
-        "autoDeleteIn": 3.1467073150706053E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.1461094175381184E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2290,11 +2162,7 @@
                 "width": 128,
                 "height": 128,
                 "file": {
-<<<<<<< Updated upstream
-                  "id": 1408,
-=======
                   "id": 366,
->>>>>>> Stashed changes
                   "size": 3476,
                   "expectedSize": 3476,
                   "local": {
@@ -2308,11 +2176,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-<<<<<<< Updated upstream
                     "id": "AAMCAQADFQABZKASNBsFFzK2WaK1NRVA133vxeYAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
-=======
-                    "id": "AAMCAQADFQABZKAz7fySacdmeUPLKCWpR89l0UoAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
->>>>>>> Stashed changes
                     "uniqueId": "AQADKwIAAonnMUdy",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -2321,11 +2185,7 @@
                 }
               },
               "sticker": {
-<<<<<<< Updated upstream
-                "id": 1407,
-=======
                 "id": 367,
->>>>>>> Stashed changes
                 "size": 26992,
                 "expectedSize": 26992,
                 "local": {
@@ -2339,11 +2199,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-<<<<<<< Updated upstream
                   "id": "CAACAgEAAxUAAWSgEjQbBRcytlmitTUVQNd978XmAAIrAgACiecxR-k4peS9jIEvLwQ",
-=======
-                  "id": "CAACAgEAAxUAAWSgM-38kmnHZnlDyyglqUfPZdFKAAIrAgACiecxR-k4peS9jIEvLwQ",
->>>>>>> Stashed changes
                   "uniqueId": "AgADKwIAAonnMUc",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -2406,11 +2262,7 @@
         "messageThreadId": 4194304,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.147638524830675E7,
-=======
-        "autoDeleteIn": 3.1466967150658607E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.1460988175325394E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2486,11 +2338,7 @@
                 "width": 128,
                 "height": 128,
                 "file": {
-<<<<<<< Updated upstream
-                  "id": 492,
-=======
                   "id": 642,
->>>>>>> Stashed changes
                   "size": 3560,
                   "expectedSize": 3560,
                   "local": {
@@ -2504,11 +2352,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-<<<<<<< Updated upstream
                     "id": "AAMCAQADFQABZKASNOUCwwN3JnItsKjLMeeA1BQAAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
-=======
-                    "id": "AAMCAQADFQABZKAz7VTDPAX8AdODUszMZjTwd84AAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
->>>>>>> Stashed changes
                     "uniqueId": "AQADNQIAAm2mMUdy",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -2517,11 +2361,7 @@
                 }
               },
               "sticker": {
-<<<<<<< Updated upstream
-                "id": 491,
-=======
                 "id": 643,
->>>>>>> Stashed changes
                 "size": 10751,
                 "expectedSize": 10751,
                 "local": {
@@ -2535,11 +2375,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-<<<<<<< Updated upstream
                   "id": "CAACAgEAAxUAAWSgEjTlAsMDdyZyLbCoyzHngNQUAAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
-=======
-                  "id": "CAACAgEAAxUAAWSgM-1UwzwF_AHTg1LMzGY08HfOAAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
->>>>>>> Stashed changes
                   "uniqueId": "AgADNQIAAm2mMUc",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -2591,11 +2427,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 3.147606624827981E7,
-=======
-        "autoDeleteIn": 3.146664815063691E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 3.1460669175298452E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2767,11 +2599,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-<<<<<<< Updated upstream
-        "autoDeleteIn": 1.338393706145835E7,
-=======
-        "autoDeleteIn": 1.3374518905690908E7,
->>>>>>> Stashed changes
+        "autoDeleteIn": 1.3368539932185411E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
