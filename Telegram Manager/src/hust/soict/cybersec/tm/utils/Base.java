@@ -54,6 +54,15 @@ public class Base
             System.out.print(currentPrompt);
         }
     }
+    
+    public static long toLong(String arg) {
+        long result = 0;
+        try {
+            result = Long.parseLong(arg);
+        } catch (NumberFormatException ignored) {
+        }
+        return result;
+    }
 
     public static String promptString(String prompt) {
         System.out.print(prompt);

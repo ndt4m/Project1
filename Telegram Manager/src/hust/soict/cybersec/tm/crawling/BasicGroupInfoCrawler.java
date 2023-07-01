@@ -83,6 +83,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
             if (adminIds.contains(2134816269l))
             {
+<<<<<<< Updated upstream
                 //System.out.println("-----------------------------");
                 //blockingSend(new TdApi.OpenChat(chatId), updateBasicGroupHandler);
                 blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
@@ -91,6 +92,13 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                 int oldSize = messages.size();
                 while (0 < oldSize && messages.size() <= 1000)
                 {   
+=======
+                blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
+                int oldSize = messages.size();
+                while (messages.size() <= 1000)
+                {
+>>>>>>> Stashed changes
                     blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
                     if (oldSize != messages.size())
                     {
@@ -118,6 +126,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                                                 //   botCommands, 
                                                   messages));
                         //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
+<<<<<<< Updated upstream
                 // System.out.println("Group name: " + groupName + " - " + chatId);
                 // System.out.println("description: " + description);
                 // System.out.println("membersSize: " + memberCount);
@@ -129,6 +138,10 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                 // System.out.println("message: " + messages.get(0).content);
                 redefinedAttributes();
 
+=======
+                // System.out.println("Group name: " + groupName);
+                redefinedAttributes();
+>>>>>>> Stashed changes
                         //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
             }
 
@@ -199,7 +212,11 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                     }
                     break;
                 case TdApi.Error.CONSTRUCTOR:
+<<<<<<< Updated upstream
                     System.err.println("[-] Received an error when crawling basic group: " + ((TdApi.Error) object).message);
+=======
+                    System.err.println("\n[-] Received an error when crawling super group: " + ((TdApi.Error) object).message);
+>>>>>>> Stashed changes
                     break;
                 default:
                     //System.out.println("Unsported update in crawl basic group: \n" + object.toString());

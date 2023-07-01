@@ -12,7 +12,10 @@
     "user_basic_group_ids": [
       906873372,
       704076527,
+<<<<<<< Updated upstream
       981850633,
+=======
+>>>>>>> Stashed changes
       731085839
     ],
     "user_super_group_ids": [
@@ -22,8 +25,13 @@
   },
   {
     "id": 2134816269,
+<<<<<<< Updated upstream
     "firstName": "tamtam",
     "lastName": "gbggbbddsz",
+=======
+    "firstName": "xbxbxbxv",
+    "lastName": "oirbfbc",
+>>>>>>> Stashed changes
     "userName": "fapspfkjc",
     "phoneNumber": "84857864831",
     "isScam": false,

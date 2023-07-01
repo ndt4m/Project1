@@ -249,19 +249,25 @@ public class UpdateHandler implements Client.ResultHandler
                 //System.out.println("====================================update basic group full info======================================");
                 TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
                 TelegramManager.basicGroupsFullInfo.put(updateBasicGroupFullInfo.basicGroupId, updateBasicGroupFullInfo.basicGroupFullInfo);
+<<<<<<< Updated upstream
                 
                 //System.out.println("description: " + updateBasicGroupFullInfo.basicGroupFullInfo.description + "-" + updateBasicGroupFullInfo.basicGroupId);
+=======
+>>>>>>> Stashed changes
                 break;
             case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
                 //System.out.println("====================================update super group full info======================================");
                 TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
                 TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
+<<<<<<< Updated upstream
                 
                 //System.out.println("description: " + updateSupergroupFullInfo.supergroupId + "-" + updateSupergroupFullInfo.supergroupFullInfo.description);
                 break;
             case TdApi.UpdateChatOnlineMemberCount.CONSTRUCTOR:
                 break;
             case TdApi.UpdateOption.CONSTRUCTOR:
+=======
+>>>>>>> Stashed changes
                 break;
             default:
                     //TelegramManager.print("Unsupported update: " + object.getClass());

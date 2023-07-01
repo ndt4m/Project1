@@ -144,12 +144,16 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                                             //   botCommands, 
                                               messages));
                 //System.out.println(messages.size());
+<<<<<<< Updated upstream
                 // System.out.println("GroupName: "+groupName);
                 // System.out.println("description: " + description);
                 // System.out.println("membersSize: " + memberCount);
                 // System.out.println(memberIds);
                 // System.out.println("inviteLink: " + inviteLink);
                 // System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
+=======
+                //System.out.println("GroupName: "+groupName);
+>>>>>>> Stashed changes
             }
             // if (!adminIds.isEmpty())
             // {
@@ -178,7 +182,10 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     break;
                 case TdApi.SupergroupFullInfo.CONSTRUCTOR:
                     TdApi.SupergroupFullInfo supergroupFullInfo = (TdApi.SupergroupFullInfo) object;
+<<<<<<< Updated upstream
                     // memberCount = supergroupFullInfo.memberCount;
+=======
+>>>>>>> Stashed changes
                     description = supergroupFullInfo.description;
                     canGetMembers = supergroupFullInfo.canGetMembers ? 1 : 0;
                     isAllHistoryAvailable = supergroupFullInfo.isAllHistoryAvailable ? 1 : 0;
