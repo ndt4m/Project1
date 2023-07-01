@@ -2,8 +2,6 @@ package hust.soict.cybersec.tm.crawling;
 
 import org.drinkless.tdlib.TdApi;
 
-import hust.soict.cybersec.tm.TelegramManager;
-import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler.UpdateBasicGroupHandler;
 import hust.soict.cybersec.tm.entity.BasicGroup;
 
 import org.drinkless.tdlib.Client;
@@ -62,9 +60,9 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
 
     
     public void crawlBasicGroupInfo() throws InterruptedException
-    {   
+    {
         for (Map.Entry<Long, TdApi.Chat> chat : chats.entrySet())
-        {   
+        {
             if (chat.getValue().type.getConstructor() != TdApi.ChatTypeBasicGroup.CONSTRUCTOR)
             {
                 continue;
@@ -79,71 +77,45 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             // defaultDisableNotification = chat.getValue().defaultDisableNotification ? 1 : 0;
             messageAutoDeleteTime = chat.getValue().messageAutoDeleteTime;
             // memberCount = basicGroups.get(id).memberCount;
-            blockingSend(new TdApi.OpenChat(chatId), updateBasicGroupHandler);
-            blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
-            if (adminIds.contains(2134816269l))
-            {
-<<<<<<< Updated upstream
-                //System.out.println("-----------------------------");
-                //blockingSend(new TdApi.OpenChat(chatId), updateBasicGroupHandler);
-                blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
-                
-                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
-                int oldSize = messages.size();
-                while (0 < oldSize && messages.size() <= 1000)
-                {   
-=======
-                blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
-                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
-                int oldSize = messages.size();
-                while (messages.size() <= 1000)
-                {
->>>>>>> Stashed changes
-                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
-                    if (oldSize != messages.size())
-                    {
-                        oldSize = messages.size();
-                        continue;
-                    }
-                    break;
-                }
-                //System.out.println(messages.size());
-                // System.out.println(messages.get(0));
-                //System.out.println("=====" + memberIds);
-                this.addCollection(new BasicGroup(id,
-                                                  chatId,
-                                                  groupName, 
-                                                  permissions, 
-                                                //   (canBeDeletedForAllUsers == 1) ? true : false, 
-                                                //   (canBeDeletedOnlyForSelf == 1) ? true : false, 
-                                                //   (defaultDisableNotification == 1) ? true : false, 
-                                                  messageAutoDeleteTime, 
-                                                  adminIds, 
-                                                  memberCount, 
-                                                  memberIds, 
-                                                  description, 
-                                                  inviteLink, 
-                                                //   botCommands, 
-                                                  messages));
-                        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
-<<<<<<< Updated upstream
-                // System.out.println("Group name: " + groupName + " - " + chatId);
-                // System.out.println("description: " + description);
-                // System.out.println("membersSize: " + memberCount);
-                // System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
-                // System.out.println("inviteLink: " + inviteLink);
-                // System.out.println("members: " + memberIds);
-                // System.out.println("permissions: " + permissions);
-                // System.out.println("admins: " + adminIds);
-                // System.out.println("message: " + messages.get(0).content);
-                redefinedAttributes();
 
-=======
-                // System.out.println("Group name: " + groupName);
-                redefinedAttributes();
->>>>>>> Stashed changes
-                        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
+            blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
+            //System.out.println("-----------------------------");
+            blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
+            
+            blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
+            int oldSize = messages.size();
+            while (messages.size() <= 1000)
+            {
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
+                if (oldSize != messages.size())
+                {
+                    oldSize = messages.size();
+                    continue;
+                }
+                break;
             }
+            //System.out.println(messages.size());
+            // System.out.println(messages.get(0));
+            //System.out.println("=====" + memberIds);
+            this.addCollection(new BasicGroup(id,
+                                              chatId,
+                                              groupName, 
+                                              permissions, 
+                                            //   (canBeDeletedForAllUsers == 1) ? true : false, 
+                                            //   (canBeDeletedOnlyForSelf == 1) ? true : false, 
+                                            //   (defaultDisableNotification == 1) ? true : false, 
+                                              messageAutoDeleteTime, 
+                                              adminIds, 
+                                              memberCount, 
+                                              memberIds, 
+                                              description, 
+                                              inviteLink, 
+                                            //   botCommands, 
+                                              messages));
+                    //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
+            // System.out.println("Group name: " + groupName);
+            redefinedAttributes();
+                    //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
 
         }
 
@@ -167,16 +139,11 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                         adminIds.add(chatAdmin.userId);
                     }
                     break;
-                // case TdApi.UpdateBasicGroupFullInfo.CONSTRUCTOR:
-                //     System.out.print("dfasdfsdfdfdffffffffffffffffffffffffffffffffffffffffffffffff");
-                //     TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
-                //     description = updateBasicGroupFullInfo.basicGroupFullInfo.description;
-                //     break;
-
+                
                 case TdApi.BasicGroupFullInfo.CONSTRUCTOR:
                     //System.out.println("dfasfafasf");
                     TdApi.BasicGroupFullInfo basicGroupFullInfo = (TdApi.BasicGroupFullInfo) object;
-                    // System.out.println(basicGroupFullInfo);
+                    //System.out.println(basicGroupFullInfo);
                     description = basicGroupFullInfo.description;
                     if (basicGroupFullInfo.inviteLink != null)
                     {  
@@ -212,14 +179,10 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                     }
                     break;
                 case TdApi.Error.CONSTRUCTOR:
-<<<<<<< Updated upstream
-                    System.err.println("[-] Received an error when crawling basic group: " + ((TdApi.Error) object).message);
-=======
-                    System.err.println("\n[-] Received an error when crawling super group: " + ((TdApi.Error) object).message);
->>>>>>> Stashed changes
+                    System.err.println("[-] Received an error when crawling super group: " + ((TdApi.Error) object).message);
                     break;
                 default:
-                    //System.out.println("Unsported update in crawl basic group: \n" + object.toString());
+                    //System.out.println(object.toString());
             }
             haveReceivedRespond = true;
             authorizationLock.lock();

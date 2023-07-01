@@ -1,8 +1,6 @@
 package hust.soict.cybersec.tm.utils;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
-import org.drinkless.tdlib.TdApi.Chats;
-import org.drinkless.tdlib.TdApi.OpenChat;
 
 import hust.soict.cybersec.tm.TelegramManager;
 
@@ -35,8 +33,6 @@ public class UpdateHandler implements Client.ResultHandler
                 //System.out.println("====================================update Basic Group======================================");
                 TdApi.UpdateBasicGroup updateBasicGroup = (TdApi.UpdateBasicGroup) object;
                 TelegramManager.basicGroups.put(updateBasicGroup.basicGroup.id, updateBasicGroup.basicGroup);
-                //for (TdApi.Chat chat: Base.chats)
-                //TelegramManager.client.send(new TdApi.OpenChat(updateBasicGroup.basicGroup.id), new UpdateHandler());
                 break;
             case TdApi.UpdateSupergroup.CONSTRUCTOR:
                 //System.out.println("====================================update Super group======================================");
@@ -70,10 +66,9 @@ public class UpdateHandler implements Client.ResultHandler
                 break;
             }
             case TdApi.UpdateChatMessageAutoDeleteTime.CONSTRUCTOR: {
-                //System.out.println("====================================update Chat messageAutoDeleteTime======================================");
                 TdApi.UpdateChatMessageAutoDeleteTime updateChat = (TdApi.UpdateChatMessageAutoDeleteTime) object;
                 TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
-                synchronized(chat) {
+                synchronized (chat) {
                     chat.messageAutoDeleteTime = updateChat.messageAutoDeleteTime;
                 }
                 break;
@@ -237,7 +232,7 @@ public class UpdateHandler implements Client.ResultHandler
                 break;
             }
             case TdApi.Error.CONSTRUCTOR: {
-                System.out.println("\n[-] Receive an error: " + ((TdApi.Error) object).message);
+                System.err.println("\n[-] Receive an error: " + ((TdApi.Error) object).message);
                 break;
             }
             case TdApi.UpdateUserFullInfo.CONSTRUCTOR:
@@ -249,30 +244,14 @@ public class UpdateHandler implements Client.ResultHandler
                 //System.out.println("====================================update basic group full info======================================");
                 TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
                 TelegramManager.basicGroupsFullInfo.put(updateBasicGroupFullInfo.basicGroupId, updateBasicGroupFullInfo.basicGroupFullInfo);
-<<<<<<< Updated upstream
-                
-                //System.out.println("description: " + updateBasicGroupFullInfo.basicGroupFullInfo.description + "-" + updateBasicGroupFullInfo.basicGroupId);
-=======
->>>>>>> Stashed changes
                 break;
             case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
                 //System.out.println("====================================update super group full info======================================");
                 TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
                 TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
-<<<<<<< Updated upstream
-                
-                //System.out.println("description: " + updateSupergroupFullInfo.supergroupId + "-" + updateSupergroupFullInfo.supergroupFullInfo.description);
-                break;
-            case TdApi.UpdateChatOnlineMemberCount.CONSTRUCTOR:
-                break;
-            case TdApi.UpdateOption.CONSTRUCTOR:
-=======
->>>>>>> Stashed changes
                 break;
             default:
-                    //TelegramManager.print("Unsupported update: " + object.getClass());
-                    //break;
-                    
+                    //TelegramManager.print("Unsupported update:\n" + object);
         }
     }
 }

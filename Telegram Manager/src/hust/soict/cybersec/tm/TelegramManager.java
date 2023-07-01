@@ -100,9 +100,6 @@ public final class TelegramManager extends Base{
             e.printStackTrace();
         }
     }
-<<<<<<< Updated upstream
-
-=======
     public static void showMenu()
     {
         System.out.println("o\r\n" + //
@@ -126,7 +123,6 @@ public final class TelegramManager extends Base{
         System.out.println("Please choose a number: 0-1-2-3");
         System.out.print("Your choise is: ");
     }
->>>>>>> Stashed changes
     public static void synchronize()
     {
         
@@ -361,9 +357,6 @@ public final class TelegramManager extends Base{
         }
     }
 
-<<<<<<< Updated upstream
-}
-=======
 }
 
 /*‘’’package com.project.main;
@@ -526,4 +519,3 @@ _ \\\n"
 
 }
 ‘’’ */
->>>>>>> Stashed changes
