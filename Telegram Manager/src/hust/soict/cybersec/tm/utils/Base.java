@@ -1,6 +1,7 @@
 package hust.soict.cybersec.tm.utils;
 
 import java.io.BufferedReader;
+import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.NavigableSet;
@@ -19,7 +20,6 @@ import hust.soict.cybersec.tm.TelegramManager;
 public class Base 
 {
     public static Client client = null;
-
     public static TdApi.AuthorizationState authorizationState = null;
     public static volatile boolean haveAuthorization = false;
     public static volatile boolean needQuit = false;
@@ -34,7 +34,7 @@ public class Base
     public static final ConcurrentMap<Integer, TdApi.SecretChat> secretChats = new ConcurrentHashMap<Integer, TdApi.SecretChat>();
 
     public static final ConcurrentMap<Long, TdApi.Chat> chats = new ConcurrentHashMap<Long, TdApi.Chat>();
-    public static final NavigableSet<OrderedChat> mainChatList = new TreeSet<OrderedChat>();
+    public static final NavigableSet<TdApi.Chat> mainChatList = new TreeSet<TdApi.Chat>();
     public static boolean haveFullMainChatList = false;
 
     public static final ConcurrentMap<Long, TdApi.UserFullInfo> usersFullInfo = new ConcurrentHashMap<Long, TdApi.UserFullInfo>();
@@ -68,7 +68,15 @@ public class Base
         currentPrompt = null;
         return str;
     }
-
+    public static long toLong(String arg) {
+        long result = 0;
+        try {
+            result = Long.parseLong(arg);
+        } catch (NumberFormatException ignored) {
+        }
+        return result;
+    }
+    
     public static void getMainChatList() {
         synchronized (mainChatList) {
             if (!haveFullMainChatList) {

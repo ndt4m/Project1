@@ -5,6 +5,9 @@ import java.util.List;
 
 import org.drinkless.tdlib.TdApi;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
 public class BasicGroup {
     private long id;
     private long chatId;
@@ -139,6 +142,12 @@ public class BasicGroup {
         this.inviteLink = inviteLink;
     }
 
+    @Override
+    public String toString()
+    {
+        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+        return gson.toJson(this);
+    }
     // public void setBotCommands(List<TdApi.BotCommands> botCommands) {
     //     this.botCommands = botCommands;
     // }

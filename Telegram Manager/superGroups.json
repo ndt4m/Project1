@@ -1,0 +1,2767 @@
+[
+  {
+    "id": 1975192757,
+    "chatId": -1001975192757,
+    "groupName": "xxxxxxxmmm",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 86400,
+    "memberCount": 2,
+    "canGetMembers": true,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      6054221228,
+      2134816269
+    ],
+    "description": "nhhggjjhvghbcccvguikbggjbghb",
+    "inviteLink": "https://t.me/+WuyTdp7yWRYxMDE1",
+    "messages": [
+      {
+        "id": 17825792,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688206280,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 80590.43287682533,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5130118425372262933,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "😑",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 199.0,
+                        "y": 456.0
+                      },
+                      "endControlPoint": {
+                        "x": 149.0,
+                        "y": 431.0
+                      },
+                      "endPoint": {
+                        "x": 110.0,
+                        "y": 392.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -40.0,
+                        "y": 243.0
+                      },
+                      "endControlPoint": {
+                        "x": 138.0,
+                        "y": -8.0
+                      },
+                      "endPoint": {
+                        "x": 332.0,
+                        "y": 70.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 535.0,
+                        "y": 152.0
+                      },
+                      "endControlPoint": {
+                        "x": 471.0,
+                        "y": 456.0
+                      },
+                      "endPoint": {
+                        "x": 255.0,
+                        "y": 455.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 1444,
+                  "size": 2994,
+                  "expectedSize": 2994,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKASNFToFGvtj2NEK5kI96dlBAoAAhUCAAKH1zFHziumzPL3qxgBAAdtAAMvBA",
+                    "uniqueId": "AQADFQIAAofXMUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 2994
+                  }
+                }
+              },
+              "sticker": {
+                "id": 1443,
+                "size": 7096,
+                "expectedSize": 7096,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSgEjRU6BRr7Y9jRCuZCPenZQQKAAIVAgACh9cxR84rpszy96sYLwQ",
+                  "uniqueId": "AgADFQIAAofXMUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 7096
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "😑"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 16777216,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688206274,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 80584.43282175064,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "sticker": {
+            "id": 5352764985921505942,
+            "setId": 750766425144033290,
+            "width": 512,
+            "height": 512,
+            "emoji": "🏃‍♂️",
+            "format": {},
+            "fullType": {
+              "premiumAnimation": null
+            },
+            "outline": [
+              {
+                "commands": [
+                  {
+                    "startControlPoint": {
+                      "x": 108.0,
+                      "y": 522.0
+                    },
+                    "endControlPoint": {
+                      "x": 153.0,
+                      "y": 488.0
+                    },
+                    "endPoint": {
+                      "x": 131.0,
+                      "y": 471.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 129.0,
+                      "y": 469.0
+                    },
+                    "endControlPoint": {
+                      "x": 132.0,
+                      "y": 482.0
+                    },
+                    "endPoint": {
+                      "x": 131.0,
+                      "y": 484.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 130.0,
+                      "y": 491.0
+                    },
+                    "endControlPoint": {
+                      "x": 121.0,
+                      "y": 493.0
+                    },
+                    "endPoint": {
+                      "x": 116.0,
+                      "y": 495.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 97.0,
+                      "y": 501.0
+                    },
+                    "endControlPoint": {
+                      "x": 58.0,
+                      "y": 504.0
+                    },
+                    "endPoint": {
+                      "x": 48.0,
+                      "y": 483.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 31.0,
+                      "y": 446.0
+                    },
+                    "endControlPoint": {
+                      "x": 110.0,
+                      "y": 417.0
+                    },
+                    "endPoint": {
+                      "x": 105.0,
+                      "y": 382.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 103.0,
+                      "y": 366.0
+                    },
+                    "endControlPoint": {
+                      "x": 73.0,
+                      "y": 347.0
+                    },
+                    "endPoint": {
+                      "x": 68.0,
+                      "y": 330.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 62.0,
+                      "y": 309.0
+                    },
+                    "endControlPoint": {
+                      "x": 89.0,
+                      "y": 323.0
+                    },
+                    "endPoint": {
+                      "x": 94.0,
+                      "y": 320.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 111.0,
+                      "y": 310.0
+                    },
+                    "endControlPoint": {
+                      "x": 118.0,
+                      "y": 260.0
+                    },
+                    "endPoint": {
+                      "x": 176.0,
+                      "y": 239.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 211.0,
+                      "y": 226.0
+                    },
+                    "endControlPoint": {
+                      "x": 255.0,
+                      "y": 229.0
+                    },
+                    "endPoint": {
+                      "x": 288.0,
+                      "y": 245.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 300.0,
+                      "y": 251.0
+                    },
+                    "endControlPoint": {
+                      "x": 310.0,
+                      "y": 259.0
+                    },
+                    "endPoint": {
+                      "x": 320.0,
+                      "y": 269.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 322.0,
+                      "y": 272.0
+                    },
+                    "endControlPoint": {
+                      "x": 326.0,
+                      "y": 280.0
+                    },
+                    "endPoint": {
+                      "x": 328.0,
+                      "y": 277.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 336.0,
+                      "y": 268.0
+                    },
+                    "endControlPoint": {
+                      "x": 230.0,
+                      "y": 179.0
+                    },
+                    "endPoint": {
+                      "x": 273.0,
+                      "y": 112.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 298.0,
+                      "y": 73.0
+                    },
+                    "endControlPoint": {
+                      "x": 367.0,
+                      "y": 85.0
+                    },
+                    "endPoint": {
+                      "x": 371.0,
+                      "y": 78.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 374.0,
+                      "y": 73.0
+                    },
+                    "endControlPoint": {
+                      "x": 372.0,
+                      "y": 65.0
+                    },
+                    "endPoint": {
+                      "x": 381.0,
+                      "y": 62.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 390.0,
+                      "y": 59.0
+                    },
+                    "endControlPoint": {
+                      "x": 415.0,
+                      "y": 69.0
+                    },
+                    "endPoint": {
+                      "x": 407.0,
+                      "y": 81.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 398.0,
+                      "y": 94.0
+                    },
+                    "endControlPoint": {
+                      "x": 394.0,
+                      "y": 73.0
+                    },
+                    "endPoint": {
+                      "x": 387.0,
+                      "y": 75.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 385.0,
+                      "y": 75.0
+                    },
+                    "endControlPoint": {
+                      "x": 388.0,
+                      "y": 105.0
+                    },
+                    "endPoint": {
+                      "x": 398.0,
+                      "y": 105.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 411.0,
+                      "y": 105.0
+                    },
+                    "endControlPoint": {
+                      "x": 437.0,
+                      "y": 82.0
+                    },
+                    "endPoint": {
+                      "x": 444.0,
+                      "y": 111.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 446.0,
+                      "y": 122.0
+                    },
+                    "endControlPoint": {
+                      "x": 424.0,
+                      "y": 133.0
+                    },
+                    "endPoint": {
+                      "x": 430.0,
+                      "y": 143.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 438.0,
+                      "y": 154.0
+                    },
+                    "endControlPoint": {
+                      "x": 483.0,
+                      "y": 132.0
+                    },
+                    "endPoint": {
+                      "x": 474.0,
+                      "y": 171.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 471.0,
+                      "y": 186.0
+                    },
+                    "endControlPoint": {
+                      "x": 449.0,
+                      "y": 186.0
+                    },
+                    "endPoint": {
+                      "x": 452.0,
+                      "y": 199.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 452.0,
+                      "y": 200.0
+                    },
+                    "endControlPoint": {
+                      "x": 482.0,
+                      "y": 192.0
+                    },
+                    "endPoint": {
+                      "x": 487.0,
+                      "y": 195.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 497.0,
+                      "y": 203.0
+                    },
+                    "endControlPoint": {
+                      "x": 473.0,
+                      "y": 218.0
+                    },
+                    "endPoint": {
+                      "x": 468.0,
+                      "y": 222.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 457.0,
+                      "y": 234.0
+                    },
+                    "endControlPoint": {
+                      "x": 493.0,
+                      "y": 209.0
+                    },
+                    "endPoint": {
+                      "x": 495.0,
+                      "y": 225.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 497.0,
+                      "y": 240.0
+                    },
+                    "endControlPoint": {
+                      "x": 462.0,
+                      "y": 236.0
+                    },
+                    "endPoint": {
+                      "x": 454.0,
+                      "y": 241.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 449.0,
+                      "y": 245.0
+                    },
+                    "endControlPoint": {
+                      "x": 447.0,
+                      "y": 278.0
+                    },
+                    "endPoint": {
+                      "x": 443.0,
+                      "y": 286.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 429.0,
+                      "y": 318.0
+                    },
+                    "endControlPoint": {
+                      "x": 406.0,
+                      "y": 343.0
+                    },
+                    "endPoint": {
+                      "x": 377.0,
+                      "y": 362.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 373.0,
+                      "y": 364.0
+                    },
+                    "endControlPoint": {
+                      "x": 332.0,
+                      "y": 385.0
+                    },
+                    "endPoint": {
+                      "x": 333.0,
+                      "y": 387.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 335.0,
+                      "y": 393.0
+                    },
+                    "endControlPoint": {
+                      "x": 345.0,
+                      "y": 391.0
+                    },
+                    "endPoint": {
+                      "x": 344.0,
+                      "y": 396.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 345.0,
+                      "y": 407.0
+                    },
+                    "endControlPoint": {
+                      "x": 349.0,
+                      "y": 433.0
+                    },
+                    "endPoint": {
+                      "x": 359.0,
+                      "y": 441.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 374.0,
+                      "y": 452.0
+                    },
+                    "endControlPoint": {
+                      "x": 412.0,
+                      "y": 446.0
+                    },
+                    "endPoint": {
+                      "x": 399.0,
+                      "y": 484.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 385.0,
+                      "y": 524.0
+                    },
+                    "endControlPoint": {
+                      "x": 321.0,
+                      "y": 481.0
+                    },
+                    "endPoint": {
+                      "x": 305.0,
+                      "y": 478.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 299.0,
+                      "y": 479.0
+                    },
+                    "endControlPoint": {
+                      "x": 294.0,
+                      "y": 484.0
+                    },
+                    "endPoint": {
+                      "x": 289.0,
+                      "y": 485.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 266.0,
+                      "y": 490.0
+                    },
+                    "endControlPoint": {
+                      "x": 271.0,
+                      "y": 524.0
+                    },
+                    "endPoint": {
+                      "x": 260.0,
+                      "y": 512.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 257.0,
+                      "y": 509.0
+                    },
+                    "endControlPoint": {
+                      "x": 264.0,
+                      "y": 492.0
+                    },
+                    "endPoint": {
+                      "x": 262.0,
+                      "y": 488.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 261.0,
+                      "y": 484.0
+                    },
+                    "endControlPoint": {
+                      "x": 255.0,
+                      "y": 488.0
+                    },
+                    "endPoint": {
+                      "x": 251.0,
+                      "y": 487.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 244.0,
+                      "y": 485.0
+                    },
+                    "endControlPoint": {
+                      "x": 237.0,
+                      "y": 481.0
+                    },
+                    "endPoint": {
+                      "x": 230.0,
+                      "y": 477.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 224.0,
+                      "y": 474.0
+                    },
+                    "endControlPoint": {
+                      "x": 224.0,
+                      "y": 455.0
+                    },
+                    "endPoint": {
+                      "x": 219.0,
+                      "y": 460.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 188.0,
+                      "y": 483.0
+                    },
+                    "endControlPoint": {
+                      "x": 233.0,
+                      "y": 511.0
+                    },
+                    "endPoint": {
+                      "x": 169.0,
+                      "y": 512.0
+                    }
+                  }
+                ]
+              }
+            ],
+            "thumbnail": {
+              "format": {},
+              "width": 128,
+              "height": 128,
+              "file": {
+                "id": 2316,
+                "size": 6710,
+                "expectedSize": 6710,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "AAMCAgADHQR1uwy1AAMQZKASPANaj2u7toIm2RETX1nPyVEAApYKAAJl10hKnguVY2_8T-ABAAdtAAMvBA",
+                  "uniqueId": "AQADlgoAAmXXSEpy",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 6710
+                }
+              }
+            },
+            "sticker": {
+              "id": 2317,
+              "size": 21341,
+              "expectedSize": 21341,
+              "local": {
+                "path": "",
+                "canBeDownloaded": true,
+                "canBeDeleted": false,
+                "isDownloadingActive": false,
+                "isDownloadingCompleted": false,
+                "downloadOffset": 0,
+                "downloadedPrefixSize": 0,
+                "downloadedSize": 0
+              },
+              "remote": {
+                "id": "CAACAgIAAx0EdbsMtQADEGSgEjwDWo9ru7aCJtkRE19Zz8lRAAKWCgACZddISp4LlWNv_E_gLwQ",
+                "uniqueId": "AgADlgoAAmXXSEo",
+                "isUploadingActive": false,
+                "isUploadingCompleted": true,
+                "uploadedSize": 21341
+              }
+            }
+          },
+          "isPremium": false
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 15728640,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190637,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64947.43274688721,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5127663220202406409,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "🥲",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 203.0,
+                        "y": 455.0
+                      },
+                      "endControlPoint": {
+                        "x": 151.0,
+                        "y": 434.0
+                      },
+                      "endPoint": {
+                        "x": 115.0,
+                        "y": 397.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -39.0,
+                        "y": 243.0
+                      },
+                      "endControlPoint": {
+                        "x": 134.0,
+                        "y": -12.0
+                      },
+                      "endPoint": {
+                        "x": 334.0,
+                        "y": 71.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 534.0,
+                        "y": 155.0
+                      },
+                      "endControlPoint": {
+                        "x": 469.0,
+                        "y": 457.0
+                      },
+                      "endPoint": {
+                        "x": 255.0,
+                        "y": 455.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 1436,
+                  "size": 3816,
+                  "expectedSize": 3816,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKASNNggtwQMfZoSgQk-brIF4VYAAgkCAAKIHilH6wp76aVRR4QBAAdtAAMvBA",
+                    "uniqueId": "AQADCQIAAogeKUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3816
+                  }
+                }
+              },
+              "sticker": {
+                "id": 1435,
+                "size": 16679,
+                "expectedSize": 16679,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSgEjTYILcEDH2aEoEJPm6yBeFWAAIJAgACiB4pR-sKe-mlUUeELwQ",
+                  "uniqueId": "AgADCQIAAogeKUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 16679
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "🥲"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 14680064,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190613,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64923.432725191116,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5130088193097466655,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "😆",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 198.0,
+                        "y": 456.0
+                      },
+                      "endControlPoint": {
+                        "x": 144.0,
+                        "y": 430.0
+                      },
+                      "endPoint": {
+                        "x": 107.0,
+                        "y": 388.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -34.0,
+                        "y": 228.0
+                      },
+                      "endControlPoint": {
+                        "x": 148.0,
+                        "y": -18.0
+                      },
+                      "endPoint": {
+                        "x": 341.0,
+                        "y": 74.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 532.0,
+                        "y": 166.0
+                      },
+                      "endControlPoint": {
+                        "x": 467.0,
+                        "y": 459.0
+                      },
+                      "endPoint": {
+                        "x": 254.0,
+                        "y": 455.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 1290,
+                  "size": 4352,
+                  "expectedSize": 4352,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKASNNnxn1E20alTRqKC_iW9kcIAAh8DAAIIvDFHauoAAfCMpRs3AQAHbQADLwQ",
+                    "uniqueId": "AQADHwMAAgi8MUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 4352
+                  }
+                }
+              },
+              "sticker": {
+                "id": 1289,
+                "size": 11081,
+                "expectedSize": 11081,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSgEjTZ8Z9RNtGpU0aigv4lvZHCAAIfAwACCLwxR2rqAAHwjKUbNy8E",
+                  "uniqueId": "AgADHwMAAgi8MUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 11081
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "😆"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 13631488,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190518,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64828.432705402374,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "rrr",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 12582912,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190388,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64698.432700634,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "r",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 11534336,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190330,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64640.43269395828,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "s",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 10485760,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190239,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64549.432690382004,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "d",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 9437184,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190226,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64536.432686805725,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "xxxxxxxmmm"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 8388608,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190206,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64516.43268370628,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "xxxxxxx"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 7340032,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688190190,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 1,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 64500.43268108368,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "d",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 6291456,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151279,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 86400,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 5242880,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151081,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 1209600,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 4194304,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688150522,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 259200,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 3145728,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688150446,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "chattest"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 2097152,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1685191524,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 6,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "hello",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1685191471,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "testChannel"
+        },
+        "replyMarkup": null
+      }
+    ]
+  },
+  {
+    "id": 1899612767,
+    "chatId": -1001899612767,
+    "groupName": "hhhhhh",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": true,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 31536000,
+    "memberCount": 1,
+    "canGetMembers": true,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "kknhbhjhhjhbjugiynhnchjm",
+    "inviteLink": "https://t.me/+0IJpsOT6Bzs0ZGI1",
+    "messages": [
+      {
+        "id": 9437184,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688211793,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1535703248392344E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "userId": 6054221228
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 8388608,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688211485,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1535395248370886E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "hhhhhh"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 7340032,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688211258,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.153516824836445E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "memberUserIds": [
+            6054221228
+          ]
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 6291456,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688207693,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1531603248358488E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "userId": 6054221228
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 5242880,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688152581,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 5242880,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1476491248354673E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5130136026148241963,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "😙",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 202.0,
+                        "y": 455.0
+                      },
+                      "endControlPoint": {
+                        "x": 149.0,
+                        "y": 433.0
+                      },
+                      "endPoint": {
+                        "x": 112.0,
+                        "y": 395.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -37.0,
+                        "y": 239.0
+                      },
+                      "endControlPoint": {
+                        "x": 137.0,
+                        "y": -16.0
+                      },
+                      "endPoint": {
+                        "x": 337.0,
+                        "y": 72.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 533.0,
+                        "y": 159.0
+                      },
+                      "endControlPoint": {
+                        "x": 470.0,
+                        "y": 456.0
+                      },
+                      "endPoint": {
+                        "x": 255.0,
+                        "y": 455.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 1408,
+                  "size": 3476,
+                  "expectedSize": 3476,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKASNBsFFzK2WaK1NRVA133vxeYAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
+                    "uniqueId": "AQADKwIAAonnMUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3476
+                  }
+                }
+              },
+              "sticker": {
+                "id": 1407,
+                "size": 26992,
+                "expectedSize": 26992,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSgEjQbBRcytlmitTUVQNd978XmAAIrAgACiecxR-k4peS9jIEvLwQ",
+                  "uniqueId": "AgADKwIAAonnMUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 26992
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "😙"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 4194304,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688152475,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 4194304,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.147638524830675E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5130064437633352245,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "🤨",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 205.0,
+                        "y": 457.0
+                      },
+                      "endControlPoint": {
+                        "x": 149.0,
+                        "y": 434.0
+                      },
+                      "endPoint": {
+                        "x": 111.0,
+                        "y": 394.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -35.0,
+                        "y": 239.0
+                      },
+                      "endControlPoint": {
+                        "x": 137.0,
+                        "y": -11.0
+                      },
+                      "endPoint": {
+                        "x": 332.0,
+                        "y": 71.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 530.0,
+                        "y": 155.0
+                      },
+                      "endControlPoint": {
+                        "x": 476.0,
+                        "y": 450.0
+                      },
+                      "endPoint": {
+                        "x": 261.0,
+                        "y": 455.0
+                      }
+                    },
+                    {
+                      "endPoint": {
+                        "x": 261.0,
+                        "y": 456.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 492,
+                  "size": 3560,
+                  "expectedSize": 3560,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKASNOUCwwN3JnItsKjLMeeA1BQAAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
+                    "uniqueId": "AQADNQIAAm2mMUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3560
+                  }
+                }
+              },
+              "sticker": {
+                "id": 491,
+                "size": 10751,
+                "expectedSize": 10751,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSgEjTlAsMDdyZyLbCoyzHngNQUAAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
+                  "uniqueId": "AgADNQIAAm2mMUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 10751
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "🤨"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 3145728,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688152156,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.147606624827981E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "uissisi"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 2097152,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151562,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 31536000,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001899612767
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151445,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "siuuuuuu"
+        },
+        "replyMarkup": null
+      }
+    ]
+  },
+  {
+    "id": 1913443622,
+    "chatId": -1001913443622,
+    "groupName": "ngu ngu ngu siiii",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 13392000,
+    "memberCount": 2,
+    "canGetMembers": true,
+    "isAllHistoryAvailable": false,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      6054221228,
+      2134816269
+    ],
+    "description": "con me m",
+    "inviteLink": "https://t.me/+2zjtPawVZv9mZTNl",
+    "messages": [
+      {
+        "id": 14680064,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688204027,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 1.338393706145835E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "memberUserIds": [
+            6054221228
+          ]
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 13631488,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688203956,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 13392000,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 12582912,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688203858,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 12582912,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "fhg",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001913443622
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688147937,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "mnlt"
+        },
+        "replyMarkup": null
+      }
+    ]
+  }
+]

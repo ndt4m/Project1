@@ -144,7 +144,12 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                                             //   botCommands, 
                                               messages));
                 //System.out.println(messages.size());
-                System.out.println("GroupName: "+groupName);
+                // System.out.println("GroupName: "+groupName);
+                // System.out.println("description: " + description);
+                // System.out.println("membersSize: " + memberCount);
+                // System.out.println(memberIds);
+                // System.out.println("inviteLink: " + inviteLink);
+                // System.out.println("messageAutoDeleteTime: " + messageAutoDeleteTime);
             }
             // if (!adminIds.isEmpty())
             // {
@@ -164,7 +169,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
             switch (object.getConstructor())
             {
                 case TdApi.ChatAdministrators.CONSTRUCTOR:
-                    //System.out.println("ddddddddddddddd");
+                    //System.out.println(object.getClass());
                     TdApi.ChatAdministrators chatAdministrators = (TdApi.ChatAdministrators) object;
                     for (TdApi.ChatAdministrator chatAdmin: chatAdministrators.administrators)
                     {
@@ -173,7 +178,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     break;
                 case TdApi.SupergroupFullInfo.CONSTRUCTOR:
                     TdApi.SupergroupFullInfo supergroupFullInfo = (TdApi.SupergroupFullInfo) object;
-                    memberCount = supergroupFullInfo.memberCount;
+                    // memberCount = supergroupFullInfo.memberCount;
                     description = supergroupFullInfo.description;
                     canGetMembers = supergroupFullInfo.canGetMembers ? 1 : 0;
                     isAllHistoryAvailable = supergroupFullInfo.isAllHistoryAvailable ? 1 : 0;
@@ -204,6 +209,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                             memberIds.add(((TdApi.MessageSenderUser) mem.memberId).userId);
                         }
                     }
+                    memberCount = memberIds.size();
                     break;
                 case TdApi.Messages.CONSTRUCTOR:
                     for (TdApi.Message m: ((TdApi.Messages) object).messages)

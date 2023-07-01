@@ -1,6 +1,8 @@
 package hust.soict.cybersec.tm.utils;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
+import org.drinkless.tdlib.TdApi.Chats;
+import org.drinkless.tdlib.TdApi.OpenChat;
 
 import hust.soict.cybersec.tm.TelegramManager;
 
@@ -20,19 +22,21 @@ public class UpdateHandler implements Client.ResultHandler
                 TdApi.UpdateUser updateUser = (TdApi.UpdateUser) object;
                 TelegramManager.users.put(updateUser.user.id, updateUser.user);
                 break;
-            // case TdApi.UpdateUserStatus.CONSTRUCTOR: {
-            //     //System.out.println("====================================update User Status======================================");
-            //     TdApi.UpdateUserStatus updateUserStatus = (TdApi.UpdateUserStatus) object;
-            //     TdApi.User user = TelegramManager.users.get(updateUserStatus.userId);
-            //     synchronized (user) {
-            //         user.status = updateUserStatus.status;
-            //     }
-            //     break;
-            // }
+            case TdApi.UpdateUserStatus.CONSTRUCTOR: {
+                //System.out.println("====================================update User Status======================================");
+                TdApi.UpdateUserStatus updateUserStatus = (TdApi.UpdateUserStatus) object;
+                TdApi.User user = TelegramManager.users.get(updateUserStatus.userId);
+                synchronized (user) {
+                    user.status = updateUserStatus.status;
+                }
+                break;
+            }
             case TdApi.UpdateBasicGroup.CONSTRUCTOR:
                 //System.out.println("====================================update Basic Group======================================");
                 TdApi.UpdateBasicGroup updateBasicGroup = (TdApi.UpdateBasicGroup) object;
                 TelegramManager.basicGroups.put(updateBasicGroup.basicGroup.id, updateBasicGroup.basicGroup);
+                //for (TdApi.Chat chat: Base.chats)
+                //TelegramManager.client.send(new TdApi.OpenChat(updateBasicGroup.basicGroup.id), new UpdateHandler());
                 break;
             case TdApi.UpdateSupergroup.CONSTRUCTOR:
                 //System.out.println("====================================update Super group======================================");
@@ -52,7 +56,7 @@ public class UpdateHandler implements Client.ResultHandler
                     TelegramManager.chats.put(chat.id, chat);
                     TdApi.ChatPosition[] positions = chat.positions;
                     chat.positions = new TdApi.ChatPosition[0];
-                    OrderedChat.setChatPositions(chat, positions);
+                    //OrderedChat.setChatPositions(chat, positions);
                 }
                 break;
             }
@@ -62,6 +66,15 @@ public class UpdateHandler implements Client.ResultHandler
                 TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
                 synchronized (chat) {
                     chat.title = updateChat.title;
+                }
+                break;
+            }
+            case TdApi.UpdateChatMessageAutoDeleteTime.CONSTRUCTOR: {
+                //System.out.println("====================================update Chat messageAutoDeleteTime======================================");
+                TdApi.UpdateChatMessageAutoDeleteTime updateChat = (TdApi.UpdateChatMessageAutoDeleteTime) object;
+                TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
+                synchronized(chat) {
+                    chat.messageAutoDeleteTime = updateChat.messageAutoDeleteTime;
                 }
                 break;
             }
@@ -80,7 +93,7 @@ public class UpdateHandler implements Client.ResultHandler
                 TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
                 synchronized (chat) {
                     chat.lastMessage = updateChat.lastMessage;
-                    OrderedChat.setChatPositions(chat, updateChat.positions);
+                    //OrderedChat.setChatPositions(chat, updateChat.positions);
                 }
                 break;
             }
@@ -109,7 +122,7 @@ public class UpdateHandler implements Client.ResultHandler
                         }
                     }
                     assert pos == new_positions.length;
-                    OrderedChat.setChatPositions(chat, new_positions);
+                    //OrderedChat.setChatPositions(chat, new_positions);
                 }
                 break;
             }
@@ -165,7 +178,7 @@ public class UpdateHandler implements Client.ResultHandler
                 TdApi.Chat chat = TelegramManager.chats.get(updateChat.chatId);
                 synchronized (chat) {
                     chat.draftMessage = updateChat.draftMessage;
-                    OrderedChat.setChatPositions(chat, updateChat.positions);
+                    //OrderedChat.setChatPositions(chat, updateChat.positions);
                 }
                 break;
             }
@@ -224,26 +237,36 @@ public class UpdateHandler implements Client.ResultHandler
                 break;
             }
             case TdApi.Error.CONSTRUCTOR: {
-                System.out.println("[-] Receive an error: " + ((TdApi.Error) object).message);
+                System.out.println("\n[-] Receive an error: " + ((TdApi.Error) object).message);
                 break;
             }
-            // case TdApi.UpdateUserFullInfo.CONSTRUCTOR:
-            //     //System.out.println("====================================update user full info======================================");
-            //     TdApi.UpdateUserFullInfo updateUserFullInfo = (TdApi.UpdateUserFullInfo) object;
-            //     TelegramManager.usersFullInfo.put(updateUserFullInfo.userId, updateUserFullInfo.userFullInfo);
-            //     break;
-            // case TdApi.UpdateBasicGroupFullInfo.CONSTRUCTOR:
-            //     //System.out.println("====================================update basic group full info======================================");
-            //     TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
-            //     TelegramManager.basicGroupsFullInfo.put(updateBasicGroupFullInfo.basicGroupId, updateBasicGroupFullInfo.basicGroupFullInfo);
-            //     break;
-            // case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
-            //     //System.out.println("====================================update super group full info======================================");
-            //     TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
-            //     TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
-            //     break;
+            case TdApi.UpdateUserFullInfo.CONSTRUCTOR:
+                //System.out.println("====================================update user full info======================================");
+                TdApi.UpdateUserFullInfo updateUserFullInfo = (TdApi.UpdateUserFullInfo) object;
+                TelegramManager.usersFullInfo.put(updateUserFullInfo.userId, updateUserFullInfo.userFullInfo);
+                break;
+            case TdApi.UpdateBasicGroupFullInfo.CONSTRUCTOR:
+                //System.out.println("====================================update basic group full info======================================");
+                TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
+                TelegramManager.basicGroupsFullInfo.put(updateBasicGroupFullInfo.basicGroupId, updateBasicGroupFullInfo.basicGroupFullInfo);
+                
+                //System.out.println("description: " + updateBasicGroupFullInfo.basicGroupFullInfo.description + "-" + updateBasicGroupFullInfo.basicGroupId);
+                break;
+            case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
+                //System.out.println("====================================update super group full info======================================");
+                TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
+                TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
+                
+                //System.out.println("description: " + updateSupergroupFullInfo.supergroupId + "-" + updateSupergroupFullInfo.supergroupFullInfo.description);
+                break;
+            case TdApi.UpdateChatOnlineMemberCount.CONSTRUCTOR:
+                break;
+            case TdApi.UpdateOption.CONSTRUCTOR:
+                break;
             default:
-                    //TelegramManager.print("Unsupported update:\n" + object);
+                    //TelegramManager.print("Unsupported update: " + object.getClass());
+                    //break;
+                    
         }
     }
 }

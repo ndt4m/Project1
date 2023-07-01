@@ -1,0 +1,82 @@
+[
+  {
+    "id": 6054221228,
+    "firstName": "Hoàng Anh IT-E15",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84862642048",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      906873372,
+      704076527,
+      981850633,
+      731085839
+    ],
+    "user_super_group_ids": [
+      1913443622,
+      1975192757
+    ]
+  },
+  {
+    "id": 2134816269,
+    "firstName": "tamtam",
+    "lastName": "gbggbbddsz",
+    "userName": "fapspfkjc",
+    "phoneNumber": "84857864831",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      906873372,
+      815909456,
+      844195347,
+      704076527,
+      982563624,
+      965667270,
+      864889876,
+      981850633,
+      731085839,
+      826636041
+    ],
+    "user_super_group_ids": [
+      1899612767,
+      1913443622,
+      1975192757
+    ]
+  },
+  {
+    "id": 806954250,
+    "firstName": "‘",
+    "lastName": "",
+    "userName": "znfeau",
+    "phoneNumber": "",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      906873372,
+      965667270
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 1817109845,
+    "firstName": "Đồng",
+    "lastName": "Lê",
+    "userName": "LeDong97",
+    "phoneNumber": "",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      965667270
+    ],
+    "user_super_group_ids": []
+  }
+]
