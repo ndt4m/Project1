@@ -92,6 +92,10 @@ public class SuperGroup
         return memberIds;
     }
 
+    public Set<Long> getAdminIds() {
+        return adminIds;
+    }
+    
     public String getGroupName() {
         return groupName;
     }

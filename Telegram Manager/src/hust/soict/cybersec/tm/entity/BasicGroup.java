@@ -92,6 +92,18 @@ public class BasicGroup {
     public String getInviteLink() {
         return inviteLink;
     }
+
+    public int getMessageAutoDeleteTime() {
+        return messageAutoDeleteTime;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getMemberCount() {
+        return memberCount;
+    }
     
     public void setId(long id) {
         this.id = id;

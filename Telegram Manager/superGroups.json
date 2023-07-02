@@ -32,832 +32,6 @@
     "inviteLink": "https://t.me/+WuyTdp7yWRYxMDE1",
     "messages": [
       {
-        "id": 17825792,
-        "senderId": {
-          "chatId": -1001975192757
-        },
-        "chatId": -1001975192757,
-        "sendingState": null,
-        "schedulingState": null,
-        "isOutgoing": true,
-        "isPinned": false,
-        "canBeEdited": true,
-        "canBeForwarded": true,
-        "canBeSaved": true,
-        "canBeDeletedOnlyForSelf": false,
-        "canBeDeletedForAllUsers": true,
-        "canGetAddedReactions": false,
-        "canGetStatistics": true,
-        "canGetMessageThread": false,
-        "canGetViewers": false,
-        "canGetMediaTimestampLinks": true,
-        "canReportReactions": false,
-        "hasTimestampedMedia": true,
-        "isChannelPost": true,
-        "isTopicMessage": false,
-        "containsUnreadMention": false,
-        "date": 1688206280,
-        "editDate": 0,
-        "forwardInfo": null,
-        "interactionInfo": {
-          "viewCount": 1,
-          "forwardCount": 0,
-          "replyInfo": null,
-          "reactions": []
-        },
-        "unreadReactions": [],
-        "replyInChatId": 0,
-        "replyToMessageId": 0,
-        "messageThreadId": 0,
-        "selfDestructTime": 0,
-        "selfDestructIn": 0.0,
-        "autoDeleteIn": 6964.850576639175,
-        "viaBotUserId": 0,
-        "authorSignature": "",
-        "mediaAlbumId": 0,
-        "restrictionReason": "",
-        "content": {
-          "animatedEmoji": {
-            "sticker": {
-              "id": 5130118425372262933,
-              "setId": 1258816259751983,
-              "width": 512,
-              "height": 512,
-              "emoji": "😑",
-              "format": {},
-              "fullType": {
-                "premiumAnimation": null
-              },
-              "outline": [
-                {
-                  "commands": [
-                    {
-                      "startControlPoint": {
-                        "x": 199.0,
-                        "y": 456.0
-                      },
-                      "endControlPoint": {
-                        "x": 149.0,
-                        "y": 431.0
-                      },
-                      "endPoint": {
-                        "x": 110.0,
-                        "y": 392.0
-                      }
-                    },
-                    {
-                      "startControlPoint": {
-                        "x": -40.0,
-                        "y": 243.0
-                      },
-                      "endControlPoint": {
-                        "x": 138.0,
-                        "y": -8.0
-                      },
-                      "endPoint": {
-                        "x": 332.0,
-                        "y": 70.0
-                      }
-                    },
-                    {
-                      "startControlPoint": {
-                        "x": 535.0,
-                        "y": 152.0
-                      },
-                      "endControlPoint": {
-                        "x": 471.0,
-                        "y": 456.0
-                      },
-                      "endPoint": {
-                        "x": 255.0,
-                        "y": 455.0
-                      }
-                    }
-                  ]
-                }
-              ],
-              "thumbnail": {
-                "format": {},
-                "width": 128,
-                "height": 128,
-                "file": {
-                  "id": 406,
-                  "size": 2994,
-                  "expectedSize": 2994,
-                  "local": {
-                    "path": "",
-                    "canBeDownloaded": true,
-                    "canBeDeleted": false,
-                    "isDownloadingActive": false,
-                    "isDownloadingCompleted": false,
-                    "downloadOffset": 0,
-                    "downloadedPrefixSize": 0,
-                    "downloadedSize": 0
-                  },
-                  "remote": {
-                    "id": "AAMCAQADFQABZKASNFToFGvtj2NEK5kI96dlBAoAAhUCAAKH1zFHziumzPL3qxgBAAdtAAMvBA",
-                    "uniqueId": "AQADFQIAAofXMUdy",
-                    "isUploadingActive": false,
-                    "isUploadingCompleted": true,
-                    "uploadedSize": 2994
-                  }
-                }
-              },
-              "sticker": {
-                "id": 407,
-                "size": 7096,
-                "expectedSize": 7096,
-                "local": {
-                  "path": "",
-                  "canBeDownloaded": true,
-                  "canBeDeleted": false,
-                  "isDownloadingActive": false,
-                  "isDownloadingCompleted": false,
-                  "downloadOffset": 0,
-                  "downloadedPrefixSize": 0,
-                  "downloadedSize": 0
-                },
-                "remote": {
-                  "id": "CAACAgEAAxUAAWSgEjRU6BRr7Y9jRCuZCPenZQQKAAIVAgACh9cxR84rpszy96sYLwQ",
-                  "uniqueId": "AgADFQIAAofXMUc",
-                  "isUploadingActive": false,
-                  "isUploadingCompleted": true,
-                  "uploadedSize": 7096
-                }
-              }
-            },
-            "stickerWidth": 512,
-            "stickerHeight": 512,
-            "fitzpatrickType": 0,
-            "sound": null
-          },
-          "emoji": "😑"
-        },
-        "replyMarkup": null
-      },
-      {
-        "id": 16777216,
-        "senderId": {
-          "chatId": -1001975192757
-        },
-        "chatId": -1001975192757,
-        "sendingState": null,
-        "schedulingState": null,
-        "isOutgoing": true,
-        "isPinned": false,
-        "canBeEdited": false,
-        "canBeForwarded": true,
-        "canBeSaved": true,
-        "canBeDeletedOnlyForSelf": false,
-        "canBeDeletedForAllUsers": true,
-        "canGetAddedReactions": false,
-        "canGetStatistics": true,
-        "canGetMessageThread": false,
-        "canGetViewers": false,
-        "canGetMediaTimestampLinks": true,
-        "canReportReactions": false,
-        "hasTimestampedMedia": true,
-        "isChannelPost": true,
-        "isTopicMessage": false,
-        "containsUnreadMention": false,
-        "date": 1688206274,
-        "editDate": 0,
-        "forwardInfo": null,
-        "interactionInfo": {
-          "viewCount": 1,
-          "forwardCount": 0,
-          "replyInfo": null,
-          "reactions": []
-        },
-        "unreadReactions": [],
-        "replyInChatId": 0,
-        "replyToMessageId": 0,
-        "messageThreadId": 0,
-        "selfDestructTime": 0,
-        "selfDestructIn": 0.0,
-        "autoDeleteIn": 6958.849257946014,
-        "viaBotUserId": 0,
-        "authorSignature": "",
-        "mediaAlbumId": 0,
-        "restrictionReason": "",
-        "content": {
-          "sticker": {
-            "id": 5352764985921505942,
-            "setId": 750766425144033290,
-            "width": 512,
-            "height": 512,
-            "emoji": "🏃‍♂️",
-            "format": {},
-            "fullType": {
-              "premiumAnimation": null
-            },
-            "outline": [
-              {
-                "commands": [
-                  {
-                    "startControlPoint": {
-                      "x": 108.0,
-                      "y": 522.0
-                    },
-                    "endControlPoint": {
-                      "x": 153.0,
-                      "y": 488.0
-                    },
-                    "endPoint": {
-                      "x": 131.0,
-                      "y": 471.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 129.0,
-                      "y": 469.0
-                    },
-                    "endControlPoint": {
-                      "x": 132.0,
-                      "y": 482.0
-                    },
-                    "endPoint": {
-                      "x": 131.0,
-                      "y": 484.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 130.0,
-                      "y": 491.0
-                    },
-                    "endControlPoint": {
-                      "x": 121.0,
-                      "y": 493.0
-                    },
-                    "endPoint": {
-                      "x": 116.0,
-                      "y": 495.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 97.0,
-                      "y": 501.0
-                    },
-                    "endControlPoint": {
-                      "x": 58.0,
-                      "y": 504.0
-                    },
-                    "endPoint": {
-                      "x": 48.0,
-                      "y": 483.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 31.0,
-                      "y": 446.0
-                    },
-                    "endControlPoint": {
-                      "x": 110.0,
-                      "y": 417.0
-                    },
-                    "endPoint": {
-                      "x": 105.0,
-                      "y": 382.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 103.0,
-                      "y": 366.0
-                    },
-                    "endControlPoint": {
-                      "x": 73.0,
-                      "y": 347.0
-                    },
-                    "endPoint": {
-                      "x": 68.0,
-                      "y": 330.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 62.0,
-                      "y": 309.0
-                    },
-                    "endControlPoint": {
-                      "x": 89.0,
-                      "y": 323.0
-                    },
-                    "endPoint": {
-                      "x": 94.0,
-                      "y": 320.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 111.0,
-                      "y": 310.0
-                    },
-                    "endControlPoint": {
-                      "x": 118.0,
-                      "y": 260.0
-                    },
-                    "endPoint": {
-                      "x": 176.0,
-                      "y": 239.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 211.0,
-                      "y": 226.0
-                    },
-                    "endControlPoint": {
-                      "x": 255.0,
-                      "y": 229.0
-                    },
-                    "endPoint": {
-                      "x": 288.0,
-                      "y": 245.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 300.0,
-                      "y": 251.0
-                    },
-                    "endControlPoint": {
-                      "x": 310.0,
-                      "y": 259.0
-                    },
-                    "endPoint": {
-                      "x": 320.0,
-                      "y": 269.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 322.0,
-                      "y": 272.0
-                    },
-                    "endControlPoint": {
-                      "x": 326.0,
-                      "y": 280.0
-                    },
-                    "endPoint": {
-                      "x": 328.0,
-                      "y": 277.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 336.0,
-                      "y": 268.0
-                    },
-                    "endControlPoint": {
-                      "x": 230.0,
-                      "y": 179.0
-                    },
-                    "endPoint": {
-                      "x": 273.0,
-                      "y": 112.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 298.0,
-                      "y": 73.0
-                    },
-                    "endControlPoint": {
-                      "x": 367.0,
-                      "y": 85.0
-                    },
-                    "endPoint": {
-                      "x": 371.0,
-                      "y": 78.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 374.0,
-                      "y": 73.0
-                    },
-                    "endControlPoint": {
-                      "x": 372.0,
-                      "y": 65.0
-                    },
-                    "endPoint": {
-                      "x": 381.0,
-                      "y": 62.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 390.0,
-                      "y": 59.0
-                    },
-                    "endControlPoint": {
-                      "x": 415.0,
-                      "y": 69.0
-                    },
-                    "endPoint": {
-                      "x": 407.0,
-                      "y": 81.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 398.0,
-                      "y": 94.0
-                    },
-                    "endControlPoint": {
-                      "x": 394.0,
-                      "y": 73.0
-                    },
-                    "endPoint": {
-                      "x": 387.0,
-                      "y": 75.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 385.0,
-                      "y": 75.0
-                    },
-                    "endControlPoint": {
-                      "x": 388.0,
-                      "y": 105.0
-                    },
-                    "endPoint": {
-                      "x": 398.0,
-                      "y": 105.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 411.0,
-                      "y": 105.0
-                    },
-                    "endControlPoint": {
-                      "x": 437.0,
-                      "y": 82.0
-                    },
-                    "endPoint": {
-                      "x": 444.0,
-                      "y": 111.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 446.0,
-                      "y": 122.0
-                    },
-                    "endControlPoint": {
-                      "x": 424.0,
-                      "y": 133.0
-                    },
-                    "endPoint": {
-                      "x": 430.0,
-                      "y": 143.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 438.0,
-                      "y": 154.0
-                    },
-                    "endControlPoint": {
-                      "x": 483.0,
-                      "y": 132.0
-                    },
-                    "endPoint": {
-                      "x": 474.0,
-                      "y": 171.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 471.0,
-                      "y": 186.0
-                    },
-                    "endControlPoint": {
-                      "x": 449.0,
-                      "y": 186.0
-                    },
-                    "endPoint": {
-                      "x": 452.0,
-                      "y": 199.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 452.0,
-                      "y": 200.0
-                    },
-                    "endControlPoint": {
-                      "x": 482.0,
-                      "y": 192.0
-                    },
-                    "endPoint": {
-                      "x": 487.0,
-                      "y": 195.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 497.0,
-                      "y": 203.0
-                    },
-                    "endControlPoint": {
-                      "x": 473.0,
-                      "y": 218.0
-                    },
-                    "endPoint": {
-                      "x": 468.0,
-                      "y": 222.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 457.0,
-                      "y": 234.0
-                    },
-                    "endControlPoint": {
-                      "x": 493.0,
-                      "y": 209.0
-                    },
-                    "endPoint": {
-                      "x": 495.0,
-                      "y": 225.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 497.0,
-                      "y": 240.0
-                    },
-                    "endControlPoint": {
-                      "x": 462.0,
-                      "y": 236.0
-                    },
-                    "endPoint": {
-                      "x": 454.0,
-                      "y": 241.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 449.0,
-                      "y": 245.0
-                    },
-                    "endControlPoint": {
-                      "x": 447.0,
-                      "y": 278.0
-                    },
-                    "endPoint": {
-                      "x": 443.0,
-                      "y": 286.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 429.0,
-                      "y": 318.0
-                    },
-                    "endControlPoint": {
-                      "x": 406.0,
-                      "y": 343.0
-                    },
-                    "endPoint": {
-                      "x": 377.0,
-                      "y": 362.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 373.0,
-                      "y": 364.0
-                    },
-                    "endControlPoint": {
-                      "x": 332.0,
-                      "y": 385.0
-                    },
-                    "endPoint": {
-                      "x": 333.0,
-                      "y": 387.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 335.0,
-                      "y": 393.0
-                    },
-                    "endControlPoint": {
-                      "x": 345.0,
-                      "y": 391.0
-                    },
-                    "endPoint": {
-                      "x": 344.0,
-                      "y": 396.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 345.0,
-                      "y": 407.0
-                    },
-                    "endControlPoint": {
-                      "x": 349.0,
-                      "y": 433.0
-                    },
-                    "endPoint": {
-                      "x": 359.0,
-                      "y": 441.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 374.0,
-                      "y": 452.0
-                    },
-                    "endControlPoint": {
-                      "x": 412.0,
-                      "y": 446.0
-                    },
-                    "endPoint": {
-                      "x": 399.0,
-                      "y": 484.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 385.0,
-                      "y": 524.0
-                    },
-                    "endControlPoint": {
-                      "x": 321.0,
-                      "y": 481.0
-                    },
-                    "endPoint": {
-                      "x": 305.0,
-                      "y": 478.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 299.0,
-                      "y": 479.0
-                    },
-                    "endControlPoint": {
-                      "x": 294.0,
-                      "y": 484.0
-                    },
-                    "endPoint": {
-                      "x": 289.0,
-                      "y": 485.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 266.0,
-                      "y": 490.0
-                    },
-                    "endControlPoint": {
-                      "x": 271.0,
-                      "y": 524.0
-                    },
-                    "endPoint": {
-                      "x": 260.0,
-                      "y": 512.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 257.0,
-                      "y": 509.0
-                    },
-                    "endControlPoint": {
-                      "x": 264.0,
-                      "y": 492.0
-                    },
-                    "endPoint": {
-                      "x": 262.0,
-                      "y": 488.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 261.0,
-                      "y": 484.0
-                    },
-                    "endControlPoint": {
-                      "x": 255.0,
-                      "y": 488.0
-                    },
-                    "endPoint": {
-                      "x": 251.0,
-                      "y": 487.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 244.0,
-                      "y": 485.0
-                    },
-                    "endControlPoint": {
-                      "x": 237.0,
-                      "y": 481.0
-                    },
-                    "endPoint": {
-                      "x": 230.0,
-                      "y": 477.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 224.0,
-                      "y": 474.0
-                    },
-                    "endControlPoint": {
-                      "x": 224.0,
-                      "y": 455.0
-                    },
-                    "endPoint": {
-                      "x": 219.0,
-                      "y": 460.0
-                    }
-                  },
-                  {
-                    "startControlPoint": {
-                      "x": 188.0,
-                      "y": 483.0
-                    },
-                    "endControlPoint": {
-                      "x": 233.0,
-                      "y": 511.0
-                    },
-                    "endPoint": {
-                      "x": 169.0,
-                      "y": 512.0
-                    }
-                  }
-                ]
-              }
-            ],
-            "thumbnail": {
-              "format": {},
-              "width": 128,
-              "height": 128,
-              "file": {
-                "id": 1456,
-                "size": 6710,
-                "expectedSize": 6710,
-                "local": {
-                  "path": "",
-                  "canBeDownloaded": true,
-                  "canBeDeleted": false,
-                  "isDownloadingActive": false,
-                  "isDownloadingCompleted": false,
-                  "downloadOffset": 0,
-                  "downloadedPrefixSize": 0,
-                  "downloadedSize": 0
-                },
-                "remote": {
-                  "id": "AAMCAgADHQR1uwy1AAMQZKASPANaj2u7toIm2RETX1nPyVEAApYKAAJl10hKnguVY2_8T-ABAAdtAAMvBA",
-                  "uniqueId": "AQADlgoAAmXXSEpy",
-                  "isUploadingActive": false,
-                  "isUploadingCompleted": true,
-                  "uploadedSize": 6710
-                }
-              }
-            },
-            "sticker": {
-              "id": 1457,
-              "size": 21341,
-              "expectedSize": 21341,
-              "local": {
-                "path": "",
-                "canBeDownloaded": true,
-                "canBeDeleted": false,
-                "isDownloadingActive": false,
-                "isDownloadingCompleted": false,
-                "downloadOffset": 0,
-                "downloadedPrefixSize": 0,
-                "downloadedSize": 0
-              },
-              "remote": {
-                "id": "CAACAgIAAx0EdbsMtQADEGSgEjwDWo9ru7aCJtkRE19Zz8lRAAKWCgACZddISp4LlWNv_E_gLwQ",
-                "uniqueId": "AgADlgoAAmXXSEo",
-                "isUploadingActive": false,
-                "isUploadingCompleted": true,
-                "uploadedSize": 21341
-              }
-            }
-          },
-          "isPremium": false
-        },
-        "replyMarkup": null
-      },
-      {
         "id": 6291456,
         "senderId": {
           "chatId": -1001975192757
@@ -1157,7 +331,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -1219,7 +393,7 @@
         "messageThreadId": 14680064,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1512357651705742E7,
+        "autoDeleteIn": 3.1470650914200783E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1279,7 +453,7 @@
         "messageThreadId": 13631488,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1512157651105165E7,
+        "autoDeleteIn": 3.1470450913847446E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1328,7 +502,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1512125651093483E7,
+        "autoDeleteIn": 3.147041891384077E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1373,7 +547,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1511920651088953E7,
+        "autoDeleteIn": 3.1470213913838387E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1418,7 +592,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1511875651085615E7,
+        "autoDeleteIn": 3.1470168913836002E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1465,7 +639,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.14620776510818E7,
+        "autoDeleteIn": 3.1420370913833857E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1510,7 +684,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.14617696510787E7,
+        "autoDeleteIn": 3.142006291383195E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1555,7 +729,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1461542651073217E7,
+        "autoDeleteIn": 3.1419835913830042E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1602,7 +776,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.145797765106964E7,
+        "autoDeleteIn": 3.1416270913828135E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1658,7 +832,7 @@
         "messageThreadId": 5242880,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.140286565106511E7,
+        "autoDeleteIn": 3.1361158913826227E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1828,7 +1002,7 @@
         "messageThreadId": 4194304,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1402759650740623E7,
+        "autoDeleteIn": 3.136105291365385E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -1993,7 +1167,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 3.1402440650676966E7,
+        "autoDeleteIn": 3.1360733913624287E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,
@@ -2164,7 +1338,7 @@
         "messageThreadId": 0,
         "selfDestructTime": 0,
         "selfDestructIn": 0.0,
-        "autoDeleteIn": 1.3310311462750435E7,
+        "autoDeleteIn": 1.3268604751076698E7,
         "viaBotUserId": 0,
         "authorSignature": "",
         "mediaAlbumId": 0,

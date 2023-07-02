@@ -25,6 +25,7 @@ import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -305,7 +306,7 @@ public final class TelegramManager extends Base{
         int width = 120;
         String delimiter = "=";
         System.out.println(centerString(title, width, delimiter));
-        System.out.println("".repeat(width));
+        //System.out.println("".repeat(width));
         System.out.println(tableString);
     }
 
@@ -390,12 +391,254 @@ public final class TelegramManager extends Base{
         userMoreInfoMenu();
         
     }
+
+    public static void showBasicGroups()
+    {
+        String title = "BASIC GROUP LIST";
+        int width = 150;
+        String delimiter = "=";
+        System.out.println(centerString(title, width, delimiter));
+        updateData();
+        List<String> headersList = Arrays.asList("Basic Group ID", "Chat ID", "Group Name", "Message Auto Delete Time", "Member Count","Description", "Invite Link");
+        List<List<String>> rowList = new ArrayList<>();
+        for (BasicGroup bs : targetBasicGroups)
+        {
+            List<String> row = new ArrayList<>();
+            row.add(bs.getId()+"");
+            row.add(bs.getChatId()+"");
+            row.add(bs.getGroupName());
+            row.add(bs.getMessageAutoDeleteTime()+"");
+            row.add(bs.getMemberCount()+"");
+            row.add(bs.getDescription());
+            row.add(bs.getInviteLink());
+            rowList.add(row);
+        }
+        Board board = new Board(180);
+        Table table = new Table(board, 180, headersList, rowList);
+        table.getColWidthsList();
+        List<Integer> colAlignList = Arrays.asList(
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER,
+            Block.DATA_CENTER,
+            Block.DATA_CENTER,
+            Block.DATA_CENTER);
+        table.setColAlignsList(colAlignList);
+        List<Integer> colWidthsListEdited = Arrays.asList(12, 12, 20, 24, 12, 40, 40);
+        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
+        Block tableBlock = table.tableToBlocks();
+        board.setInitialBlock(tableBlock);
+        board.build();
+        String tableString = board.getPreview();
+        System.out.println(tableString);
+        //groupMoreInfoMenu();
+        chooseOptionGroupMoreInfoMenu("B");
+    }
+
+    public static void groupMoreInfoMenu()
+    {
+        System.out.println("Options: ");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("1. See group permissions");
+        System.out.println("2. See admin list");
+        System.out.println("3. See member list");
+        System.out.println("0. Back");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("Please choose a number: 0-1-2-3");
+    }
+
+    public static void chooseOptionGroupMoreInfoMenu(String type)
+    {
+        //groupMoreInfoMenu();
+        boolean loop = true;
+        while (loop)
+        {
+            groupMoreInfoMenu();
+            System.out.print("Your choice is: ");
+            int choice = sc.nextInt();
+            sc.nextLine();
+            switch (choice) {
+                case 1: 
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException e) {
+                        System.err.println("[-] Error: InterruptedException in Thread.sleep() line 463.");
+                        System.out.println("Please try again or Restart the program.");
+                        break;
+                    }
+                    showPermissions(type);
+                    break;
+                case 2:
+                    showAdminList("ADMIN LIST", type);
+                    break;
+                case 3:
+                    System.out.print("\033[H\033[2J");
+                    break;
+                case 0:
+                    loop = false;
+                    break;
+                default:
+                    System.out.println("Invalid value. Please choose a number: 0-1-2");
+            }
+        }
+    }
+
+    public static void showPermissions(String type)
+    {
+        List<String> headersList = Arrays.asList("", "BasicMessages", "Audios", "Documents", "Photos", "Videos","VideoNotes", "VoiceNotes", "Polls", "OtherMessages", "AddWebPagePreviews", "ChangeInfo", "InviteUsers", "PinMessages", "ManageTopics");
+        List<Integer> colAlignList = new ArrayList<>();
+        List<List<String>> rowList = new ArrayList<List<String>>();
+        for (int i = 0; i < headersList.size(); i++)
+        {
+            colAlignList.add(Block.DATA_CENTER);
+        }
+        
+        for (BasicGroup bs: targetBasicGroups)
+        {
+            List<String> row = new ArrayList<>();
+            row.add(bs.getGroupName());
+            row.add(bs.getPermissions().canSendBasicMessages+"");
+            row.add(bs.getPermissions().canSendAudios+"");
+            row.add(bs.getPermissions().canSendDocuments+"");
+            row.add(bs.getPermissions().canSendPhotos+"");
+            row.add(bs.getPermissions().canSendVideos+"");
+            row.add(bs.getPermissions().canSendVideoNotes+"");
+            row.add(bs.getPermissions().canSendVoiceNotes+"");
+            row.add(bs.getPermissions().canSendPolls+"");
+            row.add(bs.getPermissions().canSendOtherMessages+"");
+            row.add(bs.getPermissions().canAddWebPagePreviews+"");
+            row.add(bs.getPermissions().canChangeInfo+"");
+            row.add(bs.getPermissions().canInviteUsers+"");
+            row.add(bs.getPermissions().canPinMessages+"");
+            row.add(bs.getPermissions().canManageTopics+"");
+            rowList.add(row);
+        }
+
+        Board board = new Board(200);
+        Table table = new Table(board, 200, headersList, rowList);
+        table.getColWidthsList();
+        table.setColAlignsList(colAlignList);
+        List<Integer> colWidthsListEdited = Arrays.asList(15, 14, 7, 10, 7, 7, 11, 11, 6, 14, 19, 11, 12, 12, 13);
+        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
+        Block tableBlock = table.tableToBlocks();
+        board.setInitialBlock(tableBlock);
+        board.build();
+        String tableString = board.getPreview();
+        int width = 180;
+        String delimiter = "=";
+        String title = " Permissions";
+        if (type.equals("B"))
+        {
+            title = "Basic Group" + title;
+        }
+        else if (type.equals("S"))
+        {
+            title = "Super Group" + title;
+        }
+        System.out.println(centerString(title, width, delimiter));
+        System.out.println(tableString);
+    }
+
+    public static void showAdminList(String title, String type)
+    {
+        int width = 100;
+        String delimiter = "=";
+        System.out.println(centerString(title, width, delimiter));
+        
+        List<String> headersList = new ArrayList<String>();
+        
+        List<Integer> colAlignList = new ArrayList<>();
+        List<Integer> colWidthsListEdited = new ArrayList<>();
+        List<List<Long>> adminIdsList = new ArrayList<>();
+        List<Integer> adminIdsCountList = new ArrayList<>();
+        if (type.equals("B"))
+        {
+            for (BasicGroup bs: targetBasicGroups)
+            {
+                headersList.add(bs.getGroupName());
+                colAlignList.add(Block.DATA_CENTER);
+                colWidthsListEdited.add(18);
+                adminIdsList.add(new ArrayList<>(bs.getAdminIds()));
+                adminIdsCountList.add(bs.getAdminIds().size());
+            }
+        }
+        else if (type.equals("S"))
+        {
+            for (SuperGroup sg: targetSupergroups)
+            {
+                headersList.add(sg.getGroupName());
+                colAlignList.add(Block.DATA_CENTER);
+                colWidthsListEdited.add(18);
+                adminIdsList.add(new ArrayList<>(sg.getAdminIds()));
+                adminIdsCountList.add(sg.getAdminIds().size());
+            }
+        }
+
+        for (int k = 0; k < (int) Math.ceil((double) headersList.size() / 5); k++)
+        {
+            List<List<String>> rowList = new ArrayList<List<String>>();
+            for (int i = 0; i < Collections.max(adminIdsCountList.subList(k*5, Math.min(k*5+5, headersList.size()))); i++)
+            {
+                List<String> row = new ArrayList<String>();
+                for (int j = 0; j < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); j++)
+                {
+                    List<Long> adminIds = adminIdsList.get(j);
+
+                    if (adminIds.size() > i)
+                    {
+                        for (User user: targetUsers)
+                        {
+                            if (user.getId() == adminIds.get(i))
+                            {
+                                row.add(user.getDisplayName());
+                            }
+                            // row.add(user.getId()+"");
+                        }
+                    }
+                    else
+                    {
+                        row.add("");
+                    }
+
+                }
+                rowList.add(row);
+            }
+             
+            //System.out.println("".repeat(width));
+            String tableString = createTable(headersList.subList(k*5, Math.min(k*5+5, headersList.size())), rowList, colAlignList.subList(k*5, Math.min(k*5+5, headersList.size())), colWidthsListEdited.subList(k*5, Math.min(k*5+5, headersList.size())));
+            System.out.println(tableString);
+            if (k != (int) Math.ceil((double) headersList.size() / 5) - 1)
+            {
+                System.out.println(centerString(title + " CONTINUES", width, " "));
+            }
+        }
+    }
+
+    public static String createTable(List<String> headersList, List<List<String>> rowsList, List<Integer> colAlignList, List<Integer> colWidthsListEdited)
+    {
+        Board board = new Board(180);
+        Table table = new Table(board, 200, headersList, rowsList);
+        table.getColWidthsList();
+        table.setColAlignsList(colAlignList);
+        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
+        Block tableBlock = table.tableToBlocks();
+        board.setInitialBlock(tableBlock);
+        board.build();
+        String tableString = board.getPreview();
+        return tableString;
+    }
+
     private static void getCommand() {
         String command = promptString(commandsLine);
         // System.out.println(command+"================================");
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
+                case "showBasicGroups": {
+                    showBasicGroups();
+                    break;
+                }
                 case "showUsers": {
                     showUsers();
                     break;
@@ -595,164 +838,3 @@ public final class TelegramManager extends Base{
     }
 
 }
-
-/*‘’’package com.project.main;
-
-import com.project.createchannels.CreateChannels;
-import com.project.slackdatafetching.*;
-import com.project.inviteusers.*;
-
-import java.io.IOException;
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.*;
-
-public class Main {
-
-	private static Scanner sc = new Scanner(System.in);
-
-	public static void main(String[] args) throws Exception {
-		//autoFetching();
-		showlogo();
-		showMenu();
-		sc.close();
-	}
-
-	public static void showlogo() {
-		String logo = "\n  _  _  _  _  _.---------------.\n"
-				+ ".'\\__\\'\\__\\'\\__\\'\\__\\'\\__,`   .  __
-_ \\\n"
-				+ "|\\/ _\\/ __\\/ __\\/ __\\/ _:\\   |`.  \\  \\__ \\\n"
-				+ " \\\\'\\__\\'\\__\\'\\__\\'\\__\\'\\_.__|\"\". \\  \\___ \\\n"
-				+ "  \\\\/ _\\/ __\\/ __\\/ __\\/ _:                \\\n"
-				+ "   \\\\'\\__\\'\\__\\'\\__\\ \\__\\'\\_;-----------------`\n"
-				+ "    \\\\/   \\/   \\/   \\/   \\/ :               tk|\n"
-				+ "     \\|______________________;________________|\n";
-
-		String title = "WELCOME TO SLACK MANAGEMENT PROGRAM!";
-		int width = 60;
-		String line = "-".repeat(width);
-		
-		System.out.println(logo);
-		System.out.println(line);
-		System.out.println(centerString(title, width));
-		System.out.println(line);
-	}
-
-	public static void showMenu() throws Exception {
-		String menu = "\nPlease select an option:\n\n" + "1. Show Slack's channels\n"
-				+ "2. Show Slack user's information\n" + "3. Create a channels\n" + "4. Invite user to channel\n" + "5. User management\n"
-				+ "0. Exit\n\n" + "Enter your choice (1-5): ";
-		System.out.print(menu);
-		int option = sc.nextInt();
-		
-		switch (option) {
-		case 0:
-			System.out.println("Program ended");
-			break;
-		case 1:
-			showChannels();
-			break;
-		case 2:
-			showUsers();
-			break;
-		case 3:
-			createChannel();
-			break;
-    		case 4:
-			inviteUser();
-			break;
-		case 5:
-			manageUsers();
-			break;
-		default:
-			System.out.println("Invalid input!");
-			showMenu();
-			break;
-		}
-	}
-
-	public static void autoFetching() {
-		try {
-			SlackDataFetching.airtableFetching();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	public static void showUsers() throws Exception {
-		SlackDataFetching.printUsers();
-		System.out.println("Press Enter key to get back...");
-		System.in.read();
-		showMenu();
-	}
-
-	public static void showChannels() throws Exception {
-		SlackDataFetching.printChannels();
-		System.out.println("Press Enter key to get back...");
-		System.in.read();
-		showMenu();
-	}
-
-	public static void createChannel() throws Exception {
-		// create channel bang slack API
-		BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-		System.out.print("Note: Channel names have a 21-character limit and can include lowercase letters, non-Latin characters, numbers, and hyphens.\nEnter channel's name:\n");
-		String channelName = reader.readLine();
-		if (channelName.trim().isEmpty()) {
-			System.out.println("Channel name cannot be empty.");
-			System.out.println("Press Enter to get back...");
-			System.in.read();
-			showMenu();
-		}		
-    
-		System.out.print("Enter '0' for private channel or '1' for public channel:\n");
-		String channelType = reader.readLine();
-		boolean isPrivate = false;
-
-		while (!channelType.equals("0") && !channelType.equals("1")) {
-		    System.out.println("Invalid input! Please enter '0' for private channel or '1' for public channel:");
-		    channelType = reader.readLine();
-		}
-
-		isPrivate = channelType.equals("0");
-		
-		System.out.print("Enter channel' description (optional):\n");
-		String description = reader.readLine();
-		CreateChannels.createChannel(channelName, description, isPrivate);
-    System.out.println("Press Enter key to get back...");
-		System.in.read();
-		showMenu();
-	}
-
-	public static void inviteUser() throws Exception {
-		//for debug
-		System.out.println("inviteUser");
-		InviteUsers.inviteUser();
-    System.out.println("Press Enter key to get back...");
-		System.in.read();
-		showMenu();
-	}
-
-	public static void manageUsers() {
-		//for debug
-		System.out.println("manageUsers");
-		System.out.println("Press Enter key to get back...");
-		System.in.read();
-		showMenu();
-	}
-
-	public static String centerString(String text, int width) {
-		if (text.length() > width) {
-			return text.substring(0, width);
-		} else {
-			int padding = width - text.length();
-			int leftPadding = padding / 2;
-			int rightPadding = padding - leftPadding;
-			return " ".repeat(leftPadding) + text + " ".repeat(rightPadding);
-		}
-	}
-
-}
-‘’’ */
