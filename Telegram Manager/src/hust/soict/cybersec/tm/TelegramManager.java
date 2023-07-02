@@ -2,7 +2,6 @@ package hust.soict.cybersec.tm;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.Client.ResultHandler;
-import org.drinkless.tdlib.TdApi.PingProxy;
 import org.drinkless.tdlib.TdApi;
 
 import com.google.gson.Gson;
@@ -17,11 +16,15 @@ import hust.soict.cybersec.tm.entity.User;
 import hust.soict.cybersec.tm.utils.Base;
 import hust.soict.cybersec.tm.utils.LogMessageHandler;
 import hust.soict.cybersec.tm.utils.UpdateHandler;
+import wagu.Block;
+import wagu.Board;
+import wagu.Table;
 
 import java.io.FileWriter;
 import java.io.IOError;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -29,6 +32,7 @@ import java.util.Scanner;
 
 public final class TelegramManager extends Base{
     private static Scanner sc = new Scanner(System.in);
+
     static {
         // set log message handler to handle only fatal errors (0) and plain log messages (-1)
         Client.setLogMessageHandler(0, new LogMessageHandler());
@@ -108,21 +112,21 @@ public final class TelegramManager extends Base{
         }
     }
 
-    public static void updateData() throws InterruptedException
+    public static void updateData() 
     {   
         openchat();
-        System.out.println("Start Crawling");
-        SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
-        sgCrawler.crawlSuperGroupInfo(); 
-        targetSupergroups = sgCrawler.getCollection();
-        BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(chats, client);
-        bgCrawler.crawlBasicGroupInfo();
-        targetBasicGroups = bgCrawler.getCollection();
-        UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
-        uCrawler.crawlUserInfo();
-        targetUsers = uCrawler.getCollection();
-        System.out.println("finish Crawling");
         try {
+            //System.out.println("Start Crawling");
+            SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
+            sgCrawler.crawlSuperGroupInfo();
+            targetSupergroups = sgCrawler.getCollection();
+            BasicGroupInfoCrawler bgCrawler = new BasicGroupInfoCrawler(chats, client);
+            bgCrawler.crawlBasicGroupInfo();
+            targetBasicGroups = bgCrawler.getCollection();
+            UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
+            uCrawler.crawlUserInfo();
+            targetUsers = uCrawler.getCollection();
+            //System.out.println("finish Crawling");
             FileWriter fwb = new FileWriter("basicGroups.json");
             FileWriter fws = new FileWriter("superGroups.json");  
             FileWriter fwu = new FileWriter("users.json");
@@ -134,10 +138,10 @@ public final class TelegramManager extends Base{
             fwb.close();
             fws.close();
             fwu.close();
-        } catch (IOException e) {
+        } catch (InterruptedException | IOException e) {
             // TODO Auto-generated catch block
             e.printStackTrace();
-        }
+        } 
     }
 
     public static void showMenu()
@@ -159,7 +163,7 @@ public final class TelegramManager extends Base{
 		
 		System.out.println(logo);
 		System.out.println(line);
-		System.out.println(centerString(title, width));
+		//System.out.println(centerString(title, width));
 		System.out.println(line);
         
         System.out.println("TELEGRAM MANAGER: ");
@@ -204,22 +208,199 @@ public final class TelegramManager extends Base{
                 authorizationLock.unlock();
             }
 
-        try {
             updateData();
             
 
-        } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
     }
     
+    public static void showUserGroups(String title, String type)
+    {
+        List<String> headersList = new ArrayList<String>();
+        List<Integer> colAlignList = new ArrayList<>();
+        List<Integer> colWidthsListEdited = new ArrayList<>();
+        List<List<String>> rowsList = new ArrayList<List<String>>();
+        List<List<Long>> user_group_ids_list = new ArrayList<>();
+        int maxGroupSize = 0;
+        for (User user : targetUsers)
+        {
+            headersList.add(user.getDisplayName());
+            colAlignList.add(Block.DATA_CENTER);
+            colWidthsListEdited.add(18);
+            if (type.equals("B"))
+            {
+                user_group_ids_list.add(new ArrayList<>(user.getUser_basic_group_ids()));
+                if (maxGroupSize < user.getUser_basic_group_ids().size())
+                {
+                    maxGroupSize = user.getUser_basic_group_ids().size();
+                }
+            }
+            else if (type.equals("S"))
+            {
+                user_group_ids_list.add(new ArrayList<>(user.getUser_super_group_ids()));
+                if (maxGroupSize < user.getUser_super_group_ids().size())
+                {
+                    maxGroupSize = user.getUser_super_group_ids().size();
+                }
+            }
+        }
+
+    
+        for (int i = 0; i < maxGroupSize; i++)
+        {   
+            List<String> row = new ArrayList<String>();
+            for (int j = 0; j < headersList.size(); j++)
+            {   
+                if (type.equals("B"))
+                {
+                    List<Long> user_basic_group_ids = user_group_ids_list.get(j);
+                    if (user_basic_group_ids.size() > i)
+                    {
+                        for (BasicGroup bs: targetBasicGroups)
+                        {
+                            if (bs.getId() == user_basic_group_ids.get(i))
+                            {
+                                row.add(bs.getGroupName());
+                            }
+                        }
+                        //row.add(user_basic_group_ids.get(i)+"");
+                    }
+                    else
+                    {
+                        row.add("");    
+                    }
+                }
+                else if (type.equals("S"))
+                {
+                    List<Long> user_super_group_ids = user_group_ids_list.get(j);
+                    if (user_super_group_ids.size() > i)
+                    {   
+                        for (SuperGroup sg: targetSupergroups)
+                        {
+                            if (sg.getId() == user_super_group_ids.get(i))
+                            {
+                                row.add(sg.getGroupName());
+                            }
+                        }
+                        //row.add(user_super_group_ids.get(i) + "");
+                    }
+                    else
+                    {
+                        row.add("");
+                    }
+                }
+
+            }
+            rowsList.add(row);
+        }
+
+        Board board = new Board(160);
+        Table table = new Table(board, 160, headersList, rowsList);
+        table.getColWidthsList();
+        table.setColAlignsList(colAlignList);
+        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
+        Block tableBlock = table.tableToBlocks();
+        board.setInitialBlock(tableBlock);
+        board.build();
+        String tableString = board.getPreview();
+        int width = 120;
+        String delimiter = "=";
+        System.out.println(centerString(title, width, delimiter));
+        System.out.println("".repeat(width));
+        System.out.println(tableString);
+    }
+
+    public static void showUserSuperGroups()
+    {
+
+    }
+
+    public static void userMoreInfoMenu()
+    {
+        boolean loop = true;
+        System.out.println("Options: ");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("1. See a list of \"basic\" group that user belongs to");
+        System.out.println("2. See a list of \"super\" group that user belongs to");
+        System.out.println("0. Back");
+        System.out.println("----------------------------------------------------------");
+        System.out.println("Please choose a number: 0-1-2");
+
+        while (loop)
+        {
+            System.out.print("Your choice is: ");
+            int choice = sc.nextInt();
+            switch (choice) {
+                case 1: 
+                    showUserGroups("USER BASIC GROUP LIST", "B");
+                    break;
+                case 2:
+                    showUserGroups("USER SUPER GROUP LIST", "S");
+                    break;
+                case 0:
+                    loop = false;
+                    break;
+                default:
+                    System.out.println("Invalid value. Please choose a number: 0-1-2");
+            }
+        }
+    }
+
+
+    public static void showUsers()
+    {
+        String title = "USER LIST";
+        int width = 120;
+        String delimiter = "=";
+        System.out.println(centerString(title, width, delimiter));
+        updateData();
+        List<String> headersList = Arrays.asList("User ID", "First Name", "Last Name", "UserName", "Phone Number", "IsScam", "IsFake", "User Type");
+        List<List<String>> rowsList = new ArrayList<>();
+        for (User user: targetUsers)
+        {
+            List<String> row = new ArrayList<>();
+            row.add(user.getId()+"");
+            row.add(user.getFirstName());
+            row.add(user.getLastName());
+            row.add(user.getUserName());
+            row.add(user.getPhoneNumber());
+            row.add((user.getIsScam()) ? "Yes" : "No");
+            row.add((user.getIsFake()) ? "Yes" : "No");
+            row.add(user.getType());
+            rowsList.add(row);
+        }
+        Board board = new Board(160);
+        Table table = new Table(board, 160, headersList, rowsList);
+        table.getColWidthsList();
+        List<Integer> colAlignList = Arrays.asList(
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER,
+            Block.DATA_CENTER,
+            Block.DATA_CENTER,
+            Block.DATA_CENTER, 
+            Block.DATA_CENTER);
+        table.setColAlignsList(colAlignList);
+        List<Integer> colWidthsListEdited = Arrays.asList(20, 20, 20, 20, 15, 6, 6, 20);
+        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
+        Block tableBlock = table.tableToBlocks();
+        board.setInitialBlock(tableBlock);
+        board.build();
+        String tableString = board.getPreview();
+        System.out.println(tableString);
+        userMoreInfoMenu();
+        
+    }
     private static void getCommand() {
         String command = promptString(commandsLine);
         // System.out.println(command+"================================");
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
+                case "showUsers": {
+                    showUsers();
+                    break;
+                }
                 case "update": {
                     updateData();
                     Thread.sleep(9000);
@@ -363,6 +544,23 @@ public final class TelegramManager extends Base{
             e.printStackTrace();
         }
     }
+
+    public static String centerString(String text, int width, String delimiter) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(delimiter.repeat(width));
+        sb.append("".repeat(width) + "\n");
+		if (text.length() > width) {
+			return text.substring(0, width);
+		} else {
+			int padding = width - text.length();
+			int leftPadding = padding / 2;
+			int rightPadding = padding - leftPadding;
+			sb.append(" ".repeat(leftPadding) + text + " ".repeat(rightPadding) + "\n");
+		}
+        sb.append(delimiter.repeat(width));
+        sb.append("".repeat(width));
+        return sb.toString();
+	}
     
     public static void main(String[] args) throws InterruptedException {
         

@@ -51,11 +51,50 @@ public class User
     public String getDisplayName()
     {
         StringBuilder s = new StringBuilder(firstName);
-        s.append(lastName);
+        s.append(" " + lastName);
         return s.toString();
     }
 
     public long getId() {
         return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getLanguageCode() {
+        return languageCode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+    public Set<Long> getUser_basic_group_ids() {
+        return user_basic_group_ids;
+    }
+
+    public Set<Long> getUser_super_group_ids() {
+        return user_super_group_ids;
+    }
+
+    public boolean getIsScam() {
+        return isScam;
+    }
+
+    public boolean getIsFake() {
+        return isFake;
     }
 }
