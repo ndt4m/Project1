@@ -470,16 +470,16 @@ public final class TelegramManager extends Base{
                     showPermissions(type);
                     break;
                 case 2:
-                    showAdminList("ADMIN LIST", type);
+                    showAdminList("ADMIN LIST", type, "ADMIN");
                     break;
                 case 3:
-                    System.out.print("\033[H\033[2J");
+                    showAdminList("MEMBER LIST", type, "MEM");
                     break;
                 case 0:
                     loop = false;
                     break;
                 default:
-                    System.out.println("Invalid value. Please choose a number: 0-1-2");
+                    System.out.println("Invalid value. Please choose a number: 0-1-2-3");
             }
         }
     }
@@ -540,7 +540,7 @@ public final class TelegramManager extends Base{
         System.out.println(tableString);
     }
 
-    public static void showAdminList(String title, String type)
+    public static void showAdminList(String title, String type, String mode)
     {
         int width = 100;
         String delimiter = "=";
@@ -550,8 +550,8 @@ public final class TelegramManager extends Base{
         
         List<Integer> colAlignList = new ArrayList<>();
         List<Integer> colWidthsListEdited = new ArrayList<>();
-        List<List<Long>> adminIdsList = new ArrayList<>();
-        List<Integer> adminIdsCountList = new ArrayList<>();
+        List<List<Long>> Id_List = new ArrayList<>();
+        List<Integer> Id_Count_List = new ArrayList<>();
         if (type.equals("B"))
         {
             for (BasicGroup bs: targetBasicGroups)
@@ -559,8 +559,16 @@ public final class TelegramManager extends Base{
                 headersList.add(bs.getGroupName());
                 colAlignList.add(Block.DATA_CENTER);
                 colWidthsListEdited.add(18);
-                adminIdsList.add(new ArrayList<>(bs.getAdminIds()));
-                adminIdsCountList.add(bs.getAdminIds().size());
+                if (mode.equals("ADMIN"))
+                {
+                    Id_List.add(new ArrayList<>(bs.getAdminIds()));
+                    Id_Count_List.add(bs.getAdminIds().size());
+                }
+                else if (mode.equals("MEM"))
+                {
+                    Id_List.add(new ArrayList<>(bs.getMemberIds()));
+                    Id_Count_List.add(bs.getMemberIds().size());
+                }
             }
         }
         else if (type.equals("S"))
@@ -570,20 +578,28 @@ public final class TelegramManager extends Base{
                 headersList.add(sg.getGroupName());
                 colAlignList.add(Block.DATA_CENTER);
                 colWidthsListEdited.add(18);
-                adminIdsList.add(new ArrayList<>(sg.getAdminIds()));
-                adminIdsCountList.add(sg.getAdminIds().size());
+                if (mode.equals("ADMIN"))
+                {
+                    Id_List.add(new ArrayList<>(sg.getAdminIds()));
+                    Id_Count_List.add(sg.getAdminIds().size());
+                }
+                else if (mode.equals("MEM"))
+                {
+                    Id_List.add(new ArrayList<>(sg.getMemberIds()));
+                    Id_Count_List.add(sg.getMemberIds().size());
+                }
             }
         }
 
         for (int k = 0; k < (int) Math.ceil((double) headersList.size() / 5); k++)
         {
             List<List<String>> rowList = new ArrayList<List<String>>();
-            for (int i = 0; i < Collections.max(adminIdsCountList.subList(k*5, Math.min(k*5+5, headersList.size()))); i++)
+            for (int i = 0; i < Collections.max(Id_Count_List.subList(k*5, Math.min(k*5+5, headersList.size()))); i++)
             {
                 List<String> row = new ArrayList<String>();
                 for (int j = 0; j < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); j++)
                 {
-                    List<Long> adminIds = adminIdsList.get(j);
+                    List<Long> adminIds = Id_List.get(j);
 
                     if (adminIds.size() > i)
                     {

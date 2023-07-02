@@ -18,12 +18,9 @@ import java.io.IOException;
 
 public class test {
     public static void main(String[] args) {
-        List<Integer> numbers = new ArrayList<Integer>();
-        numbers.add(1);
-                numbers.add(2);
-        numbers.add(3);
-        numbers.add(4);
-        numbers.add(5);
-        System.out.println(numbers.subList(2, 3).size());
-        }
+        double number = 3.14;
+double roundedUp = Math.ceil((double) 2/3);
+
+System.out.println("Rounded up value: " + roundedUp);
     }
+}
