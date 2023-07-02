@@ -22,7 +22,7 @@ public class SuperGroup
     // private boolean isFake;
     // private boolean isScam;
     private int memberCount;
-    private boolean canGetMembers;
+    // private boolean canGetMembers;
     private boolean isAllHistoryAvailable;
     private Set<Long> adminIds = new HashSet<>();
     private Set<Long> memberIds = new HashSet<>();
@@ -51,7 +51,7 @@ public class SuperGroup
                     //   boolean isFake,
                     //   boolean isScam,
                       int memberCount,
-                      boolean canGetMembers,
+                    //   boolean canGetMembers,
                       boolean isAllHistoryAvailable,
                       Set<Long> adminIds,
                       Set<Long> memberIds,
@@ -73,7 +73,7 @@ public class SuperGroup
         // this.isFake = isFake;
         // this.isScam = isScam;
         this.memberCount = memberCount;
-        this.canGetMembers = canGetMembers;
+        // this.canGetMembers = canGetMembers;
         this.isAllHistoryAvailable = isAllHistoryAvailable;
         this.adminIds = adminIds;
         this.memberIds = memberIds;

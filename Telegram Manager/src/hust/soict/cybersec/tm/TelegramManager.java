@@ -28,7 +28,6 @@ import java.util.Scanner;
 
 public final class TelegramManager extends Base{
     private static Scanner sc = new Scanner(System.in);
-    
     static {
         // set log message handler to handle only fatal errors (0) and plain log messages (-1)
         Client.setLogMessageHandler(0, new LogMessageHandler());
@@ -49,6 +48,7 @@ public final class TelegramManager extends Base{
 
     public static void openchat()
     {
+
         for (Map.Entry<Long, TdApi.Chat> chat : chats.entrySet())
         {
             client.send(new TdApi.OpenChat(chat.getKey()), new ResultHandler() {
@@ -67,15 +67,27 @@ public final class TelegramManager extends Base{
                     }
                 }
             });
-            if (chat.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR)
+            
+            if (chat.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR ||
+                chat.getValue().type.getConstructor() == TdApi.ChatTypeSupergroup.CONSTRUCTOR)
             {
-                client.send(new TdApi.GetBasicGroupFullInfo(((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId), new UpdateHandler());
+                TdApi.ChatPermissions permissions = chat.getValue().permissions;
+                permissions.canInviteUsers = !(permissions.canInviteUsers);
+                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new UpdateHandler());
+                permissions.canInviteUsers = !(permissions.canInviteUsers);
+                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new UpdateHandler());
+
+                // for (int i = 0; i < 2; i++)
+                // {
+                //     client.send(new TdApi.GetBasicGroupFullInfo(((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId), new UpdateHandler());
+                // }
             }
         }
     }
 
     public static void updateData() throws InterruptedException
     {   
+        openchat();
         System.out.println("Start Crawling");
         SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
         sgCrawler.crawlSuperGroupInfo(); 
@@ -188,6 +200,8 @@ public final class TelegramManager extends Base{
                     break;
                 }
                 case "update": {
+                    updateData();
+                    Thread.sleep(7900);
                     updateData();
                     break;
                 }

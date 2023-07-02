@@ -3,8 +3,10 @@ package hust.soict.cybersec.tm.crawling;
 import org.drinkless.tdlib.TdApi;
 
 import hust.soict.cybersec.tm.entity.BasicGroup;
+import hust.soict.cybersec.tm.utils.UpdateHandler;
 
 import org.drinkless.tdlib.Client;
+import org.drinkless.tdlib.Client.ResultHandler;
 
 import java.util.Map;
 import java.util.ArrayList;
@@ -67,7 +69,26 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             {
                 continue;
             }
-            
+            // client.send(new TdApi.OpenChat(chat.getKey()), new ResultHandler() {
+            //     @Override
+            //     public void onResult(TdApi.Object object)
+            //     {
+            //         switch (object.getConstructor()) 
+            //         {
+            //             case TdApi.Ok.CONSTRUCTOR: 
+            //                 //System.out.println("ok");
+            //                 break;
+                        
+            //             default: 
+            //                 System.out.println("Unhandle response: " + object.toString());
+                        
+            //         }
+            //     }
+            // });
+            // for (int i = 0; i < 2; i++)
+            // {
+            //     client.send(new TdApi.GetBasicGroupFullInfo(((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId), new UpdateHandler());
+            // }
             id = ((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId;
             chatId = chat.getKey();
             groupName = chat.getValue().title;

@@ -242,15 +242,16 @@ public class UpdateHandler implements Client.ResultHandler
                 TelegramManager.usersFullInfo.put(updateUserFullInfo.userId, updateUserFullInfo.userFullInfo);
                 break;
             case TdApi.UpdateBasicGroupFullInfo.CONSTRUCTOR:
-                System.out.println("====================================update basic group full info======================================");
+                //System.out.println("====================================update basic group full info======================================");
                 TdApi.UpdateBasicGroupFullInfo updateBasicGroupFullInfo = (TdApi.UpdateBasicGroupFullInfo) object;
                 TelegramManager.basicGroupsFullInfo.put(updateBasicGroupFullInfo.basicGroupId, updateBasicGroupFullInfo.basicGroupFullInfo);
-                //System.out.println(object.toString());
+                //System.out.println("description: " + updateBasicGroupFullInfo.basicGroupFullInfo.description);
                 break;
             case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
                 System.out.println("====================================update super group full info======================================");
                 TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
                 TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
+                System.out.println(updateSupergroupFullInfo.supergroupFullInfo.description);
                 break;
             case TdApi.UpdateOption.CONSTRUCTOR:
                 break;

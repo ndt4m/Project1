@@ -29,7 +29,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
     // private int isFake = -1;
     // private int isScam = -1;
     private int memberCount = -1;
-    private int canGetMembers = -1;
+    // private int canGetMembers = -1;
     private int isAllHistoryAvailable = -1;
     private Set<Long> adminIds = new HashSet<>();
     private Set<Long> memberIds = new HashSet<>();
@@ -58,7 +58,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
         // canBeDeletedOnlyForSelf = -1;
         // canBeDeletedForAllUsers = -1;
         // defaultDisableNotification = -1;
-        canGetMembers = -1;
+        // canGetMembers = -1;
         isAllHistoryAvailable = -1;
         messageAutoDeleteTime = -1;
         adminIds = new HashSet<>();
@@ -96,9 +96,9 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
             // isScam = superGroups.get(id).isScam ? 1 : 0;
             // isFake = superGroups.get(id).isFake ? 1 : 0;
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateSuperGroupHandler);
-            blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
             if (adminIds.contains(2134816269l))
             {   
+                blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
                 blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
                 //System.out.println(memberCount);
                 for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
@@ -135,7 +135,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                                             //   (isFake == 1) ? true : false, 
                                             //   (isScam == 1) ? true : false, 
                                               memberCount, 
-                                              (canGetMembers == 1) ? true : false, 
+                                            //   (canGetMembers == 1) ? true : false, 
                                               (isAllHistoryAvailable == 1) ? true : false, 
                                               adminIds, 
                                               memberIds, 
@@ -180,7 +180,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     TdApi.SupergroupFullInfo supergroupFullInfo = (TdApi.SupergroupFullInfo) object;
                     // memberCount = supergroupFullInfo.memberCount;
                     description = supergroupFullInfo.description;
-                    canGetMembers = supergroupFullInfo.canGetMembers ? 1 : 0;
+                    // canGetMembers = supergroupFullInfo.canGetMembers ? 1 : 0;
                     isAllHistoryAvailable = supergroupFullInfo.isAllHistoryAvailable ? 1 : 0;
                     if (supergroupFullInfo.inviteLink != null) 
                     {
