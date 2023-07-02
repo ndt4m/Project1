@@ -248,10 +248,10 @@ public class UpdateHandler implements Client.ResultHandler
                 //System.out.println("description: " + updateBasicGroupFullInfo.basicGroupFullInfo.description);
                 break;
             case TdApi.UpdateSupergroupFullInfo.CONSTRUCTOR:
-                System.out.println("====================================update super group full info======================================");
+                //System.out.println("====================================update super group full info======================================");
                 TdApi.UpdateSupergroupFullInfo updateSupergroupFullInfo = (TdApi.UpdateSupergroupFullInfo) object;
                 TelegramManager.supergroupsFullInfo.put(updateSupergroupFullInfo.supergroupId, updateSupergroupFullInfo.supergroupFullInfo);
-                System.out.println(updateSupergroupFullInfo.supergroupFullInfo.description);
+                //System.out.println(updateSupergroupFullInfo.supergroupFullInfo.description);
                 break;
             case TdApi.UpdateOption.CONSTRUCTOR:
                 break;
@@ -284,7 +284,7 @@ public class UpdateHandler implements Client.ResultHandler
             case TdApi.UpdateSelectedBackground.CONSTRUCTOR:
                 break;
             default:
-                TelegramManager.print("Unsupported update:\n" + object);
+                //TelegramManager.print("Unsupported update:\n" + object);
         }
     }
 }

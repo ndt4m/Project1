@@ -2,6 +2,7 @@ package hust.soict.cybersec.tm;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.Client.ResultHandler;
+import org.drinkless.tdlib.TdApi.PingProxy;
 import org.drinkless.tdlib.TdApi;
 
 import com.google.gson.Gson;
@@ -72,10 +73,32 @@ public final class TelegramManager extends Base{
                 chat.getValue().type.getConstructor() == TdApi.ChatTypeSupergroup.CONSTRUCTOR)
             {
                 TdApi.ChatPermissions permissions = chat.getValue().permissions;
-                permissions.canInviteUsers = !(permissions.canInviteUsers);
-                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new UpdateHandler());
-                permissions.canInviteUsers = !(permissions.canInviteUsers);
-                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new UpdateHandler());
+                permissions.canInviteUsers = !(chat.getValue().permissions.canInviteUsers);
+                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
+                    @Override
+                    public void onResult(TdApi.Object object)
+                    {
+                        switch (object.getConstructor()) 
+                        {
+                            case TdApi.Ok.CONSTRUCTOR: 
+                                //System.out.println("ok");
+                                break;
+                        }
+                    }
+                });
+                permissions.canInviteUsers = chat.getValue().permissions.canInviteUsers;
+                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
+                    @Override
+                    public void onResult(TdApi.Object object)
+                    {
+                        switch (object.getConstructor()) 
+                        {
+                            case TdApi.Ok.CONSTRUCTOR: 
+                                //System.out.println("ok");
+                                break;
+                        }
+                    }
+                });
 
                 // for (int i = 0; i < 2; i++)
                 // {
@@ -116,9 +139,10 @@ public final class TelegramManager extends Base{
             e.printStackTrace();
         }
     }
+
     public static void showMenu()
     {
-        System.out.println("o\r\n" + //
+        String logo = "o\r\n" + //
                 " \\_/\\o\r\n" + //
                 "( Oo)                    \\|/\r\n" + //
                 "(_=-)  .===O-  ~~Z~A~P~~ -O-\r\n" + //
@@ -128,7 +152,16 @@ public final class TelegramManager extends Base{
                 "{K ||\r\n" + //
                 " | PP\r\n" + //
                 " | ||\r\n" + //
-                " (__\\\\");
+                " (__\\\\";
+        String title = "WELCOME TO TELEGRAM MANAGEMENT PROGRAM!";
+		int width = 60;
+		String line = "-".repeat(width);
+		
+		System.out.println(logo);
+		System.out.println(line);
+		System.out.println(centerString(title, width));
+		System.out.println(line);
+        
         System.out.println("TELEGRAM MANAGER: ");
         System.out.println("--------------------------------");
         System.out.println("1. update");
@@ -187,21 +220,9 @@ public final class TelegramManager extends Base{
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
-                // case "gu": {
-                //     client.send(new TdApi.GetUser(5846793443l), defaultHandler);
-                //     break;
-                // }
-                case "o": {
-                    openchat();
-                    break;
-                }
-                case "s": {
-                    System.out.println(basicGroupsFullInfo.get(Long.parseLong(commands[1])).description);
-                    break;
-                }
                 case "update": {
                     updateData();
-                    Thread.sleep(7900);
+                    Thread.sleep(9000);
                     updateData();
                     break;
                 }
