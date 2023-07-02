@@ -309,11 +309,6 @@ public final class TelegramManager extends Base{
         System.out.println(tableString);
     }
 
-    public static void showUserSuperGroups()
-    {
-
-    }
-
     public static void userMoreInfoMenu()
     {
         boolean loop = true;
@@ -321,9 +316,10 @@ public final class TelegramManager extends Base{
         System.out.println("----------------------------------------------------------");
         System.out.println("1. See a list of \"basic\" group that user belongs to");
         System.out.println("2. See a list of \"super\" group that user belongs to");
+        System.out.println("3. Clear the terminal");
         System.out.println("0. Back");
         System.out.println("----------------------------------------------------------");
-        System.out.println("Please choose a number: 0-1-2");
+        System.out.println("Please choose a number: 0-1-2-3");
 
         while (loop)
         {
@@ -335,6 +331,9 @@ public final class TelegramManager extends Base{
                     break;
                 case 2:
                     showUserGroups("USER SUPER GROUP LIST", "S");
+                    break;
+                case 3:
+                    System.out.print("\033[H\033[2J");
                     break;
                 case 0:
                     loop = false;
