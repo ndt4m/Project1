@@ -460,13 +460,6 @@ public final class TelegramManager extends Base{
             sc.nextLine();
             switch (choice) {
                 case 1: 
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException e) {
-                        System.err.println("[-] Error: InterruptedException in Thread.sleep() line 463.");
-                        System.out.println("Please try again or Restart the program.");
-                        break;
-                    }
                     showPermissions(type);
                     break;
                 case 2:
@@ -602,14 +595,21 @@ public final class TelegramManager extends Base{
                     List<Long> adminIds = Id_List.get(j);
 
                     if (adminIds.size() > i)
-                    {
+                    {   
+                        boolean found = false;
                         for (User user: targetUsers)
                         {
                             if (user.getId() == adminIds.get(i))
                             {
                                 row.add(user.getDisplayName());
+                                found = true;
+                                break;
                             }
                             // row.add(user.getId()+"");
+                        }
+                        if (!found)
+                        {
+                            row.add("bot");
                         }
                     }
                     else
