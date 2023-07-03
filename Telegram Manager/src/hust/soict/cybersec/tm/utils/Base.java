@@ -1,7 +1,6 @@
 package hust.soict.cybersec.tm.utils;
 
 import java.io.BufferedReader;
-import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.NavigableSet;
@@ -15,16 +14,19 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
-import hust.soict.cybersec.tm.TelegramManager;
-
 public class Base 
 {
+    public final static String RED = "\u001B[31m";
+    public final static String GREEN = "\u001B[92m";
+    public final static String BLUE = "\u001B[34m";
+    public final static String MAGENTA = "\u001B[35m";
+    
     public static Client client = null;
     public static TdApi.AuthorizationState authorizationState = null;
     public static volatile boolean haveAuthorization = false;
     public static volatile boolean needQuit = false;
     public static volatile boolean canQuit = false;
-
+    public static boolean haveReceivedRespond = false;
     public static final Lock authorizationLock = new ReentrantLock();
     public static final Condition gotAuthorization = authorizationLock.newCondition();
 
@@ -114,4 +116,25 @@ public class Base
         }
     }
 
+    public static void printColor(String color, String content)
+    {
+        System.out.println(color + content + "\u001B[0m");
+    }
+
+    public static String centerString(String text, int width, String delimiter) {
+        StringBuilder sb = new StringBuilder();
+        sb.append(delimiter.repeat(width));
+        sb.append("".repeat(width) + "\n");
+		if (text.length() > width) {
+			return text.substring(0, width);
+		} else {
+			int padding = width - text.length();
+			int leftPadding = padding / 2;
+			int rightPadding = padding - leftPadding;
+			sb.append(" ".repeat(leftPadding) + text + " ".repeat(rightPadding) + "\n");
+		}
+        sb.append(delimiter.repeat(width));
+        sb.append("".repeat(width));
+        return sb.toString();
+	}
 }

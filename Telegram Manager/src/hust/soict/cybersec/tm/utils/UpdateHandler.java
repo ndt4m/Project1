@@ -50,7 +50,7 @@ public class UpdateHandler implements Client.ResultHandler
                 TdApi.Chat chat = updateNewChat.chat;
                 synchronized (chat) {
                     TelegramManager.chats.put(chat.id, chat);
-                    TdApi.ChatPosition[] positions = chat.positions;
+                    //TdApi.ChatPosition[] positions = chat.positions;
                     chat.positions = new TdApi.ChatPosition[0];
                     //OrderedChat.setChatPositions(chat, positions);
                 }

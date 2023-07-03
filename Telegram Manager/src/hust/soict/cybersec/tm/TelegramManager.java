@@ -34,7 +34,6 @@ import java.util.Scanner;
 
 public final class TelegramManager extends Base{
     private static Scanner sc = new Scanner(System.in);
-
     static {
         // set log message handler to handle only fatal errors (0) and plain log messages (-1)
         Client.setLogMessageHandler(0, new LogMessageHandler());
@@ -47,13 +46,14 @@ public final class TelegramManager extends Base{
 
         // create client
         client = Client.create(new UpdateHandler(), null, null);
+        //System.out.println(centerString("Create client", 180, "*"));
     }
 
     private static List<BasicGroup> targetBasicGroups = new ArrayList<BasicGroup>();
     private static List<SuperGroup> targetSupergroups = new ArrayList<SuperGroup>();
     private static List<User> targetUsers = new ArrayList<User>();
 
-    public static void openchat()
+    public static void openChat()
     {
 
         for (Map.Entry<Long, TdApi.Chat> chat : chats.entrySet())
@@ -69,7 +69,7 @@ public final class TelegramManager extends Base{
                             break;
                         
                         default: 
-                            System.out.println("Unhandle response: " + object.toString());
+                            printColor(RED, "Unhandle response: " + object.toString());
                         
                     }
                 }
@@ -116,7 +116,8 @@ public final class TelegramManager extends Base{
 
     public static void updateData() 
     {   
-        openchat();
+        //System.out.println(centerString("Update data", 180, "*"));
+        openChat();
         try {
             //System.out.println("Start Crawling");
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
@@ -148,26 +149,26 @@ public final class TelegramManager extends Base{
 
     public static void showMainMenu()
     {
-        System.out.println("TELEGRAM MANAGER: ");
-        System.out.println("--------------------------------");
-        System.out.println("1. Synchronize data to AirTable");
-        System.out.println("2. Show user information");
-        System.out.println("3. Show \"basic\" group information");
-        System.out.println("4. Show \"super\" group information");
-        System.out.println("5. Create \"basic\" group");
-        System.out.println("6. Create \"super\" group");
-        System.out.println("7. Add member");
-        System.out.println("8. Kick member");
-        System.out.println("9. Update data");
-        System.out.println("10. Log out");
-        System.out.println("0. Quit");
-        System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3-4-5-6-7-8-9-10");
+        printColor(MAGENTA, "TELEGRAM MANAGER: ");
+        printColor(MAGENTA, "--------------------------------");
+        printColor(MAGENTA, "1. Synchronize data to AirTable");
+        printColor(MAGENTA, "2. Show user information");
+        printColor(MAGENTA, "3. Show \"basic\" group information");
+        printColor(MAGENTA, "4. Show \"super\" group information");
+        printColor(MAGENTA, "5. Create \"basic\" group");
+        printColor(MAGENTA, "6. Create \"super\" group");
+        printColor(MAGENTA, "7. Add member");
+        printColor(MAGENTA, "8. Kick member");
+        printColor(MAGENTA, "9. Update data");
+        printColor(MAGENTA, "10. Log out");
+        printColor(MAGENTA, "0. Quit");
+        printColor(MAGENTA, "--------------------------------");
+        printColor(MAGENTA, "Please choose a number: 0-1-2-3-4-5-6-7-8-9-10");
     }
 
-    public static void synchronize()
+    public static void autoSynchronize()
     {
-        
+        printColor(GREEN, centerString("Create client", 180, "*"));
         authorizationLock.lock();
             try {
                 while (!haveAuthorization) {
@@ -195,9 +196,9 @@ public final class TelegramManager extends Base{
             } finally {
                 authorizationLock.unlock();
             }
-
+            printColor(GREEN, centerString("Update data", 180, "*"));
             updateData();
-            
+            printColor(GREEN, centerString("Syncronize is completed successfully!", 180, "*"));
 
     }
     
@@ -248,6 +249,7 @@ public final class TelegramManager extends Base{
                             if (bs.getId() == user_basic_group_ids.get(i))
                             {
                                 row.add(bs.getGroupName());
+                                break;
                             }
                         }
                         //row.add(user_basic_group_ids.get(i)+"");
@@ -267,6 +269,7 @@ public final class TelegramManager extends Base{
                             if (sg.getId() == user_super_group_ids.get(i))
                             {
                                 row.add(sg.getGroupName());
+                                break;
                             }
                         }
                         //row.add(user_super_group_ids.get(i) + "");
@@ -299,24 +302,29 @@ public final class TelegramManager extends Base{
 
     public static void userMoreInfoMenu()
     {
-        System.out.println("Options: ");
-        System.out.println("----------------------------------------------------------");
-        System.out.println("1. See a list of \"basic\" group that user belongs to");
-        System.out.println("2. See a list of \"super\" group that user belongs to");
-        System.out.println("0. Back");
-        System.out.println("----------------------------------------------------------");
-        System.out.println("Please choose a number: 0-1-2");
+        printColor(MAGENTA, "Options: ");
+        printColor(MAGENTA, "----------------------------------------------------------");
+        printColor(MAGENTA, "1. See a list of \"basic\" group that user belongs to");
+        printColor(MAGENTA, "2. See a list of \"super\" group that user belongs to");
+        printColor(MAGENTA, "0. Back");
+        printColor(MAGENTA, "----------------------------------------------------------");
+        printColor(MAGENTA, "Please choose a number: 0-1-2");
     }
 
     public static void chooseOptionUserMoreInfoMenu()
     {
+        int choice = -1;
         boolean loop = true;
         while (loop)
-        {
+        {   
             userMoreInfoMenu();
-            System.out.print("Your choice is: ");
-            int choice = sc.nextInt();
-            sc.nextLine();
+            try {
+                printColor(MAGENTA, "Your choice is: ");
+                choice = sc.nextInt();
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+            }
+
             switch (choice) {
                 case 1: 
                     showUserGroups("USER BASIC GROUP LIST", "B");
@@ -328,17 +336,15 @@ public final class TelegramManager extends Base{
                     loop = false;
                     break;
                 default:
-                    System.out.println("Invalid value. Please choose a number: 0-1-2");
+                    printColor(RED, centerString("Invalid value. Please choose a number: 0-1-2", 180, "#"));
             }
         }
+        
     }
 
     public static void showUsers()
     {
-        String title = "USER LIST";
-        int width = 120;
-        String delimiter = "=";
-        System.out.println(centerString(title, width, delimiter));
+        printColor(GREEN, centerString("USER LIST", 180, "#"));
         updateData();
         List<String> headersList = Arrays.asList("User ID", "First Name", "Last Name", "UserName", "Phone Number", "IsScam", "IsFake", "User Type");
         List<List<String>> rowsList = new ArrayList<>();
@@ -355,36 +361,22 @@ public final class TelegramManager extends Base{
             row.add(user.getType());
             rowsList.add(row);
         }
-        Board board = new Board(160);
-        Table table = new Table(board, 160, headersList, rowsList);
-        table.getColWidthsList();
-        List<Integer> colAlignList = Arrays.asList(
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER,
-            Block.DATA_CENTER,
-            Block.DATA_CENTER,
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER);
-        table.setColAlignsList(colAlignList);
+        List<Integer> colAlignList = new ArrayList<>();
+        for (int i = 0; i < headersList.size(); i++) 
+        {
+            colAlignList.add(Block.DATA_CENTER);
+        }
         List<Integer> colWidthsListEdited = Arrays.asList(20, 20, 20, 20, 15, 6, 6, 20);
-        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
-        Block tableBlock = table.tableToBlocks();
-        board.setInitialBlock(tableBlock);
-        board.build();
-        String tableString = board.getPreview();
-        System.out.println(tableString);
+       
+    
+        printColor(BLUE, createTable(headersList, rowsList, colAlignList, colWidthsListEdited));
         chooseOptionUserMoreInfoMenu();
         
     }
 
     public static void showBasicGroups()
     {
-        String title = "BASIC GROUP LIST";
-        int width = 150;
-        String delimiter = "=";
-        System.out.println(centerString(title, width, delimiter));
+        printColor(GREEN, centerString("BASIC GROUP LIST", 180, "#"));
         updateData();
         List<String> headersList = Arrays.asList("Basic Group ID", "Chat ID", "Group Name", "Message Auto Delete Time", "Member Count","Description", "Invite Link");
         List<List<String>> rowList = new ArrayList<>();
@@ -408,32 +400,35 @@ public final class TelegramManager extends Base{
         }
 
         List<Integer> colWidthsListEdited = Arrays.asList(12, 12, 20, 24, 12, 40, 40);
-        System.out.println(createTable(headersList, rowList, colAlignList, colWidthsListEdited));
+        printColor(BLUE, createTable(headersList, rowList, colAlignList, colWidthsListEdited));
         chooseOptionGroupMoreInfoMenu("B");
     }
 
     public static void groupMoreInfoMenu()
     {
-        System.out.println("Options: ");
-        System.out.println("----------------------------------------------------------");
-        System.out.println("1. See group permissions");
-        System.out.println("2. See admin list");
-        System.out.println("3. See member list");
-        System.out.println("0. Back");
-        System.out.println("----------------------------------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3");
+        printColor(MAGENTA, "Options: ");
+        printColor(MAGENTA, "----------------------------------------------------------");
+        printColor(MAGENTA, "1. See group permissions");
+        printColor(MAGENTA, "2. See admin list");
+        printColor(MAGENTA, "3. See member list");
+        printColor(MAGENTA, "0. Back");
+        printColor(MAGENTA, "----------------------------------------------------------");
+        printColor(MAGENTA, "Please choose a number: 0-1-2-3");
     }
 
     public static void chooseOptionGroupMoreInfoMenu(String type)
     {
-        //groupMoreInfoMenu();
+        int choice = -1;
         boolean loop = true;
         while (loop)
         {
             groupMoreInfoMenu();
-            System.out.print("Your choice is: ");
-            int choice = sc.nextInt();
-            sc.nextLine();
+            try {
+                printColor(MAGENTA, "Your choice is: ");
+                choice = sc.nextInt();
+            } catch (InputMismatchException e) {
+                sc.nextLine();
+            }
             switch (choice) {
                 case 1: 
                     showPermissions(type);
@@ -448,9 +443,10 @@ public final class TelegramManager extends Base{
                     loop = false;
                     break;
                 default:
-                    System.out.println("Invalid value. Please choose a number: 0-1-2-3");
+                    printColor(RED, centerString("Invalid value. Please choose a number: 0-1-2-3", 180, "#"));
             }
         }
+        
     }
 
     public static void showPermissions(String type)
@@ -463,8 +459,6 @@ public final class TelegramManager extends Base{
             colAlignList.add(Block.DATA_CENTER);
         }
         
-        int width = 180;
-        String delimiter = "=";
         String title = " Permissions";
         if (type.equals("B"))
         {
@@ -514,16 +508,14 @@ public final class TelegramManager extends Base{
                 rowList.add(row);
             }
         }
-        System.out.println(centerString(title, width, delimiter));
+        printColor(GREEN, centerString(title, 180, "#"));
         List<Integer> colWidthsListEdited = Arrays.asList(15, 14, 7, 10, 7, 7, 11, 11, 6, 14, 19, 11, 12, 12, 13);
-        System.out.println(createTable(headersList, rowList, colAlignList, colWidthsListEdited));
+        printColor(BLUE, createTable(headersList, rowList, colAlignList, colWidthsListEdited));
     }
 
     public static void showAdminOrMemList(String title, String type, String mode)
     {
-        int width = 100;
-        String delimiter = "=";
-        System.out.println(centerString(title, width, delimiter));
+        printColor(GREEN, centerString(title, 180, "#"));
         
         List<String> headersList = new ArrayList<String>();
         
@@ -608,11 +600,10 @@ public final class TelegramManager extends Base{
             }
              
             //System.out.println("".repeat(width));
-            String tableString = createTable(headersList.subList(k*5, Math.min(k*5+5, headersList.size())), rowList, colAlignList.subList(k*5, Math.min(k*5+5, headersList.size())), colWidthsListEdited.subList(k*5, Math.min(k*5+5, headersList.size())));
-            System.out.println(tableString);
+            printColor(BLUE, createTable(headersList.subList(k*5, Math.min(k*5+5, headersList.size())), rowList, colAlignList.subList(k*5, Math.min(k*5+5, headersList.size())), colWidthsListEdited.subList(k*5, Math.min(k*5+5, headersList.size()))));
             if (k != (int) Math.ceil((double) headersList.size() / 5) - 1)
             {
-                System.out.println(centerString(title + " CONTINUES", width, " "));
+                printColor(GREEN, centerString(title + " CONTINUES", 180, " "));
             }
         }
     }
@@ -633,10 +624,7 @@ public final class TelegramManager extends Base{
 
     public static void showSuperGroups()
     {
-        String title = "SUPER GROUP LIST";
-        int width = 170;
-        String delimeter = "=";
-        System.out.println(centerString(title, width, delimeter));
+        printColor(GREEN, centerString("SUPER GROUP LIST", 180, "#"));
         updateData();
         List<String> headersList = Arrays.asList("Super Group ID", "Chat ID", "Group Name", "Message Auto Delete Time", "Member Count", "History Available", "Description", "Invite Link");
         List<List<String>> rowList = new ArrayList<>();
@@ -660,18 +648,23 @@ public final class TelegramManager extends Base{
             colAlignList.add(Block.DATA_CENTER);
         }
         List<Integer> colWidthsListEdited = Arrays.asList(12, 12, 20, 24, 12, 17, 40, 40);
-        System.out.println(createTable(headersList, rowList, colAlignList, colWidthsListEdited));
+        printColor(BLUE, createTable(headersList, rowList, colAlignList, colWidthsListEdited));
         chooseOptionGroupMoreInfoMenu("S");
     }
 
     public static void chooseOptionMainMenu()
     {
+        int choice = -1;
         showMainMenu();
-        System.out.print("Your choice is: ");
-        int choice = sc.nextInt();
-        sc.nextLine();
+        try {
+            printColor(MAGENTA, "Your choice is: ");
+            choice = sc.nextInt();
+        } catch (InputMismatchException e) {
+            sc.nextLine();
+        }
         switch (choice) {
             case 1: 
+                manualSynchronize();
                 break;
             case 2:
                 showUsers();
@@ -689,236 +682,197 @@ public final class TelegramManager extends Base{
                 createSuperGroup();
                 break;
             case 7:
-
+                addMember();
+                break;
+            case 8:
+                kickMember();
+                break;
+            case 9:
+                printColor(GREEN, centerString("UPDATING DATA", 180, "#"));
+                updateData();
+                try {
+                    Thread.sleep(9000);
+                } catch (InterruptedException e) {
+                    //e.printStackTrace();
+                }
+                updateData();
+                printColor(GREEN, centerString("FINISHED!!!", 180, "#"));
+                break;
+            case 10:
+                logOut();
+                break;
+            case 0:
+                quit();
+                break;
+            default:
+                printColor(RED, centerString("Invalid value. Please choose a number: 0-1-2-3-4-5-6-7-8-9-10", 180, "*"));
         }
     }
 
     public static void createBasicGroup()
     {
-        System.out.println("Enter group name: ");
-        String groupName = sc.nextLine();
-        System.out.println("Enter meassage auto delete time (Optional - Hit \"Enter\" to skip): ");
-        
-        
-        client.send(new TdApi.CreateNewBasicGroupChat(null, groupName, 0), new UpdateHandler());
-        System.out.println(centerString("New \"basic\" group has been successfully created!", 60, "%"));
+        printColor(MAGENTA, "Enter group name: ");
+        String groupName = sc.nextLine();    
+        client.send(new TdApi.CreateNewBasicGroupChat(null, groupName, 0), new Client.ResultHandler() {
+            public void onResult(TdApi.Object object)
+            {
+                if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
+                {
+                    printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
+                    //showMainMenu();
+                    //chooseOptionMainMenu();
+                }
+                else 
+                {
+                    printColor(GREEN, centerString("New \"basic\" group has been successfully created!", 180, "#"));
+                }
+            }
+        });
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+           
+        };
     }
 
     public static void createSuperGroup()
     {
-        System.out.println("Enter group name: ");
+        printColor(MAGENTA, "Enter group name: ");
         String groupName = sc.nextLine();
-        client.send(new TdApi.CreateNewSupergroupChat(groupName, false, false, "", null, 0, false), new UpdateHandler());
-        System.out.println(centerString("New \"super\" group has been successfully created!", 60, "%"));
+        client.send(new TdApi.CreateNewSupergroupChat(groupName, false, false, "", null, 0, false), new Client.ResultHandler() {
+            public void onResult(TdApi.Object object)
+            {
+                if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
+                {
+                    printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
+                    //showMainMenu();
+                    //chooseOptionMainMenu();
+                }
+                else 
+                {
+                    printColor(GREEN, centerString("New \"super\" group has been successfully created!", 180, "#"));
+                }
+            }
+        });
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+           
+        };
     }
 
     public static void addMember()
     {   
-        
-            System.out.println("Enter group chat ID: ");
-            String chatId = sc.nextLine();
-            System.out.println("Enter user ID: ");
-            String userId = sc.nextLine();
-            client.send(new TdApi.AddChatMember(toLong(chatId), toLong(userId), 0), new UpdateHandler());
-    
-        System.out.println("Member has been successfully added!");
+        printColor(MAGENTA, "Enter group chat ID: ");
+        String chatId = sc.nextLine();
+        printColor(MAGENTA, "Enter user ID: ");
+        String userId = sc.nextLine();
+        client.send(new TdApi.AddChatMember(toLong(chatId), toLong(userId), 0), new Client.ResultHandler() {
+            public void onResult(TdApi.Object object)
+            {
+                if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
+                {
+                    printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
+                    //showMainMenu();
+                    //chooseOptionMainMenu();
+                }
+                else 
+                {
+                    printColor(GREEN, centerString("Member has been successfully added!", 180, "#"));
+                }
+            }
+        });
+        try {
+            Thread.sleep(1500);
+        } catch (InterruptedException e) {
+           
+        };
     }
 
     public static void kickMember()
     {
-        try {
-            System.out.println("Enter group chat ID: ");
-            long chatId = (long) sc.nextInt();
-            sc.nextLine();
-            System.out.println("Enter user ID: ");
-            long userId = (long) sc.nextInt();
-            sc.nextLine();
-            client.send(new TdApi.BanChatMember(chatId, new TdApi.MessageSenderChat(chatId), 0, true), new UpdateHandler());
-        } catch (InputMismatchException | NumberFormatException e) {
-            //System.out.println("Please enter correct ID");
-        }
-        System.out.println("Member has been successfully kicked!");
-    }
-
-    public static void getCommand() {
-        String command = promptString(commandsLine);
-        // System.out.println(command+"================================");
-        String[] commands = command.split(" ");
-        try {
-            switch (commands[0]) {
-                case "showSuperGroups": {
-                    showSuperGroups();
-                    break;
+        printColor(MAGENTA, "Enter group chat ID: ");
+        String chatId = sc.nextLine();
+        printColor(MAGENTA, "Enter user ID: ");
+        String userId = sc.nextLine();
+        client.send(new TdApi.BanChatMember(toLong(chatId), new TdApi.MessageSenderChat(toLong(userId)), 0, true), new Client.ResultHandler() {
+            public void onResult(TdApi.Object object)
+            {
+                if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
+                {
+                    printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
+                    //showMainMenu();
+                    //chooseOptionMainMenu();
                 }
-                case "showBasicGroups": {
-                    showBasicGroups();
-                    break;
+                else 
+                {
+                    printColor(GREEN, centerString("Member has been successfully kicked!", 180, "#"));
                 }
-                case "showUsers": {
-                    showUsers();
-                    break;
-                }
-                case "update": {
-                    updateData();
-                    Thread.sleep(9000);
-                    updateData();
-                    break;
-                }
-                case "createBasicGroup": {
-                        if (commands.length == 3)
-                        {
-                            client.send(new TdApi.CreateNewBasicGroupChat(null, commands[1], Integer.parseInt(commands[2])), new UpdateHandler());
-                        }
-                        else
-                        {
-                            client.send(new TdApi.CreateNewBasicGroupChat(null, commands[1], 0), new UpdateHandler());
-
-                        }
-                        break;
-                }
-                case "createSuperGroup": {
-                        if (commands.length == 2)
-                        {
-                            client.send(new TdApi.CreateNewSupergroupChat(commands[1], false, false, null, null, 0, false), new UpdateHandler());
-                        }
-                        else if (commands.length == 3)
-                        {
-                            client.send(new TdApi.CreateNewSupergroupChat(commands[1], false, false, null, null, Integer.parseInt(commands[2]), false), new UpdateHandler());
-                        }
-                        break;
-                }
-                case "am": {
-                    System.out.println("###################################################################");
-                    System.out.println("Basic Group List:");
-                    if (targetBasicGroups.size() == 0)
-                    {
-                        System.out.println("[+] There is no basic group in your chat list that you are admin");
-                        System.out.println("[+] You can try to update the data again");
-                        break;
-                    } 
-                    else 
-                    {
-                        for (BasicGroup bsg: targetBasicGroups)
-                        {
-                            System.out.println(bsg.getGroupName() + ": " + bsg.getChatId());
-                        }
-                    }
-
-                    System.out.println("Super Groups List: ");
-                    if (targetSupergroups.size() == 0)
-                    {
-                        System.out.println("[+] There is no super group in your chat list that you are admin");
-                        System.out.println("[+] You can try to update the data again");
-                        break;
-                    }
-                    else
-                    {
-                        for (SuperGroup sg: targetSupergroups)
-                        {   
-                            System.out.println(sg.getGroupName() + ": " + sg.getChatId());
-                        }
-                    }
-
-                    System.out.println("User List: ");
-                    if (targetUsers.size() == 0)
-                    {
-                        System.out.println("[+] There is no user in your chat list that you are admin");
-                        System.out.println("[+] You can try to update the data again by commading \"updata\"");
-                        break;
-                    }
-                    else
-                    {
-                        for (User u: targetUsers)
-                        {
-                           System.out.println(u.getDisplayName() + ": " + u.getId());
-                        }
-                    }
-                    
-                    // for (Map.Entry<Long, TdApi.Chat> chat : chats.entrySet())
-                    // {
-                    //     if (chat.getValue().type.getConstructor() == TdApi.ChatTypePrivate.CONSTRUCTOR)
-                    //     {
-                    //         System.out.println(chat.getValue().title + ": " + ((TdApi.ChatTypePrivate) chat.getValue().type).userId);
-                    //     }
-                    //     else if (chat.getValue().type.getConstructor() == TdApi.ChatTypeSecret.CONSTRUCTOR)
-                    //     {
-                    //         System.out.println(chat.getValue().title + ": " + ((TdApi.ChatTypeSecret) chat.getValue().type).userId);
-                    //     }
-                    // }
-                    String chatId = promptString("Enter group Id: ");
-                    String UserId = promptString("Enter user Id: ");
-                    client.send(new TdApi.AddChatMember(toLong(chatId), toLong(UserId), 0), new UpdateHandler());
-                    break;
-                    
-                }
-                case "ku": {
-                    client.send(new TdApi.BanChatMember(toLong(commands[1]), new TdApi.MessageSenderChat(toLong(commands[2])), 0, true), new UpdateHandler());
-                    break;
-                }
-                case "lo":
-                    needQuit = true;
-                    haveAuthorization = false;
-                    client.send(new TdApi.LogOut(), new Client.ResultHandler() {
-                        @Override
-                        public void onResult(TdApi.Object object) 
-                        {
-                            switch (object.getConstructor()) 
-                            {
-                                case TdApi.Ok.CONSTRUCTOR:
-                                    System.out.println("All local data will be destroyed");
-                                    break;
-                                default:
-                                    System.err.println("[-] Receive an error: " + newLine + object);
-                            }
-                        }
-                    });
-                    break;
-                case "q":
-                    needQuit = true;
-                    haveAuthorization = false;
-                    client.send(new TdApi.Close(), new Client.ResultHandler() {
-                        @Override
-                        public void onResult(TdApi.Object object) 
-                        {
-                            switch (object.getConstructor()) 
-                            {
-                                case TdApi.Ok.CONSTRUCTOR:
-                                    System.out.println("All databases will be flushed to disk and properly closed.");
-                                    break;
-                                default:
-                                    System.err.println("[-] Receive an error: " + newLine + object);
-                            }
-                        }
-                    });
-                    break;
-                default:
-                    System.err.println("Unsupported command: " + command);
             }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            print("Not enough arguments");
+        });
+        try {
+            Thread.sleep(1500);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
-        }
+           
+        };
     }
 
-    public static String centerString(String text, int width, String delimiter) {
-        StringBuilder sb = new StringBuilder();
-        sb.append(delimiter.repeat(width));
-        sb.append("".repeat(width) + "\n");
-		if (text.length() > width) {
-			return text.substring(0, width);
-		} else {
-			int padding = width - text.length();
-			int leftPadding = padding / 2;
-			int rightPadding = padding - leftPadding;
-			sb.append(" ".repeat(leftPadding) + text + " ".repeat(rightPadding) + "\n");
-		}
-        sb.append(delimiter.repeat(width));
-        sb.append("".repeat(width));
-        return sb.toString();
-	}
+    public static void logOut()
+    {
+        needQuit = true;
+        haveAuthorization = false;
+        client.send(new TdApi.LogOut(), new Client.ResultHandler() {
+            @Override
+            public void onResult(TdApi.Object object) 
+            {
+                switch (object.getConstructor()) 
+                {
+                    case TdApi.Ok.CONSTRUCTOR:
+                        printColor(GREEN, centerString("All local data will be destroyed", 180, "#"));
+                        break;
+                    default:
+                        printColor(RED, "[-] Receive an error: " + newLine + object);
+                }
+            }
+        });
+    }
+
+    public static void quit()
+    {
+        needQuit = true;
+        haveAuthorization = false;
+        client.send(new TdApi.Close(), new Client.ResultHandler() {
+            @Override
+            public void onResult(TdApi.Object object) 
+            {
+                switch (object.getConstructor()) 
+                {
+                    case TdApi.Ok.CONSTRUCTOR:
+                        printColor(GREEN, centerString("All databases will be flushed to disk and properly closed", 180, "#"));
+                        break;
+                    default:
+                        printColor(RED, "[-] Receive an error: " + newLine + object);
+                }
+            }
+        });
+    }
     
+    public static void manualSynchronize()
+    {
+        printColor(GREEN, centerString("START SYNC DATA TO AIRTABLE", 180, "#"));
+        updateData();
+        /*----------------------------------------------------------------
+         *----------------------------------------------------------------
+         *----------------------------------------------------------------
+         * * * * * * * Logic to sync data to the AirTable * * * * * * * * 
+         * ----------------------------------------------------------------
+         * ----------------------------------------------------------------
+         * ----------------------------------------------------------------
+         * ----------------------------------------------------------------
+         */
+        printColor(GREEN, centerString("FINISH!!!!", 180, "#"));
+    }
+
     public static void main(String[] args) throws InterruptedException {
         
         // main loop
@@ -941,8 +895,8 @@ public final class TelegramManager extends Base{
             } finally {
                 authorizationLock.unlock();
             }
-            openchat();
-		    System.out.println(centerString("WELCOME TO TELEGRAM MANAGEMENT PROGRAM!", 60, "#"));
+            openChat();
+		    printColor(GREEN, centerString("WELCOME TO TELEGRAM MANAGEMENT PROGRAM!", 180, "#"));
             while (haveAuthorization && haveFullMainChatList) {
                 chooseOptionMainMenu();
                 //getCommand();

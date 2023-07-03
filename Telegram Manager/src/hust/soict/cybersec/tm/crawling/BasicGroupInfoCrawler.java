@@ -3,10 +3,8 @@ package hust.soict.cybersec.tm.crawling;
 import org.drinkless.tdlib.TdApi;
 
 import hust.soict.cybersec.tm.entity.BasicGroup;
-import hust.soict.cybersec.tm.utils.UpdateHandler;
 
 import org.drinkless.tdlib.Client;
-import org.drinkless.tdlib.Client.ResultHandler;
 
 import java.util.Map;
 import java.util.ArrayList;

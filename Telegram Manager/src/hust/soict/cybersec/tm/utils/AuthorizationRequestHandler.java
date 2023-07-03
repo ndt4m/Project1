@@ -88,14 +88,14 @@ public class AuthorizationRequestHandler implements Client.ResultHandler
                 break;
             case TdApi.AuthorizationStateLoggingOut.CONSTRUCTOR:
                 TelegramManager.haveAuthorization = false;
-                TelegramManager.print("Logging out");
+                //TelegramManager.print("Logging out");
                 break;
             case TdApi.AuthorizationStateClosing.CONSTRUCTOR:
                 TelegramManager.haveAuthorization = false;
-                TelegramManager.print("Closing");
+                //TelegramManager.print("Closing");
                 break;
             case TdApi.AuthorizationStateClosed.CONSTRUCTOR:
-                TelegramManager.print("Closed");
+                //TelegramManager.print("Closed");
                 if (!TelegramManager.needQuit) {
                     TelegramManager.client = Client.create(new UpdateHandler(), null, null); // recreate client after previous has closed
                 } else {

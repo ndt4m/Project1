@@ -19,8 +19,23 @@
     ]
   },
   {
+    "id": 6006813736,
+    "firstName": "Quyền IT-E15",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84347432354",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      937181806
+    ],
+    "user_super_group_ids": []
+  },
+  {
     "id": 2134816269,
-    "firstName": "tamyhhb",
+    "firstName": "tam",
     "lastName": "ppopp",
     "userName": "fapspfkjc",
     "phoneNumber": "84857864831",
@@ -37,8 +52,10 @@
       981850633,
       826636041,
       906873372,
+      672132318,
       815909456,
       956284814,
+      937181806,
       704076527,
       982563624,
       864889876,
@@ -46,6 +63,7 @@
       953623145
     ],
     "user_super_group_ids": [
+      1809958885,
       1899612767,
       1913443622,
       1975192757
@@ -77,6 +95,7 @@
     "languageCode": "",
     "type": "regular user",
     "user_basic_group_ids": [
+      803806955,
       981850633
     ],
     "user_super_group_ids": []

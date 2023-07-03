@@ -10,7 +10,6 @@ import java.util.concurrent.locks.ReentrantLock;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
-import hust.soict.cybersec.tm.entity.BasicGroup;
 
 public class Crawler <T>
 {
@@ -40,7 +39,7 @@ public class Crawler <T>
     }
 
 
-    public void blockingSend(TdApi.Function query, Client.ResultHandler resultHandler) throws InterruptedException
+    public void blockingSend(TdApi.Function<?> query, Client.ResultHandler resultHandler) throws InterruptedException
     {
         haveReceivedRespond = false;
         client.send(query, resultHandler);

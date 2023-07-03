@@ -80,7 +80,9 @@ public class BasicGroup {
     public TdApi.ChatPermissions getPermissions() {
         return permissions;
     }
-
+    public List<TdApi.Message> getMessages() {
+        return messages;
+    }
     public String getGroupName() {
         return groupName;
     }
