@@ -26,6 +26,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
+import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
@@ -145,37 +146,23 @@ public final class TelegramManager extends Base{
         } 
     }
 
-    public static void showMenu()
+    public static void showMainMenu()
     {
-        String logo = "o\r\n" + //
-                " \\_/\\o\r\n" + //
-                "( Oo)                    \\|/\r\n" + //
-                "(_=-)  .===O-  ~~Z~A~P~~ -O-\r\n" + //
-                "/   \\_/U'                /|\\\r\n" + //
-                "||  |_/\r\n" + //
-                "\\\\  |\r\n" + //
-                "{K ||\r\n" + //
-                " | PP\r\n" + //
-                " | ||\r\n" + //
-                " (__\\\\";
-        String title = "WELCOME TO TELEGRAM MANAGEMENT PROGRAM!";
-		int width = 60;
-		String line = "-".repeat(width);
-		
-		System.out.println(logo);
-		System.out.println(line);
-		//System.out.println(centerString(title, width));
-		System.out.println(line);
-        
         System.out.println("TELEGRAM MANAGER: ");
         System.out.println("--------------------------------");
-        System.out.println("1. update");
-        System.out.println("2. Update store");
-        System.out.println("3. See current cart");
-        System.out.println("0. Exit");
+        System.out.println("1. Synchronize data to AirTable");
+        System.out.println("2. Show user information");
+        System.out.println("3. Show \"basic\" group information");
+        System.out.println("4. Show \"super\" group information");
+        System.out.println("5. Create \"basic\" group");
+        System.out.println("6. Create \"super\" group");
+        System.out.println("7. Add member");
+        System.out.println("8. Kick member");
+        System.out.println("9. Update data");
+        System.out.println("10. Log out");
+        System.out.println("0. Quit");
         System.out.println("--------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3");
-        System.out.print("Your choise is: ");
+        System.out.println("Please choose a number: 0-1-2-3-4-5-6-7-8-9-10");
     }
 
     public static void synchronize()
@@ -312,29 +299,30 @@ public final class TelegramManager extends Base{
 
     public static void userMoreInfoMenu()
     {
-        boolean loop = true;
         System.out.println("Options: ");
         System.out.println("----------------------------------------------------------");
         System.out.println("1. See a list of \"basic\" group that user belongs to");
         System.out.println("2. See a list of \"super\" group that user belongs to");
-        System.out.println("3. Clear the terminal");
         System.out.println("0. Back");
         System.out.println("----------------------------------------------------------");
-        System.out.println("Please choose a number: 0-1-2-3");
+        System.out.println("Please choose a number: 0-1-2");
+    }
 
+    public static void chooseOptionUserMoreInfoMenu()
+    {
+        boolean loop = true;
         while (loop)
         {
+            userMoreInfoMenu();
             System.out.print("Your choice is: ");
             int choice = sc.nextInt();
+            sc.nextLine();
             switch (choice) {
                 case 1: 
                     showUserGroups("USER BASIC GROUP LIST", "B");
                     break;
                 case 2:
                     showUserGroups("USER SUPER GROUP LIST", "S");
-                    break;
-                case 3:
-                    System.out.print("\033[H\033[2J");
                     break;
                 case 0:
                     loop = false;
@@ -344,7 +332,6 @@ public final class TelegramManager extends Base{
             }
         }
     }
-
 
     public static void showUsers()
     {
@@ -388,7 +375,7 @@ public final class TelegramManager extends Base{
         board.build();
         String tableString = board.getPreview();
         System.out.println(tableString);
-        userMoreInfoMenu();
+        chooseOptionUserMoreInfoMenu();
         
     }
 
@@ -413,26 +400,15 @@ public final class TelegramManager extends Base{
             row.add(bs.getInviteLink());
             rowList.add(row);
         }
-        Board board = new Board(180);
-        Table table = new Table(board, 180, headersList, rowList);
-        table.getColWidthsList();
-        List<Integer> colAlignList = Arrays.asList(
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER, 
-            Block.DATA_CENTER,
-            Block.DATA_CENTER,
-            Block.DATA_CENTER,
-            Block.DATA_CENTER);
-        table.setColAlignsList(colAlignList);
+
+        List<Integer> colAlignList = new ArrayList<>();
+        for (int i = 0; i < headersList.size(); i++)
+        {
+            colAlignList.add(Block.DATA_CENTER);
+        }
+
         List<Integer> colWidthsListEdited = Arrays.asList(12, 12, 20, 24, 12, 40, 40);
-        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
-        Block tableBlock = table.tableToBlocks();
-        board.setInitialBlock(tableBlock);
-        board.build();
-        String tableString = board.getPreview();
-        System.out.println(tableString);
-        //groupMoreInfoMenu();
+        System.out.println(createTable(headersList, rowList, colAlignList, colWidthsListEdited));
         chooseOptionGroupMoreInfoMenu("B");
     }
 
@@ -463,10 +439,10 @@ public final class TelegramManager extends Base{
                     showPermissions(type);
                     break;
                 case 2:
-                    showAdminList("ADMIN LIST", type, "ADMIN");
+                    showAdminOrMemList("ADMIN LIST", type, "ADMIN");
                     break;
                 case 3:
-                    showAdminList("MEMBER LIST", type, "MEM");
+                    showAdminOrMemList("MEMBER LIST", type, "MEM");
                     break;
                 case 0:
                     loop = false;
@@ -487,53 +463,63 @@ public final class TelegramManager extends Base{
             colAlignList.add(Block.DATA_CENTER);
         }
         
-        for (BasicGroup bs: targetBasicGroups)
-        {
-            List<String> row = new ArrayList<>();
-            row.add(bs.getGroupName());
-            row.add(bs.getPermissions().canSendBasicMessages+"");
-            row.add(bs.getPermissions().canSendAudios+"");
-            row.add(bs.getPermissions().canSendDocuments+"");
-            row.add(bs.getPermissions().canSendPhotos+"");
-            row.add(bs.getPermissions().canSendVideos+"");
-            row.add(bs.getPermissions().canSendVideoNotes+"");
-            row.add(bs.getPermissions().canSendVoiceNotes+"");
-            row.add(bs.getPermissions().canSendPolls+"");
-            row.add(bs.getPermissions().canSendOtherMessages+"");
-            row.add(bs.getPermissions().canAddWebPagePreviews+"");
-            row.add(bs.getPermissions().canChangeInfo+"");
-            row.add(bs.getPermissions().canInviteUsers+"");
-            row.add(bs.getPermissions().canPinMessages+"");
-            row.add(bs.getPermissions().canManageTopics+"");
-            rowList.add(row);
-        }
-
-        Board board = new Board(200);
-        Table table = new Table(board, 200, headersList, rowList);
-        table.getColWidthsList();
-        table.setColAlignsList(colAlignList);
-        List<Integer> colWidthsListEdited = Arrays.asList(15, 14, 7, 10, 7, 7, 11, 11, 6, 14, 19, 11, 12, 12, 13);
-        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
-        Block tableBlock = table.tableToBlocks();
-        board.setInitialBlock(tableBlock);
-        board.build();
-        String tableString = board.getPreview();
         int width = 180;
         String delimiter = "=";
         String title = " Permissions";
         if (type.equals("B"))
         {
             title = "Basic Group" + title;
+            for (BasicGroup bs: targetBasicGroups)
+            {
+                List<String> row = new ArrayList<>();
+                row.add(bs.getGroupName());
+                row.add(bs.getPermissions().canSendBasicMessages+"");
+                row.add(bs.getPermissions().canSendAudios+"");
+                row.add(bs.getPermissions().canSendDocuments+"");
+                row.add(bs.getPermissions().canSendPhotos+"");
+                row.add(bs.getPermissions().canSendVideos+"");
+                row.add(bs.getPermissions().canSendVideoNotes+"");
+                row.add(bs.getPermissions().canSendVoiceNotes+"");
+                row.add(bs.getPermissions().canSendPolls+"");
+                row.add(bs.getPermissions().canSendOtherMessages+"");
+                row.add(bs.getPermissions().canAddWebPagePreviews+"");
+                row.add(bs.getPermissions().canChangeInfo+"");
+                row.add(bs.getPermissions().canInviteUsers+"");
+                row.add(bs.getPermissions().canPinMessages+"");
+                row.add(bs.getPermissions().canManageTopics+"");
+                rowList.add(row);
+            }
         }
         else if (type.equals("S"))
         {
             title = "Super Group" + title;
+            for (SuperGroup sg: targetSupergroups)
+            {
+                List<String> row = new ArrayList<>();
+                row.add(sg.getGroupName());
+                row.add(sg.getPermissions().canSendBasicMessages+"");
+                row.add(sg.getPermissions().canSendAudios+"");
+                row.add(sg.getPermissions().canSendDocuments+"");
+                row.add(sg.getPermissions().canSendPhotos+"");
+                row.add(sg.getPermissions().canSendVideos+"");
+                row.add(sg.getPermissions().canSendVideoNotes+"");
+                row.add(sg.getPermissions().canSendVoiceNotes+"");
+                row.add(sg.getPermissions().canSendPolls+"");
+                row.add(sg.getPermissions().canSendOtherMessages+"");
+                row.add(sg.getPermissions().canAddWebPagePreviews+"");
+                row.add(sg.getPermissions().canChangeInfo+"");
+                row.add(sg.getPermissions().canInviteUsers+"");
+                row.add(sg.getPermissions().canPinMessages+"");
+                row.add(sg.getPermissions().canManageTopics+"");
+                rowList.add(row);
+            }
         }
         System.out.println(centerString(title, width, delimiter));
-        System.out.println(tableString);
+        List<Integer> colWidthsListEdited = Arrays.asList(15, 14, 7, 10, 7, 7, 11, 11, 6, 14, 19, 11, 12, 12, 13);
+        System.out.println(createTable(headersList, rowList, colAlignList, colWidthsListEdited));
     }
 
-    public static void showAdminList(String title, String type, String mode)
+    public static void showAdminOrMemList(String title, String type, String mode)
     {
         int width = 100;
         String delimiter = "=";
@@ -592,14 +578,14 @@ public final class TelegramManager extends Base{
                 List<String> row = new ArrayList<String>();
                 for (int j = 0; j < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); j++)
                 {
-                    List<Long> adminIds = Id_List.get(j);
+                    List<Long> Ids = Id_List.get(j);
 
-                    if (adminIds.size() > i)
+                    if (Ids.size() > i)
                     {   
                         boolean found = false;
                         for (User user: targetUsers)
                         {
-                            if (user.getId() == adminIds.get(i))
+                            if (user.getId() == Ids.get(i))
                             {
                                 row.add(user.getDisplayName());
                                 found = true;
@@ -633,7 +619,7 @@ public final class TelegramManager extends Base{
 
     public static String createTable(List<String> headersList, List<List<String>> rowsList, List<Integer> colAlignList, List<Integer> colWidthsListEdited)
     {
-        Board board = new Board(180);
+        Board board = new Board(190);
         Table table = new Table(board, 200, headersList, rowsList);
         table.getColWidthsList();
         table.setColAlignsList(colAlignList);
@@ -645,12 +631,125 @@ public final class TelegramManager extends Base{
         return tableString;
     }
 
-    private static void getCommand() {
+    public static void showSuperGroups()
+    {
+        String title = "SUPER GROUP LIST";
+        int width = 170;
+        String delimeter = "=";
+        System.out.println(centerString(title, width, delimeter));
+        updateData();
+        List<String> headersList = Arrays.asList("Super Group ID", "Chat ID", "Group Name", "Message Auto Delete Time", "Member Count", "History Available", "Description", "Invite Link");
+        List<List<String>> rowList = new ArrayList<>();
+        for (SuperGroup sg: targetSupergroups)
+        {
+            List<String> row = new ArrayList<>();
+            row.add(sg.getId()+"");
+            row.add(sg.getChatId()+"");
+            row.add(sg.getGroupName());
+            row.add(sg.getMessageAutoDeleteTime()+"");
+            row.add(sg.getMemberCount()+"");
+            row.add((sg.getIsAllHistoryAvailable()) ? "Yes" : "No");
+            row.add(sg.getDescription());
+            row.add(sg.getInviteLink());
+            rowList.add(row);
+        }
+
+        List<Integer> colAlignList = new ArrayList<>();
+        for (int i = 0; i < headersList.size(); i++)
+        {
+            colAlignList.add(Block.DATA_CENTER);
+        }
+        List<Integer> colWidthsListEdited = Arrays.asList(12, 12, 20, 24, 12, 17, 40, 40);
+        System.out.println(createTable(headersList, rowList, colAlignList, colWidthsListEdited));
+        chooseOptionGroupMoreInfoMenu("S");
+    }
+
+    public static void chooseOptionMainMenu()
+    {
+        showMainMenu();
+        System.out.print("Your choice is: ");
+        int choice = sc.nextInt();
+        sc.nextLine();
+        switch (choice) {
+            case 1: 
+                break;
+            case 2:
+                showUsers();
+                break;
+            case 3:
+                showBasicGroups();
+                break;
+            case 4:
+                showSuperGroups();
+                break;
+            case 5:
+                createBasicGroup();
+                break;
+            case 6:
+                createSuperGroup();
+                break;
+            case 7:
+
+        }
+    }
+
+    public static void createBasicGroup()
+    {
+        System.out.println("Enter group name: ");
+        String groupName = sc.nextLine();
+        System.out.println("Enter meassage auto delete time (Optional - Hit \"Enter\" to skip): ");
+        
+        
+        client.send(new TdApi.CreateNewBasicGroupChat(null, groupName, 0), new UpdateHandler());
+        System.out.println(centerString("New \"basic\" group has been successfully created!", 60, "%"));
+    }
+
+    public static void createSuperGroup()
+    {
+        System.out.println("Enter group name: ");
+        String groupName = sc.nextLine();
+        client.send(new TdApi.CreateNewSupergroupChat(groupName, false, false, "", null, 0, false), new UpdateHandler());
+        System.out.println(centerString("New \"super\" group has been successfully created!", 60, "%"));
+    }
+
+    public static void addMember()
+    {   
+        
+            System.out.println("Enter group chat ID: ");
+            String chatId = sc.nextLine();
+            System.out.println("Enter user ID: ");
+            String userId = sc.nextLine();
+            client.send(new TdApi.AddChatMember(toLong(chatId), toLong(userId), 0), new UpdateHandler());
+    
+        System.out.println("Member has been successfully added!");
+    }
+
+    public static void kickMember()
+    {
+        try {
+            System.out.println("Enter group chat ID: ");
+            long chatId = (long) sc.nextInt();
+            sc.nextLine();
+            System.out.println("Enter user ID: ");
+            long userId = (long) sc.nextInt();
+            sc.nextLine();
+            client.send(new TdApi.BanChatMember(chatId, new TdApi.MessageSenderChat(chatId), 0, true), new UpdateHandler());
+        } catch (InputMismatchException | NumberFormatException e) {
+            //System.out.println("Please enter correct ID");
+        }
+        System.out.println("Member has been successfully kicked!");
+    }
+
+    public static void getCommand() {
         String command = promptString(commandsLine);
         // System.out.println(command+"================================");
         String[] commands = command.split(" ");
         try {
             switch (commands[0]) {
+                case "showSuperGroups": {
+                    showSuperGroups();
+                    break;
+                }
                 case "showBasicGroups": {
                     showBasicGroups();
                     break;
@@ -843,9 +942,10 @@ public final class TelegramManager extends Base{
                 authorizationLock.unlock();
             }
             openchat();
-
+		    System.out.println(centerString("WELCOME TO TELEGRAM MANAGEMENT PROGRAM!", 60, "#"));
             while (haveAuthorization && haveFullMainChatList) {
-                getCommand();
+                chooseOptionMainMenu();
+                //getCommand();
             }
         }
         while (!canQuit) {
