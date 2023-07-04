@@ -18,6 +18,26 @@ import java.util.List;
 
 
 public class Record {
+    private final String id;
+    private final JsonObject fields;
+    private final String IdFieldVal;
+    public Record(JsonObject jsonObject) {
+        this.id = jsonObject.getAsString();
+        this.fields = jsonObject.get("field").getAsJsonObject();
+        this.IdFieldVal = this.fields.get("Id").getAsString();
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    protected String getValOfId() {
+        return this.IdFieldVal;
+    }
+    protected JsonObject getFields() {
+        return this.fields;
+    }
+
     protected static String listRecords(String tableId, String baseId, String token) {
         //curl "https://api.airtable.com/v0/{baseId}/{tableIdOrName}" \
         //-H "Authorization: Bearer YOUR_TOKEN"
