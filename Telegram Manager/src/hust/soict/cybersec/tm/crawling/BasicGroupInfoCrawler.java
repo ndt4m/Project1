@@ -98,21 +98,26 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             // memberCount = basicGroups.get(id).memberCount;
 
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
-            if (adminIds.contains(2134816269l))
+            if (adminIds.contains(currentUserId))
             {
                 blockingSend(new TdApi.GetBasicGroupFullInfo(id), updateBasicGroupHandler);
             
-                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateBasicGroupHandler);
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 50, false), updateBasicGroupHandler);
                 int oldSize = messages.size();
-                while (messages.size() <= 1000)
+                while (messages.size() <= 50)
                 {
-                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateBasicGroupHandler);
+                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 50, false), updateBasicGroupHandler);
                     if (oldSize != messages.size())
                     {
                         oldSize = messages.size();
                         continue;
                     }
                     break;
+                }
+                List<TdApi.MessageContent> msContent = new ArrayList<TdApi.MessageContent>();
+                for (TdApi.Message ms: messages)
+                {
+                    msContent.add(ms.content);
                 }
                 //System.out.println(messages.size());
                 // System.out.println(messages.get(0));
@@ -131,7 +136,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                                                   description, 
                                                   inviteLink, 
                                                 //   botCommands, 
-                                                  messages));
+                                                  msContent));
                         //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
                 // System.out.println("Group name: " + groupName);
                 redefinedAttributes();

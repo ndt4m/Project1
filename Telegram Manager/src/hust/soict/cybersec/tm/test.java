@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Scanner;
 import java.io.File;
 import java.io.IOException;
 
@@ -18,9 +19,11 @@ import java.io.IOException;
 
 public class test {
     public static void main(String[] args) {
-        double number = 3.14;
-double roundedUp = Math.ceil((double) 2/3);
-
-System.out.println("Rounded up value: " + roundedUp);
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter a Vietnamese word: ");
+        String input = scanner.nextLine();
+        System.out.println("You entered: " + input);
+        scanner.close();
     }
-}
+    }
+

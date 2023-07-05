@@ -96,7 +96,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
             // isScam = superGroups.get(id).isScam ? 1 : 0;
             // isFake = superGroups.get(id).isFake ? 1 : 0;
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateSuperGroupHandler);
-            if (adminIds.contains(2134816269l))
+            if (adminIds.contains(currentUserId))
             {   
                 blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
                 blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
@@ -109,18 +109,23 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     //System.out.println("memSize: " + memberIds.size());
                 }
                 
-                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateSuperGroupHandler);
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 50, false), updateSuperGroupHandler);
                 int oldSize = messages.size();
-                while (messages.size() <= 1000)
+                while (messages.size() <= 50)
                 {
                     //System.out.println("size: " + messages.size());
-                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateSuperGroupHandler);
+                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 50, false), updateSuperGroupHandler);
                     if (oldSize != messages.size())
                     {
                         oldSize = messages.size();
                         continue;
                     }
                     break;
+                }
+                List<TdApi.MessageContent> msContent = new ArrayList<TdApi.MessageContent>();
+                for (TdApi.Message ms: messages)
+                {
+                    msContent.add(ms.content);
                 }
                 this.addCollection(new SuperGroup(id, 
                                               chatId,
@@ -142,7 +147,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                                               description, 
                                               inviteLink, 
                                             //   botCommands, 
-                                              messages));
+                                              msContent));
                 //System.out.println(messages.size());
                 // System.out.println("GroupName: "+groupName);
                 // System.out.println("description: " + description);

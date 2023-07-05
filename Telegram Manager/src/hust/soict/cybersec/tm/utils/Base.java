@@ -20,6 +20,7 @@ public class Base
     public final static String GREEN = "\u001B[92m";
     public final static String BLUE = "\u001B[34m";
     public final static String MAGENTA = "\u001B[35m";
+    public final static String YELLOW = "\u001B[33m";
     
     public static Client client = null;
     public static TdApi.AuthorizationState authorizationState = null;

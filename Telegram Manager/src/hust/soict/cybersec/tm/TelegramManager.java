@@ -7,6 +7,7 @@ import org.drinkless.tdlib.TdApi;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+import hust.soict.cybersec.tm.airtable.PushUserMethod;
 import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.SuperGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.UserInfoCrawler;
@@ -23,6 +24,7 @@ import wagu.Table;
 import java.io.FileWriter;
 import java.io.IOError;
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -33,7 +35,8 @@ import java.util.Scanner;
 
 
 public final class TelegramManager extends Base{
-    private static Scanner sc = new Scanner(System.in);
+    private static Scanner sc;
+            
     static {
         // set log message handler to handle only fatal errors (0) and plain log messages (-1)
         Client.setLogMessageHandler(0, new LogMessageHandler());
@@ -75,42 +78,46 @@ public final class TelegramManager extends Base{
                 }
             });
             
-            if (chat.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR ||
-                chat.getValue().type.getConstructor() == TdApi.ChatTypeSupergroup.CONSTRUCTOR)
-            {
-                TdApi.ChatPermissions permissions = chat.getValue().permissions;
-                permissions.canInviteUsers = !(chat.getValue().permissions.canInviteUsers);
-                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
-                    @Override
-                    public void onResult(TdApi.Object object)
-                    {
-                        switch (object.getConstructor()) 
-                        {
-                            case TdApi.Ok.CONSTRUCTOR: 
-                                //System.out.println("ok");
-                                break;
-                        }
-                    }
-                });
-                permissions.canInviteUsers = chat.getValue().permissions.canInviteUsers;
-                client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
-                    @Override
-                    public void onResult(TdApi.Object object)
-                    {
-                        switch (object.getConstructor()) 
-                        {
-                            case TdApi.Ok.CONSTRUCTOR: 
-                                //System.out.println("ok");
-                                break;
-                        }
-                    }
-                });
-
-                // for (int i = 0; i < 2; i++)
-                // {
-                //     client.send(new TdApi.GetBasicGroupFullInfo(((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId), new UpdateHandler());
-                // }
-            }
+            // if (chat.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR ||
+            //     chat.getValue().type.getConstructor() == TdApi.ChatTypeSupergroup.CONSTRUCTOR)
+            // {
+            //     TdApi.ChatPermissions permissions = chat.getValue().permissions;
+            //     //System.out.println("trước khi đổi: " + permissions.canInviteUsers);
+            //     permissions.canInviteUsers = !(chat.getValue().permissions.canInviteUsers);
+            //     //System.out.println("sau khi đổi: " + permissions.canInviteUsers);
+            //     client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
+            //         @Override
+            //         public void onResult(TdApi.Object object)
+            //         {
+            //             switch (object.getConstructor()) 
+            //             {
+            //                 case TdApi.Ok.CONSTRUCTOR: 
+            //                     //System.out.println("ok");
+            //                     break;
+            //             }
+            //         }
+            //     });
+            //     // try {
+            //     //     Thread.sleep(3000);
+            //     // } catch (InterruptedException e) {
+            //     //     // TODO Auto-generated catch block
+            //     //     e.printStackTrace();
+            //     // }
+            //     // permissions.canInviteUsers = !(chat.getValue().permissions.canInviteUsers);
+            //     // System.out.println("đổi lại ban đầu: " + permissions.canInviteUsers);
+            //     // client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
+            //     //     @Override
+            //     //     public void onResult(TdApi.Object object)
+            //     //     {
+            //     //         switch (object.getConstructor()) 
+            //     //         {
+            //     //             case TdApi.Ok.CONSTRUCTOR: 
+            //     //                 //System.out.println("ok");
+            //     //                 break;
+            //     //         }
+            //     //     }
+            //     // });
+            // }
         }
     }
 
@@ -118,6 +125,12 @@ public final class TelegramManager extends Base{
     {   
         //System.out.println(centerString("Update data", 180, "*"));
         openChat();
+        try {
+            Thread.sleep(1000);
+        } catch (InterruptedException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
         try {
             //System.out.println("Start Crawling");
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
@@ -198,18 +211,21 @@ public final class TelegramManager extends Base{
             }
             printColor(GREEN, centerString("Update data", 180, "*"));
             updateData();
+            updateData();
             printColor(GREEN, centerString("Syncronize is completed successfully!", 180, "*"));
 
     }
     
     public static void showUserGroups(String title, String type)
     {
+        printColor(GREEN, centerString(title, 180, "#"));
         List<String> headersList = new ArrayList<String>();
+
         List<Integer> colAlignList = new ArrayList<>();
         List<Integer> colWidthsListEdited = new ArrayList<>();
-        List<List<String>> rowsList = new ArrayList<List<String>>();
-        List<List<Long>> user_group_ids_list = new ArrayList<>();
-        int maxGroupSize = 0;
+        
+        List<List<Long>> Id_List = new ArrayList<>();
+        List<Integer> Id_Count_List = new ArrayList<>();
         for (User user : targetUsers)
         {
             headersList.add(user.getDisplayName());
@@ -217,87 +233,86 @@ public final class TelegramManager extends Base{
             colWidthsListEdited.add(18);
             if (type.equals("B"))
             {
-                user_group_ids_list.add(new ArrayList<>(user.getUser_basic_group_ids()));
-                if (maxGroupSize < user.getUser_basic_group_ids().size())
-                {
-                    maxGroupSize = user.getUser_basic_group_ids().size();
-                }
+                Id_List.add(new ArrayList<>(user.getUser_basic_group_ids()));
+                Id_Count_List.add(user.getUser_basic_group_ids().size());
             }
             else if (type.equals("S"))
             {
-                user_group_ids_list.add(new ArrayList<>(user.getUser_super_group_ids()));
-                if (maxGroupSize < user.getUser_super_group_ids().size())
-                {
-                    maxGroupSize = user.getUser_super_group_ids().size();
-                }
+                Id_List.add(new ArrayList<>(user.getUser_super_group_ids()));
+                Id_Count_List.add(user.getUser_super_group_ids().size());
             }
         }
 
-    
-        for (int i = 0; i < maxGroupSize; i++)
-        {   
-            List<String> row = new ArrayList<String>();
-            for (int j = 0; j < headersList.size(); j++)
+        
+        for (int k = 0; k < (int) Math.ceil((double) headersList.size() / 5); k++)
+        {
+            List<List<String>> rowList = new ArrayList<List<String>>();
+            for (int i = 0; i < Collections.max(Id_Count_List.subList(k*5, Math.min(k*5+5, headersList.size()))); i++)
             {   
-                if (type.equals("B"))
-                {
-                    List<Long> user_basic_group_ids = user_group_ids_list.get(j);
-                    if (user_basic_group_ids.size() > i)
+                List<String> row = new ArrayList<String>();
+                for (int j = 0; j < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); j++)
+                {   
+                    if (type.equals("B"))
                     {
-                        for (BasicGroup bs: targetBasicGroups)
+                        List<Long> user_basic_group_ids = Id_List.get(j);
+                        if (user_basic_group_ids.size() > i)
                         {
-                            if (bs.getId() == user_basic_group_ids.get(i))
+                            //boolean found = false;
+                            for (BasicGroup bs: targetBasicGroups)
                             {
-                                row.add(bs.getGroupName());
-                                break;
+                                if (bs.getId() == user_basic_group_ids.get(i))
+                                {
+                                    row.add(bs.getGroupName());
+                                    //found = true;
+                                    break;
+                                }
                             }
+                            //row.add(user_basic_group_ids.get(i)+"");
                         }
-                        //row.add(user_basic_group_ids.get(i)+"");
-                    }
-                    else
-                    {
-                        row.add("");    
-                    }
-                }
-                else if (type.equals("S"))
-                {
-                    List<Long> user_super_group_ids = user_group_ids_list.get(j);
-                    if (user_super_group_ids.size() > i)
-                    {   
-                        for (SuperGroup sg: targetSupergroups)
+                        else
                         {
-                            if (sg.getId() == user_super_group_ids.get(i))
-                            {
-                                row.add(sg.getGroupName());
-                                break;
-                            }
+                            row.add("");    
                         }
-                        //row.add(user_super_group_ids.get(i) + "");
                     }
-                    else
+                    else if (type.equals("S"))
                     {
-                        row.add("");
+                        List<Long> user_super_group_ids = Id_List.get(j);
+                        if (user_super_group_ids.size() > i)
+                        {   
+                            for (SuperGroup sg: targetSupergroups)
+                            {
+                                if (sg.getId() == user_super_group_ids.get(i))
+                                {
+                                    row.add(sg.getGroupName());
+                                    break;
+                                }
+                            }
+                            //row.add(user_super_group_ids.get(i) + "");
+                        }
+                        else
+                        {
+                            row.add("");
+                        }
                     }
-                }
 
+                }
+                rowList.add(row);
             }
-            rowsList.add(row);
+            if (rowList.size() == 0)
+            {
+                List<String> row = new ArrayList<String>();
+                for (int i = 0; i < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); i++)
+                {
+                    row.add(" ");
+                }
+                rowList.add(row);
+            }
+            printColor(BLUE, createTable(headersList.subList(k*5, Math.min(k*5+5, headersList.size())), rowList, colAlignList.subList(k*5, Math.min(k*5+5, headersList.size())), colWidthsListEdited.subList(k*5, Math.min(k*5+5, headersList.size()))));
+            if (k != (int) Math.ceil((double) headersList.size() / 5) - 1)
+            {
+                printColor(GREEN, centerString(title + " CONTINUES", 180, " "));
+            }
         }
-
-        Board board = new Board(160);
-        Table table = new Table(board, 160, headersList, rowsList);
-        table.getColWidthsList();
-        table.setColAlignsList(colAlignList);
-        table.setGridMode(Table.GRID_FULL).setColWidthsList(colWidthsListEdited);
-        Block tableBlock = table.tableToBlocks();
-        board.setInitialBlock(tableBlock);
-        board.build();
-        String tableString = board.getPreview();
-        int width = 120;
-        String delimiter = "=";
-        System.out.println(centerString(title, width, delimiter));
-        //System.out.println("".repeat(width));
-        System.out.println(tableString);
     }
 
     public static void userMoreInfoMenu()
@@ -322,6 +337,7 @@ public final class TelegramManager extends Base{
                 printColor(MAGENTA, "Your choice is: ");
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
+                choice = -1;
                 sc.nextLine();
             }
 
@@ -427,6 +443,7 @@ public final class TelegramManager extends Base{
                 printColor(MAGENTA, "Your choice is: ");
                 choice = sc.nextInt();
             } catch (InputMismatchException e) {
+                choice = -1;
                 sc.nextLine();
             }
             switch (choice) {
@@ -600,6 +617,16 @@ public final class TelegramManager extends Base{
             }
              
             //System.out.println("".repeat(width));
+            //System.out.println(rowList);
+            if (rowList.size() == 0)
+            {
+                List<String> row = new ArrayList<String>();
+                for (int i = 0; i < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); i++)
+                {
+                    row.add(" ");
+                }
+                rowList.add(row);
+            }
             printColor(BLUE, createTable(headersList.subList(k*5, Math.min(k*5+5, headersList.size())), rowList, colAlignList.subList(k*5, Math.min(k*5+5, headersList.size())), colWidthsListEdited.subList(k*5, Math.min(k*5+5, headersList.size()))));
             if (k != (int) Math.ceil((double) headersList.size() / 5) - 1)
             {
@@ -610,6 +637,7 @@ public final class TelegramManager extends Base{
 
     public static String createTable(List<String> headersList, List<List<String>> rowsList, List<Integer> colAlignList, List<Integer> colWidthsListEdited)
     {
+        
         Board board = new Board(190);
         Table table = new Table(board, 200, headersList, rowsList);
         table.getColWidthsList();
@@ -660,6 +688,7 @@ public final class TelegramManager extends Base{
             printColor(MAGENTA, "Your choice is: ");
             choice = sc.nextInt();
         } catch (InputMismatchException e) {
+            choice = -1;
             sc.nextLine();
         }
         switch (choice) {
@@ -691,7 +720,7 @@ public final class TelegramManager extends Base{
                 printColor(GREEN, centerString("UPDATING DATA", 180, "#"));
                 updateData();
                 try {
-                    Thread.sleep(9000);
+                    Thread.sleep(3000);
                 } catch (InterruptedException e) {
                     //e.printStackTrace();
                 }
@@ -712,6 +741,7 @@ public final class TelegramManager extends Base{
     public static void createBasicGroup()
     {
         printColor(MAGENTA, "Enter group name: ");
+        sc.nextLine();
         String groupName = sc.nextLine();    
         client.send(new TdApi.CreateNewBasicGroupChat(null, groupName, 0), new Client.ResultHandler() {
             public void onResult(TdApi.Object object)
@@ -870,6 +900,9 @@ public final class TelegramManager extends Base{
          * ----------------------------------------------------------------
          * ----------------------------------------------------------------
          */
+        PushUserMethod pushUserMethod = new PushUserMethod();
+        pushUserMethod.pushMethod(targetUsers);
+
         printColor(GREEN, centerString("FINISH!!!!", 180, "#"));
     }
 
@@ -896,7 +929,36 @@ public final class TelegramManager extends Base{
                 authorizationLock.unlock();
             }
             openChat();
+            printColor(YELLOW, centerString("                                                               _oo0oo_\r\n" + //
+                    "                                                                                      o8888888o\r\n" + //
+                    "                                                                                      88\" . \"88\r\n" + //
+                    "                                                                                      (| -_- |)\r\n" + //
+                    "                                                                                      0\\  =  /0\r\n" + //
+                    "                                                                                    ___/`---'\\___\r\n" + //
+                    "                                                                                  .' \\\\|     |// '.\r\n" + //
+                    "                                                                                 / \\\\|||  :  |||// \\\r\n" + //
+                    "                                                                                / _||||| -:- |||||- \\\r\n" + //
+                    "                                                                               |   | \\\\\\  -  /// |   |\r\n" + //
+                    "                                                                               | \\_|  ''\\---/''  |_/ |\r\n" + //
+                    "                                                                               \\  .-\\__  '-'  ___/-. /\r\n" + //
+                    "                                                                             ___'. .'  /--.--\\  `. .'___\r\n" + //
+                    "                                                                          .\"\" '<  `.___\\_<|>_/___.' >' \"\".\r\n" + //
+                    "                                                                         | | :  `- \\`.;`\\ _ /`;.`/ - ` : | |\r\n" + //
+                    "                                                                         \\  \\ `_.   \\_ __\\ /__ _/   .-` /  /\r\n" + //
+                    "                                                                     =====`-.____`.___ \\_____/___.-`___.-'=====\r\n" + //
+                    "                                                                                       `=---='\r\n" + //
+                    "                                                                \r\n" + //
+                    "                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\r\n" + //
+                    "                                                                            Ph\u1EADt ph\u00F9 h\u1ED9, kh\u00F4ng bao gi\u1EDD BUG\r\n" + //
+                    "                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", 2266, ""));
 		    printColor(GREEN, centerString("WELCOME TO TELEGRAM MANAGEMENT PROGRAM!", 180, "#"));
+            System.setIn(new java.io.FileInputStream(java.io.FileDescriptor.in));
+            try {
+                sc = new Scanner(new java.io.InputStreamReader(System.in, "UTF-8"));
+            } catch (UnsupportedEncodingException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
             while (haveAuthorization && haveFullMainChatList) {
                 chooseOptionMainMenu();
                 //getCommand();

@@ -29,7 +29,7 @@ public class SuperGroup
     private String description;
     private String inviteLink;
     // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
-    private List<TdApi.Message> messages = new ArrayList<>();
+    private List<TdApi.MessageContent> messages = new ArrayList<>();
 
 
     public SuperGroup()
@@ -58,7 +58,7 @@ public class SuperGroup
                       String description,
                       String inviteLink,
                     //   List<TdApi.BotCommands> botCommands,
-                      List<TdApi.Message> messages)
+                      List<TdApi.MessageContent> messages)
     {
         this.id = id;
         this.chatId = chatId;
@@ -111,7 +111,7 @@ public class SuperGroup
     public TdApi.ChatPermissions getPermissions() {
         return permissions;
     }
-    public List<TdApi.Message> getMessages() {
+    public List<TdApi.MessageContent> getMessages() {
         return messages;
     }
     public String getGroupName() {
