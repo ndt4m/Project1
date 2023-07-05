@@ -1,0 +1,1675 @@
+[
+  {
+    "id": 1809958885,
+    "chatId": -1001809958885,
+    "groupName": "zaaaahoooo",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+6F0gR76qffsyNzE9",
+    "messages": [
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001809958885
+        },
+        "chatId": -1001809958885,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688385833,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "zaaaahoooo"
+        },
+        "replyMarkup": null
+      }
+    ]
+  },
+  {
+    "id": 1975192757,
+    "chatId": -1001975192757,
+    "groupName": "mkhhhbh",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 86400,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "hjghjhbh",
+    "inviteLink": "https://t.me/+WuyTdp7yWRYxMDE1",
+    "messages": [
+      {
+        "id": 18874368,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688379431,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 75272.65125083923,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "mkhhhbh"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 6291456,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151279,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 86400,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 5242880,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151081,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 1209600,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 4194304,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688150522,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 259200,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 3145728,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688150446,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "chattest"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 2097152,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": true,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1685191524,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 7,
+          "forwardCount": 0,
+          "replyInfo": null,
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "hello",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001975192757
+        },
+        "chatId": -1001975192757,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": false,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": true,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1685191471,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "testChannel"
+        },
+        "replyMarkup": null
+      }
+    ]
+  },
+  {
+    "id": 1899612767,
+    "chatId": -1001899612767,
+    "groupName": "đhncn",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 31536000,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "jjjjjjj",
+    "inviteLink": "https://t.me/+LhAjMQv899FjYjY1",
+    "messages": [
+      {
+        "id": 14680064,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688262073,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 14680064,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.140751447264099E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "jj",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 13631488,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688261873,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 13631488,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1407314472210407E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "upoijn",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 12582912,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688261841,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.14072824721992E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "đhncn"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 11534336,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688261636,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.140707747219491E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "userId": 6173576926
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 10485760,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688261591,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.140703247219038E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "memberUserIds": [
+            6173576926
+          ]
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 9437184,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688211793,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1357234472186804E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "userId": 6054221228
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 8388608,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688211485,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1356926472183466E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "hhhhhh"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 7340032,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688211258,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1356699472180367E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "memberUserIds": [
+            6054221228
+          ]
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 6291456,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688207693,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1353134472177267E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "userId": 6054221228
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 5242880,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688152581,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 5242880,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.129802247217393E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5130136026148241963,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "😙",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 202.0,
+                        "y": 455.0
+                      },
+                      "endControlPoint": {
+                        "x": 149.0,
+                        "y": 433.0
+                      },
+                      "endPoint": {
+                        "x": 112.0,
+                        "y": 395.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -37.0,
+                        "y": 239.0
+                      },
+                      "endControlPoint": {
+                        "x": 137.0,
+                        "y": -16.0
+                      },
+                      "endPoint": {
+                        "x": 337.0,
+                        "y": 72.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 533.0,
+                        "y": 159.0
+                      },
+                      "endControlPoint": {
+                        "x": 470.0,
+                        "y": 456.0
+                      },
+                      "endPoint": {
+                        "x": 255.0,
+                        "y": 455.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 366,
+                  "size": 3476,
+                  "expectedSize": 3476,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKLKs-ST4x62ZM3O4oC63CZWzzwAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
+                    "uniqueId": "AQADKwIAAonnMUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3476
+                  }
+                }
+              },
+              "sticker": {
+                "id": 367,
+                "size": 26992,
+                "expectedSize": 26992,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSiyrPkk-MetmTNzuKAutwmVs88AAIrAgACiecxR-k4peS9jIEvLwQ",
+                  "uniqueId": "AgADKwIAAonnMUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 26992
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "😙"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 4194304,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688152475,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 4194304,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1297916471806288E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "animatedEmoji": {
+            "sticker": {
+              "id": 5130064437633352245,
+              "setId": 1258816259751983,
+              "width": 512,
+              "height": 512,
+              "emoji": "🤨",
+              "format": {},
+              "fullType": {
+                "premiumAnimation": null
+              },
+              "outline": [
+                {
+                  "commands": [
+                    {
+                      "startControlPoint": {
+                        "x": 205.0,
+                        "y": 457.0
+                      },
+                      "endControlPoint": {
+                        "x": 149.0,
+                        "y": 434.0
+                      },
+                      "endPoint": {
+                        "x": 111.0,
+                        "y": 394.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": -35.0,
+                        "y": 239.0
+                      },
+                      "endControlPoint": {
+                        "x": 137.0,
+                        "y": -11.0
+                      },
+                      "endPoint": {
+                        "x": 332.0,
+                        "y": 71.0
+                      }
+                    },
+                    {
+                      "startControlPoint": {
+                        "x": 530.0,
+                        "y": 155.0
+                      },
+                      "endControlPoint": {
+                        "x": 476.0,
+                        "y": 450.0
+                      },
+                      "endPoint": {
+                        "x": 261.0,
+                        "y": 455.0
+                      }
+                    },
+                    {
+                      "endPoint": {
+                        "x": 261.0,
+                        "y": 456.0
+                      }
+                    }
+                  ]
+                }
+              ],
+              "thumbnail": {
+                "format": {},
+                "width": 128,
+                "height": 128,
+                "file": {
+                  "id": 642,
+                  "size": 3560,
+                  "expectedSize": 3560,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AAMCAQADFQABZKLKswQo3jtKNtLULo4yiyV5dD0AAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
+                    "uniqueId": "AQADNQIAAm2mMUdy",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3560
+                  }
+                }
+              },
+              "sticker": {
+                "id": 643,
+                "size": 10751,
+                "expectedSize": 10751,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "CAACAgEAAxUAAWSiyrMEKN47SjbS1C6OMosleXQ9AAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
+                  "uniqueId": "AgADNQIAAm2mMUc",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 10751
+                }
+              }
+            },
+            "stickerWidth": 512,
+            "stickerHeight": 512,
+            "fitzpatrickType": 0,
+            "sound": null
+          },
+          "emoji": "🤨"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 3145728,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688152156,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 3.1297597471744537E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "uissisi"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 2097152,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151562,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 31536000,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001899612767
+        },
+        "chatId": -1001899612767,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688151445,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "siuuuuuu"
+        },
+        "replyMarkup": null
+      }
+    ]
+  },
+  {
+    "id": 1913443622,
+    "chatId": -1001913443622,
+    "groupName": "super group",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 13392000,
+    "memberCount": 2,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      6054221228,
+      2134816269
+    ],
+    "description": "unldjfjcjc",
+    "inviteLink": "https://t.me/+2zjtPawVZv9mZTNl",
+    "messages": [
+      {
+        "id": 15728640,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688355303,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 1.3356744293320656E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "super group"
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 14680064,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688204027,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 1.3205468292983294E7,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "memberUserIds": [
+            6054221228
+          ]
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 13631488,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688203956,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "messageAutoDeleteTime": 13392000,
+          "fromUserId": 0
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 12582912,
+        "senderId": {
+          "userId": 2134816269
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": true,
+        "canBeForwarded": true,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": true,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": true,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688203858,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": {
+          "viewCount": 0,
+          "forwardCount": 0,
+          "replyInfo": {
+            "replyCount": 0,
+            "recentReplierIds": [],
+            "lastReadInboxMessageId": 0,
+            "lastReadOutboxMessageId": 0,
+            "lastMessageId": 0
+          },
+          "reactions": []
+        },
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 12582912,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "text": {
+            "text": "fhg",
+            "entities": []
+          },
+          "webPage": null
+        },
+        "replyMarkup": null
+      },
+      {
+        "id": 1048576,
+        "senderId": {
+          "chatId": -1001913443622
+        },
+        "chatId": -1001913443622,
+        "sendingState": null,
+        "schedulingState": null,
+        "isOutgoing": true,
+        "isPinned": false,
+        "canBeEdited": false,
+        "canBeForwarded": false,
+        "canBeSaved": true,
+        "canBeDeletedOnlyForSelf": false,
+        "canBeDeletedForAllUsers": false,
+        "canGetAddedReactions": false,
+        "canGetStatistics": false,
+        "canGetMessageThread": false,
+        "canGetViewers": true,
+        "canGetMediaTimestampLinks": true,
+        "canReportReactions": false,
+        "hasTimestampedMedia": true,
+        "isChannelPost": false,
+        "isTopicMessage": false,
+        "containsUnreadMention": false,
+        "date": 1688147937,
+        "editDate": 0,
+        "forwardInfo": null,
+        "interactionInfo": null,
+        "unreadReactions": [],
+        "replyInChatId": 0,
+        "replyToMessageId": 0,
+        "messageThreadId": 0,
+        "selfDestructTime": 0,
+        "selfDestructIn": 0.0,
+        "autoDeleteIn": 0.0,
+        "viaBotUserId": 0,
+        "authorSignature": "",
+        "mediaAlbumId": 0,
+        "restrictionReason": "",
+        "content": {
+          "title": "mnlt"
+        },
+        "replyMarkup": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,155 @@
+[
+  {
+    "id": 5547980524,
+    "firstName": "Quý",
+    "lastName": "Phúc",
+    "userName": "",
+    "phoneNumber": "84971681233",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 5966111295,
+    "firstName": "Duy",
+    "lastName": "Bảo",
+    "userName": "",
+    "phoneNumber": "84397244554",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 5914064773,
+    "firstName": "Vinh",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84979494803",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 1496195650,
+    "firstName": "Tú Lan",
+    "lastName": "",
+    "userName": "at1612",
+    "phoneNumber": "84981208146",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 6054221228,
+    "firstName": "Vincenzo",
+    "lastName": "Cassano",
+    "userName": "",
+    "phoneNumber": "84862642048",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      917475886,
+      994553637,
+      997737791,
+      819009183,
+      906873372,
+      842365636,
+      917381180,
+      833548410,
+      887962713,
+      900688441,
+      704076527,
+      731085839,
+      905589540
+    ],
+    "user_super_group_ids": [
+      1913443622
+    ]
+  },
+  {
+    "id": 2134816269,
+    "firstName": "Đức Tâm",
+    "lastName": "E15",
+    "userName": "fapspfkjc",
+    "phoneNumber": "84857864831",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      906873372,
+      704076527,
+      731085839
+    ],
+    "user_super_group_ids": [
+      1913443622
+    ]
+  },
+  {
+    "id": 1484359786,
+    "firstName": "",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "Không rõ",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 1153880733,
+    "firstName": "Martin",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84856826376",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  },
+  {
+    "id": 5402771963,
+    "firstName": "Thu",
+    "lastName": "Ba",
+    "userName": "",
+    "phoneNumber": "84968844298",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      842365636
+    ],
+    "user_super_group_ids": []
+  }
+]
