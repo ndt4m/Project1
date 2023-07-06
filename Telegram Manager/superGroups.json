@@ -15,7 +15,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": false,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": false,
       "canManageTopics": true
     },
@@ -37,6 +37,43 @@
     ]
   },
   {
+    "id": 1876255601,
+    "chatId": -1001876255601,
+    "groupName": "superman",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+hZjoH2y08Z41MmE1",
+    "messages": [
+      {
+        "title": "superman"
+      }
+    ]
+  },
+  {
     "id": 1899612767,
     "chatId": -1001899612767,
     "groupName": "đhncn",
@@ -52,7 +89,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -360,9 +397,9 @@
     ]
   },
   {
-    "id": 1913443622,
-    "chatId": -1001913443622,
-    "groupName": "super groupp",
+    "id": 1587492959,
+    "chatId": -1001587492959,
+    "groupName": "masterpiece",
     "permissions": {
       "canSendBasicMessages": true,
       "canSendAudios": true,
@@ -374,12 +411,12 @@
       "canSendPolls": true,
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
-      "canChangeInfo": true,
-      "canInviteUsers": true,
-      "canPinMessages": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
       "canManageTopics": true
     },
-    "messageAutoDeleteTime": 13392000,
+    "messageAutoDeleteTime": 0,
     "memberCount": 1,
     "isAllHistoryAvailable": true,
     "adminIds": [
@@ -388,50 +425,87 @@
     "memberIds": [
       2134816269
     ],
-    "description": "cncncncnc",
-    "inviteLink": "https://t.me/+Y0-6Z4Kkv5xiMDc1",
+    "description": "",
+    "inviteLink": "https://t.me/+2Lbtzz9XV-A1NDM1",
     "messages": [
       {
-        "userId": 6054221228
-      },
+        "title": "masterpiece"
+      }
+    ]
+  },
+  {
+    "id": 1714341959,
+    "chatId": -1001714341959,
+    "groupName": "narruutooo",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+7z4cH2EcWMc5NTdl",
+    "messages": [
       {
-        "title": "super groupp"
-      },
+        "title": "narruutooo"
+      }
+    ]
+  },
+  {
+    "id": 1856449499,
+    "chatId": -1001856449499,
+    "groupName": "siuuu",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 3,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      6054221228,
+      2134816269,
+      6274169886
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+Xgd9f5F-fP9hNmJl",
+    "messages": [
       {
-        "text": {
-          "text": "Tessy",
-          "entities": []
-        },
-        "webPage": null
-      },
-      {
-        "text": {
-          "text": "Test",
-          "entities": []
-        },
-        "webPage": null
-      },
-      {
-        "title": "super group"
-      },
-      {
-        "memberUserIds": [
-          6054221228
-        ]
-      },
-      {
-        "messageAutoDeleteTime": 13392000,
-        "fromUserId": 0
-      },
-      {
-        "text": {
-          "text": "fhg",
-          "entities": []
-        },
-        "webPage": null
-      },
-      {
-        "title": "mnlt"
+        "title": "siuuu"
       }
     ]
   }

@@ -2,6 +2,8 @@ package hust.soict.cybersec.tm.entity;
 
 import java.util.Set;
 
+import com.google.gson.JsonObject;
+
 public class User 
 {
     private long id;
@@ -95,5 +97,20 @@ public class User
 
     public boolean getIsFake() {
         return isFake;
+    }
+
+    public JsonObject toJson(){
+        JsonObject fields = new JsonObject();
+        fields.addProperty("Id", String.valueOf(getId()));
+        fields.addProperty("FirstName", getFirstName());
+        fields.addProperty("LastName", getLastName());
+        fields.addProperty("UserName", getUserName());
+        fields.addProperty("PhoneNumber", getPhoneNumber());
+        fields.addProperty("IsScam", getIsScam());
+        fields.addProperty("IsFake", getIsFake());
+        fields.addProperty("LanguageCode", getLanguageCode());
+        fields.addProperty("Type", getType());
+
+        return fields;
     }
 }

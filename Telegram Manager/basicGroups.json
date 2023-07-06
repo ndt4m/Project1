@@ -15,7 +15,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -31,6 +31,20 @@
     "description": "uuuuii",
     "inviteLink": "https://t.me/+g6Ld2nnn-tYwNGZl",
     "messages": [
+      {
+        "text": {
+          "text": "ddxxxxx",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "a đuồiiiiii quasssssz",
+          "entities": []
+        },
+        "webPage": null
+      },
       {
         "text": {
           "text": "Kinh :)) test tính năng khiếp",
@@ -86,7 +100,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": true,
       "canManageTopics": false
     },
@@ -276,7 +290,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -291,6 +305,14 @@
     "description": "",
     "inviteLink": "https://t.me/+hn21_iaDlXo4Yzk1",
     "messages": [
+      {
+        "userId": 5680795783
+      },
+      {
+        "memberUserIds": [
+          5680795783
+        ]
+      },
       {
         "title": "lgsg",
         "memberUserIds": [
@@ -315,7 +337,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -586,7 +608,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -614,7 +636,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -642,7 +664,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -670,7 +692,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -952,7 +974,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -980,7 +1002,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1008,7 +1030,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1036,7 +1058,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSlp1o-MUjYPynvBfUH8kJYilPsAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1142,7 +1164,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -1272,6 +1294,53 @@
     ]
   },
   {
+    "id": 687495272,
+    "chatId": -687495272,
+    "groupName": "budha",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+8iivH1CwazRmMTY1",
+    "messages": [
+      {
+        "userId": 5680795783
+      },
+      {
+        "memberUserIds": [
+          5680795783
+        ]
+      },
+      {
+        "title": "budha",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
     "id": 731085839,
     "chatId": -731085839,
     "groupName": "200",
@@ -1287,7 +1356,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -1344,7 +1413,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": true,
       "canManageTopics": false
     },
@@ -1368,45 +1437,6 @@
     ]
   },
   {
-    "id": 877491821,
-    "chatId": -877491821,
-    "groupName": "r",
-    "permissions": {
-      "canSendBasicMessages": true,
-      "canSendAudios": true,
-      "canSendDocuments": true,
-      "canSendPhotos": true,
-      "canSendVideos": true,
-      "canSendVideoNotes": true,
-      "canSendVoiceNotes": true,
-      "canSendPolls": true,
-      "canSendOtherMessages": true,
-      "canAddWebPagePreviews": true,
-      "canChangeInfo": true,
-      "canInviteUsers": true,
-      "canPinMessages": true,
-      "canManageTopics": true
-    },
-    "messageAutoDeleteTime": 0,
-    "adminIds": [
-      2134816269
-    ],
-    "memberCount": 1,
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+MwIdJNzC2q4xYTU9",
-    "messages": [
-      {
-        "title": "r",
-        "memberUserIds": [
-          2134816269
-        ]
-      }
-    ]
-  },
-  {
     "id": 937181806,
     "chatId": -937181806,
     "groupName": "bsgroup",
@@ -1422,7 +1452,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -1452,45 +1482,6 @@
     ]
   },
   {
-    "id": 999590438,
-    "chatId": -999590438,
-    "groupName": "h l",
-    "permissions": {
-      "canSendBasicMessages": true,
-      "canSendAudios": true,
-      "canSendDocuments": true,
-      "canSendPhotos": true,
-      "canSendVideos": true,
-      "canSendVideoNotes": true,
-      "canSendVoiceNotes": true,
-      "canSendPolls": true,
-      "canSendOtherMessages": true,
-      "canAddWebPagePreviews": true,
-      "canChangeInfo": true,
-      "canInviteUsers": true,
-      "canPinMessages": true,
-      "canManageTopics": true
-    },
-    "messageAutoDeleteTime": 0,
-    "adminIds": [
-      2134816269
-    ],
-    "memberCount": 1,
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+Fc5jXecUfos4NTA9",
-    "messages": [
-      {
-        "title": "h l",
-        "memberUserIds": [
-          2134816269
-        ]
-      }
-    ]
-  },
-  {
     "id": 982563624,
     "chatId": -982563624,
     "groupName": "testBasic",
@@ -1506,7 +1497,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -1546,7 +1537,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -1585,7 +1576,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -1628,7 +1619,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -1719,7 +1710,7 @@
       "canSendOtherMessages": false,
       "canAddWebPagePreviews": false,
       "canChangeInfo": false,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": false,
       "canManageTopics": false
     },
@@ -1781,45 +1772,6 @@
     ]
   },
   {
-    "id": 926330856,
-    "chatId": -926330856,
-    "groupName": "dfasdf",
-    "permissions": {
-      "canSendBasicMessages": true,
-      "canSendAudios": true,
-      "canSendDocuments": true,
-      "canSendPhotos": true,
-      "canSendVideos": true,
-      "canSendVideoNotes": true,
-      "canSendVoiceNotes": true,
-      "canSendPolls": true,
-      "canSendOtherMessages": true,
-      "canAddWebPagePreviews": true,
-      "canChangeInfo": true,
-      "canInviteUsers": true,
-      "canPinMessages": true,
-      "canManageTopics": true
-    },
-    "messageAutoDeleteTime": 0,
-    "adminIds": [
-      2134816269
-    ],
-    "memberCount": 1,
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+j251oo7t0IcyNWU9",
-    "messages": [
-      {
-        "title": "dfasdf",
-        "memberUserIds": [
-          2134816269
-        ]
-      }
-    ]
-  },
-  {
     "id": 672132318,
     "chatId": -672132318,
     "groupName": "is it work",
@@ -1835,7 +1787,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -1859,45 +1811,6 @@
     ]
   },
   {
-    "id": 834984738,
-    "chatId": -834984738,
-    "groupName": "\"h l \"",
-    "permissions": {
-      "canSendBasicMessages": true,
-      "canSendAudios": true,
-      "canSendDocuments": true,
-      "canSendPhotos": true,
-      "canSendVideos": true,
-      "canSendVideoNotes": true,
-      "canSendVoiceNotes": true,
-      "canSendPolls": true,
-      "canSendOtherMessages": true,
-      "canAddWebPagePreviews": true,
-      "canChangeInfo": true,
-      "canInviteUsers": true,
-      "canPinMessages": true,
-      "canManageTopics": true
-    },
-    "messageAutoDeleteTime": 0,
-    "adminIds": [
-      2134816269
-    ],
-    "memberCount": 1,
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+vq_UrVPLY_UzZWY1",
-    "messages": [
-      {
-        "title": "\"h l \"",
-        "memberUserIds": [
-          2134816269
-        ]
-      }
-    ]
-  },
-  {
     "id": 989766425,
     "chatId": -989766425,
     "groupName": "rllr",
@@ -1913,7 +1826,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -1952,7 +1865,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": true,
+      "canInviteUsers": false,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -1976,45 +1889,6 @@
     ]
   },
   {
-    "id": 815909456,
-    "chatId": -815909456,
-    "groupName": "hngjfgnh",
-    "permissions": {
-      "canSendBasicMessages": false,
-      "canSendAudios": false,
-      "canSendDocuments": false,
-      "canSendPhotos": false,
-      "canSendVideos": false,
-      "canSendVideoNotes": false,
-      "canSendVoiceNotes": false,
-      "canSendPolls": false,
-      "canSendOtherMessages": false,
-      "canAddWebPagePreviews": false,
-      "canChangeInfo": false,
-      "canInviteUsers": true,
-      "canPinMessages": false,
-      "canManageTopics": false
-    },
-    "messageAutoDeleteTime": 0,
-    "adminIds": [
-      2134816269
-    ],
-    "memberCount": 1,
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+9bTNLJrQOs80Nzll",
-    "messages": [
-      {
-        "title": "hngjfgnh",
-        "memberUserIds": [
-          2134816269
-        ]
-      }
-    ]
-  },
-  {
     "id": 956284814,
     "chatId": -956284814,
     "groupName": "hello",
@@ -2030,7 +1904,7 @@
       "canSendOtherMessages": true,
       "canAddWebPagePreviews": true,
       "canChangeInfo": true,
-      "canInviteUsers": false,
+      "canInviteUsers": true,
       "canPinMessages": true,
       "canManageTopics": true
     },
@@ -2047,6 +1921,45 @@
     "messages": [
       {
         "title": "hello",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 908779736,
+    "chatId": -908779736,
+    "groupName": "jugok",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+EcULPPOnwnw3NzZl",
+    "messages": [
+      {
+        "title": "jugok",
         "memberUserIds": [
           2134816269
         ]

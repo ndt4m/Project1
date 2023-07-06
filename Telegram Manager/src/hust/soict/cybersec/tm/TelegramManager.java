@@ -6,8 +6,9 @@ import org.drinkless.tdlib.TdApi;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonObject;
 
-import hust.soict.cybersec.tm.airtable.PushUserMethod;
+import hust.soict.cybersec.tm.airtable.AirTable;
 import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.SuperGroupInfoCrawler;
 import hust.soict.cybersec.tm.crawling.UserInfoCrawler;
@@ -25,6 +26,7 @@ import java.io.FileWriter;
 import java.io.IOError;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
+import java.nio.charset.StandardCharsets;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -35,7 +37,7 @@ import java.util.Scanner;
 
 
 public final class TelegramManager extends Base{
-    private static Scanner sc;
+    private static Scanner sc = new Scanner(System.in);
             
     static {
         // set log message handler to handle only fatal errors (0) and plain log messages (-1)
@@ -211,7 +213,7 @@ public final class TelegramManager extends Base{
             }
             printColor(GREEN, centerString("Update data", 180, "*"));
             updateData();
-            updateData();
+            new AirTable().push(targetUsers,targetBasicGroups,targetSupergroups);
             printColor(GREEN, centerString("Syncronize is completed successfully!", 180, "*"));
 
     }
@@ -687,6 +689,7 @@ public final class TelegramManager extends Base{
         try {
             printColor(MAGENTA, "Your choice is: ");
             choice = sc.nextInt();
+            sc.nextLine();
         } catch (InputMismatchException e) {
             choice = -1;
             sc.nextLine();
@@ -741,7 +744,7 @@ public final class TelegramManager extends Base{
     public static void createBasicGroup()
     {
         printColor(MAGENTA, "Enter group name: ");
-        sc.nextLine();
+        //sc.nextLine();
         String groupName = sc.nextLine();    
         client.send(new TdApi.CreateNewBasicGroupChat(null, groupName, 0), new Client.ResultHandler() {
             public void onResult(TdApi.Object object)
@@ -900,8 +903,7 @@ public final class TelegramManager extends Base{
          * ----------------------------------------------------------------
          * ----------------------------------------------------------------
          */
-        PushUserMethod pushUserMethod = new PushUserMethod();
-        pushUserMethod.pushMethod(targetUsers);
+        new AirTable().push(targetUsers,targetBasicGroups,targetSupergroups);
 
         printColor(GREEN, centerString("FINISH!!!!", 180, "#"));
     }
@@ -952,13 +954,8 @@ public final class TelegramManager extends Base{
                     "                                                                            Ph\u1EADt ph\u00F9 h\u1ED9, kh\u00F4ng bao gi\u1EDD BUG\r\n" + //
                     "                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~", 2266, ""));
 		    printColor(GREEN, centerString("WELCOME TO TELEGRAM MANAGEMENT PROGRAM!", 180, "#"));
-            System.setIn(new java.io.FileInputStream(java.io.FileDescriptor.in));
-            try {
-                sc = new Scanner(new java.io.InputStreamReader(System.in, "UTF-8"));
-            } catch (UnsupportedEncodingException e) {
-                // TODO Auto-generated catch block
-                e.printStackTrace();
-            }
+
+
             while (haveAuthorization && haveFullMainChatList) {
                 chooseOptionMainMenu();
                 //getCommand();

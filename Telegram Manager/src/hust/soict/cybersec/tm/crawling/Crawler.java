@@ -46,6 +46,9 @@ public class Crawler <T>
                         break;
                     case TdApi.Error.CONSTRUCTOR:
                         System.out.println("\u001B[31m" + ((TdApi.Error) object).message + "\u001B[0m");
+                        break;
+                    default:
+
                 }
                 haveReceivedRespond = true;
                 authorizationLock.lock();

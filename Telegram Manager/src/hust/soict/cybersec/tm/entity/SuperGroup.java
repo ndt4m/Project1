@@ -7,6 +7,10 @@ import java.util.Set;
 
 import org.drinkless.tdlib.TdApi;
 
+import com.google.gson.Gson;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 public class SuperGroup 
 {
     private long id;
@@ -124,5 +128,32 @@ public class SuperGroup
 
     public String getInviteLink() {
         return inviteLink;
+    }
+
+    public JsonObject toJson(){
+        Gson gson = new Gson();
+        JsonObject fields = new JsonObject();
+        fields.addProperty("Id", String.valueOf(getId()));
+        fields.addProperty("ChatID", getChatId());
+        fields.addProperty("GroupName", getGroupName());
+        fields.addProperty("Permission", gson.toJson(permissions));
+        fields.addProperty("MessageAutoDeleteTime", getMessageAutoDeleteTime());
+        fields.addProperty("MemberCount", getMemberCount());
+        fields.addProperty("IsAllHistoryAvailable", getIsAllHistoryAvailable());
+        fields.addProperty("Description", getDescription());
+        fields.addProperty("InviteLink", getInviteLink());
+        fields.addProperty("Message", gson.toJson(messages) );
+        JsonArray admidIDs = new JsonArray();
+        for(Long ID : adminIds){
+            admidIDs.add(ID);
+        }
+        JsonArray memberIDs = new JsonArray();
+        for(Long ID : memberIds){
+            memberIDs.add(ID);
+        }
+        fields.add("AdminIDs", admidIDs);
+        fields.add("MemberIDs", memberIDs);
+
+        return fields;
     }
 }

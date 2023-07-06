@@ -7,6 +7,8 @@ import org.drinkless.tdlib.TdApi;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
 
 public class BasicGroup {
     private long id;
@@ -165,4 +167,30 @@ public class BasicGroup {
     // public void setBotCommands(List<TdApi.BotCommands> botCommands) {
     //     this.botCommands = botCommands;
     // }
+    public JsonObject toJson(){
+        JsonObject fields = new JsonObject();
+        Gson gson = new Gson();
+        fields.addProperty("Id", String.valueOf(getId()));
+        fields.addProperty("ChatID", getChatId());
+        fields.addProperty("GroupName", getGroupName());
+        fields.addProperty("Permission", gson.toJson(permissions));
+        fields.addProperty("MessageAutoDeleteTime", getMessageAutoDeleteTime());
+        fields.addProperty("MemberCount", getMemberCount());
+        fields.addProperty("Description", getDescription());
+        fields.addProperty("InviteLink", getInviteLink());
+        fields.addProperty("Message", gson.toJson(messages) );
+
+        JsonArray AdminIDs = new JsonArray();
+        for(Long ID: adminIds){
+            AdminIDs.add(ID);
+        }
+        JsonArray MemberIDs = new JsonArray();
+        for(Long ID: memberIds){
+            MemberIDs.add(ID);
+        }
+        fields.add("AdminIDs", AdminIDs);
+        fields.add("MemberIDs", MemberIDs);
+
+        return fields;
+    }
 }
