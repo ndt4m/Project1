@@ -2,6 +2,7 @@ package hust.soict.cybersec.tm;
 
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.Client.ResultHandler;
+
 import org.drinkless.tdlib.TdApi;
 
 import com.google.gson.Gson;
@@ -36,6 +37,8 @@ import java.util.Scanner;
 
 
 public final class TelegramManager extends Base{
+    
+
     private static Scanner sc = new Scanner(System.in);
             
     static {
@@ -93,6 +96,9 @@ public final class TelegramManager extends Base{
             
             
         }
+        FileWriter fwb = null;
+        FileWriter fws = null;
+        FileWriter fwu = null;
         try {
            
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
@@ -105,9 +111,9 @@ public final class TelegramManager extends Base{
             uCrawler.crawlUserInfo();
             targetUsers = uCrawler.getCollection();
             
-            FileWriter fwb = new FileWriter("basicGroups.json");
-            FileWriter fws = new FileWriter("superGroups.json");  
-            FileWriter fwu = new FileWriter("users.json");
+            fwb = new FileWriter("basicGroups.json");
+            fws = new FileWriter("superGroups.json");  
+            fwu = new FileWriter("users.json");
 
             Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
             gson.toJson(targetBasicGroups, fwb);
@@ -117,8 +123,20 @@ public final class TelegramManager extends Base{
             fws.close();
             fwu.close();
         } catch (InterruptedException | IOException e) {
-            
-        } 
+            //logger.error("Error occurred: ", e);
+            // Restore interrupted state...
+            Thread.currentThread().interrupt();
+        } finally {
+            try {
+                fwb.close();
+                fws.close();
+                fwu.close();
+            } catch (IOException e) {
+                // TODO Auto-generated catch block
+                Thread.currentThread().interrupt();
+            }
+        }
+         
     }
 
     public static void showMainMenu()
