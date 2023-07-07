@@ -57,7 +57,7 @@ public class Base
         try {
             str = reader.readLine();
         } catch (IOException e) {
-            e.printStackTrace();
+            
         }
         currentPrompt = null;
         return str;
