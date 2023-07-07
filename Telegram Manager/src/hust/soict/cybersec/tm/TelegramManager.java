@@ -1,8 +1,5 @@
 package hust.soict.cybersec.tm;
 
-import hust.soict.cybersec.tm.AirTable.PushBasicGroupMethod;
-import hust.soict.cybersec.tm.AirTable.PushSuperGroupMethod;
-import hust.soict.cybersec.tm.AirTable.PushUserMethod;
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
