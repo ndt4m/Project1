@@ -94,7 +94,7 @@ public final class TelegramManager extends Base{
             Thread.sleep(1000);
         } catch (InterruptedException e) {
             
-            
+            Thread.currentThread().interrupt();
         }
         FileWriter fwb = null;
         FileWriter fws = null;
@@ -127,13 +127,31 @@ public final class TelegramManager extends Base{
             // Restore interrupted state...
             Thread.currentThread().interrupt();
         } finally {
-            try {
-                fwb.close();
-                fws.close();
-                fwu.close();
-            } catch (IOException e) {
-                // TODO Auto-generated catch block
-                Thread.currentThread().interrupt();
+            if (fwb != null) 
+            {
+                try {
+                    fwb.close();
+                } catch (IOException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+
+            if (fws != null)
+            {
+                try {
+                    fwb.close();
+                } catch (IOException e) {
+                    Thread.currentThread().interrupt();
+                }
+            }
+
+            if (fwu != null) 
+            {
+                try {
+                    fwu.close();
+                } catch (IOException e) {
+                    Thread.currentThread().interrupt();
+                }
             }
         }
          
