@@ -72,8 +72,7 @@ public class Crawler <T>
                 try {
                     gotAuthorization.await();
                 } catch (InterruptedException e) {
-                    // TODO Auto-generated catch block
-                    e.printStackTrace();
+                    Thread.currentThread().interrupt();
                 }
             }
         } finally {

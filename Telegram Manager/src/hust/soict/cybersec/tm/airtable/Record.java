@@ -83,6 +83,12 @@ public class Record{
         
     }
 
+    @Override
+    public int hashCode()
+    {
+        return this.id.hashCode();
+    }
+
     protected String getIdFieldVal() {
         return this.IdFieldVal;
     }

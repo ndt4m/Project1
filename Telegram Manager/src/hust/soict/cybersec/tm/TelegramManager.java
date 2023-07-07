@@ -139,7 +139,7 @@ public final class TelegramManager extends Base{
             if (fws != null)
             {
                 try {
-                    fwb.close();
+                    fws.close();
                 } catch (IOException e) {
                     Thread.currentThread().interrupt();
                 }
@@ -185,7 +185,7 @@ public final class TelegramManager extends Base{
                     try {
                         gotAuthorization.await();
                     } catch (InterruptedException e) {
-                       
+                        Thread.currentThread().interrupt();
                     }
                 }
             } finally {
@@ -198,7 +198,7 @@ public final class TelegramManager extends Base{
                     try {
                         gotAuthorization.await();
                     } catch (InterruptedException e) {
-                        
+                        Thread.currentThread().interrupt();
                     }
                 }
             } finally {
@@ -717,7 +717,7 @@ public final class TelegramManager extends Base{
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
-                   
+                    Thread.currentThread().interrupt();
                 }
                 updateData();
                 printColor(GREEN, centerString("FINISHED!!!", 180, "#"));
@@ -755,7 +755,7 @@ public final class TelegramManager extends Base{
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
-           
+            Thread.currentThread().interrupt();
         };
     }
 
@@ -780,7 +780,7 @@ public final class TelegramManager extends Base{
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
-           
+            Thread.currentThread().interrupt();
         };
     }
 
@@ -807,7 +807,7 @@ public final class TelegramManager extends Base{
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
-           
+            Thread.currentThread().interrupt();
         };
     }
 
@@ -834,7 +834,7 @@ public final class TelegramManager extends Base{
         try {
             Thread.sleep(1500);
         } catch (InterruptedException e) {
-           
+            Thread.currentThread().interrupt();
         };
     }
 

@@ -84,7 +84,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                 blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
                 blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
                 
-                for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
+                for (int i = 0; i < Math.min((int) Math.ceil(memberCount / ((double) 200)) + 1, (int) 10000/200); i++)
                 {   
                     
                     blockingSend(new TdApi.GetSupergroupMembers(id, null, 200 * i, 200), updateSuperGroupHandler);
