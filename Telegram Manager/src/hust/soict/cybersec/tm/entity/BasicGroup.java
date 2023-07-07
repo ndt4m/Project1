@@ -5,54 +5,26 @@ import java.util.List;
 
 import org.drinkless.tdlib.TdApi;
 
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
+import com.google.gson.JsonObject;
+
 public class BasicGroup {
     private long id;
     private long chatId;
     private String groupName;
     private TdApi.ChatPermissions permissions;
-    // private boolean canBeDeletedOnlyForSelf;
-    // private boolean canBeDeletedForAllUsers;
-    // private boolean defaultDisableNotification;
+    
     private int messageAutoDeleteTime;
     private List<Long> adminIds = new ArrayList<>();
     private int memberCount;
     private List<Long> memberIds = new ArrayList<>();
     private String description;
     private String inviteLink;
-    // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
-    private List<TdApi.Message> messages = new ArrayList<>();
-
-    public void setChatId(long chatId) {
-        this.chatId = chatId;
-    }
-
-    public int getMessageAutoDeleteTime() {
-        return messageAutoDeleteTime;
-    }
-
-    public void setAdminIds(List<Long> adminIds) {
-        this.adminIds = adminIds;
-    }
-
-    public int getMemberCount() {
-        return memberCount;
-    }
-
-    public void setMemberIds(List<Long> memberIds) {
-        this.memberIds = memberIds;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public List<TdApi.Message> getMessages() {
-        return messages;
-    }
-
-    public void setMessages(List<TdApi.Message> messages) {
-        this.messages = messages;
-    }
+    
+    private List<TdApi.MessageContent> messages = new ArrayList<>();
+    
 
     public BasicGroup()
     {
@@ -63,32 +35,28 @@ public class BasicGroup {
                       long chatId,
                       String groupName, 
                       TdApi.ChatPermissions permissions, 
-                    //   boolean canBeDeletedForAllUsers, 
-                    //   boolean canBeDeletedOnlyForSelf,
-                    //   boolean defaultDisableNotification,
+                    
                       int messageAutoDeleteTime,
                       List<Long> adminIds,
                       int memberCount,
                       List<Long> memberIds,
                       String description,
                       String inviteLink,
-                    //   List<TdApi.BotCommands> botCommands,
-                      List<TdApi.Message> messages)
+                    
+                      List<TdApi.MessageContent> messages)
     {
         this.id = id;
         this.chatId = chatId;
         this.groupName = groupName;
         this.permissions = permissions;
-        // this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
-        // this.canBeDeletedOnlyForSelf = canBeDeletedOnlyForSelf;
-        // this.defaultDisableNotification = defaultDisableNotification;
+        
         this.messageAutoDeleteTime = messageAutoDeleteTime;
         this.adminIds = adminIds;
         this.memberCount = memberCount;
         this.memberIds = memberIds;
         this.description = description;
         this.inviteLink = inviteLink;
-        // this.botCommands = botCommands;
+        
         this.messages = messages;
     }
 
@@ -101,14 +69,16 @@ public class BasicGroup {
     }
 
     public List<Long> getMemberIds() {
-        //System.out.println(this.memberIds + "o trong basic group class");
+        
         return this.memberIds;
     }
 
     public TdApi.ChatPermissions getPermissions() {
         return permissions;
     }
-
+    public List<TdApi.MessageContent> getMessages() {
+        return messages;
+    }
     public String getGroupName() {
         return groupName;
     }
@@ -119,6 +89,18 @@ public class BasicGroup {
 
     public String getInviteLink() {
         return inviteLink;
+    }
+
+    public int getMessageAutoDeleteTime() {
+        return messageAutoDeleteTime;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public int getMemberCount() {
+        return memberCount;
     }
     
     public void setId(long id) {
@@ -132,18 +114,6 @@ public class BasicGroup {
     public void setPermissions(TdApi.ChatPermissions permissions) {
         this.permissions = permissions;
     }
-
-    // public void setCanBeDeletedOnlyForSelf(boolean canBeDeletedOnlyForSelf) {
-    //     this.canBeDeletedOnlyForSelf = canBeDeletedOnlyForSelf;
-    // }
-
-    // public void setCanBeDeletedOnlyForAllUsers(boolean canBeDeletedForAllUsers) {
-    //     this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
-    // }
-
-    // public void setDefaultDisableNotification(boolean defaultDisableNotification) {
-    //     this.defaultDisableNotification = defaultDisableNotification;
-    // }
     
     public void setMessageAutoDeleteTime(int messageAutoDeleteTime) {
         this.messageAutoDeleteTime = messageAutoDeleteTime;
@@ -170,7 +140,37 @@ public class BasicGroup {
         this.inviteLink = inviteLink;
     }
 
-    // public void setBotCommands(List<TdApi.BotCommands> botCommands) {
-    //     this.botCommands = botCommands;
-    // }
+    @Override
+    public String toString()
+    {
+        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+        return gson.toJson(this);
+    }
+    
+    public JsonObject toJson(){
+        JsonObject fields = new JsonObject();
+        Gson gson = new Gson();
+        fields.addProperty("Id", String.valueOf(getId()));
+        fields.addProperty("ChatID", getChatId());
+        fields.addProperty("GroupName", getGroupName());
+        fields.addProperty("Permission", gson.toJson(permissions));
+        fields.addProperty("MessageAutoDeleteTime", getMessageAutoDeleteTime());
+        fields.addProperty("MemberCount", getMemberCount());
+        fields.addProperty("Description", getDescription());
+        fields.addProperty("InviteLink", getInviteLink());
+        fields.addProperty("Message", gson.toJson(messages) );
+
+        JsonArray AdminIDs = new JsonArray();
+        for(Long ID: adminIds){
+            AdminIDs.add(ID);
+        }
+        JsonArray MemberIDs = new JsonArray();
+        for(Long ID: memberIds){
+            MemberIDs.add(ID);
+        }
+        fields.add("AdminIDs", AdminIDs);
+        fields.add("MemberIDs", MemberIDs);
+
+        return fields;
+    }
 }

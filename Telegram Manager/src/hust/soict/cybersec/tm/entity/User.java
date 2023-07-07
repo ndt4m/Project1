@@ -1,7 +1,8 @@
 package hust.soict.cybersec.tm.entity;
 
-import java.util.HashSet;
 import java.util.Set;
+
+import com.google.gson.JsonObject;
 
 public class User 
 {
@@ -16,49 +17,6 @@ public class User
     private String type;
     private Set<Long> user_basic_group_ids;
     private Set<Long> user_super_group_ids;
-
-    // Getter
-
-
-    public String getFirstName() {
-        return firstName;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public String getUserName() {
-        return userName;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public boolean isScam() {
-        return isScam;
-    }
-
-    public boolean isFake() {
-        return isFake;
-    }
-
-    public String getLanguageCode() {
-        return languageCode;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public Set<Long> getUser_basic_group_ids() {
-        return user_basic_group_ids;
-    }
-
-    public Set<Long> getUser_super_group_ids() {
-        return user_super_group_ids;
-    }
 
     public User()
     {
@@ -94,11 +52,65 @@ public class User
     public String getDisplayName()
     {
         StringBuilder s = new StringBuilder(firstName);
-        s.append(lastName);
+        s.append(" " + lastName);
         return s.toString();
     }
 
     public long getId() {
         return id;
+    }
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public String getLanguageCode() {
+        return languageCode;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+    public Set<Long> getUser_basic_group_ids() {
+        return user_basic_group_ids;
+    }
+
+    public Set<Long> getUser_super_group_ids() {
+        return user_super_group_ids;
+    }
+
+    public boolean getIsScam() {
+        return isScam;
+    }
+
+    public boolean getIsFake() {
+        return isFake;
+    }
+
+    public JsonObject toJson(){
+        JsonObject fields = new JsonObject();
+        fields.addProperty("Id", String.valueOf(getId()));
+        fields.addProperty("FirstName", getFirstName());
+        fields.addProperty("LastName", getLastName());
+        fields.addProperty("UserName", getUserName());
+        fields.addProperty("PhoneNumber", getPhoneNumber());
+        fields.addProperty("IsScam", getIsScam());
+        fields.addProperty("IsFake", getIsFake());
+        fields.addProperty("LanguageCode", getLanguageCode());
+        fields.addProperty("Type", getType());
+
+        return fields;
     }
 }

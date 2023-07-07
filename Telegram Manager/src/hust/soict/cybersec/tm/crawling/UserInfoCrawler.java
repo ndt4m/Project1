@@ -106,18 +106,7 @@ public class UserInfoCrawler extends Crawler<User>
             findUserBasicGroupIds(id);
             findUserSuperGroupIds(id);
             blockingSend(new TdApi.GetUser(id), updateUserHandler);
-            // System.out.println("id: " + id);
-            // System.out.println("firstName: " + firstName);
-            // System.out.println("lastName: " + lastName);
-            // System.out.println("userName: " + userName);
-            // System.out.println("phoneNumber: " + phoneNumber);
-            // System.out.println("isScam: " + isScam);
-            // System.out.println("isFake: " + isFake);
-            // System.out.println("languageCode: " + languageCode);
-            // System.out.println("type: " + type);
-            // System.out.println("user_basic_group_ids: " + user_basic_group_ids);
-            // System.out.println("user_super_group_ids: " + user_super_group_ids);
-            // System.out.println("====================================================================");
+            
             if (!type.equals("bot user"))
             {
                 this.addCollection(new User(id, 
@@ -171,7 +160,7 @@ public class UserInfoCrawler extends Crawler<User>
                     break;
 
                 default:
-                    //System.out.println(object.toString());
+                    
             }
             haveReceivedRespond = true;
             authorizationLock.lock();

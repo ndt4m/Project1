@@ -14,28 +14,23 @@ import hust.soict.cybersec.tm.entity.SuperGroup;
 public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
 {
     private Client.ResultHandler updateSuperGroupHandler = new UpdateSuperGroupHandler();
-    // private Map<Long, TdApi.Supergroup> superGroups;
+    
     
     private long id = 0l;
     private long chatId = 0l;
     private String groupName = "";
     private TdApi.ChatPermissions permissions = null;
-    // private int canBeDeletedOnlyForSelf = -1;
-    // private int canBeDeletedForAllUsers = -1;
-    // private int defaultDisableNotification = -1;
+    
     private int messageAutoDeleteTime = -1;
-    // private int isChannel = -1;
-    // // private int isBroadCastGroup = -1;
-    // private int isFake = -1;
-    // private int isScam = -1;
+    
     private int memberCount = -1;
-    private int canGetMembers = -1;
+    
     private int isAllHistoryAvailable = -1;
     private Set<Long> adminIds = new HashSet<>();
     private Set<Long> memberIds = new HashSet<>();
     private String description = "";
     private String inviteLink = "";
-    // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
+    
     private List<TdApi.Message> messages = new ArrayList<>();
 
     public SuperGroupInfoCrawler()
@@ -46,7 +41,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
     public SuperGroupInfoCrawler(Map<Long, TdApi.Chat> chats, Client client)
     {
         super(client, chats);
-        // this.superGroups = superGroups;
+        
     }
 
     public void redefinedAttributes()
@@ -55,10 +50,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
         chatId = 0l;
         groupName = "";
         permissions = null;
-        // canBeDeletedOnlyForSelf = -1;
-        // canBeDeletedForAllUsers = -1;
-        // defaultDisableNotification = -1;
-        canGetMembers = -1;
+        
         isAllHistoryAvailable = -1;
         messageAutoDeleteTime = -1;
         adminIds = new HashSet<>();
@@ -66,11 +58,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
         memberIds = new HashSet<>();
         description = "";
         inviteLink = "";
-        // botCommands = new ArrayList<>();
-        // isChannel = -1;
-        // // isBroadCastGroup = -1;
-        // isFake = -1;
-        // isScam = -1;
+        
         messages = new ArrayList<>();
     }
 
@@ -87,34 +75,28 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
             chatId = chat.getKey();
             groupName = chat.getValue().title;
             permissions = chat.getValue().permissions;
-            // canBeDeletedOnlyForSelf = chat.getValue().canBeDeletedOnlyForSelf ? 1 : 0;
-            // canBeDeletedForAllUsers = chat.getValue().canBeDeletedForAllUsers ? 1 : 0;
-            // defaultDisableNotification = chat.getValue().defaultDisableNotification ? 1 : 0;
+            
             messageAutoDeleteTime = chat.getValue().messageAutoDeleteTime;
-            // isChannel = superGroups.get(id).isChannel ? 1 : 0;
-            // isBroadCastGroup = superGroups.get(id).isBroadcastGroup ? 1 : 0;
-            // isScam = superGroups.get(id).isScam ? 1 : 0;
-            // isFake = superGroups.get(id).isFake ? 1 : 0;
+            
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateSuperGroupHandler);
-            blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
-            if (adminIds.contains(2134816269l))
+            if (adminIds.contains(currentUserId))
             {   
+                blockingSend(new TdApi.GetSupergroupFullInfo(id), updateSuperGroupHandler);
                 blockingSend(new TdApi.GetSupergroupMembers(id, null, 0, 200), updateSuperGroupHandler);
-                //System.out.println(memberCount);
-                for (int i = 0; i < Math.min((int) Math.ceil(memberCount / 200) + 1, (int) 10000/200); i++)
+                
+                for (int i = 0; i < Math.min((int) Math.ceil(memberCount / ((double) 200)) + 1, (int) 10000/200); i++)
                 {   
-                    //System.out.print(i + ". ");
+                    
                     blockingSend(new TdApi.GetSupergroupMembers(id, null, 200 * i, 200), updateSuperGroupHandler);
-                    //Thread.sleep(100);
-                    //System.out.println("memSize: " + memberIds.size());
+                    
                 }
                 
-                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 100, false), updateSuperGroupHandler);
+                blockingSend(new TdApi.GetChatHistory(chat.getKey(), 0, 0, 50, false), updateSuperGroupHandler);
                 int oldSize = messages.size();
-                while (messages.size() <= 1000)
+                while (messages.size() <= 50)
                 {
-                    //System.out.println("size: " + messages.size());
-                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 100, false), updateSuperGroupHandler);
+                    
+                    blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 50, false), updateSuperGroupHandler);
                     if (oldSize != messages.size())
                     {
                         oldSize = messages.size();
@@ -122,35 +104,30 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     }
                     break;
                 }
+                List<TdApi.MessageContent> msContent = new ArrayList<TdApi.MessageContent>();
+                for (TdApi.Message ms: messages)
+                {
+                    msContent.add(ms.content);
+                }
                 this.addCollection(new SuperGroup(id, 
                                               chatId,
                                               groupName, 
                                               permissions, 
-                                            //   (canBeDeletedOnlyForSelf == 1) ? true : false, 
-                                            //   (canBeDeletedForAllUsers == 1) ? true : false, 
-                                            //   (defaultDisableNotification == 1) ? true : false, 
+                                            
                                               messageAutoDeleteTime, 
-                                            //   (isChannel == 1) ? true : false, 
-                                            //   (isBroadCastGroup == 1) ? true : false, 
-                                            //   (isFake == 1) ? true : false, 
-                                            //   (isScam == 1) ? true : false, 
+                                            
                                               memberCount, 
-                                              (canGetMembers == 1) ? true : false, 
+                                            
                                               (isAllHistoryAvailable == 1) ? true : false, 
                                               adminIds, 
                                               memberIds, 
                                               description, 
                                               inviteLink, 
-                                            //   botCommands, 
-                                              messages));
-                //System.out.println(messages.size());
-                System.out.println("GroupName: "+groupName);
+                                            
+                                              msContent));
+                
             }
-            // if (!adminIds.isEmpty())
-            // {
-            //     System.out.println("superGroup Id: " + groupName + "======" + adminIds);
-            //     System.out.println(memberIds);
-            // }
+            
             redefinedAttributes();
             
         }
@@ -164,7 +141,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
             switch (object.getConstructor())
             {
                 case TdApi.ChatAdministrators.CONSTRUCTOR:
-                    //System.out.println("ddddddddddddddd");
+                    
                     TdApi.ChatAdministrators chatAdministrators = (TdApi.ChatAdministrators) object;
                     for (TdApi.ChatAdministrator chatAdmin: chatAdministrators.administrators)
                     {
@@ -173,9 +150,9 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     break;
                 case TdApi.SupergroupFullInfo.CONSTRUCTOR:
                     TdApi.SupergroupFullInfo supergroupFullInfo = (TdApi.SupergroupFullInfo) object;
-                    memberCount = supergroupFullInfo.memberCount;
+                    
                     description = supergroupFullInfo.description;
-                    canGetMembers = supergroupFullInfo.canGetMembers ? 1 : 0;
+                    
                     isAllHistoryAvailable = supergroupFullInfo.isAllHistoryAvailable ? 1 : 0;
                     if (supergroupFullInfo.inviteLink != null) 
                     {
@@ -185,13 +162,10 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     {
                         inviteLink = "";
                     }
-                    // for (TdApi.BotCommands bc : supergroupFullInfo.botCommands)
-                    // {
-                    //     botCommands.add(bc);
-                    // }
+                    
                     break;
                 case TdApi.ChatMembers.CONSTRUCTOR:
-                    //System.out.println("i'm here");
+                    
                     TdApi.ChatMembers chatMembers = (TdApi.ChatMembers) object;
                     for (TdApi.ChatMember mem: chatMembers.members)
                     {
@@ -204,6 +178,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                             memberIds.add(((TdApi.MessageSenderUser) mem.memberId).userId);
                         }
                     }
+                    memberCount = memberIds.size();
                     break;
                 case TdApi.Messages.CONSTRUCTOR:
                     for (TdApi.Message m: ((TdApi.Messages) object).messages)
@@ -220,7 +195,7 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                     }
                     break;
                 default:
-                    //System.out.println(object.toString());
+                    
             }
             haveReceivedRespond = true;
             authorizationLock.lock();
