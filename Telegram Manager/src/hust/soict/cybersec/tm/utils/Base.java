@@ -44,19 +44,10 @@ public class Base
     public static final ConcurrentMap<Long, TdApi.BasicGroupFullInfo> basicGroupsFullInfo = new ConcurrentHashMap<Long, TdApi.BasicGroupFullInfo>();
     public static final ConcurrentMap<Long, TdApi.SupergroupFullInfo> supergroupsFullInfo = new ConcurrentHashMap<Long, TdApi.SupergroupFullInfo>();
 
-    public static final String newLine = System.getProperty("line.separator");
-    public static final String commandsLine = "Enter command (gcs - GetChats, gc <chatId> - GetChat, me - GetMe, gu <userId> - GetUser, sm <chatId> <message> - SendMessage, lo - LogOut, q - Quit): ";
+    
     public static volatile String currentPrompt = null;
 
-    public static void print(String str) {
-        if (currentPrompt != null) {
-            System.out.println("");
-        }
-        System.out.println(str);
-        if (currentPrompt != null) {
-            System.out.print(currentPrompt);
-        }
-    }
+    
 
     public static String promptString(String prompt) {
         System.out.print(prompt);
@@ -83,7 +74,7 @@ public class Base
     public static void getMainChatList() {
         synchronized (mainChatList) {
             if (!haveFullMainChatList) {
-                // send LoadChats request if there are some unknown chats and have not enough known chats
+                
                 client.send(new TdApi.LoadChats(new TdApi.ChatListMain(), 50), new Client.ResultHandler() {
                     @Override
                     public void onResult(TdApi.Object object) {
@@ -104,11 +95,11 @@ public class Base
                                 }
                                 break;
                             case TdApi.Ok.CONSTRUCTOR:
-                                // chats had already been received through updates, let's retry request
+                                
                                 getMainChatList();
                                 break;
                             default:
-                                //System.err.println("Receive wrong response from TDLib:\n" + object);
+                                
                         }
                     }
                 });

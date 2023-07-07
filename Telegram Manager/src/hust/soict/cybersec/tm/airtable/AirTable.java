@@ -4,7 +4,6 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
-import hust.soict.cybersec.tm.airtable.Table;
 import hust.soict.cybersec.tm.entity.BasicGroup;
 import hust.soict.cybersec.tm.entity.SuperGroup;
 import hust.soict.cybersec.tm.entity.User;
@@ -27,7 +26,7 @@ public class AirTable {
         String response = Table.listTables(baseID, token);
 
         JsonArray listTable = JsonParser.parseString(response).getAsJsonObject().get("tables").getAsJsonArray();
-        //System.out.println(JsonParser.parseString(response));
+        
         for (var table : listTable) {
             JsonObject tableJson = table.getAsJsonObject();
             String tableId = tableJson.get("id").getAsString();
@@ -148,13 +147,13 @@ public class AirTable {
         boolean result = true;
         result &= push2UserTable(newUsersJsonRecordFiledsList);
         atUserTable.dropRecord(newUsersJsonRecordFiledsList,baseID, token);
-        //atUserTable.syncRecord(baseID, token);
+        
         result &= push2BasicGroupTable(newBasicGroupsJsonRecordFieldsList);
         atBasicGroupTable.dropRecord(newBasicGroupsJsonRecordFieldsList,baseID,token);
-        //atBasicGroupTable.syncRecord(baseID,token);
+        
         result &= push2SuperGroupTable(newSuperGroupsJsonRecordFieldsList);
         atSuperGroupTable.dropRecord(newSuperGroupsJsonRecordFieldsList,baseID,token);
-        //atSuperGroupTable.syncRecord(baseID,token);
+        
         return result;
     }
 

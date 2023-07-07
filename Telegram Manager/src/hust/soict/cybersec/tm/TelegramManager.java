@@ -6,7 +6,7 @@ import org.drinkless.tdlib.TdApi;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonObject;
+
 
 import hust.soict.cybersec.tm.airtable.AirTable;
 import hust.soict.cybersec.tm.crawling.BasicGroupInfoCrawler;
@@ -25,8 +25,7 @@ import wagu.Table;
 import java.io.FileWriter;
 import java.io.IOError;
 import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.nio.charset.StandardCharsets;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
@@ -40,18 +39,18 @@ public final class TelegramManager extends Base{
     private static Scanner sc = new Scanner(System.in);
             
     static {
-        // set log message handler to handle only fatal errors (0) and plain log messages (-1)
+        
         Client.setLogMessageHandler(0, new LogMessageHandler());
 
-        // disable TDLib log and redirect fatal errors and plain log messages to a file
+        
         Client.execute(new TdApi.SetLogVerbosityLevel(0));
         if (Client.execute(new TdApi.SetLogStream(new TdApi.LogStreamFile("tdlib.log", 1 << 27, false))) instanceof TdApi.Error) {
             throw new IOError(new IOException("Write access to the current directory is required"));
         }
 
-        // create client
+        
         client = Client.create(new UpdateHandler(), null, null);
-        //System.out.println(centerString("Create client", 180, "*"));
+        
     }
 
     private static List<BasicGroup> targetBasicGroups = new ArrayList<BasicGroup>();
@@ -70,7 +69,7 @@ public final class TelegramManager extends Base{
                     switch (object.getConstructor()) 
                     {
                         case TdApi.Ok.CONSTRUCTOR: 
-                            //System.out.println("ok");
+                            
                             break;
                         
                         default: 
@@ -80,61 +79,22 @@ public final class TelegramManager extends Base{
                 }
             });
             
-            // if (chat.getValue().type.getConstructor() == TdApi.ChatTypeBasicGroup.CONSTRUCTOR ||
-            //     chat.getValue().type.getConstructor() == TdApi.ChatTypeSupergroup.CONSTRUCTOR)
-            // {
-            //     TdApi.ChatPermissions permissions = chat.getValue().permissions;
-            //     //System.out.println("trước khi đổi: " + permissions.canInviteUsers);
-            //     permissions.canInviteUsers = !(chat.getValue().permissions.canInviteUsers);
-            //     //System.out.println("sau khi đổi: " + permissions.canInviteUsers);
-            //     client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
-            //         @Override
-            //         public void onResult(TdApi.Object object)
-            //         {
-            //             switch (object.getConstructor()) 
-            //             {
-            //                 case TdApi.Ok.CONSTRUCTOR: 
-            //                     //System.out.println("ok");
-            //                     break;
-            //             }
-            //         }
-            //     });
-            //     // try {
-            //     //     Thread.sleep(3000);
-            //     // } catch (InterruptedException e) {
-            //     //     // TODO Auto-generated catch block
-            //     //     e.printStackTrace();
-            //     // }
-            //     // permissions.canInviteUsers = !(chat.getValue().permissions.canInviteUsers);
-            //     // System.out.println("đổi lại ban đầu: " + permissions.canInviteUsers);
-            //     // client.send(new TdApi.SetChatPermissions(chat.getKey(), permissions), new ResultHandler() {
-            //     //     @Override
-            //     //     public void onResult(TdApi.Object object)
-            //     //     {
-            //     //         switch (object.getConstructor()) 
-            //     //         {
-            //     //             case TdApi.Ok.CONSTRUCTOR: 
-            //     //                 //System.out.println("ok");
-            //     //                 break;
-            //     //         }
-            //     //     }
-            //     // });
-            // }
+            
         }
     }
 
     public static void updateData() 
     {   
-        //System.out.println(centerString("Update data", 180, "*"));
+        
         openChat();
         try {
             Thread.sleep(1000);
         } catch (InterruptedException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            
+            
         }
         try {
-            //System.out.println("Start Crawling");
+           
             SuperGroupInfoCrawler sgCrawler = new SuperGroupInfoCrawler(chats, client);
             sgCrawler.crawlSuperGroupInfo();
             targetSupergroups = sgCrawler.getCollection();
@@ -144,7 +104,7 @@ public final class TelegramManager extends Base{
             UserInfoCrawler uCrawler = new UserInfoCrawler(client, bgCrawler.getCollection(), sgCrawler.getCollection());
             uCrawler.crawlUserInfo();
             targetUsers = uCrawler.getCollection();
-            //System.out.println("finish Crawling");
+            
             FileWriter fwb = new FileWriter("basicGroups.json");
             FileWriter fws = new FileWriter("superGroups.json");  
             FileWriter fwu = new FileWriter("users.json");
@@ -157,8 +117,7 @@ public final class TelegramManager extends Base{
             fws.close();
             fwu.close();
         } catch (InterruptedException | IOException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            
         } 
     }
 
@@ -190,8 +149,7 @@ public final class TelegramManager extends Base{
                     try {
                         gotAuthorization.await();
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
+                       
                     }
                 }
             } finally {
@@ -204,8 +162,7 @@ public final class TelegramManager extends Base{
                     try {
                         gotAuthorization.await();
                     } catch (InterruptedException e) {
-                        // TODO Auto-generated catch block
-                        e.printStackTrace();
+                        
                     }
                 }
             } finally {
@@ -259,17 +216,17 @@ public final class TelegramManager extends Base{
                         List<Long> user_basic_group_ids = Id_List.get(j);
                         if (user_basic_group_ids.size() > i)
                         {
-                            //boolean found = false;
+                            
                             for (BasicGroup bs: targetBasicGroups)
                             {
                                 if (bs.getId() == user_basic_group_ids.get(i))
                                 {
                                     row.add(bs.getGroupName());
-                                    //found = true;
+                                    
                                     break;
                                 }
                             }
-                            //row.add(user_basic_group_ids.get(i)+"");
+                            
                         }
                         else
                         {
@@ -289,7 +246,7 @@ public final class TelegramManager extends Base{
                                     break;
                                 }
                             }
-                            //row.add(user_super_group_ids.get(i) + "");
+                            
                         }
                         else
                         {
@@ -602,7 +559,7 @@ public final class TelegramManager extends Base{
                                 found = true;
                                 break;
                             }
-                            // row.add(user.getId()+"");
+                            
                         }
                         if (!found)
                         {
@@ -618,8 +575,7 @@ public final class TelegramManager extends Base{
                 rowList.add(row);
             }
              
-            //System.out.println("".repeat(width));
-            //System.out.println(rowList);
+            
             if (rowList.size() == 0)
             {
                 List<String> row = new ArrayList<String>();
@@ -725,7 +681,7 @@ public final class TelegramManager extends Base{
                 try {
                     Thread.sleep(3000);
                 } catch (InterruptedException e) {
-                    //e.printStackTrace();
+                   
                 }
                 updateData();
                 printColor(GREEN, centerString("FINISHED!!!", 180, "#"));
@@ -744,7 +700,7 @@ public final class TelegramManager extends Base{
     public static void createBasicGroup()
     {
         printColor(MAGENTA, "Enter group name: ");
-        //sc.nextLine();
+        
         String groupName = sc.nextLine();    
         client.send(new TdApi.CreateNewBasicGroupChat(null, groupName, 0), new Client.ResultHandler() {
             public void onResult(TdApi.Object object)
@@ -752,8 +708,7 @@ public final class TelegramManager extends Base{
                 if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
                 {
                     printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
-                    //showMainMenu();
-                    //chooseOptionMainMenu();
+                    
                 }
                 else 
                 {
@@ -778,8 +733,7 @@ public final class TelegramManager extends Base{
                 if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
                 {
                     printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
-                    //showMainMenu();
-                    //chooseOptionMainMenu();
+                    
                 }
                 else 
                 {
@@ -806,8 +760,7 @@ public final class TelegramManager extends Base{
                 if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
                 {
                     printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
-                    //showMainMenu();
-                    //chooseOptionMainMenu();
+                    
                 }
                 else 
                 {
@@ -834,8 +787,7 @@ public final class TelegramManager extends Base{
                 if (object.getConstructor() == TdApi.Error.CONSTRUCTOR)
                 {
                     printColor(RED, centerString(((TdApi.Error) object).message, 180, "#"));
-                    //showMainMenu();
-                    //chooseOptionMainMenu();
+                    
                 }
                 else 
                 {
@@ -864,7 +816,7 @@ public final class TelegramManager extends Base{
                         printColor(GREEN, centerString("All local data will be destroyed", 180, "#"));
                         break;
                     default:
-                        printColor(RED, "[-] Receive an error: " + newLine + object);
+                        printColor(RED, "[-] Receive an error: " + object);
                 }
             }
         });
@@ -884,7 +836,7 @@ public final class TelegramManager extends Base{
                         printColor(GREEN, centerString("All databases will be flushed to disk and properly closed", 180, "#"));
                         break;
                     default:
-                        printColor(RED, "[-] Receive an error: " + newLine + object);
+                        printColor(RED, "[-] Receive an error: " + object);
                 }
             }
         });
@@ -894,15 +846,7 @@ public final class TelegramManager extends Base{
     {
         printColor(GREEN, centerString("START SYNC DATA TO AIRTABLE", 180, "#"));
         updateData();
-        /*----------------------------------------------------------------
-         *----------------------------------------------------------------
-         *----------------------------------------------------------------
-         * * * * * * * Logic to sync data to the AirTable * * * * * * * * 
-         * ----------------------------------------------------------------
-         * ----------------------------------------------------------------
-         * ----------------------------------------------------------------
-         * ----------------------------------------------------------------
-         */
+        
         new AirTable().push(targetUsers,targetBasicGroups,targetSupergroups);
 
         printColor(GREEN, centerString("FINISH!!!!", 180, "#"));
@@ -910,9 +854,9 @@ public final class TelegramManager extends Base{
 
     public static void main(String[] args) throws InterruptedException {
         
-        // main loop
+        
         while (!needQuit) {
-            // await authorization
+            
             authorizationLock.lock();
             try {
                 while (!haveAuthorization) {
@@ -958,7 +902,7 @@ public final class TelegramManager extends Base{
 
             while (haveAuthorization && haveFullMainChatList) {
                 chooseOptionMainMenu();
-                //getCommand();
+                
             }
         }
         while (!canQuit) {

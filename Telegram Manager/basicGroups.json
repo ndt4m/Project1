@@ -594,7 +594,7 @@
               {
                 "type": "a",
                 "photo": {
-                  "id": 1360,
+                  "id": 62,
                   "size": 3176,
                   "expectedSize": 3176,
                   "local": {
@@ -608,7 +608,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -622,7 +622,7 @@
               {
                 "type": "b",
                 "photo": {
-                  "id": 1361,
+                  "id": 63,
                   "size": 6515,
                   "expectedSize": 6515,
                   "local": {
@@ -636,7 +636,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -650,7 +650,7 @@
               {
                 "type": "c",
                 "photo": {
-                  "id": 1362,
+                  "id": 64,
                   "size": 14353,
                   "expectedSize": 14353,
                   "local": {
@@ -664,7 +664,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -678,7 +678,7 @@
               {
                 "type": "d",
                 "photo": {
-                  "id": 1363,
+                  "id": 65,
                   "size": 20101,
                   "expectedSize": 20101,
                   "local": {
@@ -692,7 +692,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -960,7 +960,7 @@
               {
                 "type": "a",
                 "photo": {
-                  "id": 1360,
+                  "id": 62,
                   "size": 3176,
                   "expectedSize": 3176,
                   "local": {
@@ -974,7 +974,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -988,7 +988,7 @@
               {
                 "type": "b",
                 "photo": {
-                  "id": 1361,
+                  "id": 63,
                   "size": 6515,
                   "expectedSize": 6515,
                   "local": {
@@ -1002,7 +1002,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1016,7 +1016,7 @@
               {
                 "type": "c",
                 "photo": {
-                  "id": 1362,
+                  "id": 64,
                   "size": 14353,
                   "expectedSize": 14353,
                   "local": {
@@ -1030,7 +1030,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1044,7 +1044,7 @@
               {
                 "type": "d",
                 "photo": {
-                  "id": 1363,
+                  "id": 65,
                   "size": 20101,
                   "expectedSize": 20101,
                   "local": {
@@ -1058,7 +1058,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSnCe372QZS66Gbr-5ZKEoR6InqAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "id": "AgACAgIAAxUAAWSoN0oDjSKG0iPsiSG-ncNc1RN5AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1921,6 +1921,59 @@
     "messages": [
       {
         "title": "hello",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 923795685,
+    "chatId": -923795685,
+    "groupName": "It-e15baocao",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      1817109845,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+RwyXxWcyroA4ZDg9",
+    "messages": [
+      {
+        "memberUserIds": [
+          1817109845
+        ]
+      },
+      {
+        "userId": 1817109845
+      },
+      {
+        "memberUserIds": [
+          1817109845
+        ]
+      },
+      {
+        "title": "It-e15baocao",
         "memberUserIds": [
           2134816269
         ]

@@ -15,28 +15,26 @@ import java.util.List;
 public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
 {
     private Client.ResultHandler updateBasicGroupHandler = new UpdateBasicGroupHandler();
-    // private Map<Long, TdApi.BasicGroup> basicGroups;
+    
 
     private long id = 0l;
     private long chatId = 0l;
     private String groupName = "";
     private TdApi.ChatPermissions permissions = null;
-    // private int canBeDeletedOnlyForSelf = -1;
-    // private int canBeDeletedForAllUsers = -1;
-    // private int defaultDisableNotification = -1;
+    
     private int messageAutoDeleteTime = -1;
     private List<Long> adminIds = new ArrayList<>();
     private int memberCount = -1;
     private List<Long> memberIds = new ArrayList<>();
     private String description = "";
     private String inviteLink = "";
-    // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
+    
     private List<TdApi.Message> messages = new ArrayList<>();
 
     public BasicGroupInfoCrawler(Map<Long, TdApi.Chat> chats, Client client)
     {
         super(client, chats);
-        // this.basicGroups = basicGroups;
+        
     }
 
     public void redefinedAttributes()
@@ -45,16 +43,14 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
         chatId = 0l;
         groupName = "";
         permissions = null;
-        // canBeDeletedOnlyForSelf = -1;
-        // canBeDeletedForAllUsers = -1;
-        // defaultDisableNotification = -1;
+        
         messageAutoDeleteTime = -1;
         adminIds = new ArrayList<>();
         memberCount = -1;
         memberIds = new ArrayList<>();
         description = "";
         inviteLink = "";
-        // botCommands = new ArrayList<>();
+        
         messages = new ArrayList<>();
     }
 
@@ -67,35 +63,14 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             {
                 continue;
             }
-            // client.send(new TdApi.OpenChat(chat.getKey()), new ResultHandler() {
-            //     @Override
-            //     public void onResult(TdApi.Object object)
-            //     {
-            //         switch (object.getConstructor()) 
-            //         {
-            //             case TdApi.Ok.CONSTRUCTOR: 
-            //                 //System.out.println("ok");
-            //                 break;
-                        
-            //             default: 
-            //                 System.out.println("Unhandle response: " + object.toString());
-                        
-            //         }
-            //     }
-            // });
-            // for (int i = 0; i < 2; i++)
-            // {
-            //     client.send(new TdApi.GetBasicGroupFullInfo(((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId), new UpdateHandler());
-            // }
+            
             id = ((TdApi.ChatTypeBasicGroup) chat.getValue().type).basicGroupId;
             chatId = chat.getKey();
             groupName = chat.getValue().title;
             permissions = chat.getValue().permissions;
-            // canBeDeletedOnlyForSelf = chat.getValue().canBeDeletedOnlyForSelf ? 1 : 0;
-            // canBeDeletedForAllUsers = chat.getValue().canBeDeletedForAllUsers ? 1 : 0;
-            // defaultDisableNotification = chat.getValue().defaultDisableNotification ? 1 : 0;
+            
             messageAutoDeleteTime = chat.getValue().messageAutoDeleteTime;
-            // memberCount = basicGroups.get(id).memberCount;
+            
 
             blockingSend(new TdApi.GetChatAdministrators(chat.getKey()), updateBasicGroupHandler);
             if (adminIds.contains(currentUserId))
@@ -119,32 +94,27 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                 {
                     msContent.add(ms.content);
                 }
-                //System.out.println(messages.size());
-                // System.out.println(messages.get(0));
-                //System.out.println("=====" + memberIds);
+                
                 this.addCollection(new BasicGroup(id,
                                                   chatId,
                                                   groupName, 
                                                   permissions, 
-                                                //   (canBeDeletedForAllUsers == 1) ? true : false, 
-                                                //   (canBeDeletedOnlyForSelf == 1) ? true : false, 
-                                                //   (defaultDisableNotification == 1) ? true : false, 
+                                                
                                                   messageAutoDeleteTime, 
                                                   adminIds, 
                                                   memberCount, 
                                                   memberIds, 
                                                   description, 
                                                   inviteLink, 
-                                                //   botCommands, 
+                                                
                                                   msContent));
-                        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "===232332======");
-                // System.out.println("Group name: " + groupName);
+                        
                 redefinedAttributes();
-                        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
+                        
             }
         }
 
-        //System.out.println(this.getCollection().get(this.getCollection().size() - 1).getMemberIds() + "=========");
+        
     }
 
     
@@ -157,7 +127,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
             switch (object.getConstructor())
             {
                 case TdApi.ChatAdministrators.CONSTRUCTOR:
-                    //System.out.println("ddddddddddddddd");
+                    
                     TdApi.ChatAdministrators chatAdministrators = (TdApi.ChatAdministrators) object;
                     for (TdApi.ChatAdministrator chatAdmin: chatAdministrators.administrators)
                     {
@@ -166,9 +136,9 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                     break;
                 
                 case TdApi.BasicGroupFullInfo.CONSTRUCTOR:
-                    //System.out.println("dfasfafasf");
+                    
                     TdApi.BasicGroupFullInfo basicGroupFullInfo = (TdApi.BasicGroupFullInfo) object;
-                    //System.out.println(basicGroupFullInfo);
+                    
                     description = basicGroupFullInfo.description;
                     if (basicGroupFullInfo.inviteLink != null)
                     {  
@@ -178,11 +148,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                     {
                         inviteLink = "";
                     }
-                    // for (TdApi.BotCommands bc : basicGroupFullInfo.botCommands)
-                    // {
-                    //     botCommands.add(bc);
-                    //     //System.out.println(bc);
-                    // }
+                    
                     for (TdApi.ChatMember mem: basicGroupFullInfo.members)
                     {
                         if (mem.memberId instanceof TdApi.MessageSenderChat)
@@ -193,7 +159,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                         {
                             memberIds.add(((TdApi.MessageSenderUser) mem.memberId).userId);
                         }
-                        //System.out.println(memberIds);
+                        
                     }
                     memberCount = basicGroupFullInfo.members.length;
                     break;
@@ -207,7 +173,7 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                     System.err.println("[-] Received an error when crawling super group: " + ((TdApi.Error) object).message);
                     break;
                 default:
-                    //System.out.println(object.toString());
+                    
             }
             haveReceivedRespond = true;
             authorizationLock.lock();

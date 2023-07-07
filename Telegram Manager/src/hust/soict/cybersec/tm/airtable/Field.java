@@ -2,7 +2,7 @@ package hust.soict.cybersec.tm.airtable;
 
 
 import com.google.gson.JsonObject;
-import org.apache.hc.client5.http.classic.methods.HttpPatch;
+
 import org.apache.hc.client5.http.classic.methods.HttpPost;
 import org.apache.hc.client5.http.impl.classic.CloseableHttpClient;
 import org.apache.hc.client5.http.impl.classic.HttpClientBuilder;
@@ -21,17 +21,13 @@ public class Field {
     private final String id;
     private final String name;
     private final String type;
-//    private final JsonObject options;
+
 
     protected Field(JsonObject field) {
         this.id = field.get("id").getAsString();
         this.name = field.get("name").getAsString();
         this.type = field.get("type").getAsString();
-//        if (field.has("options")) {
-//            this.options = field.get("options").getAsJsonObject();
-//        } else {
-//            this.options = null;
-//        }
+
     }
 
     protected String getId() {
@@ -46,7 +42,7 @@ public class Field {
     }
 
 
-    // API Methods
+    
     protected static String createField(JsonObject field, String tableId, String baseId, String token) {
 
         URI uri = URI.create("https://api.airtable.com/v0/meta/bases/" + baseId + "/tables/" + tableId + "/fields");
@@ -65,7 +61,7 @@ public class Field {
             }
             return EntityUtils.toString(response.getEntity());
         } catch (IOException | ParseException e) {
-            e.printStackTrace();
+            
             return null;
         }
 

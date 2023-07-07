@@ -24,7 +24,7 @@ import com.google.common.reflect.TypeToken;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
-import java.util.List;
+
 import java.util.Map;
 
 public class Record{
@@ -33,7 +33,7 @@ public class Record{
     private final JsonObject fields;
     private final String IdFieldVal;
 
-    Record(JsonObject record) {
+    public Record(JsonObject record) {
         this.id = record.get("id").getAsString();
         this.fields = record.get("fields").getAsJsonObject();
         if (this.fields.has("Id")) {
@@ -43,44 +43,12 @@ public class Record{
             System.out.println("field không có trường id: " + fields.toString());
             System.exit(0);
         }
-            // this.IdFieldVal = null;
+            
     }
     protected String getId() {
         return this.id;
     }
-    // protected boolean equals(JsonObject recordFields, List<Field> tableFieldList) {
-    //     // for (Field field : fieldList) 
-    //     // {
-    //     //     if (fields.has(field.getName())) 
-    //     //     {
-    //     //         String newVal = fields.get(field.getName()).toString();
-    //     //         if (newVal.equals("false") || newVal.equals("null") || newVal.equals("[]") || newVal.equals("\"\""))
-    //     //             continue;
-    //     //         if (!this.fields.has(field.getName()))
-    //     //         {
-    //     //             System.out.println(fields);
-    //     //             System.out.println(this.fields);
-    //     //             System.out.println(field.getName());
-    //     //             System.out.println("Error 1");
-    //     //             return false;
-    //     //         }
-    //     //         String oldVal = this.fields.get(field.getName()).toString();
-    //     //         if (field.getType().contains("date"))
-    //     //             if(oldVal.replaceAll(".000Z", "Z").equals(newVal))
-    //     //                 continue;
-    //     //         if (!newVal.equals(oldVal))
-    //     //         {
-    //     //             System.out.println(fields.get("Permission"));
-    //     //             System.out.println(this.fields.get("Permission"));
-    //     //             System.out.println(field.getName());
-    //     //             System.out.println("Error 2");
-    //     //             return false;
-    //     //         }
-    //     //     }
-    //     // }
-        
-    //     return true;
-    // }
+    
     @Override
     public boolean equals(Object obj) 
     {
@@ -90,10 +58,12 @@ public class Record{
         Map<String, Object> oldRFFlatMap;
         if (obj instanceof JsonObject)
         {
+            
             newRecordFieldsMap = gson.fromJson((JsonObject) obj, new TypeToken<Map<String, Object>>(){}.getType());
         }
         else if (obj instanceof Record)
         {
+            
             newRecordFieldsMap = gson.fromJson(((Record) obj).getFields(), new TypeToken<Map<String, Object>>(){}.getType());
         }
         else
@@ -104,7 +74,7 @@ public class Record{
         newRFFlatMap = FlatMapUtil.flatten(newRecordFieldsMap);
         oldRFFlatMap = FlatMapUtil.flatten(oldRecordFieldsMap);
         MapDifference<String, Object> difference = Maps.difference(newRFFlatMap, oldRFFlatMap);
-        //System.out.println("difference: " + difference.entriesDiffering());
+        
         if (difference.entriesDiffering().size() == 0)
         {
             return true;
@@ -120,10 +90,9 @@ public class Record{
     protected JsonObject getFields() {
         return this.fields;
     }
-    // API Methods
+    
     protected static String listRecords(String tableId, String baseId, String token) {
-        //curl "https://api.airtable.com/v0/{baseId}/{tableIdOrName}" \
-        //-H "Authorization: Bearer YOUR_TOKEN"
+        
         String url = "https://api.airtable.com/v0/" + baseId + "/" + tableId;
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
@@ -134,7 +103,7 @@ public class Record{
             ClassicHttpResponse response = client.execute(get);
             return EntityUtils.toString(response.getEntity());
         } catch (IOException | ParseException e) {
-            e.printStackTrace();
+            
             return null;
         }
     }
@@ -149,8 +118,7 @@ public class Record{
             JsonObject fullBody = new JsonObject();
             fullBody.add("fields", fields);
             patch.setEntity(new StringEntity(fullBody.toString(), StandardCharsets.UTF_8));
-            //System.out.println(url);
-            //System.out.println(fullBody);
+            
 
             ClassicHttpResponse response = client.execute(patch);
 
@@ -160,7 +128,7 @@ public class Record{
                 return null;
             }
         } catch (IOException | ParseException e) {
-            e.printStackTrace();
+            
             return null;
         }
     }
@@ -182,8 +150,7 @@ public class Record{
             post.setHeader("Authorization", "Bearer " + Token);
             post.setHeader("Content-Type", "application/json");
             post.setEntity(new StringEntity(fullBody.toString(),StandardCharsets.UTF_8));
-            //System.out.println(url);
-            //System.out.println(fullBody);
+            
 
             ClassicHttpResponse response = client.execute(post);
 
@@ -191,7 +158,7 @@ public class Record{
                 return EntityUtils.toString(response.getEntity());
             } else {
                 System.out.println("Error creating record: " + response.getCode());
-                //System.out.println("fullBody: " + fullBody);
+                
                 return null;
             }
         } catch (IOException | ParseException e) {
@@ -200,8 +167,7 @@ public class Record{
         }
     }
     protected static boolean dropRecord(String recordId, String tableId, String baseId, String Token){
-        // curl -X DELETE "https://api.airtable.com/v0/{baseId}/{tableIdOrName}/{recordId}" \
-        //-H "Authorization: Bearer YOUR_TOKEN"
+        
         String url = "https://api.airtable.com/v0/" + baseId + "/" + tableId + "/" + recordId;
 
         try (CloseableHttpClient client = HttpClientBuilder.create().build()) {
@@ -211,13 +177,13 @@ public class Record{
             ClassicHttpResponse response = client.execute(delete);
 
             if (response.getCode() == 200) {
-                //System.out.println("Record " + recordId + " deleted");
+                
                 return true;
             } else {
                 return false;
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            
             return false;
         }
     }

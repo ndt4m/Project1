@@ -76,7 +76,7 @@ public class LogMessageHandler implements Client.LogMessageHandler
         final AtomicLong errorThrowTime = new AtomicLong(Long.MAX_VALUE);
         new Thread(new ThrowError(errorMessage, errorThrowTime), "TDLib fatal error thread").start();
 
-        // wait at least 10 seconds after the error is thrown
+        
         while (errorThrowTime.get() >= System.currentTimeMillis() - 10000) {
             try {
                 Thread.sleep(1000 /* milliseconds */);

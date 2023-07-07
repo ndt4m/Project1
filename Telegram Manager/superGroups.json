@@ -37,6 +37,43 @@
     ]
   },
   {
+    "id": 1668043053,
+    "chatId": -1001668043053,
+    "groupName": "musshashi",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+V_NgTvgBbtJmNTFl",
+    "messages": [
+      {
+        "title": "musshashi"
+      }
+    ]
+  },
+  {
     "id": 1876255601,
     "chatId": -1001876255601,
     "groupName": "superman",
@@ -209,7 +246,7 @@
               "width": 128,
               "height": 128,
               "file": {
-                "id": 366,
+                "id": 1368,
                 "size": 3476,
                 "expectedSize": 3476,
                 "local": {
@@ -223,7 +260,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-                  "id": "AAMCAQADFQABZKLKs-ST4x62ZM3O4oC63CZWzzwAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
+                  "id": "AAMCAQADFQABZKg3PqgLgMUhg5J9ITgr7WHmXdEAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
                   "uniqueId": "AQADKwIAAonnMUdy",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -232,7 +269,7 @@
               }
             },
             "sticker": {
-              "id": 367,
+              "id": 1367,
               "size": 26992,
               "expectedSize": 26992,
               "local": {
@@ -246,7 +283,7 @@
                 "downloadedSize": 0
               },
               "remote": {
-                "id": "CAACAgEAAxUAAWSiyrPkk-MetmTNzuKAutwmVs88AAIrAgACiecxR-k4peS9jIEvLwQ",
+                "id": "CAACAgEAAxUAAWSoNz6oC4DFIYOSfSE4K-1h5l3RAAIrAgACiecxR-k4peS9jIEvLwQ",
                 "uniqueId": "AgADKwIAAonnMUc",
                 "isUploadingActive": false,
                 "isUploadingCompleted": true,
@@ -332,7 +369,7 @@
               "width": 128,
               "height": 128,
               "file": {
-                "id": 642,
+                "id": 535,
                 "size": 3560,
                 "expectedSize": 3560,
                 "local": {
@@ -346,7 +383,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-                  "id": "AAMCAQADFQABZKLKswQo3jtKNtLULo4yiyV5dD0AAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
+                  "id": "AAMCAQADFQABZKg3PjJMGtBKB00bEMn3HAnZ2-0AAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
                   "uniqueId": "AQADNQIAAm2mMUdy",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -355,7 +392,7 @@
               }
             },
             "sticker": {
-              "id": 643,
+              "id": 534,
               "size": 10751,
               "expectedSize": 10751,
               "local": {
@@ -369,7 +406,7 @@
                 "downloadedSize": 0
               },
               "remote": {
-                "id": "CAACAgEAAxUAAWSiyrMEKN47SjbS1C6OMosleXQ9AAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
+                "id": "CAACAgEAAxUAAWSoNz4yTBrQSgdNGxDJ9xwJ2dvtAAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
                 "uniqueId": "AgADNQIAAm2mMUc",
                 "isUploadingActive": false,
                 "isUploadingCompleted": true,
@@ -397,43 +434,6 @@
     ]
   },
   {
-    "id": 1587492959,
-    "chatId": -1001587492959,
-    "groupName": "masterpiece",
-    "permissions": {
-      "canSendBasicMessages": true,
-      "canSendAudios": true,
-      "canSendDocuments": true,
-      "canSendPhotos": true,
-      "canSendVideos": true,
-      "canSendVideoNotes": true,
-      "canSendVoiceNotes": true,
-      "canSendPolls": true,
-      "canSendOtherMessages": true,
-      "canAddWebPagePreviews": true,
-      "canChangeInfo": false,
-      "canInviteUsers": false,
-      "canPinMessages": false,
-      "canManageTopics": true
-    },
-    "messageAutoDeleteTime": 0,
-    "memberCount": 1,
-    "isAllHistoryAvailable": true,
-    "adminIds": [
-      2134816269
-    ],
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+2Lbtzz9XV-A1NDM1",
-    "messages": [
-      {
-        "title": "masterpiece"
-      }
-    ]
-  },
-  {
     "id": 1714341959,
     "chatId": -1001714341959,
     "groupName": "narruutooo",
@@ -453,7 +453,7 @@
       "canPinMessages": false,
       "canManageTopics": true
     },
-    "messageAutoDeleteTime": 0,
+    "messageAutoDeleteTime": 86400,
     "memberCount": 1,
     "isAllHistoryAvailable": true,
     "adminIds": [
@@ -465,6 +465,10 @@
     "description": "",
     "inviteLink": "https://t.me/+7z4cH2EcWMc5NTdl",
     "messages": [
+      {
+        "messageAutoDeleteTime": 86400,
+        "fromUserId": 0
+      },
       {
         "title": "narruutooo"
       }

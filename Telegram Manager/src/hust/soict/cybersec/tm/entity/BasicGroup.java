@@ -15,16 +15,14 @@ public class BasicGroup {
     private long chatId;
     private String groupName;
     private TdApi.ChatPermissions permissions;
-    // private boolean canBeDeletedOnlyForSelf;
-    // private boolean canBeDeletedForAllUsers;
-    // private boolean defaultDisableNotification;
+    
     private int messageAutoDeleteTime;
     private List<Long> adminIds = new ArrayList<>();
     private int memberCount;
     private List<Long> memberIds = new ArrayList<>();
     private String description;
     private String inviteLink;
-    // private List<TdApi.BotCommands> botCommands = new ArrayList<>();
+    
     private List<TdApi.MessageContent> messages = new ArrayList<>();
     
 
@@ -37,32 +35,28 @@ public class BasicGroup {
                       long chatId,
                       String groupName, 
                       TdApi.ChatPermissions permissions, 
-                    //   boolean canBeDeletedForAllUsers, 
-                    //   boolean canBeDeletedOnlyForSelf,
-                    //   boolean defaultDisableNotification,
+                    
                       int messageAutoDeleteTime,
                       List<Long> adminIds,
                       int memberCount,
                       List<Long> memberIds,
                       String description,
                       String inviteLink,
-                    //   List<TdApi.BotCommands> botCommands,
+                    
                       List<TdApi.MessageContent> messages)
     {
         this.id = id;
         this.chatId = chatId;
         this.groupName = groupName;
         this.permissions = permissions;
-        // this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
-        // this.canBeDeletedOnlyForSelf = canBeDeletedOnlyForSelf;
-        // this.defaultDisableNotification = defaultDisableNotification;
+        
         this.messageAutoDeleteTime = messageAutoDeleteTime;
         this.adminIds = adminIds;
         this.memberCount = memberCount;
         this.memberIds = memberIds;
         this.description = description;
         this.inviteLink = inviteLink;
-        // this.botCommands = botCommands;
+        
         this.messages = messages;
     }
 
@@ -75,7 +69,7 @@ public class BasicGroup {
     }
 
     public List<Long> getMemberIds() {
-        //System.out.println(this.memberIds + "o trong basic group class");
+        
         return this.memberIds;
     }
 
@@ -120,18 +114,6 @@ public class BasicGroup {
     public void setPermissions(TdApi.ChatPermissions permissions) {
         this.permissions = permissions;
     }
-
-    // public void setCanBeDeletedOnlyForSelf(boolean canBeDeletedOnlyForSelf) {
-    //     this.canBeDeletedOnlyForSelf = canBeDeletedOnlyForSelf;
-    // }
-
-    // public void setCanBeDeletedOnlyForAllUsers(boolean canBeDeletedForAllUsers) {
-    //     this.canBeDeletedForAllUsers = canBeDeletedForAllUsers;
-    // }
-
-    // public void setDefaultDisableNotification(boolean defaultDisableNotification) {
-    //     this.defaultDisableNotification = defaultDisableNotification;
-    // }
     
     public void setMessageAutoDeleteTime(int messageAutoDeleteTime) {
         this.messageAutoDeleteTime = messageAutoDeleteTime;
@@ -164,9 +146,7 @@ public class BasicGroup {
         Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
         return gson.toJson(this);
     }
-    // public void setBotCommands(List<TdApi.BotCommands> botCommands) {
-    //     this.botCommands = botCommands;
-    // }
+    
     public JsonObject toJson(){
         JsonObject fields = new JsonObject();
         Gson gson = new Gson();
