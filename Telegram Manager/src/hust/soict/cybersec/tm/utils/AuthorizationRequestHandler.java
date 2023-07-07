@@ -1,4 +1,8 @@
 package hust.soict.cybersec.tm.utils;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.drinkless.tdlib.Client;
 import org.drinkless.tdlib.TdApi;
 
@@ -7,6 +11,19 @@ import hust.soict.cybersec.tm.TelegramManager;
 
 public class AuthorizationRequestHandler implements Client.ResultHandler 
 {
+    private static final Properties TELEGRAM = new Properties();
+    private static final int apiId;
+    private static final String apiHash;
+    
+    static {
+        try {
+            TELEGRAM.load(new FileInputStream("telegram.properties"));
+        } catch (IOException e) {
+            
+        }
+        apiId = Integer.parseInt(TELEGRAM.getProperty("apiId"));
+        apiHash = TELEGRAM.getProperty("apiHash");
+    }
 
     public void onResult(TdApi.Object object) {
         switch (object.getConstructor()) {

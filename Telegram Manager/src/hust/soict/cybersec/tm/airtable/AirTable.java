@@ -8,21 +8,40 @@ import hust.soict.cybersec.tm.entity.BasicGroup;
 import hust.soict.cybersec.tm.entity.SuperGroup;
 import hust.soict.cybersec.tm.entity.User;
 
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 
 public class AirTable {
-    private static final String userTableID = "tbl4y5hY1zz38uq6M";
-    private static final String basicGroupTableID = "tbltki8kkSaveHNOZ";
-    private static final String superGroupTableID = "tblY2v9iAMjuwwQPV";
-    private static final String baseID = "app3NFSG2GJiNJEZt";
-    private static final String token = "patzon7RmPnoPUI8D.b2b67bd6454b5ba71b6d3f59d23dc393b88cade9a69022643287e42cc3600a29";
+    private static final String userTableID;
+    private static final String basicGroupTableID;
+    private static final String superGroupTableID;
+    private static final String baseID;
+    private static final String token;
+
+    private static final Properties AIRTABLE = new Properties();
+
+    static {
+        try {
+            AIRTABLE.load(new FileInputStream("airtable.properties"));
+        } catch (IOException e) {
+            
+        }
+        userTableID = AIRTABLE.getProperty("userTableID");
+        basicGroupTableID = AIRTABLE.getProperty("basicGroupTableID");
+        superGroupTableID = AIRTABLE.getProperty("superGroupTableID");
+        baseID = AIRTABLE.getProperty("baseID");
+        token = AIRTABLE.getProperty("token");
+    }
 
     Table atUserTable;
     Table atBasicGroupTable;
     Table atSuperGroupTable;
 
     public AirTable(){
+        
         String response = Table.listTables(baseID, token);
 
         JsonArray listTable = JsonParser.parseString(response).getAsJsonObject().get("tables").getAsJsonArray();

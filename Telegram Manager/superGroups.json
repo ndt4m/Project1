@@ -111,6 +111,43 @@
     ]
   },
   {
+    "id": 1703579681,
+    "chatId": -1001703579681,
+    "groupName": "supernesrsta",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+5giFc_JW4qBmNjY9",
+    "messages": [
+      {
+        "title": "supernesrsta"
+      }
+    ]
+  },
+  {
     "id": 1899612767,
     "chatId": -1001899612767,
     "groupName": "đhncn",
@@ -260,7 +297,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-                  "id": "AAMCAQADFQABZKg3PqgLgMUhg5J9ITgr7WHmXdEAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
+                  "id": "AAMCAQADFQABZKiCxPYjqa_7udd_LIVo1uGsmBEAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
                   "uniqueId": "AQADKwIAAonnMUdy",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -283,7 +320,7 @@
                 "downloadedSize": 0
               },
               "remote": {
-                "id": "CAACAgEAAxUAAWSoNz6oC4DFIYOSfSE4K-1h5l3RAAIrAgACiecxR-k4peS9jIEvLwQ",
+                "id": "CAACAgEAAxUAAWSogsT2I6mv-7nXfyyFaNbhrJgRAAIrAgACiecxR-k4peS9jIEvLwQ",
                 "uniqueId": "AgADKwIAAonnMUc",
                 "isUploadingActive": false,
                 "isUploadingCompleted": true,
@@ -383,7 +420,7 @@
                   "downloadedSize": 0
                 },
                 "remote": {
-                  "id": "AAMCAQADFQABZKg3PjJMGtBKB00bEMn3HAnZ2-0AAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
+                  "id": "AAMCAQADFQABZKiCxGe4QTlofRBlR2DZv4D9RvEAAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
                   "uniqueId": "AQADNQIAAm2mMUdy",
                   "isUploadingActive": false,
                   "isUploadingCompleted": true,
@@ -406,7 +443,7 @@
                 "downloadedSize": 0
               },
               "remote": {
-                "id": "CAACAgEAAxUAAWSoNz4yTBrQSgdNGxDJ9xwJ2dvtAAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
+                "id": "CAACAgEAAxUAAWSogsRnuEE5aH0QZUdg2b-A_UbxAAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
                 "uniqueId": "AgADNQIAAm2mMUc",
                 "isUploadingActive": false,
                 "isUploadingCompleted": true,
