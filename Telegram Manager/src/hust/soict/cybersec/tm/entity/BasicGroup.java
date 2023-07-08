@@ -158,7 +158,7 @@ public class BasicGroup {
         fields.addProperty("MemberCount", getMemberCount());
         fields.addProperty("Description", getDescription());
         fields.addProperty("InviteLink", getInviteLink());
-        fields.addProperty("Message", gson.toJson(messages) );
+        fields.addProperty("Message", gson.toJson(messages));
 
         JsonArray AdminIDs = new JsonArray();
         for(Long ID: adminIds){

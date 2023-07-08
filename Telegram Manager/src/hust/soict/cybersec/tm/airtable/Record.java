@@ -39,12 +39,12 @@ public class Record{
         if (this.fields.has("Id")) {
             this.IdFieldVal = this.fields.get("Id").getAsString();
         } else {
-            this.IdFieldVal = "Không có trường id này là sao";
-            System.out.println("field không có trường id: " + fields.toString());
-            System.exit(0);
+            this.IdFieldVal = "emptyRecord";
+            
         }
             
     }
+
     protected String getId() {
         return this.id;
     }

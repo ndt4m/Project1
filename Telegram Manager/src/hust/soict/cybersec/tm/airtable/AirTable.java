@@ -36,9 +36,9 @@ public class AirTable {
         token = AIRTABLE.getProperty("token");
     }
 
-    Table atUserTable;
-    Table atBasicGroupTable;
-    Table atSuperGroupTable;
+    private Table atUserTable;
+    private Table atBasicGroupTable;
+    private Table atSuperGroupTable;
 
     public AirTable(){
         
@@ -62,6 +62,65 @@ public class AirTable {
     }
 
     private boolean push2UserTable(List<JsonObject> usersJsonRecordFileds){
+        List<JsonObject> listPush = new ArrayList<>();
+
+        for (JsonObject jsonObject: usersJsonRecordFileds)
+        {
+            JsonArray memberOfBasicGroup = jsonObject.get("bsGroupsOfUser").getAsJsonArray();
+            JsonArray memberOfBasicGroupPush = new JsonArray();
+            for (JsonElement element: memberOfBasicGroup)
+            {
+                Record record = atBasicGroupTable.getRecord(element.getAsString());
+                if (record != null)
+                {
+                    memberOfBasicGroupPush.add(record.getId());
+                }
+            }
+            jsonObject.add("MemberOfBasicGroup", memberOfBasicGroupPush);
+
+            JsonArray memberOfSuperGroup = jsonObject.get("spGroupsOfUser").getAsJsonArray();
+            JsonArray memberOfSuperGroupPush = new JsonArray();
+            for (JsonElement element: memberOfSuperGroup)
+            {
+                Record record = atSuperGroupTable.getRecord(element.getAsString());
+                if (record != null)
+                {
+                    memberOfSuperGroupPush.add(record.getId());
+                }
+            }
+            jsonObject.add("MemberOfSuperGroup", memberOfSuperGroupPush);
+
+            JsonArray adminOfBasicGroup = jsonObject.get("adminOfBsGroup").getAsJsonArray();
+            JsonArray adminOfBasicGroupPush = new JsonArray();
+            for (JsonElement element: adminOfBasicGroup)
+            {
+                Record record = atBasicGroupTable.getRecord(element.getAsString());
+                if (record != null)
+                {
+                    adminOfBasicGroupPush.add(record.getId());
+                }
+            }
+            jsonObject.add("AdminOfBasicGroup", adminOfBasicGroupPush);
+
+            JsonArray adminOfSuperGroup = jsonObject.get("adminOfSpGroup").getAsJsonArray();
+            JsonArray adminOfSuperGroupPush = new JsonArray();
+            for (JsonElement element: adminOfSuperGroup)
+            {
+                Record record = atSuperGroupTable.getRecord(element.getAsString());
+                if (record != null)
+                {
+                    adminOfSuperGroupPush.add(record.getId());
+                }
+            }
+            jsonObject.add("AdminOfSuperGroup", adminOfSuperGroupPush);
+
+            jsonObject.remove("bsGroupsOfUser");
+            jsonObject.remove("spGroupsOfUser");
+            jsonObject.remove("adminOfBsGroup");
+            jsonObject.remove("adminOfSpGroup");
+            
+            listPush.add(jsonObject);
+        }
         return atUserTable.pushAllRecord(usersJsonRecordFileds, baseID, token);
     }
 
@@ -98,7 +157,7 @@ public class AirTable {
 
             jsonObject.remove("AdminIDs");
             jsonObject.remove("MemberIDs");
-
+            
             listPush.add(jsonObject);
 
         }
@@ -139,7 +198,7 @@ public class AirTable {
             jsonObject.add("Member", membersPush);
             jsonObject.remove("AdminIDs");
             jsonObject.remove("MemberIDs");
-
+            
             listPush.add(jsonObject);
 
         }
@@ -172,6 +231,7 @@ public class AirTable {
         
         result &= push2SuperGroupTable(newSuperGroupsJsonRecordFieldsList);
         atSuperGroupTable.dropRecord(newSuperGroupsJsonRecordFieldsList,baseID,token);
+        
         
         return result;
     }
