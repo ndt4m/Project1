@@ -85,6 +85,45 @@
     ]
   },
   {
+    "id": 815994917,
+    "chatId": -815994917,
+    "groupName": "new",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+gzmgaiTnCXZhMmE1",
+    "messages": [
+      {
+        "title": "new",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
     "id": 981850633,
     "chatId": -981850633,
     "groupName": "gen",
@@ -647,7 +686,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -675,7 +714,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -703,7 +742,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -731,7 +770,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1013,7 +1052,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1041,7 +1080,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1069,7 +1108,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1097,7 +1136,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWSoihlBeoBvsMcI-QyXdRGCzdMHAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "id": "AgACAgIAAxUAAWSpK85wElCaT4hm1r8x7po84_-dAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1460,15 +1499,60 @@
     "adminIds": [
       2134816269
     ],
-    "memberCount": 1,
+    "memberCount": 2,
     "memberIds": [
+      6006813736,
       2134816269
     ],
     "description": "hhhhjjvhjhjjj",
     "inviteLink": "https://t.me/+ijNiIrKUcHk1Y2Jl",
     "messages": [
       {
+        "memberUserIds": [
+          6006813736
+        ]
+      },
+      {
         "title": "300",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 754523232,
+    "chatId": -754523232,
+    "groupName": "successbasic",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+v_DSou7KZUswZDg9",
+    "messages": [
+      {
+        "title": "successbasic",
         "memberUserIds": [
           2134816269
         ]
@@ -1666,9 +1750,8 @@
     "adminIds": [
       2134816269
     ],
-    "memberCount": 5,
+    "memberCount": 4,
     "memberIds": [
-      806954250,
       1817109845,
       373610989,
       84210004,
@@ -1727,83 +1810,6 @@
       },
       {
         "title": "tamtest",
-        "memberUserIds": [
-          2134816269
-        ]
-      }
-    ]
-  },
-  {
-    "id": 826636041,
-    "chatId": -826636041,
-    "groupName": "dffdfdfdfddfd",
-    "permissions": {
-      "canSendBasicMessages": false,
-      "canSendAudios": false,
-      "canSendDocuments": false,
-      "canSendPhotos": false,
-      "canSendVideos": false,
-      "canSendVideoNotes": false,
-      "canSendVoiceNotes": false,
-      "canSendPolls": false,
-      "canSendOtherMessages": false,
-      "canAddWebPagePreviews": false,
-      "canChangeInfo": false,
-      "canInviteUsers": false,
-      "canPinMessages": false,
-      "canManageTopics": false
-    },
-    "messageAutoDeleteTime": 0,
-    "adminIds": [
-      2134816269
-    ],
-    "memberCount": 1,
-    "memberIds": [
-      2134816269
-    ],
-    "description": "ddddddddddddddddddddddddddd",
-    "inviteLink": "https://t.me/+DEUZwRed7-cyMDA1",
-    "messages": [
-      {
-        "title": "dffdfdfdfddfd"
-      },
-      {
-        "title": "tammmmmmmmmmmmmmmm"
-      },
-      {
-        "title": "dasfasdfasdfasdfasdfasdfasdf"
-      },
-      {
-        "title": "mmmmmmmmmmmmmmmm"
-      },
-      {
-        "title": "tamatmatmatmatm"
-      },
-      {
-        "title": "dasfasdfasdfasdf"
-      },
-      {
-        "title": "dfdffdfdfdfdfdfdfdfddddddddddddddddddddddd"
-      },
-      {
-        "title": "ddddadsf"
-      },
-      {
-        "title": "sadASDasssdaSdas"
-      },
-      {
-        "title": "dfdfdfdfdfdfdfdfdffdfdfdfdfdfdfdf"
-      },
-      {
-        "userId": 6054221228
-      },
-      {
-        "memberUserIds": [
-          6054221228
-        ]
-      },
-      {
-        "title": "umltk",
         "memberUserIds": [
           2134816269
         ]
@@ -1921,6 +1927,45 @@
     "messages": [
       {
         "title": "há lô",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 919909925,
+    "chatId": -919909925,
+    "groupName": "dfasdfasdfasdfasdfasdf",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+dgv6ZNL0V8JhMjQ1",
+    "messages": [
+      {
+        "title": "dfasdfasdfasdfasdfasdf",
         "memberUserIds": [
           2134816269
         ]

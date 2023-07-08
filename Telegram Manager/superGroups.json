@@ -37,6 +37,80 @@
     ]
   },
   {
+    "id": 1932596021,
+    "chatId": -1001932596021,
+    "groupName": "supersuccess",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+jV4sLawckaY4MDQ9",
+    "messages": [
+      {
+        "title": "supersuccess"
+      }
+    ]
+  },
+  {
+    "id": 1980603276,
+    "chatId": -1001980603276,
+    "groupName": "dsfgfg",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+_h1od_dktktlMWFl",
+    "messages": [
+      {
+        "title": "dsfgfg"
+      }
+    ]
+  },
+  {
     "id": 1668043053,
     "chatId": -1001668043053,
     "groupName": "musshashi",
@@ -107,6 +181,51 @@
     "messages": [
       {
         "title": "superman"
+      }
+    ]
+  },
+  {
+    "id": 1913890870,
+    "chatId": -1001913890870,
+    "groupName": "newsup",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+ieirTJBVpVxiZTg9",
+    "messages": [
+      {
+        "userId": 6006813736
+      },
+      {
+        "memberUserIds": [
+          6006813736
+        ]
+      },
+      {
+        "title": "newsup"
       }
     ]
   },
@@ -467,47 +586,6 @@
       },
       {
         "title": "siuuuuuu"
-      }
-    ]
-  },
-  {
-    "id": 1714341959,
-    "chatId": -1001714341959,
-    "groupName": "narruutooo",
-    "permissions": {
-      "canSendBasicMessages": true,
-      "canSendAudios": true,
-      "canSendDocuments": true,
-      "canSendPhotos": true,
-      "canSendVideos": true,
-      "canSendVideoNotes": true,
-      "canSendVoiceNotes": true,
-      "canSendPolls": true,
-      "canSendOtherMessages": true,
-      "canAddWebPagePreviews": true,
-      "canChangeInfo": false,
-      "canInviteUsers": false,
-      "canPinMessages": false,
-      "canManageTopics": true
-    },
-    "messageAutoDeleteTime": 86400,
-    "memberCount": 1,
-    "isAllHistoryAvailable": true,
-    "adminIds": [
-      2134816269
-    ],
-    "memberIds": [
-      2134816269
-    ],
-    "description": "",
-    "inviteLink": "https://t.me/+7z4cH2EcWMc5NTdl",
-    "messages": [
-      {
-        "messageAutoDeleteTime": 86400,
-        "fromUserId": 0
-      },
-      {
-        "title": "narruutooo"
       }
     ]
   },

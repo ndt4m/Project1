@@ -1,7 +1,9 @@
 package hust.soict.cybersec.tm.entity;
 
+import java.util.HashSet;
 import java.util.Set;
 
+import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 
 public class User 
@@ -17,6 +19,8 @@ public class User
     private String type;
     private Set<Long> user_basic_group_ids;
     private Set<Long> user_super_group_ids;
+    private Set<Long> admin_basic_group_ids;
+    private Set<Long> admin_super_group_ids;
 
     public User()
     {
@@ -34,7 +38,9 @@ public class User
                 String languageCode,
                 String type,
                 Set<Long> user_basic_group_ids,
-                Set<Long> user_super_group_ids)
+                Set<Long> user_super_group_ids,
+                Set<Long> admin_basic_group_ids,
+                Set<Long> admin_super_group_ids)
     {
         this.id = id;
         this.firstName = firstName;
@@ -47,6 +53,8 @@ public class User
         this.type = type;
         this.user_basic_group_ids = user_basic_group_ids;
         this.user_super_group_ids = user_super_group_ids;
+        this.admin_basic_group_ids = admin_basic_group_ids;
+        this.admin_super_group_ids = admin_super_group_ids;
     }
 
     public String getDisplayName()
@@ -110,7 +118,33 @@ public class User
         fields.addProperty("IsFake", getIsFake());
         fields.addProperty("LanguageCode", getLanguageCode());
         fields.addProperty("Type", getType());
+        JsonArray bsGroupsOfUser = new JsonArray(); 
+        for (Long ID: user_basic_group_ids)
+        {
+            bsGroupsOfUser.add(ID);
+        }
 
+        JsonArray spGroupsOfUser = new JsonArray();
+        for (Long ID: user_super_group_ids)
+        {
+            spGroupsOfUser.add(ID);
+        }
+
+        JsonArray adminOfBsGroup = new JsonArray();
+        for (Long ID: admin_basic_group_ids)
+        {
+            adminOfBsGroup.add(ID);
+        }
+
+        JsonArray adminOfSpGroup = new JsonArray();
+        for (Long ID: admin_super_group_ids)
+        {
+            adminOfSpGroup.add(ID);
+        }
+        fields.add("bsGroupsOfUser", bsGroupsOfUser);
+        fields.add("spGroupsOfUser", spGroupsOfUser);
+        fields.add("adminOfBsGroup", adminOfBsGroup);
+        fields.add("adminOfSpGroup", adminOfSpGroup);
         return fields;
     }
 }

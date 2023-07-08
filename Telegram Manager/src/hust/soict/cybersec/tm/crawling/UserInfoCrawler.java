@@ -29,7 +29,9 @@ public class UserInfoCrawler extends Crawler<User>
     private String type = "Không rõ";
     private Set<Long> user_basic_group_ids = new HashSet<>();
     private Set<Long> user_super_group_ids = new HashSet<>();
-    
+    private Set<Long> admin_basic_group_ids = new HashSet<>();
+    private Set<Long> admin_super_group_ids = new HashSet<>();
+
     public UserInfoCrawler()
     {
 
@@ -55,6 +57,8 @@ public class UserInfoCrawler extends Crawler<User>
         type = "Không rõ";
         user_basic_group_ids = new HashSet<>();
         user_super_group_ids = new HashSet<>();
+        admin_basic_group_ids = new HashSet<>();
+        admin_super_group_ids = new HashSet<>();
     }
 
     public void findUserBasicGroupIds(long userId)
@@ -79,6 +83,27 @@ public class UserInfoCrawler extends Crawler<User>
         }
     }
 
+    public void findAdminBasicGroupIds(long userId)
+    {
+        for (BasicGroup basicGroup: basicGroups)
+        {
+            if (basicGroup.getAdminIds().contains(userId))
+            {
+                admin_basic_group_ids.add(basicGroup.getId());
+            }
+        }
+    }
+
+    public void findAdminSuperGroupIds(long userId)
+    {
+        for (SuperGroup superGroup: superGroups)
+        {
+            if (superGroup.getAdminIds().contains(userId))
+            {
+                admin_super_group_ids.add(superGroup.getId());
+            }
+        }
+    }
 
     public void crawlUserInfo() throws InterruptedException
     {
@@ -105,6 +130,8 @@ public class UserInfoCrawler extends Crawler<User>
             id = userId;
             findUserBasicGroupIds(id);
             findUserSuperGroupIds(id);
+            findAdminBasicGroupIds(id);
+            findAdminSuperGroupIds(id);
             blockingSend(new TdApi.GetUser(id), updateUserHandler);
             
             if (!type.equals("bot user"))
@@ -119,7 +146,9 @@ public class UserInfoCrawler extends Crawler<User>
                                         languageCode, 
                                         type, 
                                         user_basic_group_ids, 
-                                        user_super_group_ids));
+                                        user_super_group_ids,
+                                        admin_basic_group_ids,
+                                        admin_super_group_ids));
             }
             redefinedAttributes();
         }

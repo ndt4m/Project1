@@ -35,6 +35,7 @@ public class Table{
 
         
         syncRecord(baseId, token);
+        
     }
 
     protected void syncRecord(String baseId, String token) {
@@ -73,6 +74,9 @@ public class Table{
         return null;
     }
     
+    protected List<Record> getRecords() {
+        return records;
+    }
 
     protected boolean addField(JsonObject field, String baseId, String token) {
         String fieldCreate = Field.createField(field, id, baseId, token);
@@ -95,13 +99,8 @@ public class Table{
         }
         JsonObject recordJson = JsonParser.parseString(updatedRecord).getAsJsonObject();
         
-        for (Record rec: records) {
-            if (rec.getId().equals(rec0rd.getId()))
-            {
-                this.records.remove(rec);
-                break;
-            }
-        }
+        records.remove(rec0rd);
+        
         records.add(new Record(recordJson));
         
         return true;
@@ -134,19 +133,18 @@ public class Table{
         Record oldRecord = getRecord(newRecordFields.get("Id").getAsString());
         if (oldRecord == null) {
             if (addRecord(newRecordFields, baseId, token)){
-                
                 numChanges++;
                 return true;
             }
             
             return false;
         }
+    
         if (oldRecord.equals(newRecordFields)) {
             return true;
         }
         
         if (updateRecord(newRecordFields, oldRecord, baseId, token)) {
-            
             numChanges++;
             return true;
         }
@@ -165,9 +163,11 @@ public class Table{
         
         return true;
     }
+
     protected void dropRecord(List<JsonObject> newEntityRecordFieldsList, String baseId, String token) {
         List<Record> dropList = new ArrayList<>();
         for (Record rec : this.records) {
+            
             boolean isExist = false;
             for (JsonObject fields : newEntityRecordFieldsList) {
                 if (rec.getIdFieldVal().equals(fields.get("Id").getAsString())) {
@@ -175,6 +175,7 @@ public class Table{
                     break;
                 }
             }
+            
             if (!isExist) {
                 if (Record.dropRecord(rec.getId(), id, baseId, token)) {
                     
