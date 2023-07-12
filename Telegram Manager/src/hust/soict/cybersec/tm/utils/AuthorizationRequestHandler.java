@@ -49,8 +49,8 @@ public class AuthorizationRequestHandler implements Client.ResultHandler
                 request.databaseDirectory = "tdlib";
                 request.useMessageDatabase = true;
                 request.useSecretChats = true;
-                request.apiId = 25245925;
-                request.apiHash = "8e7c340bb15ab94ae3c8dc78fc44b91f";
+                request.apiId = apiId;
+                request.apiHash = apiHash;
                 request.systemLanguageCode = "en";
                 request.deviceModel = "Desktop";
                 request.applicationVersion = "1.0";
