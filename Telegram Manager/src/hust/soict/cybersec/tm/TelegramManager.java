@@ -17,14 +17,11 @@ import hust.soict.cybersec.tm.entity.BasicGroup;
 import hust.soict.cybersec.tm.entity.SuperGroup;
 import hust.soict.cybersec.tm.entity.User;
 import hust.soict.cybersec.tm.utils.Base;
-import hust.soict.cybersec.tm.utils.LogMessageHandler;
-import hust.soict.cybersec.tm.utils.UpdateHandler;
 import wagu.Block;
 import wagu.Board;
 import wagu.Table;
 
 import java.io.FileWriter;
-import java.io.IOError;
 import java.io.IOException;
 
 import java.util.ArrayList;
@@ -40,21 +37,6 @@ public final class TelegramManager extends Base{
     
 
     private static Scanner sc = new Scanner(System.in);
-            
-    static {
-        
-        Client.setLogMessageHandler(0, new LogMessageHandler());
-
-        
-        Client.execute(new TdApi.SetLogVerbosityLevel(0));
-        if (Client.execute(new TdApi.SetLogStream(new TdApi.LogStreamFile("tdlib.log", 1 << 27, false))) instanceof TdApi.Error) {
-            throw new IOError(new IOException("Write access to the current directory is required"));
-        }
-
-        
-        client = Client.create(new UpdateHandler(), null, null);
-        
-    }
 
     private static List<BasicGroup> targetBasicGroups = new ArrayList<BasicGroup>();
     private static List<SuperGroup> targetSupergroups = new ArrayList<SuperGroup>();
