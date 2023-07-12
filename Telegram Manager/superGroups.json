@@ -1,0 +1,631 @@
+[
+  {
+    "id": 1809958885,
+    "chatId": -1001809958885,
+    "groupName": "zaaaahoooo",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "hoooolaa",
+    "inviteLink": "https://t.me/+6F0gR76qffsyNzE9",
+    "messages": [
+      {
+        "title": "zaaaahoooo"
+      }
+    ]
+  },
+  {
+    "id": 1932596021,
+    "chatId": -1001932596021,
+    "groupName": "supersuccess",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+jV4sLawckaY4MDQ9",
+    "messages": [
+      {
+        "title": "supersuccess"
+      }
+    ]
+  },
+  {
+    "id": 1980603276,
+    "chatId": -1001980603276,
+    "groupName": "dsfgfg",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+_h1od_dktktlMWFl",
+    "messages": [
+      {
+        "title": "dsfgfg"
+      }
+    ]
+  },
+  {
+    "id": 1668043053,
+    "chatId": -1001668043053,
+    "groupName": "musshashi",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+V_NgTvgBbtJmNTFl",
+    "messages": [
+      {
+        "title": "musshashi"
+      }
+    ]
+  },
+  {
+    "id": 1876255601,
+    "chatId": -1001876255601,
+    "groupName": "superman",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+hZjoH2y08Z41MmE1",
+    "messages": [
+      {
+        "title": "superman"
+      }
+    ]
+  },
+  {
+    "id": 1913890870,
+    "chatId": -1001913890870,
+    "groupName": "newsup",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+ieirTJBVpVxiZTg9",
+    "messages": [
+      {
+        "userId": 6006813736
+      },
+      {
+        "memberUserIds": [
+          6006813736
+        ]
+      },
+      {
+        "title": "newsup"
+      }
+    ]
+  },
+  {
+    "id": 1703579681,
+    "chatId": -1001703579681,
+    "groupName": "supernesrsta",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+5giFc_JW4qBmNjY9",
+    "messages": [
+      {
+        "title": "supernesrsta"
+      }
+    ]
+  },
+  {
+    "id": 1899612767,
+    "chatId": -1001899612767,
+    "groupName": "đhncn",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 31536000,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "jjjjjjj",
+    "inviteLink": "https://t.me/+LhAjMQv899FjYjY1",
+    "messages": [
+      {
+        "text": {
+          "text": "jj",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "upoijn",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "title": "đhncn"
+      },
+      {
+        "userId": 6173576926
+      },
+      {
+        "memberUserIds": [
+          6173576926
+        ]
+      },
+      {
+        "userId": 6054221228
+      },
+      {
+        "title": "hhhhhh"
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "userId": 6054221228
+      },
+      {
+        "animatedEmoji": {
+          "sticker": {
+            "id": 5130136026148241963,
+            "setId": 1258816259751983,
+            "width": 512,
+            "height": 512,
+            "emoji": "😙",
+            "format": {},
+            "fullType": {
+              "premiumAnimation": null
+            },
+            "outline": [
+              {
+                "commands": [
+                  {
+                    "startControlPoint": {
+                      "x": 202.0,
+                      "y": 455.0
+                    },
+                    "endControlPoint": {
+                      "x": 149.0,
+                      "y": 433.0
+                    },
+                    "endPoint": {
+                      "x": 112.0,
+                      "y": 395.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": -37.0,
+                      "y": 239.0
+                    },
+                    "endControlPoint": {
+                      "x": 137.0,
+                      "y": -16.0
+                    },
+                    "endPoint": {
+                      "x": 337.0,
+                      "y": 72.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 533.0,
+                      "y": 159.0
+                    },
+                    "endControlPoint": {
+                      "x": 470.0,
+                      "y": 456.0
+                    },
+                    "endPoint": {
+                      "x": 255.0,
+                      "y": 455.0
+                    }
+                  }
+                ]
+              }
+            ],
+            "thumbnail": {
+              "format": {},
+              "width": 128,
+              "height": 128,
+              "file": {
+                "id": 366,
+                "size": 3476,
+                "expectedSize": 3476,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "AAMCAQADFQABZKl9ZjjCE9rU7zQXh_hJPa9B14kAAisCAAKJ5zFH6Til5L2MgS8BAAdtAAMvBA",
+                  "uniqueId": "AQADKwIAAonnMUdy",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 3476
+                }
+              }
+            },
+            "sticker": {
+              "id": 367,
+              "size": 26992,
+              "expectedSize": 26992,
+              "local": {
+                "path": "",
+                "canBeDownloaded": true,
+                "canBeDeleted": false,
+                "isDownloadingActive": false,
+                "isDownloadingCompleted": false,
+                "downloadOffset": 0,
+                "downloadedPrefixSize": 0,
+                "downloadedSize": 0
+              },
+              "remote": {
+                "id": "CAACAgEAAxUAAWSpfWY4whPa1O80F4f4ST2vQdeJAAIrAgACiecxR-k4peS9jIEvLwQ",
+                "uniqueId": "AgADKwIAAonnMUc",
+                "isUploadingActive": false,
+                "isUploadingCompleted": true,
+                "uploadedSize": 26992
+              }
+            }
+          },
+          "stickerWidth": 512,
+          "stickerHeight": 512,
+          "fitzpatrickType": 0,
+          "sound": null
+        },
+        "emoji": "😙"
+      },
+      {
+        "animatedEmoji": {
+          "sticker": {
+            "id": 5130064437633352245,
+            "setId": 1258816259751983,
+            "width": 512,
+            "height": 512,
+            "emoji": "🤨",
+            "format": {},
+            "fullType": {
+              "premiumAnimation": null
+            },
+            "outline": [
+              {
+                "commands": [
+                  {
+                    "startControlPoint": {
+                      "x": 205.0,
+                      "y": 457.0
+                    },
+                    "endControlPoint": {
+                      "x": 149.0,
+                      "y": 434.0
+                    },
+                    "endPoint": {
+                      "x": 111.0,
+                      "y": 394.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": -35.0,
+                      "y": 239.0
+                    },
+                    "endControlPoint": {
+                      "x": 137.0,
+                      "y": -11.0
+                    },
+                    "endPoint": {
+                      "x": 332.0,
+                      "y": 71.0
+                    }
+                  },
+                  {
+                    "startControlPoint": {
+                      "x": 530.0,
+                      "y": 155.0
+                    },
+                    "endControlPoint": {
+                      "x": 476.0,
+                      "y": 450.0
+                    },
+                    "endPoint": {
+                      "x": 261.0,
+                      "y": 455.0
+                    }
+                  },
+                  {
+                    "endPoint": {
+                      "x": 261.0,
+                      "y": 456.0
+                    }
+                  }
+                ]
+              }
+            ],
+            "thumbnail": {
+              "format": {},
+              "width": 128,
+              "height": 128,
+              "file": {
+                "id": 642,
+                "size": 3560,
+                "expectedSize": 3560,
+                "local": {
+                  "path": "",
+                  "canBeDownloaded": true,
+                  "canBeDeleted": false,
+                  "isDownloadingActive": false,
+                  "isDownloadingCompleted": false,
+                  "downloadOffset": 0,
+                  "downloadedPrefixSize": 0,
+                  "downloadedSize": 0
+                },
+                "remote": {
+                  "id": "AAMCAQADFQABZKl9Zkd7h4N_rYhFq1KpJBH2Sj4AAjUCAAJtpjFHc2r0uDLYMbYBAAdtAAMvBA",
+                  "uniqueId": "AQADNQIAAm2mMUdy",
+                  "isUploadingActive": false,
+                  "isUploadingCompleted": true,
+                  "uploadedSize": 3560
+                }
+              }
+            },
+            "sticker": {
+              "id": 643,
+              "size": 10751,
+              "expectedSize": 10751,
+              "local": {
+                "path": "",
+                "canBeDownloaded": true,
+                "canBeDeleted": false,
+                "isDownloadingActive": false,
+                "isDownloadingCompleted": false,
+                "downloadOffset": 0,
+                "downloadedPrefixSize": 0,
+                "downloadedSize": 0
+              },
+              "remote": {
+                "id": "CAACAgEAAxUAAWSpfWZHe4eDf62IRatSqSQR9ko-AAI1AgACbaYxR3Nq9Lgy2DG2LwQ",
+                "uniqueId": "AgADNQIAAm2mMUc",
+                "isUploadingActive": false,
+                "isUploadingCompleted": true,
+                "uploadedSize": 10751
+              }
+            }
+          },
+          "stickerWidth": 512,
+          "stickerHeight": 512,
+          "fitzpatrickType": 0,
+          "sound": null
+        },
+        "emoji": "🤨"
+      },
+      {
+        "title": "uissisi"
+      },
+      {
+        "messageAutoDeleteTime": 31536000,
+        "fromUserId": 0
+      },
+      {
+        "title": "siuuuuuu"
+      }
+    ]
+  },
+  {
+    "id": 1856449499,
+    "chatId": -1001856449499,
+    "groupName": "siuuu",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 3,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      6054221228,
+      2134816269,
+      6274169886
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+Xgd9f5F-fP9hNmJl",
+    "messages": [
+      {
+        "title": "siuuu"
+      }
+    ]
+  }
+]

@@ -97,15 +97,22 @@ public class Record{
         return this.fields;
     }
     
-    protected static String listRecords(String tableId, String baseId, String token) {
-        
-        String url = "https://api.airtable.com/v0/" + baseId + "/" + tableId;
+    protected static String listRecords(String tableId, String baseId, String token, String offset) {
+        String url;
+        if (offset == null)
+        {
+            url = "https://api.airtable.com/v0/" + baseId + "/" + tableId;
+        }
+        else
+        {
+            url = "https://api.airtable.com/v0/" + baseId + "/" + tableId + "?offset=" + offset;
+        }
 
         try(CloseableHttpClient client = HttpClientBuilder.create().build()) {
             HttpGet get = new HttpGet(url);
             get.setHeader("Authorization", "Bearer " + token);
             get.setHeader("Content-Type", "application/json");
-
+            
             ClassicHttpResponse response = client.execute(get);
             return EntityUtils.toString(response.getEntity());
         } catch (IOException | ParseException e) {
@@ -113,6 +120,7 @@ public class Record{
             return null;
         }
     }
+    
     protected static String updateRecord(JsonObject fields, String recordId, String tableId, String baseId, String Token){
         String url = "https://api.airtable.com/v0/" + baseId + "/" + tableId + "/" + recordId;
 

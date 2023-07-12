@@ -40,13 +40,28 @@ public class Table{
 
     protected void syncRecord(String baseId, String token) {
         records.clear();
-        String rec0rds = Record.listRecords(id, baseId, token);
+        String rec0rds = Record.listRecords(id, baseId, token, null);
         if (rec0rds == null) {
             System.out.println("Error: Could not get records for table: " + name);
         } else {
             JsonObject recordsJson = new Gson().fromJson(rec0rds, JsonObject.class);
             JsonArray listRecords = recordsJson.get("records").getAsJsonArray();
             listRecords.forEach(rec -> this.records.add(new Record(rec.getAsJsonObject())));
+            while (recordsJson.has("offset"))
+            {
+                rec0rds = Record.listRecords(id, baseId, token, recordsJson.get("offset").getAsString());
+                if (rec0rds == null)
+                {
+                    System.out.println("Error: Could not get next page of records for table: " + name);
+                    break;
+                }
+                else
+                {
+                    recordsJson = new Gson().fromJson(rec0rds, JsonObject.class);
+                    listRecords = recordsJson.get("records").getAsJsonArray();
+                    listRecords.forEach(rec -> this.records.add(new Record(rec.getAsJsonObject())));
+                }
+            }
         }
     }
 
