@@ -1,6 +1,7 @@
 package hust.soict.cybersec.tm.utils;
 
 import java.io.BufferedReader;
+import java.io.IOError;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.NavigableSet;
@@ -47,7 +48,20 @@ public class Base
     
     public static volatile String currentPrompt = null;
 
-    
+    static {
+        
+        Client.setLogMessageHandler(0, new LogMessageHandler());
+
+        
+        Client.execute(new TdApi.SetLogVerbosityLevel(0));
+        if (Client.execute(new TdApi.SetLogStream(new TdApi.LogStreamFile("tdlib.log", 1 << 27, false))) instanceof TdApi.Error) {
+            throw new IOError(new IOException("Write access to the current directory is required"));
+        }
+
+        
+        client = Client.create(new UpdateHandler(), null, null);
+        
+    }
 
     public static String promptString(String prompt) {
         System.out.print(prompt);
