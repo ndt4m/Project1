@@ -856,6 +856,7 @@ public final class TelegramManager extends Base{
                 }
             }
         });
+        sc.close();
     }
 
     public static void quit()
@@ -876,6 +877,7 @@ public final class TelegramManager extends Base{
                 }
             }
         });
+        sc.close();
     }
     
     public static void manualSynchronize()
