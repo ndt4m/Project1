@@ -95,6 +95,10 @@ public class SuperGroupInfoCrawler extends Crawler<SuperGroup>
                 int oldSize = messages.size();
                 while (messages.size() <= 50)
                 {
+                    if (messages.size() == 0)
+                    {
+                        break;
+                    }
                     
                     blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 50, false), updateSuperGroupHandler);
                     if (oldSize != messages.size())

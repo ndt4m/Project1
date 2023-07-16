@@ -354,6 +354,11 @@ public final class TelegramManager extends Base{
             row.add(user.getType());
             rowsList.add(row);
         }
+        if (targetUsers.size() == 0)
+        {
+            printColor(BLUE, centerString("THIS ACCOUNT HAS NO BASICGROUPS AND SUPERGROUPS THAT YOU'RE ADMIN", 180, "*"));
+            return;
+        }
         List<Integer> colAlignList = new ArrayList<>();
         for (int i = 0; i < headersList.size(); i++) 
         {
@@ -385,7 +390,11 @@ public final class TelegramManager extends Base{
             row.add(bs.getInviteLink());
             rowList.add(row);
         }
-
+        if (targetBasicGroups.size() == 0)
+        {
+            printColor(BLUE, centerString("THIS ACCOUNT HAS NO BASICGROUPS THAT YOU'RE ADMIN", 180, "*"));
+            return;
+        }
         List<Integer> colAlignList = new ArrayList<>();
         for (int i = 0; i < headersList.size(); i++)
         {
@@ -645,7 +654,11 @@ public final class TelegramManager extends Base{
             row.add(sg.getInviteLink());
             rowList.add(row);
         }
-
+        if (targetSupergroups.size() == 0)
+        {
+            printColor(BLUE, centerString("THIS ACCOUNT HAS NO SUPERGROUPS THAT YOU'RE ADMIN", 180, "*"));
+            return;
+        }
         List<Integer> colAlignList = new ArrayList<>();
         for (int i = 0; i < headersList.size(); i++)
         {
