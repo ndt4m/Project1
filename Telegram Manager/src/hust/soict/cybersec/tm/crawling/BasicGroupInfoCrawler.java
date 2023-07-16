@@ -81,6 +81,10 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                 int oldSize = messages.size();
                 while (messages.size() <= 50)
                 {
+                    if (messages.size() == 0)
+                    {
+                        break;
+                    }
                     blockingSend(new TdApi.GetChatHistory(chat.getKey(), messages.get(messages.size() - 1).id, 0, 50, false), updateBasicGroupHandler);
                     if (oldSize != messages.size())
                     {
@@ -108,10 +112,9 @@ public class BasicGroupInfoCrawler extends Crawler<BasicGroup>
                                                   inviteLink, 
                                                 
                                                   msContent));
-                        
-                redefinedAttributes();
-                        
+                                   
             }
+            redefinedAttributes();
         }
 
         
