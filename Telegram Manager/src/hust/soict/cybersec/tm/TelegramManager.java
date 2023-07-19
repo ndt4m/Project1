@@ -664,7 +664,7 @@ public final class TelegramManager extends Base{
         {
             colAlignList.add(Block.DATA_CENTER);
         }
-        List<Integer> colWidthsListEdited = Arrays.asList(12, 12, 20, 24, 12, 17, 40, 40);
+        List<Integer> colWidthsListEdited = Arrays.asList(12, 15, 20, 24, 12, 17, 40, 40);
         printColor(BLUE, createTable(headersList, rowList, colAlignList, colWidthsListEdited));
         chooseOptionGroupMoreInfoMenu("S");
     }
