@@ -71,6 +71,7 @@ public class Crawler <T>
             while (!haveReceivedRespond) {
                 try {
                     gotAuthorization.await();
+                    haveReceivedRespond = true;
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }

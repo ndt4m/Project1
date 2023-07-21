@@ -1,0 +1,1935 @@
+[
+  {
+    "id": 803806955,
+    "chatId": -803806955,
+    "groupName": "robo",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 604800,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "uuuuii",
+    "inviteLink": "https://t.me/+g6Ld2nnn-tYwNGZl",
+    "messages": [
+      {
+        "messageAutoDeleteTime": 604800,
+        "fromUserId": 0
+      },
+      {
+        "memberUserIds": [
+          6274169886
+        ]
+      },
+      {
+        "title": "robo",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 815994917,
+    "chatId": -815994917,
+    "groupName": "new",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+gzmgaiTnCXZhMmE1",
+    "messages": [
+      {
+        "title": "new",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 981850633,
+    "chatId": -981850633,
+    "groupName": "gen",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 604800,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      5680795783,
+      2134816269
+    ],
+    "description": "moomloloo",
+    "inviteLink": "https://t.me/+WCvse3AtSBoyZGNl",
+    "messages": [
+      {
+        "memberUserIds": [
+          5680795783
+        ]
+      },
+      {
+        "messageAutoDeleteTime": 604800,
+        "fromUserId": 0
+      },
+      {
+        "userId": 6274169886
+      },
+      {
+        "text": {
+          "text": "🙈🙈🙈🙈🙈🙈",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "🙈🙈🙈",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Hdjebdjdb",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          6274169886
+        ]
+      },
+      {
+        "text": {
+          "text": "ghvghh",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "userId": 6274169886
+      },
+      {
+        "memberUserIds": [
+          6274169886
+        ]
+      },
+      {
+        "title": "newg"
+      },
+      {
+        "messageAutoDeleteTime": 0,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 259200,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 86400,
+        "fromUserId": 0
+      },
+      {
+        "text": {
+          "text": "t",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "messageAutoDeleteTime": 13392000,
+        "fromUserId": 0
+      },
+      {
+        "userId": 84210004
+      },
+      {
+        "messageAutoDeleteTime": 8035200,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 31536000,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 604800,
+        "fromUserId": 0
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "userId": 6054221228
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "memberUserIds": [
+          806954250
+        ]
+      },
+      {
+        "userId": 6024238663
+      },
+      {
+        "userId": 6173576926
+      },
+      {
+        "userId": 806954250
+      },
+      {
+        "text": {
+          "text": "This bot can create simple polls in groups.\n\n/newpoll - create a poll\n/results - see how the poll is going\n/poll - repeat the question\n/endpoll - close poll and show final results",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "title": "newgroup",
+        "memberUserIds": [
+          2134816269,
+          6173576926,
+          6024238663,
+          806954250,
+          373610989,
+          84210004
+        ]
+      }
+    ]
+  },
+  {
+    "id": 963956475,
+    "chatId": -963956475,
+    "groupName": "basicnewesrrrr",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+9JoBmV1gJQ5iMjll",
+    "messages": [
+      {
+        "title": "basicnewesrrrr",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 901751341,
+    "chatId": -901751341,
+    "groupName": "lgsg",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+hn21_iaDlXo4Yzk1",
+    "messages": [
+      {
+        "userId": 5680795783
+      },
+      {
+        "memberUserIds": [
+          5680795783
+        ]
+      },
+      {
+        "title": "lgsg",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 906873372,
+    "chatId": -906873372,
+    "groupName": "testpppppp",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": true,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      6054221228,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+r4dvZdyvSWUyYzJl",
+    "messages": [
+      {
+        "userId": 6024238663
+      },
+      {
+        "userId": 6173576926
+      },
+      {
+        "userId": 373610989
+      },
+      {
+        "userId": 84210004
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "messageAutoDeleteTime": 0,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 172800,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 86400,
+        "fromUserId": 0
+      },
+      {
+        "title": "testpppppp"
+      },
+      {
+        "memberUserIds": [
+          6173576926
+        ]
+      },
+      {
+        "userId": 6173576926
+      },
+      {
+        "memberUserIds": [
+          6173576926
+        ]
+      },
+      {
+        "userId": 6173576926
+      },
+      {
+        "text": {
+          "text": "kkkkkkk",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "hi",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "test",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          6173576926
+        ]
+      },
+      {
+        "text": {
+          "text": "@infortracker_bot  d",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 17,
+              "type": {}
+            }
+          ]
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "d",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          6024238663
+        ]
+      },
+      {
+        "memberUserIds": [
+          806954250
+        ]
+      },
+      {
+        "text": {
+          "text": "@GroupIDbot /id",
+          "entities": [
+            {
+              "offset": 0,
+              "length": 11,
+              "type": {}
+            }
+          ]
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/id@GroupIDbot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          373610989
+        ]
+      },
+      {
+        "text": {
+          "text": "what does hello mean?\n👥 1 person voted so far.\n\nhi – 1\n👍👍👍👍👍👍👍 100%\n\nhello – 0\n▫️ 0%\n\nhow – 0\n▫️ 0%\n\n/poll - repeat question\n/endpoll - close poll",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/results@PollBot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "☝️T voted for \u0027hi\u0027.\n/results - show results\n/poll - repeat the question",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "hi",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "what does hello mean?\n\n/1. hi\n/2. hello\n/3. how\n\n/results - show results\n/endpoll - close poll\n\nUse this link to vote anonymously:\nt.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
+          "entities": [
+            {
+              "offset": 131,
+              "length": 59,
+              "type": {}
+            }
+          ]
+        },
+        "webPage": {
+          "url": "http://t.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
+          "displayUrl": "t.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
+          "type": "telegram_bot",
+          "siteName": "Telegram",
+          "title": "PollBot",
+          "description": {
+            "text": "Add this bot to groups to create simple polls.",
+            "entities": []
+          },
+          "photo": {
+            "hasStickers": false,
+            "minithumbnail": null,
+            "sizes": [
+              {
+                "type": "a",
+                "photo": {
+                  "id": 1367,
+                  "size": 3176,
+                  "expectedSize": 3176,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAUAAQ",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3176
+                  }
+                },
+                "width": 160,
+                "height": 160,
+                "progressiveSizes": []
+              },
+              {
+                "type": "b",
+                "photo": {
+                  "id": 1368,
+                  "size": 6515,
+                  "expectedSize": 6515,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAVn",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 6515
+                  }
+                },
+                "width": 320,
+                "height": 320,
+                "progressiveSizes": []
+              },
+              {
+                "type": "c",
+                "photo": {
+                  "id": 1369,
+                  "size": 14353,
+                  "expectedSize": 14353,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAUB",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 14353
+                  }
+                },
+                "width": 640,
+                "height": 640,
+                "progressiveSizes": []
+              },
+              {
+                "type": "d",
+                "photo": {
+                  "id": 1370,
+                  "size": 20101,
+                  "expectedSize": 20101,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAVp",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 20101
+                  }
+                },
+                "width": 1000,
+                "height": 1000,
+                "progressiveSizes": []
+              }
+            ]
+          },
+          "embedUrl": "",
+          "embedType": "",
+          "embedWidth": 0,
+          "embedHeight": 0,
+          "duration": 0,
+          "author": "",
+          "animation": null,
+          "audio": null,
+          "document": null,
+          "sticker": null,
+          "video": null,
+          "videoNote": null,
+          "voiceNote": null,
+          "instantViewVersion": 0
+        }
+      },
+      {
+        "text": {
+          "text": "👍 Poll created.",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/done",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Good. Now send me another answer option.\n\nWhen you\u0027ve added enough options, simply send /done to publish the poll.",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "how",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Good. Now send me another answer option.\n\nWhen you\u0027ve added enough options, simply send /done to publish the poll.",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "hello",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Good. Now send me another answer option.\n\nWhen you\u0027ve added enough options, simply send /done to publish the poll.",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "hi",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Creating a new poll: \u0027what does hello mean?\u0027\n\nPlease send me the first answer option.",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "what does hello mean?",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Let\u0027s create a new poll. First, send me the question.",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/newpoll@PollBot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "📊 Poll closed, final results:\n\nwhat is poll?\n👥 1 person voted in total.\n\n🎱 – 1\n👍👍👍👍👍👍👍 100%",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/endpoll@PollBot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Sorry, only one poll at a time is allowed.\n/poll - repeat the question\n/endpoll - close current poll",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/newpoll@PollBot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "☝️T voted for \u0027🎱\u0027.\n/results - show results\n/poll - repeat the question",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/1@PollBot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "what is poll?\n\n/1. 🎱\n\n/results - show results\n/endpoll - close poll\n\nUse this link to vote anonymously:\nt.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
+          "entities": [
+            {
+              "offset": 105,
+              "length": 59,
+              "type": {}
+            }
+          ]
+        },
+        "webPage": {
+          "url": "http://t.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
+          "displayUrl": "t.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
+          "type": "telegram_bot",
+          "siteName": "Telegram",
+          "title": "PollBot",
+          "description": {
+            "text": "Add this bot to groups to create simple polls.",
+            "entities": []
+          },
+          "photo": {
+            "hasStickers": false,
+            "minithumbnail": null,
+            "sizes": [
+              {
+                "type": "a",
+                "photo": {
+                  "id": 1367,
+                  "size": 3176,
+                  "expectedSize": 3176,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAUAAQ",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 3176
+                  }
+                },
+                "width": 160,
+                "height": 160,
+                "progressiveSizes": []
+              },
+              {
+                "type": "b",
+                "photo": {
+                  "id": 1368,
+                  "size": 6515,
+                  "expectedSize": 6515,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAVn",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 6515
+                  }
+                },
+                "width": 320,
+                "height": 320,
+                "progressiveSizes": []
+              },
+              {
+                "type": "c",
+                "photo": {
+                  "id": 1369,
+                  "size": 14353,
+                  "expectedSize": 14353,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAUB",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 14353
+                  }
+                },
+                "width": 640,
+                "height": 640,
+                "progressiveSizes": []
+              },
+              {
+                "type": "d",
+                "photo": {
+                  "id": 1370,
+                  "size": 20101,
+                  "expectedSize": 20101,
+                  "local": {
+                    "path": "",
+                    "canBeDownloaded": true,
+                    "canBeDeleted": false,
+                    "isDownloadingActive": false,
+                    "isDownloadingCompleted": false,
+                    "downloadOffset": 0,
+                    "downloadedPrefixSize": 0,
+                    "downloadedSize": 0
+                  },
+                  "remote": {
+                    "id": "AgACAgIAAxUAAWS6QHw68B72rm7sRWtYY7UNC6ZJAAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
+                    "uniqueId": "AQADr6cxG1TxBAVp",
+                    "isUploadingActive": false,
+                    "isUploadingCompleted": true,
+                    "uploadedSize": 20101
+                  }
+                },
+                "width": 1000,
+                "height": 1000,
+                "progressiveSizes": []
+              }
+            ]
+          },
+          "embedUrl": "",
+          "embedType": "",
+          "embedWidth": 0,
+          "embedHeight": 0,
+          "duration": 0,
+          "author": "",
+          "animation": null,
+          "audio": null,
+          "document": null,
+          "sticker": null,
+          "video": null,
+          "videoNote": null,
+          "voiceNote": null,
+          "instantViewVersion": 0
+        }
+      },
+      {
+        "text": {
+          "text": "This bot can create simple polls in groups.\n\n/newpoll - create a poll\n/results - see how the poll is going\n/poll - repeat the question\n/endpoll - close poll and show final results",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "/start@PollBot",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          84210004
+        ]
+      },
+      {
+        "text": {
+          "text": "aasdf",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "title": "test",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 704076527,
+    "chatId": -704076527,
+    "groupName": "tamamama",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      6054221228,
+      2134816269
+    ],
+    "description": "ggggggggggggggggggggggggggggggggggggg",
+    "inviteLink": "https://t.me/+ISeD6XfT-mczZThl",
+    "messages": [
+      {
+        "title": "tamamama"
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "userId": 6054221228
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "userId": 6054221228
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "userId": 6054221228
+      },
+      {
+        "text": {
+          "text": "Yokatta",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "Chạy r",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "text": {
+          "text": "adsf",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "text": {
+          "text": "d",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "messageAutoDeleteTime": 0,
+        "fromUserId": 0
+      },
+      {
+        "messageAutoDeleteTime": 172800,
+        "fromUserId": 0
+      },
+      {
+        "title": "daaaaaaaaaaaaa"
+      },
+      {
+        "text": {
+          "text": "xcZXC",
+          "entities": []
+        },
+        "webPage": null
+      },
+      {
+        "title": "ddddddddddddddddđ"
+      },
+      {
+        "title": "adsfsdfdfffffffffffffff"
+      },
+      {
+        "title": "ddddddddddddddd"
+      },
+      {
+        "title": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee"
+      },
+      {
+        "title": "ddddddddddddddddddddddddddddddddddddd"
+      },
+      {
+        "title": "mmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+      },
+      {
+        "title": "uiuuuuu"
+      },
+      {
+        "title": "ssss"
+      },
+      {
+        "title": "dfdfdfdffd"
+      },
+      {
+        "title": "newesttest",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 731085839,
+    "chatId": -731085839,
+    "groupName": "200",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": true,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      6054221228,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+6EHvOihfAfw0ODY1",
+    "messages": [
+      {
+        "userId": 6024238663
+      },
+      {
+        "userId": 373610989
+      },
+      {
+        "memberUserIds": [
+          6054221228
+        ]
+      },
+      {
+        "memberUserIds": [
+          373610989
+        ]
+      },
+      {
+        "memberUserIds": [
+          6024238663
+        ]
+      },
+      {
+        "title": "200",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 687495272,
+    "chatId": -687495272,
+    "groupName": "budha",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+8iivH1CwazRmMTY1",
+    "messages": [
+      {
+        "userId": 5680795783
+      },
+      {
+        "memberUserIds": [
+          5680795783
+        ]
+      },
+      {
+        "title": "budha",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 864889876,
+    "chatId": -864889876,
+    "groupName": "300",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      6006813736,
+      2134816269
+    ],
+    "description": "hhhhjjvhjhjjj",
+    "inviteLink": "https://t.me/+ijNiIrKUcHk1Y2Jl",
+    "messages": [
+      {
+        "memberUserIds": [
+          6006813736
+        ]
+      },
+      {
+        "title": "300",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 754523232,
+    "chatId": -754523232,
+    "groupName": "successbasic",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+v_DSou7KZUswZDg9",
+    "messages": [
+      {
+        "title": "successbasic",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 937181806,
+    "chatId": -937181806,
+    "groupName": "bsgroup",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      6006813736,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+xituTTtKYyA2Nzll",
+    "messages": [
+      {
+        "memberUserIds": [
+          6006813736
+        ]
+      },
+      {
+        "title": "bsgroup",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 982563624,
+    "chatId": -982563624,
+    "groupName": "testBasic",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 86400,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 4,
+    "memberIds": [
+      6024238663,
+      373610989,
+      84210004,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+mhm4tB6IKdIyODU1",
+    "messages": [
+      {
+        "messageAutoDeleteTime": 86400,
+        "fromUserId": 0
+      }
+    ]
+  },
+  {
+    "id": 953623145,
+    "chatId": -953623145,
+    "groupName": "hhuhu",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+_CdeNJ5iVttiOGQ1",
+    "messages": [
+      {
+        "title": "hhuhu",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 844195347,
+    "chatId": -844195347,
+    "groupName": "abcdadas",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+inc2JuBpohs4OTVl",
+    "messages": [
+      {
+        "userId": 1817109845
+      },
+      {},
+      {
+        "title": "abcdadas",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 965667270,
+    "chatId": -965667270,
+    "groupName": "tamtest",
+    "permissions": {
+      "canSendBasicMessages": false,
+      "canSendAudios": false,
+      "canSendDocuments": false,
+      "canSendPhotos": false,
+      "canSendVideos": false,
+      "canSendVideoNotes": false,
+      "canSendVoiceNotes": false,
+      "canSendPolls": false,
+      "canSendOtherMessages": false,
+      "canAddWebPagePreviews": false,
+      "canChangeInfo": false,
+      "canInviteUsers": true,
+      "canPinMessages": false,
+      "canManageTopics": false
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 4,
+    "memberIds": [
+      1817109845,
+      373610989,
+      84210004,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+y7SjZA7HTd45OTc1",
+    "messages": [
+      {
+        "memberUserIds": [
+          806954250
+        ]
+      },
+      {
+        "memberUserIds": [
+          1817109845
+        ]
+      },
+      {
+        "memberUserIds": [
+          373610989
+        ]
+      },
+      {
+        "text": {
+          "text": "This bot can create simple polls in groups.\n\n/newpoll - create a poll\n/results - see how the poll is going\n/poll - repeat the question\n/endpoll - close poll and show final results",
+          "entities": [
+            {
+              "offset": 45,
+              "length": 8,
+              "type": {}
+            },
+            {
+              "offset": 70,
+              "length": 8,
+              "type": {}
+            },
+            {
+              "offset": 107,
+              "length": 5,
+              "type": {}
+            },
+            {
+              "offset": 135,
+              "length": 8,
+              "type": {}
+            }
+          ]
+        },
+        "webPage": null
+      },
+      {
+        "memberUserIds": [
+          84210004
+        ]
+      },
+      {
+        "title": "tamtest",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 672132318,
+    "chatId": -672132318,
+    "groupName": "is it work",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+ZJCDyuPHri1kMDc1",
+    "messages": [
+      {
+        "title": "is it work",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 904320006,
+    "chatId": -904320006,
+    "groupName": "telegramManager",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+lFqHQTh4-mA3ZmRl",
+    "messages": [
+      {
+        "userId": 1817109845
+      },
+      {
+        "memberUserIds": [
+          1817109845
+        ]
+      },
+      {
+        "title": "telegramManager",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 989766425,
+    "chatId": -989766425,
+    "groupName": "rllr",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+8wq1H47zs5RhMzdl",
+    "messages": [
+      {
+        "title": "rllr",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 946329729,
+    "chatId": -946329729,
+    "groupName": "há lô",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": false,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "faker",
+    "inviteLink": "https://t.me/+yLfaOXEBV7M4Yjc1",
+    "messages": [
+      {
+        "title": "há lô",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 919909925,
+    "chatId": -919909925,
+    "groupName": "dfasdfasdfasdfasdfasdf",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+dgv6ZNL0V8JhMjQ1",
+    "messages": [
+      {
+        "title": "dfasdfasdfasdfasdfasdf",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 956284814,
+    "chatId": -956284814,
+    "groupName": "hello",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+5H3w34Cl_GhjYTZl",
+    "messages": [
+      {
+        "title": "hello",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 923795685,
+    "chatId": -923795685,
+    "groupName": "It-e15baocao",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 2,
+    "memberIds": [
+      1817109845,
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+RwyXxWcyroA4ZDg9",
+    "messages": [
+      {
+        "memberUserIds": [
+          1817109845
+        ]
+      },
+      {
+        "userId": 1817109845
+      },
+      {
+        "memberUserIds": [
+          1817109845
+        ]
+      },
+      {
+        "title": "It-e15baocao",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  },
+  {
+    "id": 908779736,
+    "chatId": -908779736,
+    "groupName": "jugok",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": true,
+      "canInviteUsers": true,
+      "canPinMessages": true,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "adminIds": [
+      2134816269
+    ],
+    "memberCount": 1,
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+EcULPPOnwnw3NzZl",
+    "messages": [
+      {
+        "title": "jugok",
+        "memberUserIds": [
+          2134816269
+        ]
+      }
+    ]
+  }
+]
