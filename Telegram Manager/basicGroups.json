@@ -108,8 +108,7 @@
     },
     "messageAutoDeleteTime": 604800,
     "adminIds": [
-      2134816269,
-      5680795783
+      2134816269
     ],
     "memberCount": 2,
     "memberIds": [
@@ -119,6 +118,11 @@
     "description": "moomloloo",
     "inviteLink": "https://t.me/+WCvse3AtSBoyZGNl",
     "messages": [
+      {
+        "memberUserIds": [
+          5680795783
+        ]
+      },
       {
         "messageAutoDeleteTime": 604800,
         "fromUserId": 0
@@ -365,18 +369,26 @@
     "adminIds": [
       2134816269
     ],
-    "memberCount": 6,
+    "memberCount": 2,
     "memberIds": [
       6054221228,
-      6173576926,
-      6024238663,
-      373610989,
-      84210004,
       2134816269
     ],
     "description": "",
     "inviteLink": "https://t.me/+r4dvZdyvSWUyYzJl",
     "messages": [
+      {
+        "userId": 6024238663
+      },
+      {
+        "userId": 6173576926
+      },
+      {
+        "userId": 373610989
+      },
+      {
+        "userId": 84210004
+      },
       {
         "memberUserIds": [
           6054221228
@@ -477,11 +489,6 @@
               "offset": 0,
               "length": 11,
               "type": {}
-            },
-            {
-              "offset": 12,
-              "length": 3,
-              "type": {}
             }
           ]
         },
@@ -490,13 +497,7 @@
       {
         "text": {
           "text": "/id@GroupIDbot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 14,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -508,49 +509,21 @@
       {
         "text": {
           "text": "what does hello mean?\n👥 1 person voted so far.\n\nhi – 1\n👍👍👍👍👍👍👍 100%\n\nhello – 0\n▫️ 0%\n\nhow – 0\n▫️ 0%\n\n/poll - repeat question\n/endpoll - close poll",
-          "entities": [
-            {
-              "offset": 109,
-              "length": 5,
-              "type": {}
-            },
-            {
-              "offset": 133,
-              "length": 8,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "/results@PollBot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 16,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "☝️T voted for \u0027hi\u0027.\n/results - show results\n/poll - repeat the question",
-          "entities": [
-            {
-              "offset": 20,
-              "length": 8,
-              "type": {}
-            },
-            {
-              "offset": 44,
-              "length": 5,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -565,31 +538,6 @@
         "text": {
           "text": "what does hello mean?\n\n/1. hi\n/2. hello\n/3. how\n\n/results - show results\n/endpoll - close poll\n\nUse this link to vote anonymously:\nt.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
           "entities": [
-            {
-              "offset": 23,
-              "length": 2,
-              "type": {}
-            },
-            {
-              "offset": 30,
-              "length": 2,
-              "type": {}
-            },
-            {
-              "offset": 40,
-              "length": 2,
-              "type": {}
-            },
-            {
-              "offset": 49,
-              "length": 8,
-              "type": {}
-            },
-            {
-              "offset": 73,
-              "length": 8,
-              "type": {}
-            },
             {
               "offset": 131,
               "length": 59,
@@ -614,7 +562,7 @@
               {
                 "type": "a",
                 "photo": {
-                  "id": 1361,
+                  "id": 1367,
                   "size": 3176,
                   "expectedSize": 3176,
                   "local": {
@@ -628,7 +576,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2EAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -642,7 +590,7 @@
               {
                 "type": "b",
                 "photo": {
-                  "id": 1362,
+                  "id": 1368,
                   "size": 6515,
                   "expectedSize": 6515,
                   "local": {
@@ -656,7 +604,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2IAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -670,7 +618,7 @@
               {
                 "type": "c",
                 "photo": {
-                  "id": 1363,
+                  "id": 1369,
                   "size": 14353,
                   "expectedSize": 14353,
                   "local": {
@@ -684,7 +632,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2MAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -698,7 +646,7 @@
               {
                 "type": "d",
                 "photo": {
-                  "id": 1364,
+                  "id": 1370,
                   "size": 20101,
                   "expectedSize": 20101,
                   "local": {
@@ -712,7 +660,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2QAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -751,26 +699,14 @@
       {
         "text": {
           "text": "/done",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 5,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "Good. Now send me another answer option.\n\nWhen you\u0027ve added enough options, simply send /done to publish the poll.",
-          "entities": [
-            {
-              "offset": 88,
-              "length": 5,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -784,13 +720,7 @@
       {
         "text": {
           "text": "Good. Now send me another answer option.\n\nWhen you\u0027ve added enough options, simply send /done to publish the poll.",
-          "entities": [
-            {
-              "offset": 88,
-              "length": 5,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -804,13 +734,7 @@
       {
         "text": {
           "text": "Good. Now send me another answer option.\n\nWhen you\u0027ve added enough options, simply send /done to publish the poll.",
-          "entities": [
-            {
-              "offset": 88,
-              "length": 5,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -845,13 +769,7 @@
       {
         "text": {
           "text": "/newpoll@PollBot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 16,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -865,75 +783,35 @@
       {
         "text": {
           "text": "/endpoll@PollBot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 16,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "Sorry, only one poll at a time is allowed.\n/poll - repeat the question\n/endpoll - close current poll",
-          "entities": [
-            {
-              "offset": 43,
-              "length": 5,
-              "type": {}
-            },
-            {
-              "offset": 71,
-              "length": 8,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "/newpoll@PollBot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 16,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "☝️T voted for \u0027🎱\u0027.\n/results - show results\n/poll - repeat the question",
-          "entities": [
-            {
-              "offset": 20,
-              "length": 8,
-              "type": {}
-            },
-            {
-              "offset": 44,
-              "length": 5,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "/1@PollBot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 10,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
@@ -941,21 +819,6 @@
         "text": {
           "text": "what is poll?\n\n/1. 🎱\n\n/results - show results\n/endpoll - close poll\n\nUse this link to vote anonymously:\nt.me/PollBot?start\u003dLTkwNjg3MzM3MjpmNzVjZDljNWYwZDgyYTQxMA\u003d\u003d",
           "entities": [
-            {
-              "offset": 15,
-              "length": 2,
-              "type": {}
-            },
-            {
-              "offset": 23,
-              "length": 8,
-              "type": {}
-            },
-            {
-              "offset": 47,
-              "length": 8,
-              "type": {}
-            },
             {
               "offset": 105,
               "length": 59,
@@ -980,7 +843,7 @@
               {
                 "type": "a",
                 "photo": {
-                  "id": 1361,
+                  "id": 1367,
                   "size": 3176,
                   "expectedSize": 3176,
                   "local": {
@@ -994,7 +857,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2EAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYQADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUAAQ",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1008,7 +871,7 @@
               {
                 "type": "b",
                 "photo": {
-                  "id": 1362,
+                  "id": 1368,
                   "size": 6515,
                   "expectedSize": 6515,
                   "local": {
@@ -1022,7 +885,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2IAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYgADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVn",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1036,7 +899,7 @@
               {
                 "type": "c",
                 "photo": {
-                  "id": 1363,
+                  "id": 1369,
                   "size": 14353,
                   "expectedSize": 14353,
                   "local": {
@@ -1050,7 +913,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2MAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADYwADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAUB",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1064,7 +927,7 @@
               {
                 "type": "d",
                 "photo": {
-                  "id": 1364,
+                  "id": 1370,
                   "size": 20101,
                   "expectedSize": 20101,
                   "local": {
@@ -1078,7 +941,7 @@
                     "downloadedSize": 0
                   },
                   "remote": {
-                    "id": "AgACAgIAAxUAAWS3XTvGb-9GpYk3AAEDpCFNLvNghQACr6cxG1TxBAV9T_GlWio1awEAAwIAA2QAAy8E",
+                    "id": "AgACAgIAAxUAAWS6Gj_Gz7rpCD_HUt8-z_JncbR3AAKvpzEbVPEEBX1P8aVaKjVrAQADAgADZAADLwQ",
                     "uniqueId": "AQADr6cxG1TxBAVp",
                     "isUploadingActive": false,
                     "isUploadingCompleted": true,
@@ -1110,60 +973,20 @@
       {
         "text": {
           "text": "This bot can create simple polls in groups.\n\n/newpoll - create a poll\n/results - see how the poll is going\n/poll - repeat the question\n/endpoll - close poll and show final results",
-          "entities": [
-            {
-              "offset": 45,
-              "length": 8,
-              "type": {}
-            },
-            {
-              "offset": 70,
-              "length": 8,
-              "type": {}
-            },
-            {
-              "offset": 107,
-              "length": 5,
-              "type": {}
-            },
-            {
-              "offset": 135,
-              "length": 8,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "text": {
           "text": "/start@PollBot",
-          "entities": [
-            {
-              "offset": 0,
-              "length": 14,
-              "type": {}
-            }
-          ]
+          "entities": []
         },
         "webPage": null
       },
       {
         "memberUserIds": [
           84210004
-        ]
-      },
-      {
-        "text": {
-          "text": "aasdf",
-          "entities": []
-        },
-        "webPage": null
-      },
-      {
-        "title": "test",
-        "memberUserIds": [
-          2134816269
         ]
       }
     ]
@@ -1384,16 +1207,20 @@
     "adminIds": [
       2134816269
     ],
-    "memberCount": 4,
+    "memberCount": 2,
     "memberIds": [
       6054221228,
-      373610989,
-      6024238663,
       2134816269
     ],
     "description": "",
     "inviteLink": "https://t.me/+6EHvOihfAfw0ODY1",
     "messages": [
+      {
+        "userId": 6024238663
+      },
+      {
+        "userId": 373610989
+      },
       {
         "memberUserIds": [
           6054221228
