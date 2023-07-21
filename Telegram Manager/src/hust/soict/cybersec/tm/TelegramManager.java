@@ -231,7 +231,7 @@ public final class TelegramManager extends Base{
                 {   
                     if (type.equals("B"))
                     {
-                        List<Long> user_basic_group_ids = Id_List.get(j);
+                        List<Long> user_basic_group_ids = Id_List.get(j+k*5);
                         if (user_basic_group_ids.size() > i)
                         {
                             
@@ -253,7 +253,7 @@ public final class TelegramManager extends Base{
                     }
                     else if (type.equals("S"))
                     {
-                        List<Long> user_super_group_ids = Id_List.get(j);
+                        List<Long> user_super_group_ids = Id_List.get(j+k*5);
                         if (user_super_group_ids.size() > i)
                         {   
                             for (SuperGroup sg: targetSupergroups)
@@ -573,7 +573,7 @@ public final class TelegramManager extends Base{
                 List<String> row = new ArrayList<String>();
                 for (int j = 0; j < headersList.subList(k*5, Math.min(k*5+5, headersList.size())).size(); j++)
                 {
-                    List<Long> Ids = Id_List.get(j);
+                    List<Long> Ids = Id_List.get(j+k*5);
 
                     if (Ids.size() > i)
                     {   

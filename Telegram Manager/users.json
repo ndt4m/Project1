@@ -1,0 +1,159 @@
+[
+  {
+    "id": 6054221228,
+    "firstName": "Hoàng Anh IT-E15",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84862642048",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      906873372,
+      704076527,
+      731085839
+    ],
+    "user_super_group_ids": [
+      1856449499
+    ],
+    "admin_basic_group_ids": [],
+    "admin_super_group_ids": []
+  },
+  {
+    "id": 6006813736,
+    "firstName": "Quyền IT-E15",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84347432354",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      937181806,
+      864889876
+    ],
+    "user_super_group_ids": [],
+    "admin_basic_group_ids": [],
+    "admin_super_group_ids": []
+  },
+  {
+    "id": 2134816269,
+    "firstName": "tam",
+    "lastName": "ppopp",
+    "userName": "fapspfkjc",
+    "phoneNumber": "84857864831",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      803806955,
+      844195347,
+      815994917,
+      946329729,
+      989766425,
+      965667270,
+      981850633,
+      963956475,
+      906873372,
+      672132318,
+      919909925,
+      956284814,
+      901751341,
+      687495272,
+      937181806,
+      908779736,
+      923795685,
+      704076527,
+      982563624,
+      864889876,
+      754523232,
+      731085839,
+      953623145
+    ],
+    "user_super_group_ids": [
+      1980603276,
+      1668043053,
+      1809958885,
+      1932596021,
+      1876255601,
+      1913890870,
+      1899612767,
+      1703579681,
+      1856449499
+    ],
+    "admin_basic_group_ids": [
+      803806955,
+      844195347,
+      815994917,
+      946329729,
+      989766425,
+      965667270,
+      981850633,
+      963956475,
+      906873372,
+      672132318,
+      919909925,
+      956284814,
+      901751341,
+      687495272,
+      937181806,
+      908779736,
+      923795685,
+      704076527,
+      982563624,
+      864889876,
+      754523232,
+      731085839,
+      953623145
+    ],
+    "admin_super_group_ids": [
+      1980603276,
+      1668043053,
+      1809958885,
+      1932596021,
+      1876255601,
+      1913890870,
+      1899612767,
+      1703579681,
+      1856449499
+    ]
+  },
+  {
+    "id": 1817109845,
+    "firstName": "Đồng",
+    "lastName": "Lê",
+    "userName": "LeDong97",
+    "phoneNumber": "",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      923795685,
+      965667270
+    ],
+    "user_super_group_ids": [],
+    "admin_basic_group_ids": [],
+    "admin_super_group_ids": []
+  },
+  {
+    "id": 5680795783,
+    "firstName": "Hưng IT-E15",
+    "lastName": "",
+    "userName": "",
+    "phoneNumber": "84936065500",
+    "isScam": false,
+    "isFake": false,
+    "languageCode": "",
+    "type": "regular user",
+    "user_basic_group_ids": [
+      981850633
+    ],
+    "user_super_group_ids": [],
+    "admin_basic_group_ids": [],
+    "admin_super_group_ids": []
+  }
+]
