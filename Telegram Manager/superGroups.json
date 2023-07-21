@@ -590,6 +590,43 @@
     ]
   },
   {
+    "id": 1956950613,
+    "chatId": -1001956950613,
+    "groupName": "superTelegramGroup",
+    "permissions": {
+      "canSendBasicMessages": true,
+      "canSendAudios": true,
+      "canSendDocuments": true,
+      "canSendPhotos": true,
+      "canSendVideos": true,
+      "canSendVideoNotes": true,
+      "canSendVoiceNotes": true,
+      "canSendPolls": true,
+      "canSendOtherMessages": true,
+      "canAddWebPagePreviews": true,
+      "canChangeInfo": false,
+      "canInviteUsers": false,
+      "canPinMessages": false,
+      "canManageTopics": true
+    },
+    "messageAutoDeleteTime": 0,
+    "memberCount": 1,
+    "isAllHistoryAvailable": true,
+    "adminIds": [
+      2134816269
+    ],
+    "memberIds": [
+      2134816269
+    ],
+    "description": "",
+    "inviteLink": "https://t.me/+fE7JkOBjQK1hZjE9",
+    "messages": [
+      {
+        "title": "superTelegramGroup"
+      }
+    ]
+  },
+  {
     "id": 1856449499,
     "chatId": -1001856449499,
     "groupName": "siuuu",

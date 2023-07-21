@@ -65,12 +65,17 @@ public class Crawler <T>
     public void blockingSend(TdApi.Function<?> query, Client.ResultHandler resultHandler)
     {
         haveReceivedRespond = false;
+        boolean canEndLoop = false;
         client.send(query, resultHandler);
         authorizationLock.lock();
         try {
-            while (!haveReceivedRespond) {
+            while (!canEndLoop) {
                 try {
                     gotAuthorization.await();
+                    if (haveReceivedRespond)
+                    {
+                        canEndLoop = true;
+                    }
                 } catch (InterruptedException e) {
                     Thread.currentThread().interrupt();
                 }
