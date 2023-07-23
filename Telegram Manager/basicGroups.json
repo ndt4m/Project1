@@ -562,7 +562,7 @@
               {
                 "type": "a",
                 "photo": {
-                  "id": 1372,
+                  "id": 1363,
                   "size": 3176,
                   "expectedSize": 3176,
                   "local": {
@@ -590,7 +590,7 @@
               {
                 "type": "b",
                 "photo": {
-                  "id": 1373,
+                  "id": 1364,
                   "size": 6515,
                   "expectedSize": 6515,
                   "local": {
@@ -618,7 +618,7 @@
               {
                 "type": "c",
                 "photo": {
-                  "id": 1374,
+                  "id": 1365,
                   "size": 14353,
                   "expectedSize": 14353,
                   "local": {
@@ -646,7 +646,7 @@
               {
                 "type": "d",
                 "photo": {
-                  "id": 1375,
+                  "id": 1366,
                   "size": 20101,
                   "expectedSize": 20101,
                   "local": {
@@ -843,7 +843,7 @@
               {
                 "type": "a",
                 "photo": {
-                  "id": 1372,
+                  "id": 1363,
                   "size": 3176,
                   "expectedSize": 3176,
                   "local": {
@@ -871,7 +871,7 @@
               {
                 "type": "b",
                 "photo": {
-                  "id": 1373,
+                  "id": 1364,
                   "size": 6515,
                   "expectedSize": 6515,
                   "local": {
@@ -899,7 +899,7 @@
               {
                 "type": "c",
                 "photo": {
-                  "id": 1374,
+                  "id": 1365,
                   "size": 14353,
                   "expectedSize": 14353,
                   "local": {
@@ -927,7 +927,7 @@
               {
                 "type": "d",
                 "photo": {
-                  "id": 1375,
+                  "id": 1366,
                   "size": 20101,
                   "expectedSize": 20101,
                   "local": {
@@ -987,19 +987,6 @@
       {
         "memberUserIds": [
           84210004
-        ]
-      },
-      {
-        "text": {
-          "text": "aasdf",
-          "entities": []
-        },
-        "webPage": null
-      },
-      {
-        "title": "test",
-        "memberUserIds": [
-          2134816269
         ]
       }
     ]
